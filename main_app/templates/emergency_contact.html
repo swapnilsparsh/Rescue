@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{%  extends 'main_app/common.html' %}
+
+{% block content %}
+<html lang="en">
+<body style="background-color:white;">
+	
+	<div class="jumbotron container" style="background-color: white;">
+	  <div>
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+              <h1 class="display-4" style="color: black; font-family: 'Bangers', cursive;">Emergency Contacts</h1>
+              <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+              <p class="lead" style="font-family: 'Overpass', sans-serif;">Save Your Trusted Contacts. In Emergency Your Contacts are just one <b>CLICK </b> away.</p>
+              <hr class="my-10">
+	  </div>
+	</div>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-7">
+				<h6><strong> Saved Contacts: {{total_contacts}}</strong></h6>
+				<hr><br>
+
+					<a style="color:white; background-color:rgb(30,142,62);" class="btn btn-primary  btn-sm btn-block" href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
+					<br>
+					<table class="table">
+						<thead class="thead"  style="color:black; background-color:#E9ECEF;">
+							<tr>
+								<th>Name</th>
+								<th>Relation</th>
+								<th>Email</th>
+								<th>Update</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+
+						{% for contact in contacts.all %}
+							<tbody class="table-striped">
+								<tr>
+									<td>{{contact.name}}</td>
+									<td>{{contact.relation}}</td>
+									<td>{{contact.email}}</td>
+									<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info" href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
+									<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger" href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
+								</tr>
+							</tbody>
+							<br>
+						{% endfor %}
+
+					</table>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<br><br><br>
+
+{% endblock %}
+</html>
