@@ -90,7 +90,6 @@ def create_contact(request):
 
 
 def update_contact(request, pk):
-    # log_user = request.user
     curr_contact = contact.objects.get(id=pk)
     name = curr_contact.name
     form = ContactForm
@@ -138,3 +137,15 @@ def emergency(request):
 
 def helpline_numbers(request):
     return render(request, 'main_app/helpline_numbers.html', {'title': 'helpline_numbers'})
+
+
+def women_laws(request):
+    return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
+
+
+def developers(request):
+    return render(request, 'main_app/developers.html', {'title': 'developers'})
+
+
+def women_rights(request):
+    return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})

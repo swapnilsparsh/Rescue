@@ -14,5 +14,8 @@ urlpatterns = [
     path("update_contact/<str:pk>/", views.update_contact, name="update_contact"),
     path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
     path("emergency/", views.emergency, name="emergency"),
-    path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers")
+    path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
+    path("women_laws/", views.women_laws, name="women_laws"),
+    path('women_rights/', views.women_rights, name='women_rights'),
+    path("developers/", views.developers, name="developers")
               ]
