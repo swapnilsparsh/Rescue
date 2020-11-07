@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+<html lang="en">
+    {% block content %}
+    <body style="background-color:white;">
+        <br>
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <button style="color:white; background-color:rgb(30,142,62);  border-radius: 25px;" 
+                class="btn" name="submit" type="submit"><b>Create</b></button>
+            </form>
+        </div>
+    </body>
+    <br><br><br><br>
+    <br><br><br>
+    {% endblock %}
+
+
+
+</html>
