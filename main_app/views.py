@@ -134,3 +134,7 @@ def emergency(request):
     for c in contacts:
         send_email(name, c.email, link)
     return render(request,'main_app/emergency.html')
+
+
+def helpline_numbers(request):
+    return render(request, 'main_app/helpline_numbers.html', {'title': 'helpline_numbers'})
