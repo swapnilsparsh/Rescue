@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg" style="background-color:rgb(21,48,78); height:100px; padding:None;" >
+          <a href="/home"><i class="material-icons medium white-text" style="margin: 25px;">home</i></a>
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+
+               <!-- Dropdown Trigger -->
+
+               <li class="nav-item">
+                <a  data-position="right" href="/emergency_contact" style="color: rgb(217,48,37);"><h5><b>Emergency Contacts</b></h5></a>
+              </li>
+
+              <li class="nav-item" style="padding-left:10px">
+                  <a class="dropdown-trigger " data-position="right" href='#' data-target='dropdown2'><h5>More</h5></a>
+              </li>
+              <!-- Dropdown Structure -->
+              <ul id='dropdown2' class='dropdown-content' style="background-color: white; ">
+                <li><a style="color: black;" href="/women_rights"  data-position="right" >Women's Rights</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a style="color: black;" href="/women_laws"  data-position="right" >Women's Safety Laws </a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a style="color: black;" href="/helpline_numbers"  data-position="right" >Women Helpline Numbers</a></li>
+                <li class="divider" tabindex="-1"></li>
+              </ul>
+              <script>
+                  $('.dropdown-trigger').dropdown({
+                      coverTrigger:false
+                  });
+              </script>
+
+            </ul>
+
+            <ul>
+              {% if user.is_authenticated %}
+                  <li>
+                      <a class="nav-link nav-item dropdown-trigger  navbar-nav mr-auto" style="color:white;" href="#" data-target="dropdown3" data-position="left" ><h5>{{user.username}}</h5></a>
+                  </li>
+                <ul id='dropdown3' class='dropdown-content' style="background-color: white;">
+                    <li><a style="color: black;" href="/logout"  data-position="left" >Logout</a></li>
+                </ul>
+              <script>
+                  $('.dropdown-trigger').dropdown({
+                      coverTrigger:false
+                  });
+              </script>
+              {% else %}
+                  <li>
+                      <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" data-position="left"  style="color:white;" href="#" data-target="dropdown4" data-position="left" ><h5> User</h5></a>
+                  </li>
+                <ul id='dropdown4' class='dropdown-content' style="background-color: white;">
+                  <li class="nav-item">
+                    <a style="color: black;" data-position="left" href="/register">Register</a>
+                  </li>
+                  <li class="divider" tabindex="-1"></li>
+                  <li class="nav-item">
+                    <a style="color: black;"ata-position="left" href="/login">Login</a>
+                  </li>
+                </ul>
+              <script>
+                  $('.dropdown-trigger').dropdown({
+                      coverTrigger:false
+                  });
+              </script>
+              {% endif %}
+              <li><a class="nav-link nav-item" data-position="left" href="/emergency " style="color: rgb(217,48,37);"><h5><b>EMERGENCY</b></h5></a></li>
+
+            </ul>
+             <script>
+                $(document).ready(function(){
+                    $('.tooltipped').tooltip();
+                  });
+            </script>
+          </div>
+        </nav>
+
+        {% if messages %}
+            {% for message in messages %}
+                <script>M.toast({html: "{{message}}", classes: 'blue rounded',
+                displayLength:4000});</script>
+            {% endfor %}
+        {% endif %}
+
+
+            {% block content %}
+
+            {% endblock %}
+
+        <footer class="page-footer" style="background-color:rgb(21,48,78);">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h4 class="white-text"><b>OUR MOTTO</b></h4>
+                <p class="grey-text text-lighten-4"><h4>"FIGHT BACK! BE ALERT!"</h4></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="white-text"  data-position="right"  href="/home"><h4>Return To Home</h4></a></li>
+
+                  <li><a class="white-text" data-position="right"  href="/developers"><h4>Developers</h4></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+          </div>
+        </footer>
+    </body>
+</html>
