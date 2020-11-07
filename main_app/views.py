@@ -5,6 +5,8 @@ from django.contrib import messages
 from .forms import ContactForm
 from .models import contact
 from django.contrib.auth.models import User
+from .mail import send_email
+from .location import lat, log, location, city, state
 
 
 # Create your views here
@@ -112,3 +114,23 @@ def delete_contact(request, pk):
         return redirect('main_app:emergency_contact')
     context = {'item': curr_contact}
     return render(request, 'main_app/delete_contact.html', context)
+
+
+def emergency(request):
+    users = User.objects.all()
+    curr = 0
+    for user in users:
+        if request.user.is_authenticated:
+            curr = user
+            break
+    if curr == 0:
+        return redirect("main_app:login")
+    contacts = contact.objects.filter(user=request.user)
+    emails = []
+    for j in contacts:
+        emails.append(j._meta.get_field("email"))
+    name = request.user.username
+    link = "http://www.google.com/maps/place/"+lat+","+log
+    for c in contacts:
+        send_email(name, c.email, link)
+    return render(request,'main_app/emergency.html')
