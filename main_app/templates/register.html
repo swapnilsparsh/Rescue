@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+<html lang="en">
+
+{% block content %}
+<body style="background-color:white;">
+    <div class="container">
+            <br>
+            <div class="jumbotron" style="background-color: white; text-align: center;" >
+                <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+                <h1 class="display-4" style="color: black; font-family: 'Bangers', cursive;">Register</h1>
+                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+                <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>CREATE Your Account</b></p>
+                <hr class="my-10">
+              </div>
+            <form method="POST" style="background-color: white;">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <button style="color:white; background-color:rgb(30,142,62); border-radius: 25px;" class="btn" type="submit"><b>Register</b></button>
+                <br>
+            </form>
+            <br>
+            <strong>Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62);" ><strong><b><u>Sign In</u></b></strong></a>
+            <br>
+    </div>
+</body>
+<br>
+<br>
+{% endblock %}
+
+</html>
