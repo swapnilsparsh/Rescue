@@ -3,9 +3,7 @@ from email.utils import formataddr
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import base64
-# from email import encoders
-# from email.utils import formataddr
-# from email.mime.base import MIMEBase
+
 
 
 # Before using your email,  please ensure that you have set you gmail account to enable "less secure apps"
