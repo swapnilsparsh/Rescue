@@ -31,6 +31,9 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 
 ## Installation
 
+## License
+https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE
+
 ## Connect with me
 <div align="center">
 <a href="https://github.com/swapnilsparsh" target="_blank">
