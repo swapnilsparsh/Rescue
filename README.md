@@ -3,7 +3,7 @@
     <img src="https://github.com/swapnilsparsh/Rescue/blob/master/image.png" >
   </a>
 
-  <h3 align="center">Rescue(Weomen Safety Website)/h3>
+  <h3 align="center">Rescue(Weomen Safety Website)</h3>
 
   <p align="center">
     A women safety website which send emails to your trusted ones. 📩
@@ -32,3 +32,11 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 ## Installation
 
 ## Connect with me
+<div align="center">
+<a href="https://github.com/swapnilsparsh" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+</div>
