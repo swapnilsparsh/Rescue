@@ -36,8 +36,10 @@ pip install django
 pip install requests
 ```
 
-
-
+2. Run the website by following command
+```sh
+python manage.py runserver
+```
 
 ## License
 [MIT](https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE)
