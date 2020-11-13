@@ -30,6 +30,12 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 </ol>
 
 ## Installation
+1. Install django and requests
+```sh
+pip install django
+```
+
+
 
 ## License
 [MIT](https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE)
