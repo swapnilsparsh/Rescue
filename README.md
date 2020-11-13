@@ -33,7 +33,9 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 1. Install django and requests
 ```sh
 pip install django
+pip install requests
 ```
+
 
 
 
