@@ -34,6 +34,7 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 ```sh
 pip install django
 pip install requests
+pip install smtplib
 ```
 
 2. Run the website by following command
