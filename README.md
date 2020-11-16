@@ -25,7 +25,6 @@ Our panic responsive Rescue website prevents the crime before happening to the w
   <li>Backend</li>
   <ol>
     <li>Django</li>
-    <li>Sqlite3</li>
   </ol>
 </ol>
 
