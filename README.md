@@ -37,7 +37,7 @@ pip install smtplib
 pip install bs4
 ```
 
-2. Run the website by following command
+2. Run the website by following command in the terminal
 ```sh
 python manage.py runserver
 ```
