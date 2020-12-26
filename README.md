@@ -3,7 +3,7 @@
     <img src="https://github.com/swapnilsparsh/Rescue/blob/master/image.png" >
   </a>
 
-  <h3 align="center">Rescue(Weomen Safety Website)</h3>
+  <h3 align="center">Rescue(Women Safety Website)</h3>
 
   <p align="center">
     A women safety website which send emails to your trusted ones. 📩
