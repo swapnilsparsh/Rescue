@@ -31,10 +31,7 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 ## Installation
 1. Install django and requests
 ```sh
-pip install django
-pip install requests
-pip install smtplib
-pip install bs4
+pip install -r requirements.txt
 ```
 
 2. Run the website by following command in the terminal
