@@ -29,12 +29,14 @@ Our panic responsive Rescue website prevents the crime before happening to the w
 </ol>
 
 ## Installation
-1. Install django and requests
+1. Star the Repo 🌟 and this will keep me motivated.
+
+2. Install django and requests
 ```sh
 pip install -r requirements.txt
 ```
 
-2. Run the website by following command in the terminal
+3. Run the website by following command in the terminal
 ```sh
 python manage.py runserver
 ```
