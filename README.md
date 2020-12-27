@@ -12,14 +12,11 @@
 </p>
 
 ## ✨About the Project
-----
-Our panic responsive Rescue website prevents the crime before happening to the women by notifying their respective contacts via **alert messages**.
-<br>
 
-</br>
+Our panic responsive Rescue website prevents the crime before happening to the women by notifying their respective contacts via **alert messages**.
 
 ## 💻Technology Stack
-----
+
 <ol> 
   <li>Frontend</li> 
     <ul> 
@@ -36,12 +33,9 @@ Our panic responsive Rescue website prevents the crime before happening to the w
     <li><img src="https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/></li>
   </ul>
 </ol>
-<br>
-
-</br>
 
 ## ⚙Installation
-----
+
 1. Star the Repo 🌟 and this will keep me motivated.
 
 2. Install django and requests by typing the below command in terminal.
@@ -56,7 +50,6 @@ python manage.py runserver
 
 
 ## 📄License
-----
 
 <a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
 <img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
@@ -66,7 +59,7 @@ python manage.py runserver
 </br>
 
 ## 📱Connect with me
-----
+
 
 <div align="left">
 <a href="https://github.com/swapnilsparsh" target="_blank">
