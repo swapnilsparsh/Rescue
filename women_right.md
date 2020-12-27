@@ -84,14 +84,13 @@ Some acts have special provisions to safeguard women and their interests like
         -  Commission of Sati (Prevention) Act, 1987
         - The Protection of Women from Domestic Violence Act, 2005
         
-  <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU" align="right">  
+  <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU" >  
+  <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIY2uZjiNf1-_YFNPMhIzlJ3UawKZbNSm7w&usqp=CAU">
    
 ## 3 SPECIAL INITIATIVES FOR WOMEN 
- - ***National Commission for Women*** : 
- In January 1992, the Government set-up this statutory body with a
+ - ***National Commission for Women*** : In January 1992, the Government set-up this statutory body with a
 specific mandate to study and monitor all matters relating to the constitutional and legal safeguards
 provided for women, review the existing legislation to suggest amendments wherever necessary, etc.
-- ***Reservation for Women in Local Self -Government*** : 
-The 73rd Constitutional Amendment Acts passed in
+- ***Reservation for Women in Local Self -Government*** : The 73rd Constitutional Amendment Acts passed in
 1992 by Parliament ensure one-third of the total seats for women in all elected offices in local bodies
 whether in rural areas or urban areas
