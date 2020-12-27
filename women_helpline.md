@@ -102,9 +102,6 @@ https://shaktishalini.org/ |
 
 
 
-
-
-
 ## KARNATAKA
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -113,3 +110,27 @@ https://shaktishalini.org/ |
 | KKarnataka Women Police |0821-2418400 |
 |Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
 | Mysore Women Police | 0821-2418110/2418410 |
+ 
+
+
+## TAMIL NADU 
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Tamil Nadu Women Helpline | 044-285927505 |
+| State Commission for Women | 044-28551155 |
+
+
+
+## PUNJAB
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Women Helpline Punjab |1091 / 112 |
+| Women Helpline Amritsar City Only |9781101091 |
+|Punjab Women Commission SCO No:-57,58,59 Sector-17-C, Chandigarh | 0172-2712607 0172-2783607|
+| Punjab Samvad ( NGO ) | 0172- 2546389, 2700109, 276000114 |
+
+
+
+
