@@ -1,4 +1,4 @@
-## ⭐ Getting Started
+## ⭐ First time contributing? We will help you out.
 
 Refer to the following articles on the basics of Git and Github and can also contact the Project Mentors, in case you are stuck:
 
@@ -58,7 +58,7 @@ git push
 
 **8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
 
-**9.** **Congratulations!** Sit and relax, you've made your contribution to [Hacking-Scripts](https://github.com/swapnilsparsh/Rescue) project.
+**9.** **Congratulations!** Sit and relax, you've made your contribution to [Rescue](https://github.com/swapnilsparsh/Rescue) project.
 
 
 ## 💥 Issues:
