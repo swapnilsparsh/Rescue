@@ -39,6 +39,36 @@ https://shaktishalini.org/ |
 
 ## ARUNACHAL PRADESH
 
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Arunachal Pradesh Women Commission 'C' Sector, Ita Nagar | 0360-2214567,0360-2290544|
 
- 
+ ## GOA
 
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| GOA Women Helpline | 1091 , 0832-2421208|
+| GOA Women Commission  | 0832-2421080 |
+
+ ## GUJRAT
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| STATE WOMEN COMMMISION GUJRAT ( http://www.scwgujarat.org/ ) | 18002331111 / 079-23251604 , 079-23251613|
+| GUJRAT - Ahemdabad Women Group https://www.awagindia.org/ | 7926441214 | 
+| GUJRAT - Self Employed Women’s Association http://www.sewa.org/ | 079-25506477/ 25506444 |
+
+
+
+
+ ## MAHARASHTRA 
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Mumbai Railway Police | 9833331111|
+| MMumbai Police Women Helpline No.  |022-22633333, 22620111|
+| Maharashtra Women Commision http://mscw.org.in/
+( Gruha Nirman Bhawan Mhada Bldg., Kalanagar, Bandra ) | 07477722424  022-26592707|
+| Maharashtra Women Helpline |022-26111103, 1298 , 103|
+|MAJLIS - MAHARASHTRA | 022-26661252 / 26662394|
+|Navi Mumbai Police Station | 022-27580255 |
