@@ -34,7 +34,8 @@ It is a responsive website which helps women/girls who are in panic or in some t
  <li> Install django and requests by typing following commands in your <b>terminal</b>.
 ```sh
 pip install -r requirements.txt
-```</li>
+```
+</li>
 
  <li>
   Run the website by typing following command in the your <b>terminal</b>.
