@@ -44,3 +44,5 @@ Municipality to be reserved for women and such seats to be allotted by rotation 
 constituencies in a Municipality `(Article 243 T (3))`.
    -  Reservation of offices of Chairpersons in Municipalities for the Scheduled Castes, the Scheduled Tribes
 and women in such manner as the legislature of a State may by law provide `(Article 243 T (4))`.
+
+## 2. LEGAL PROVISIONS
