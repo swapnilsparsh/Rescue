@@ -1,34 +1,32 @@
- <h1 align="center">Rescue(Women Safety Website)</h1>
+ <h1 align="center">Rescue:bellhop_bell:(Women Safety Website)</h1>
 <p align="center">
   <a href="https://github.com/swapnilsparsh/Rescue">
     <img src="https://github.com/swapnilsparsh/Rescue/blob/master/image.png" >
   </a> 
 
-
-  <p align="center">
+  <h3 align="center">
     A women safety website which send emails to your trusted ones. 📩
     <br />
-  </p>
+  </h3>
 </p>
 
-## About the Project
-Our panic responsive Rescue website prevents the crime before happening to the women by notifying through alert messages to respective contacts.
+## About the Project:thinking::thought_balloon:
+It is a responsive website which helps women/girls who are in panic or in some trouble(unsafe). The website have some great features like an <b>Emergency Button</b> which on pressing/touching helps women when they are unsafe or need help. It automatically sends some instant/quick mails to her family members about her unsafe situation with <b>Location</b>.
 
-## Technology Stack
+## Technology Stack:woman_technologist:
 <ol> 
-  <li>Frontend</li> 
-    <ol> 
-      <li>HTML5</li> 
-      <li>CSS3</li> 
-      <li>Bootstrap</li>
-    </ol>
-  <li>Backend</li>
-  <ol>
-    <li>Django</li>
-  </ol>
-</ol>
+ <li><b>Frontend</b></li> 
+ 
+ <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+ <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+ <img src="https://img.shields.io/badge/bootstrap%20-%234f0599.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/>
+ 
+  <li><b>Backend</b></li>
 
-## Installation
+  <img src="https://img.shields.io/badge/django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/>
+  <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
+
+## Installation:gear:
 1. Star the Repo 🌟 and this will keep me motivated.
 
 2. Install django and requests
