@@ -41,7 +41,7 @@ pip install -r requirements.txt
 main_app/mail.py
 ```
 
-3. Run the website by following command in the terminal
+4. Run the website by following command in the terminal
 ```sh
 python manage.py runserver
 ```
