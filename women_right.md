@@ -17,7 +17,7 @@ regard.
 
 - Constitutional Privileges
    - Equality before law for women (Article 14)
-   -  The State not to discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth or any of them (Article 15 (i))
+   -  The State not to discriminate against any citizen on grounds only of religion,race, caste, sex, place of birth or any of them (Article 15(i))
    -  The State to make any special provision in favour of women and children (Article 15 (3))
    -  Equality of opportunity for all citizens in matters relating to employment or appointment to any office
 under the State (Article 16)
@@ -27,22 +27,22 @@ means of livelihood (Article 39(a)); and equal pay for equal work for both men a
    -  To promote justice, on a basis of equal opportunity and to provide free legal aid by suitable legislation
 or scheme or in any other way to ensure that opportunities for securing justice are not denied to any
 citizen by reason of economic or other disabilities (Article 39 A)
-(vii) The State to make provision for securing just and humane conditions of work and for maternity relief
+   -  The State to make provision for securing just and humane conditions of work and for maternity relief
 (Article 42)
-(viii) The State to promote with special care the educational and economic interests of the weaker sections
+   -  The State to promote with special care the educational and economic interests of the weaker sections
 of the people and to protect them from social injustice and all forms of exploitation (Article 46)
-(ix) The State to raise the level of nutrition and the standard of living of its people (Article 47)
-(x) To promote harmony and the spirit of common brotherhood amongst all the people of India and to
+   -  The State to raise the level of nutrition and the standard of living of its people (Article 47)
+   -  To promote harmony and the spirit of common brotherhood amongst all the people of India and to
 renounce practices derogatory to the dignity of women (Article 51(A) (e))
-(xi) Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
+   -  Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
 Castes and the Scheduled Tribes) of the total number of seats to be filled by direct election in every
 Panchayat to be reserved for women and such seats to be allotted by rotation to different
 constituencies in a Panchayat (Article 243 D(3))
-(xii) Not less than one- third of the total number of offices of Chairpersons in the Panchayats at each level
+   -  Not less than one- third of the total number of offices of Chairpersons in the Panchayats at each level
 to be reserved for women (Article 243 D (4))
-(xiii) Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
+   -  Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
 Castes and the Scheduled Tribes) of the total number of seats to be filled by direct election in every
 Municipality to be reserved for women and such seats to be allotted by rotation to different
 constituencies in a Municipality (Article 243 T (3))
-(xiv) Reservation of offices of Chairpersons in Municipalities for the Scheduled Castes, the Scheduled Tribes
+   -  Reservation of offices of Chairpersons in Municipalities for the Scheduled Castes, the Scheduled Tribes
 and women in such manner as the legislature of a State may by law provide (Article 243 T (4))
