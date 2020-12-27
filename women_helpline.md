@@ -22,14 +22,14 @@
 
 # STATE WISE WOMEN HELPLINE   NUMBERS  
 
-| DELHI | |
+| DELHI |   NUMBERS   |
 |----------|-------------|
 |Delhi Commison for women|  011-23379181, 23370597 | 
 |Delhi Women Protection Cell | 011-24673366/4156/ 7699 | 
 |Shakti Shalini ( N.G.O ) Women Shelter , Support Survivors , Councelling |  011-24373737011-24373736 10920 |
 https://shaktishalini.org/ |
 
-| ANDHRA PRADESH | | 
+| ANDHRA PRADESH |  NUMBERS   | 
 |----------|-------------|
 | Andhra Pradesh - Hyderabad/Secundrabad Police station | 040-27853508 |
 | Andhra Pradesh Women Protection cell | 040-23320539 | 
