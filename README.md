@@ -54,9 +54,6 @@ python manage.py runserver
 <a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
 <img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
 </a>
-<br>
-
-</br>
 
 ## 📱Connect with me
 
