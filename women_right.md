@@ -46,3 +46,10 @@ constituencies in a Municipality `(Article 243 T (3))`.
 and women in such manner as the legislature of a State may by law provide `(Article 243 T (4))`.
 
 ## 2. LEGAL PROVISIONS
+ - To uphold the Constitutional mandate, the State has enacted various legislative measures intended
+to ensure equal rights, to counter social discrimination and various forms of violence and atrocities and to
+provide support services especially to working women. Although women may be victims of any of the crimes
+such as 'Murder', 'Robbery', 'Cheating' etc, the crimes, which are directed specifically against women, are
+characterized as 'Crime against Women'. These are broadly classified under two categories.
+       - The Crimes Identified Under the Indian Penal Code (IPC)
+              - Rape (Sec. 376 IPC)
