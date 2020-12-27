@@ -23,7 +23,7 @@
 |  STATE WISE WOMEN HELPLINE  | NUMBERS  | 
 |----------|-------------|
 |National Commission for Women|  011-23237166, 23234918 | 
-| DELHI| |
+| **DELHI**| |
 |Delhi Commison for women|  011-23379181, 23370597 | 
 |Delhi Women Protection Cell | 011-24673366/4156/ 7699 | 
 |Shakti Shalini ( N.G.O ) Women Shelter , Support Survivors , Councelling https://shaktishalini.org/|  011-24373737011-2437373610920 | 
