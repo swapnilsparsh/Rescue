@@ -54,3 +54,18 @@ characterized as 'Crime against Women'. These are broadly classified under two c
       
    - The Crimes Identified Under the Indian Penal Code (IPC)   
         - Rape (Sec. 376 IPC)
+        - The Special Marriage Act, 1954
+        - The Hindu Marriage Act, 1955
+        - The Hindu Succession Act, 1956 with amendment in 2005
+        - Immoral Traffic (Prevention) Act, 1956
+        - The Maternity Benefit Act, 1961 (Amended in 1995)
+        -  Dowry Prohibition Act, 1961
+        - The Medical Termination of Pregnancy Act, 1971
+        - The Contract Labour (Regulation and Abolition) Act, 1976
+        - The Equal Remuneration Act, 1976
+        - The Prohibition of Child Marriage Act, 2006
+        - The Criminal Law (Amendment) Act, 1983
+        - Indecent Representation of Women (Prohibition) Act, 1986
+        -  Commission of Sati (Prevention) Act, 1987
+        - The Protection of Women from Domestic Violence Act, 2005
+      
