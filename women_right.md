@@ -89,6 +89,7 @@ Some acts have special provisions to safeguard women and their interests like
   <img src = "mhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXtxTThs96u7Pap5K5S7AA9yd2kCWmCC-Dw&usqp=CAU">
   </p> 
   
+ 
 ## 3 SPECIAL INITIATIVES FOR WOMEN 
  - `National Commission for Women` : In January 1992, the Government set-up this statutory body with a
 specific mandate to study and monitor all matters relating to the constitutional and legal safeguards
