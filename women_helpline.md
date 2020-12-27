@@ -117,8 +117,7 @@ https://shaktishalini.org/ |
 |Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
 | Mysore Women Police | 0821-2418110/2418410 |
  
-
-
+<p>
 ## TAMIL NADU 
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -127,6 +126,10 @@ https://shaktishalini.org/ |
 | State Commission for Women | 044-28551155 |
 
 <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyqOWuQYDvdehO5dfe1Qa-BPpkttnCf8WVg&usqp=CAU" >
+
+</p>
+
+
 
 ## PUNJAB
 
