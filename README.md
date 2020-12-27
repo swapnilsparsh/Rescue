@@ -11,7 +11,7 @@
 </p>
 
 ## About the Project:thinking::thought_balloon:
-It is a responsive website which helps women/girls who are in panic or in some trouble(unsafe). The website have some great features like an <b>Emergency Button</b> which on pressing/touching helps women when they are unsafe or need help. It automatically sends some instant/quick mails to her family members about her unsafe situation with <b>Location</b>.
+It is a responsive website which helps women/girls who are in panic or in some trouble. The website have some great features like an <b>Emergency Button</b> which on pressing/touching helps women when they are unsafe or need help. It automatically sends some instant/quick mails to her family members about her unsafe situation with <b>Location</b>.
 
 ## Technology Stack:woman_technologist:
 <ol> 
