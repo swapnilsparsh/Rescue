@@ -27,17 +27,22 @@ It is a responsive website which helps women/girls who are in panic or in some t
   <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
 
 ## Installation:gear:
-1. Star the Repo 🌟 and this will keep me motivated.
-
-2. Install django and requests by typing following commands in your <b>terminal</b>.
+<ol>
+ 
+ <li>Star the Repo 🌟 and this will keep me motivated.</li>
+ 
+ <li> Install django and requests by typing following commands in your <b>terminal</b>.
 ```sh
 pip install -r requirements.txt
-```
+```</li>
 
-3. Run the website by typing following command in the your <b>terminal</b>.
+ <li>
+  Run the website by typing following command in the your <b>terminal</b>.
 ```sh
 python manage.py runserver
 ```
+ </li>
+</ol>
 
 ## License:bookmark_tabs:
 <a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
