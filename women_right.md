@@ -86,6 +86,7 @@ Some acts have special provisions to safeguard women and their interests like
   <p>      
   <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU" >  
   <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIY2uZjiNf1-_YFNPMhIzlJ3UawKZbNSm7w&usqp=CAU">
+  <img src = "mhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXtxTThs96u7Pap5K5S7AA9yd2kCWmCC-Dw&usqp=CAU">
   </p> 
   
 ## 3 SPECIAL INITIATIVES FOR WOMEN 
