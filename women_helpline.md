@@ -97,4 +97,19 @@ https://shaktishalini.org/ |
 |State Vanitha Cell | 0471-2338100|
 |Women Cell , Kollam | 0474-2742376|
 |Women Cell , Kochi | 0484-2396730|
-|Kerala Women Police Helpline (Trivandrum) | 9995399953|
+
+
+
+
+
+
+
+
+## KARNATAKA
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Banglore Women Police | 080-22943225 |
+| KKarnataka Women Police |0821-2418400 |
+|Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
+| Mysore Women Police | 0821-2418110/2418410 |
