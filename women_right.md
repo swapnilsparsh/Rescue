@@ -57,7 +57,9 @@ characterized as 'Crime against Women'. These are broadly classified under two c
         - Homicide for Dowry, Dowry Deaths or their attempts (Sec. 302/304-B IPC)
         - Torture, both mental and physical (Sec. 498-A IPC)
         - Molestation (Sec. 354 IPC)
-        -
+        - Sexual Harassment (Sec. 509 IPC)
+        - Importation of girls (up to 21 years of age)
+
         
    -  The Crimes identified under the Special Laws (SLL)
 Although all laws are not gender specific, the provisions of law affecting women significantly have
@@ -78,4 +80,6 @@ Some acts have special provisions to safeguard women and their interests like
         - Indecent Representation of Women (Prohibition) Act, 1986
         -  Commission of Sati (Prevention) Act, 1987
         - The Protection of Women from Domestic Violence Act, 2005
-      
+   <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU">
+   
+##  SPECIAL INITIATIVES FOR WOMEN 
