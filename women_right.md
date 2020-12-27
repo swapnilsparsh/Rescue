@@ -7,10 +7,43 @@
 - Gender equality means a society in wherein both women and men enjoy the same opportunities, rights and obligations in different spheres of life. Equality in decision making, economic and social freedom, equal access to education and right to practice an occupation of one’s choice.In order to promote gender equality , we need to the empowerment of women,and concentrate on areas which are most crucial to her well being. Women’s empowerment, economic, social, political, is vital to growth of any nation and to protect and nurture human rights.
 
 ## 1. CONSTITUTIONAL PROVISIONS
-The Constitution of India not only grants equality to women but also empowers the State to adopt measures
+- The Constitution of India not only grants equality to women but also empowers the State to adopt measures
 of positive discrimination in favour of women for neutralizing the cumulative socio economic, education and
 political disadvantages faced by them. Fundamental Rights, among others, ensure equality before the law
 and equal protection of law; prohibits discrimination against any citizen on grounds of religion, race, caste,
 sex or place of birth, and guarantee equality of opportunity to all citizens in matters relating to employment.
 Articles 14, 15, 15(3), 16, 39(a), 39(b), 39(c) and 42 of the Constitution are of specific importance in this
 regard.
+
+- Constitutional Privileges
+   - Equality before law for women (Article 14)
+(ii) The State not to discriminate against any citizen on grounds only of religion, race, caste, sex, place of
+birth or any of them (Article 15 (i))
+(iii) The State to make any special provision in favour of women and children (Article 15 (3))
+(iv) Equality of opportunity for all citizens in matters relating to employment or appointment to any office
+under the State (Article 16)
+(v) The State to direct its policy towards securing for men and women equally the right to an adequate
+means of livelihood (Article 39(a)); and equal pay for equal work for both men and women (Article
+39(d))
+(vi) To promote justice, on a basis of equal opportunity and to provide free legal aid by suitable legislation
+or scheme or in any other way to ensure that opportunities for securing justice are not denied to any
+citizen by reason of economic or other disabilities (Article 39 A)
+(vii) The State to make provision for securing just and humane conditions of work and for maternity relief
+(Article 42)
+(viii) The State to promote with special care the educational and economic interests of the weaker sections
+of the people and to protect them from social injustice and all forms of exploitation (Article 46)
+(ix) The State to raise the level of nutrition and the standard of living of its people (Article 47)
+(x) To promote harmony and the spirit of common brotherhood amongst all the people of India and to
+renounce practices derogatory to the dignity of women (Article 51(A) (e))
+(xi) Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
+Castes and the Scheduled Tribes) of the total number of seats to be filled by direct election in every
+Panchayat to be reserved for women and such seats to be allotted by rotation to different
+constituencies in a Panchayat (Article 243 D(3))
+(xii) Not less than one- third of the total number of offices of Chairpersons in the Panchayats at each level
+to be reserved for women (Article 243 D (4))
+(xiii) Not less than one-third (including the number of seats reserved for women belonging to the Scheduled
+Castes and the Scheduled Tribes) of the total number of seats to be filled by direct election in every
+Municipality to be reserved for women and such seats to be allotted by rotation to different
+constituencies in a Municipality (Article 243 T (3))
+(xiv) Reservation of offices of Chairpersons in Municipalities for the Scheduled Castes, the Scheduled Tribes
+and women in such manner as the legislature of a State may by law provide (Article 243 T (4))
