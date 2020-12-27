@@ -27,13 +27,7 @@
 
 
 # STATE WISE WOMEN HELPLINE   NUMBERS  
-##  NEW DELHI 
-|  WOMEN HELPLINE |   NUMBERS   |
-|----------|-------------|
-|Delhi Commison for women|  011-23379181, 23370597 | 
-|Delhi Women Protection Cell | 011-24673366/4156/ 7699 | 
-|Shakti Shalini ( N.G.O ) Women Shelter , Support Survivors , Councelling |  011-24373737011-24373736 10920 |
-https://shaktishalini.org/ |
+
 
 ## ANDHRA PRADESH
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -49,12 +43,16 @@ https://shaktishalini.org/ |
 |----------|-------------|
 | Arunachal Pradesh Women Commission 'C' Sector, Ita Nagar | 0360-2214567,0360-2290544|
 
+
+
+
  ## GOA
 
 | WOMEN HELPLINE |  NUMBERS   | 
 |----------|-------------|
 | GOA Women Helpline | 1091 , 0832-2421208|
 | GOA Women Commission  | 0832-2421080 |
+
 
  ## GUJRAT
 
@@ -64,6 +62,30 @@ https://shaktishalini.org/ |
 | GUJRAT - Ahemdabad Women Group https://www.awagindia.org/ | 7926441214 | 
 | GUJRAT - Self Employed Women’s Association http://www.sewa.org/ | 079-25506477/ 25506444 |
 
+
+## KARNATAKA
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Banglore Women Police | 080-22943225 |
+| KKarnataka Women Police |0821-2418400 |
+|Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
+| Mysore Women Police | 0821-2418110/2418410 |
+
+
+
+
+
+
+ ## KERALA
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+|Kerala Women Police Helpline (Trivandrum) | 9995399953|
+| Kerala Women’s Commission | 0471-2322590, 2320509, 2337589, 2339878, 2339882 |
+|State Vanitha Cell | 0471-2338100|
+|Women Cell , Kollam | 0474-2742376|
+|Women Cell , Kochi | 0484-2396730|
 
 
 
@@ -81,6 +103,28 @@ https://shaktishalini.org/ |
 
 
 
+##  NEW DELHI 
+|  WOMEN HELPLINE |   NUMBERS   |
+|----------|-------------|
+|Delhi Commison for women|  011-23379181, 23370597 | 
+|Delhi Women Protection Cell | 011-24673366/4156/ 7699 | 
+|Shakti Shalini ( N.G.O ) Women Shelter , Support Survivors , Councelling |  011-24373737011-24373736 10920 |
+https://shaktishalini.org/ |
+
+
+
+
+
+## PUNJAB
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Women Helpline Punjab |1091 / 112 |
+| Women Helpline Amritsar City Only |9781101091 |
+|Punjab Women Commission SCO No:-57,58,59 Sector-17-C, Chandigarh | 0172-2712607 0172-2783607|
+| Punjab Samvad ( NGO ) | 0172- 2546389, 2700109, 276000114 |
+
+
 
 
  ## RAJASTHAN 
@@ -94,28 +138,10 @@ https://shaktishalini.org/ |
 
 
 
- ## KERALA
-
-| WOMEN HELPLINE |  NUMBERS   | 
-|----------|-------------|
-|Kerala Women Police Helpline (Trivandrum) | 9995399953|
-| Kerala Women’s Commission | 0471-2322590, 2320509, 2337589, 2339878, 2339882 |
-|State Vanitha Cell | 0471-2338100|
-|Women Cell , Kollam | 0474-2742376|
-|Women Cell , Kochi | 0484-2396730|
 
 
 
 
-
-## KARNATAKA
-
-| WOMEN HELPLINE |  NUMBERS   | 
-|----------|-------------|
-| Banglore Women Police | 080-22943225 |
-| KKarnataka Women Police |0821-2418400 |
-|Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
-| Mysore Women Police | 0821-2418110/2418410 |
  
 
 ## TAMIL NADU 
@@ -130,15 +156,6 @@ https://shaktishalini.org/ |
 
 
 
-
-## PUNJAB
-
-| WOMEN HELPLINE |  NUMBERS   | 
-|----------|-------------|
-| Women Helpline Punjab |1091 / 112 |
-| Women Helpline Amritsar City Only |9781101091 |
-|Punjab Women Commission SCO No:-57,58,59 Sector-17-C, Chandigarh | 0172-2712607 0172-2783607|
-| Punjab Samvad ( NGO ) | 0172- 2546389, 2700109, 276000114 |
 
 
 
