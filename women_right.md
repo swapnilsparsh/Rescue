@@ -51,6 +51,7 @@ to ensure equal rights, to counter social discrimination and various forms of vi
 provide support services especially to working women. Although women may be victims of any of the crimes
 such as 'Murder', 'Robbery', 'Cheating' etc, the crimes, which are directed specifically against women, are
 characterized as 'Crime against Women'. These are broadly classified under two categories.
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU" align="right"> 
    - The Crimes Identified Under the Indian Penal Code (IPC)
         - Rape (Sec. 376 IPC)
         - Kidnapping & Abduction for different purposes ( Sec. 363-373)
@@ -60,7 +61,7 @@ characterized as 'Crime against Women'. These are broadly classified under two c
         - Sexual Harassment (Sec. 509 IPC)
         - Importation of girls (up to 21 years of age)
 
-     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvvLel_lsdU8ZpN7yk6a3FK3_wSNBZCPDkCw&usqp=CAU" align="right">      
+          
    -  The Crimes identified under the Special Laws (SLL)
 Although all laws are not gender specific, the provisions of law affecting women significantly have
 been reviewed periodically and amendments carried out to keep pace with the emerging requirements.
