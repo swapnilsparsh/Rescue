@@ -51,9 +51,19 @@ to ensure equal rights, to counter social discrimination and various forms of vi
 provide support services especially to working women. Although women may be victims of any of the crimes
 such as 'Murder', 'Robbery', 'Cheating' etc, the crimes, which are directed specifically against women, are
 characterized as 'Crime against Women'. These are broadly classified under two categories.
-      
-   - The Crimes Identified Under the Indian Penal Code (IPC)   
+   - The Crimes Identified Under the Indian Penal Code (IPC)
         - Rape (Sec. 376 IPC)
+        - Kidnapping & Abduction for different purposes ( Sec. 363-373)
+        - Homicide for Dowry, Dowry Deaths or their attempts (Sec. 302/304-B IPC)
+        - Torture, both mental and physical (Sec. 498-A IPC)
+        - Molestation (Sec. 354 IPC)
+        -
+        
+   -  The Crimes identified under the Special Laws (SLL)
+Although all laws are not gender specific, the provisions of law affecting women significantly have
+been reviewed periodically and amendments carried out to keep pace with the emerging requirements.
+Some acts have special provisions to safeguard women and their interests like
+        - The Family Courts Act, 1954
         - The Special Marriage Act, 1954
         - The Hindu Marriage Act, 1955
         - The Hindu Succession Act, 1956 with amendment in 2005
