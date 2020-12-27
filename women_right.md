@@ -28,7 +28,7 @@ or scheme or in any other way to ensure that opportunities for securing justice 
 citizen by reason of economic or other disabilities `(Article 39 A)`.
    -  The State to make provision for securing just and humane conditions of work and for maternity relief `(Article 42)`.
    -  The State to promote with special care the educational and economic interests of the weaker sections
-of the people and to protect them from social injustice and all forms of exploitation ``.(Article 46)
+of the people and to protect them from social injustice and all forms of exploitation `(Article 46)`.
    -  The State to raise the level of nutrition and the standard of living of its people `(Article 47)`.
    -  To promote harmony and the spirit of common brotherhood amongst all the people of India and to
 renounce practices derogatory to the dignity of women `(Article 51(A) (e))`.
