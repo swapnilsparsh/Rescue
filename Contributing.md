@@ -19,7 +19,7 @@ Refer to the following articles on the basics of Git and Github and can also con
 - Read the [Code of Conduct](https://github.com/smriti1313/Rescue/blob/master/Code_of_Conduct.md)
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 - Add Screenshots to help us know what this Script is all about.
-- You can discuss with other people working on the same issue on [discord.](https://discord.com/channels/731001496417730611/792257592322949121)
+- You can discuss with other people working on the same project about your idea on [discord.](https://discord.com/channels/731001496417730611/792257592322949121)
 
 ## ⭐HOW TO MAKE A PULL REQUEST:
 
