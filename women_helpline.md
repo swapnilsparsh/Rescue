@@ -49,6 +49,20 @@
 | GUJRAT - Ahemdabad Women Group https://www.awagindia.org/ | 7926441214 | 
 | GUJRAT - Self Employed Women’s Association http://www.sewa.org/ | 079-25506477/ 25506444 |
 
+## HARYANA
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Haryana Women and Child Helpline| 0124-2335100 |
+| Haryana Women CommissioN ( Bays No: 39-40, CADA Bhawan, Sec-4, Panchkula ) | 0172 - 2584039, 0172-2583639 | 
+| Helpline for women in Distress | 9911599100 |
+
+ ## HIMANCHAL PRADESH
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Himachal Pradesh Women Commision http://hp.gov.in/hpwomencommission/Home.aspx | 9816077100, 0177-2622929, 0177-2783607, 01892-228072 |
+
 ## KARNATAKA
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -120,6 +134,13 @@ https://shaktishalini.org/ |
 | Tamil Nadu Women Helpline | 044-285927505 |
 | State Commission for Women | 044-28551155 |
 
+## TRIPURA 
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Tripura Commmission for Women H.G. Basak Road, Melarmath Agartala, West Tripura ( http://tcw.nic.in/ )| 0381-2323355, 2322912 |
+
+
 ## UTTAR PRADESH
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -127,17 +148,9 @@ https://shaktishalini.org/ |
 | Uttar Pradesh Women commission | 0522-2306403 , 18001805220,whatsapp : 6306511708 |
 | Uttar Pradesh Women Helpline  | 1090 / 112  |
 
+## WEST BENGAL 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| West Bengal women commission ( Salt Lake City, Kolkata )| 033-2359560, 033-23210154 |
+| Swayam - Westbengal NGO https://www.swayam.info/ | 033-24863367/3368/3357  |
