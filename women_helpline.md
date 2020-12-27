@@ -1,8 +1,8 @@
 # WOMEN HELPLINE NUMBERS
-
+<p>
 <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWoRYkOevrNlo1F7PHbbx9iOA9xnHBSJTKxA&usqp=CAU" align = "right">
 <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyqOWuQYDvdehO5dfe1Qa-BPpkttnCf8WVg&usqp=CAU" align = "right">
-
+</p>
 
 |  WOMEN HELPLINE | NUMBERS  | 
 |----------|-------------|
