@@ -93,4 +93,8 @@ https://shaktishalini.org/ |
 | WOMEN HELPLINE |  NUMBERS   | 
 |----------|-------------|
 |Kerala Women Police Helpline (Trivandrum) | 9995399953|
-| Kerala Women’s Commission | 0832-2421080 |
+| Kerala Women’s Commission | 0471-2322590, 2320509, 2337589, 2339878, 2339882 |
+|State Vanitha Cell | 0471-2338100|
+|Kerala Women Police Helpline (Trivandrum) | 9995399953|
+|Kerala Women Police Helpline (Trivandrum) | 9995399953|
+|Kerala Women Police Helpline (Trivandrum) | 9995399953|
