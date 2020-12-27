@@ -7,3 +7,10 @@
 - Gender equality means a society in wherein both women and men enjoy the same opportunities, rights and obligations in different spheres of life. Equality in decision making, economic and social freedom, equal access to education and right to practice an occupation of one’s choice.In order to promote gender equality , we need to the empowerment of women,and concentrate on areas which are most crucial to her well being. Women’s empowerment, economic, social, political, is vital to growth of any nation and to protect and nurture human rights.
 
 ## 1. CONSTITUTIONAL PROVISIONS
+The Constitution of India not only grants equality to women but also empowers the State to adopt measures
+of positive discrimination in favour of women for neutralizing the cumulative socio economic, education and
+political disadvantages faced by them. Fundamental Rights, among others, ensure equality before the law
+and equal protection of law; prohibits discrimination against any citizen on grounds of religion, race, caste,
+sex or place of birth, and guarantee equality of opportunity to all citizens in matters relating to employment.
+Articles 14, 15, 15(3), 16, 39(a), 39(b), 39(c) and 42 of the Constitution are of specific importance in this
+regard.
