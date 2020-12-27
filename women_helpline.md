@@ -16,18 +16,9 @@
 | National Human Right Commision| 		011-23385368/9810298900 |  
 |National Commission for Women|  011-23237166, 23234918 | 
 
-
-
-
 --- 
 
-
-
-
-
-
 # STATE WISE WOMEN HELPLINE   NUMBERS  
-
 
 ## ANDHRA PRADESH
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -43,16 +34,12 @@
 |----------|-------------|
 | Arunachal Pradesh Women Commission 'C' Sector, Ita Nagar | 0360-2214567,0360-2290544|
 
-
-
-
  ## GOA
 
 | WOMEN HELPLINE |  NUMBERS   | 
 |----------|-------------|
 | GOA Women Helpline | 1091 , 0832-2421208|
 | GOA Women Commission  | 0832-2421080 |
-
 
  ## GUJRAT
 
@@ -61,7 +48,6 @@
 | STATE WOMEN COMMMISION GUJRAT ( http://www.scwgujarat.org/ ) | 18002331111 / 079-23251604 , 079-23251613|
 | GUJRAT - Ahemdabad Women Group https://www.awagindia.org/ | 7926441214 | 
 | GUJRAT - Self Employed Women’s Association http://www.sewa.org/ | 079-25506477/ 25506444 |
-
 
 ## KARNATAKA
 
@@ -72,11 +58,6 @@
 |Karnataka Women Commision( 1st Floor, Karnatka Housing Board Building, Cauvery Bhawan, K.G. Marg, Bangalore-560 009 )| 080-22100435/ 22862368, 080-2216485|
 | Mysore Women Police | 0821-2418110/2418410 |
 
-
-
-
-
-
  ## KERALA
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -86,8 +67,6 @@
 |State Vanitha Cell | 0471-2338100|
 |Women Cell , Kollam | 0474-2742376|
 |Women Cell , Kochi | 0484-2396730|
-
-
 
  ## MAHARASHTRA 
 
@@ -101,7 +80,12 @@
 |MAJLIS - MAHARASHTRA | 022-26661252 / 26662394|
 |Navi Mumbai Police Station | 022-27580255 |
 
+## MADHYA PRADESH
 
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+|Madhya Pradesh Women Commission | 0755-2661813, 2661802, 2661806, 2661808 ,1800-233-6112|
+|Madhya Pradesh Mahila thana| 0731-2434999|
 
 ##  NEW DELHI 
 |  WOMEN HELPLINE |   NUMBERS   |
@@ -110,10 +94,6 @@
 |Delhi Women Protection Cell | 011-24673366/4156/ 7699 | 
 |Shakti Shalini ( N.G.O ) Women Shelter , Support Survivors , Councelling |  011-24373737011-24373736 10920 |
 https://shaktishalini.org/ |
-
-
-
-
 
 ## PUNJAB
 
@@ -124,9 +104,6 @@ https://shaktishalini.org/ |
 |Punjab Women Commission SCO No:-57,58,59 Sector-17-C, Chandigarh | 0172-2712607 0172-2783607|
 | Punjab Samvad ( NGO ) | 0172- 2546389, 2700109, 276000114 |
 
-
-
-
  ## RAJASTHAN 
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -136,20 +113,19 @@ https://shaktishalini.org/ |
 | Rajasthan Women Helpline | 0141-2744000 |
 |Jodhpur Women Helpline|0291-2012112 |
 
-
-
-
-
-
-
- 
-
 ## TAMIL NADU 
 
 | WOMEN HELPLINE |  NUMBERS   | 
 |----------|-------------|
 | Tamil Nadu Women Helpline | 044-285927505 |
 | State Commission for Women | 044-28551155 |
+
+## UTTAR PRADESH
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Uttar Pradesh Women commission | 0522-2306403 , 18001805220,whatsapp : 6306511708 |
+| Uttar Pradesh Women Helpline  | 1090 / 112  |
 
 
 
