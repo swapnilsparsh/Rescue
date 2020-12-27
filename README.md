@@ -39,10 +39,13 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-## License
-[MIT](https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE)
+## License:bookmark_tabs:
+<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
+<img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
+</a>
 
-## Connect with me
+
+## Connect with me📱
 <div align="center">
 <a href="https://github.com/swapnilsparsh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
