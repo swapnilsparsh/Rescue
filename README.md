@@ -36,7 +36,12 @@ Our project i.e a responsive website to help women in panic and unsafe situation
 pip install -r requirements.txt
 ```
 
-3. Run the website by following command in the terminal
+3. Fill the detailes in  
+```
+main_app/mail.py
+```
+
+4. Run the website by following command in the terminal
 ```sh
 python manage.py runserver
 ```
