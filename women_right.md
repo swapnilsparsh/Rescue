@@ -17,8 +17,8 @@ regard.
 
 - Constitutional Privileges
    - Equality before law for women (Article 14)
-   -  The State not to discriminate against any citizen on grounds only of religion,race, caste, sex, place of birth or any of them (Article 15(i))
-   -  The State to make any special provision in favour of women and children (Article 15 (3))
+   -  The State not to discriminate against any citizen on grounds only of religion,race, caste, sex, place of birth or any of them `(Article 15(i))`
+   -  The State to make any special provision in favour of women and children `(Article 15 (3))`
    -  Equality of opportunity for all citizens in matters relating to employment or appointment to any office
 under the State (Article 16)
    -  The State to direct its policy towards securing for men and women equally the right to an adequate
