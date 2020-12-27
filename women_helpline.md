@@ -92,5 +92,5 @@ https://shaktishalini.org/ |
 
 | WOMEN HELPLINE |  NUMBERS   | 
 |----------|-------------|
-|Kerala Women Police Helpline (Trivandrum) | 1091 , 0832-2421208|
-| GOA Women Commission  | 0832-2421080 |
+|Kerala Women Police Helpline (Trivandrum) | 9995399953|
+| Kerala Women’s Commission | 0832-2421080 |
