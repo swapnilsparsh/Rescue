@@ -139,4 +139,4 @@ https://shaktishalini.org/ |
 
 
 
-<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyqOWuQYDvdehO5dfe1Qa-BPpkttnCf8WVg&usqp=CAU" align = "right">
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyqOWuQYDvdehO5dfe1Qa-BPpkttnCf8WVg&usqp=CAU" >
