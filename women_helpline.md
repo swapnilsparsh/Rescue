@@ -34,6 +34,32 @@
 |----------|-------------|
 | Arunachal Pradesh Women Commission 'C' Sector, Ita Nagar | 0360-2214567,0360-2290544|
 
+## ASSAM
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| ASSAM WOMEN HELPLINE | 181 , 9345215029, 0361-2521242 |
+| ASSAM Women Commission | 0361-2227888,2220150 ,0361-2220013 | 
+
+## BIHAR
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Bihar Women Helpline | 18003456247 / 0612-2320047 / 2214318 |
+| Bihar Women Commission ( 1 South, Beily Road, Patna, Bihar ) | 0612- 2507800 | 
+
+## CHANDIGARH
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Chandigarh Women Police | 0172-2741900 |
+
+## CHATTISHGARH
+
+| WOMEN HELPLINE |  NUMBERS   | 
+|----------|-------------|
+| Chattishgarh Women Commission ( Gaytri Bhawan,  Raipur ) http://cgmahilaayog.com/ | 0771-2429977 / 4013189, 18002334299, 0771-4241400 |
+
  ## GOA
 
 | WOMEN HELPLINE |  NUMBERS   | 
@@ -154,3 +180,6 @@ https://shaktishalini.org/ |
 |----------|-------------|
 | West Bengal women commission ( Salt Lake City, Kolkata )| 033-2359560, 033-23210154 |
 | Swayam - Westbengal NGO https://www.swayam.info/ | 033-24863367/3368/3357  |
+
+
+> For more details you can visit [Here](https://indianhelpline.com/WOMEN-HELPLINE/)
