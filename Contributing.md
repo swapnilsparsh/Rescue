@@ -64,8 +64,20 @@ git clone "url you just copied"
 ```
 git clone https://github.com/sanscript-tech/orphan_support-php.git
 ```
+### 3. Install django and requests:comet:
+```sh
+pip install -r requirements.txt
+```
+### 4. Fill the detailes in:bookmark_tabs:  
+```
+main_app/mail.py
+```
 
-### 3. Create a branch ⚓
+### 5. Run the website by following command in the terminal:arrow_forward:
+```sh
+python manage.py runserver
+```
+### 6. Create a branch ⚓
 
 * Change to the repository directory on your computer (if you are not already there):
 
@@ -85,7 +97,7 @@ git checkout -b your-new-branch-name
 git checkout -b dev_username
 ```
 
-### 4. Make necessary changes and commit those changes 🚏
+### 7. Make necessary changes and commit those changes 🚏
 
 * Do the necessary changes.
 
@@ -113,7 +125,7 @@ git commit -m "(Add your message here)"
 
    replacing `<Add your message here>` with your message.
 
-### 5. Push changes to GitHub 🪂
+### 8. Push changes to GitHub 🪂
 
 * Push your changes using the command `git push`:
 
@@ -127,7 +139,7 @@ git push origin <branch-name>
 
    replacing `<branch-name>` with the name of the branch you created earlier.
 
-### 6. Submit your changes for review 🚩
+### 9. Submit your changes for review 🚩
 
 * If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
 
