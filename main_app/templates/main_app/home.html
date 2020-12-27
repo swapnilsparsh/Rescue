@@ -1,193 +1,229 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 
 <html lang="en">
-    <head>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        .mySlides {
+            display: none;
+        }
         
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        .parallax-container {
+            height: 650px;
+        }
+    </style>
+</head>
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body style="padding:0px; margin:0px;">
+    <nav class="navbar navbar-expand-lg " style="background-color:rgb(21,48,78); height:100px; padding:None; position:absolute;">
+        <a href="/home"><i class="material-icons medium white-text" style="margin: 25px;">home</i></a>
 
-        <style>
-            .mySlides {display:none;}
-            .parallax-container {
-                height: 650px;
-            }
-        </style>
-    </head>
-    <body style="padding:0px; margin:0px;">
-        <nav class="navbar navbar-expand-lg " style="background-color:rgb(21,48,78); height:100px; padding:None; position:absolute;" >
-            <a href="/home"><i class="material-icons medium white-text" style="margin: 25px;">home</i></a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
 
-               <!-- Dropdown Trigger -->
+                <!-- Dropdown Trigger -->
 
-               <li class="nav-item">
-                <a class="nav-link " data-position="right"  href="/emergency_contact" style="color:rgb(217,48,37);"><h3><strong> Emergency Contacts </strong></h3></a>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-position="right" href="/emergency_contact" style="color:rgb(217,48,37);">
+                        <h3><strong> Emergency Contacts </strong></h3>
+                    </a>
+                </li>
 
-              <li class="nav-item" style="padding-left:10px">
-                  <a class="dropdown-trigger nav-link " data-position="right"  href='#' data-target='dropdown2' style="color: white;"><h3> More </h3></a>
-              </li>
-              <!-- Dropdown Structure -->
-              <ul id='dropdown2' class='dropdown-content' style="background-color: white; ">
-                <li><a style="color: black;" href="/women_rights"  data-position="right" >Women's Rights</a></li>
-                <li class="divider" tabindex="-1"></li>
-                <li><a style="color: black;" href="/women_laws"  data-position="right" >Women's Safety Laws </a></li>
-                <li class="divider" tabindex="-1"></li>
-                <li><a style="color: black;" href="/helpline_numbers"  data-position="right" >Women Helpline Numbers</a></li>
-                <li class="divider" tabindex="-1"></li>
-              </ul>
-              <script>
-                  $('.dropdown-trigger').dropdown({
-                      coverTrigger:false
-                  });
-              </script>
+                <li class="nav-item" style="padding-left:10px">
+                    <a class="dropdown-trigger nav-link " data-position="right" href='#' data-target='dropdown2' style="color: white;">
+                        <h3> More </h3>
+                    </a>
+                </li>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown2' class='dropdown-content' style="background-color: white; ">
+                    <li><a style="color: black;" href="/women_rights" data-position="right">Women's Rights</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a style="color: black;" href="/women_laws" data-position="right">Women's Safety Laws </a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a style="color: black;" href="/helpline_numbers" data-position="right">Women Helpline Numbers</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                </ul>
+                <script>
+                    $('.dropdown-trigger').dropdown({
+                        coverTrigger: false
+                    });
+                </script>
 
             </ul>
 
             <ul>
-              {% if user.is_authenticated %}
-                  <li>
-                      <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" style="color:white;" href="#" data-target="dropdown3" data-position="left" ><h3>{{user.username}}</h3></a>
-                  </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" style="color:white;" href="#" data-target="dropdown3" data-position="left">
+                        <h3>{{user.username}}</h3>
+                    </a>
+                </li>
                 <ul id='dropdown3' class='dropdown-content' style="background-color: white;">
-                    <li><a style="color: #000000;" href="/logout"  data-position="left" >Logout</a></li>
+                    <li><a style="color: #000000;" href="/logout" data-position="left">Logout</a></li>
                 </ul>
-              <script>
-                  $('.dropdown-trigger').dropdown({
-                      coverTrigger:false
-                  });
-              </script>
-              {% else %}
-                  <li>
-                      <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" data-position="left" style="color:white;" href="#" data-target="dropdown4" data-position="left"><h3> User</h3></a>
-                  </li>
+                <script>
+                    $('.dropdown-trigger').dropdown({
+                        coverTrigger: false
+                    });
+                </script>
+                {% else %}
+                <li>
+                    <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" data-position="left" style="color:white;" href="#" data-target="dropdown4" data-position="left">
+                        <h3> User</h3>
+                    </a>
+                </li>
                 <ul id='dropdown4' class='dropdown-content' style="background-color: white;">
-                  <li class="nav-item">
-                    <a style="color: black;" href="/register" data-position="left">Register</a>
-                  </li>
-                  <li class="divider" tabindex="-1"></li>
-                  <li class="nav-item">
-                    <a style="color: black;"  href="/login" data-position="left">Login</a>
-                  </li>
+                    <li class="nav-item">
+                        <a style="color: black;" href="/register" data-position="left">Register</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li class="nav-item">
+                        <a style="color: black;" href="/login" data-position="left">Login</a>
+                    </li>
                 </ul>
-              <script>
-                  $('.dropdown-trigger').dropdown({
-                      coverTrigger:false
-                  });
-              </script>
-              {% endif %}
-              <li><a class="nav-link nav-item" data-position="left" href="/emergency" style="color: rgb(217,48,37);"><h3><b>EMERGENCY !</b></h3></a></li>
+                <script>
+                    $('.dropdown-trigger').dropdown({
+                        coverTrigger: false
+                    });
+                </script>
+                {% endif %}
+                <li>
+                    <a class="nav-link nav-item" data-position="left" href="/emergency" style="color: rgb(217,48,37);">
+                        <h3><b>EMERGENCY !</b></h3>
+                    </a>
+                </li>
 
             </ul>
-             <script>
-                $(document).ready(function(){
+            <script>
+                $(document).ready(function() {
                     $('.tooltipped').tooltip();
-                  });
+                });
             </script>
-          </div>
-        </nav>
+        </div>
+    </nav>
 
-        {% if messages %}
-            {% for message in messages %}
-                <script>M.toast({html: "{{message}}", classes: 'blue rounded',
-                displayLength:4000});</script>
-            {% endfor %}
-        {% endif %}
+    {% if messages %} {% for message in messages %}
+    <script>
+        M.toast({
+            html: "{{message}}",
+            classes: 'blue rounded',
+            displayLength: 4000
+        });
+    </script>
+    {% endfor %} {% endif %}
     <div>
         <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
     </div>
 
-      <div class="jumbotron" style="background-color: white;">
+    <div class="jumbotron" style="background-color: white;">
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
         <h3 class="display-4" style="color: black; font-family: 'Bangers', cursive; text-align: center;"><u>Wonder Women of India</u></h3>
-      </div>
+    </div>
 
     <div class="w3-content w3-section w3-center" style="max-width:90%" style="margin-left: auto;
   margin-right: auto; display:bloack;">
-          <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss1.png' %}"></div>
-          <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss2.png' %}"></div>
-          <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss3.png' %}"></div>
-          <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss4.png' %}"></div>
-          <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss5.png' %}"></div>
-          
-          <button class="w3-button w3-black" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="w3-button w3-black" onclick="plusDivs(1)"> &#10095;</button>
+        <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss1.png' %}"></div>
+        <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss2.png' %}"></div>
+        <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss3.png' %}"></div>
+        <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss4.png' %}"></div>
+        <div><img height="650" width="100%" class="mySlides" src="{% static 'Images/slideshow/ss5.png' %}"></div>
+
+        <button class="w3-button w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black" onclick="plusDivs(1)"> &#10095;</button>
     </div>
-    
+
 
     <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      x[slideIndex-1].style.display = "block";  
-      setTimeout(showDivs, 3000);
-    }
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(showDivs, 5000);
+        }
     </script>
 
     <script>
-    var myIndex = 0;
-    carousel();
+        var myIndex = 0;
+        carousel();
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 3000); // Change image every 5 seconds
-    }
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
     </script>
 
-        <footer class="page-footer" style="background-color:rgb(21,48,78);">
-          <div class="container">
+    <footer class="page-footer" style="background-color:rgb(21,48,78);">
+        <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h2 class="white-text"><b>Our Motto</b></h2>
-                <p class="white-text text-lighten-4"><h3>"FIGHT BACK! BE ALERT!"</h3></p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <ul>
-                  <li><a class="white-text " data-position="right"  href="/home"><h3>Back to Top</h3></a></li>
+                <div class="col l6 s12">
+                    <h2 class="white-text"><b>Our Motto</b></h2>
+                    <p class="white-text text-lighten-4">
+                        <h3>"FIGHT BACK! BE ALERT!"</h3>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li>
+                            <a class="white-text " data-position="right" href="/home">
+                                <h3>Back to Top</h3>
+                            </a>
+                        </li>
 
-                  <li><a class="white-text " data-position="right"  href="/developers"><h3>Developers</h3></a></li>
-                </ul>
-              </div>
+                        <li>
+                            <a class="white-text " data-position="right" href="/developers">
+                                <h3>Developers</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright">
-          </div>
-        </footer>
-    </body>
+        </div>
+        <div class="footer-copyright">
+        </div>
+    </footer>
+</body>
+
 </html>
