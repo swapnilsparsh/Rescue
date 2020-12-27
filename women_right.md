@@ -51,5 +51,7 @@ to ensure equal rights, to counter social discrimination and various forms of vi
 provide support services especially to working women. Although women may be victims of any of the crimes
 such as 'Murder', 'Robbery', 'Cheating' etc, the crimes, which are directed specifically against women, are
 characterized as 'Crime against Women'. These are broadly classified under two categories.
-       - The Crimes Identified Under the Indian Penal Code (IPC)
-              - Rape (Sec. 376 IPC)
+      
+   - The Crimes Identified Under the Indian Penal Code (IPC)
+             
+        - Rape (Sec. 376 IPC)
