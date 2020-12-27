@@ -21,7 +21,7 @@
 
 
 # STATE WISE WOMEN HELPLINE   NUMBERS  
-## DELHI 
+##  NEW DELHI 
 |  WOMEN HELPLINE |   NUMBERS   |
 |----------|-------------|
 |Delhi Commison for women|  011-23379181, 23370597 | 
