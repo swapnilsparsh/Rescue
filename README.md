@@ -16,16 +16,13 @@
 Our project i.e a responsive website to help women in panic and unsafe situations. The website has an **Emergency** button. If the person feels unsafe in any situtation, then they can click on that emergency button and within no time an **alert message** will be sent to her **Trusted contacts** with her **Location credentials** that she is in need of help. Our main aim is to help women with the support of new technologies.
 
 ## 💻Technology Stack
-1. Frontend
+Frontend
 
-    - <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
-    - <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
-    - <img src="https://img.shields.io/badge/bootstrap%20-%234f0599.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>   <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>    <img src="https://img.shields.io/badge/bootstrap%20-%234f0599.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/>
 
-2. Backend
+Backend
 
-    - <img src="https://img.shields.io/badge/django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/>
-    - <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/>   <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
 
 ## ⚙Installation
 
@@ -36,7 +33,7 @@ Our project i.e a responsive website to help women in panic and unsafe situation
 pip install -r requirements.txt
 ```
 
-3. Fill the detailes in  
+3. Fill the details in  
 ```
 main_app/mail.py
 ```
