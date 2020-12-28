@@ -132,7 +132,7 @@ def emergency(request):
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
         send_email(name, c.email, link)
-    return render(request,'main_app/emergency.html')
+    return render(request,'main_app/emergency_contact.html')
 
 
 def helpline_numbers(request):
