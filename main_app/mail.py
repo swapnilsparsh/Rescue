@@ -7,15 +7,23 @@ import base64
 
 
 # Before using your email,  please ensure that you have set you gmail account to enable "less secure apps"
+# Recheck this step that you have enabled the less secure app
+
 def send_email(name, dest, link):
     server = smtplib.SMTP('smtp.gmail.com', 587)   #Gmail SMTP port (TLS)
     server.starttls()
-    server.login("rescuemail2020@gmail.com", "SIH@2020")
+
+    # Enter your Email and Password
+    server.login("Email ID", "Password")
     email_html = open('main_app/templates/main_app/email.html')
     email_body = email_html.read().format(name=name, link=link)
     msg = MIMEMultipart()
     msg['Subject'] = 'EMERGENCY'
     msg.attach(MIMEText(email_body, 'html'))
-    msg['From'] = formataddr(("TEAM RESCUE", "rescuemail2020@gmail.com"))
-    server.sendmail("rescuemail2020@gmail.com", dest, msg.as_string())
+    
+    # Again enter your Email ID
+    msg['From'] = formataddr(("TEAM RESCUE", "Email ID"))
+
+    # One last time add your email
+    server.sendmail("Email ID", dest, msg.as_string())
     server.quit()
