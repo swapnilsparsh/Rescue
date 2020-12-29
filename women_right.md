@@ -2,7 +2,7 @@
 <img src = "https://static1.squarespace.com/static/5cf69f015171fc0001b39d4b/t/5d17a1b4e5cab800012e7966/1606157140192/?format=1000w">
 
 # WOMEN'S RIGHTS 
-- The United Nations adopted the Universal Declaration of Human rights on 10 December 1948 which proclaims that all human beings are born free and have equal right to dignity .Similarly Indian Constitution guarantees several rights such as the right to equality in Article 14, right to life and personal liberty under Article 21 of Constitution to all its citizens irrespective of gender .
+- The United Nations adopted the Universal Declaration of Human rights on 10 December 1948 which proclaims that all human beings are born free and have equal right to dignity .Similarly Indian Constitution guarantees several rights such as the right to equality in `Article 14`, right to life and personal liberty under `Article 21` of Constitution to all its citizens irrespective of gender .
 
 - Gender equality means a society in wherein both women and men enjoy the same opportunities, rights and obligations in different spheres of life. Equality in decision making, economic and social freedom, equal access to education and right to practice an occupation of one’s choice.In order to promote gender equality , we need to the empowerment of women,and concentrate on areas which are most crucial to her well being. Women’s empowerment, economic, social, political, is vital to growth of any nation and to protect and nurture human rights.
 
@@ -12,17 +12,17 @@ of positive discrimination in favour of women for neutralizing the cumulative so
 political disadvantages faced by them. Fundamental Rights, among others, ensure equality before the law
 and equal protection of law; prohibits discrimination against any citizen on grounds of religion, race, caste,
 sex or place of birth, and guarantee equality of opportunity to all citizens in matters relating to employment.
-Articles 14, 15, 15(3), 16, 39(a), 39(b), 39(c) and 42 of the Constitution are of specific importance in this
+`Articles 14, 15, 15(3), 16, 39(a), 39(b), 39(c) and 42` of the Constitution are of specific importance in this
 regard.
 
 - Constitutional Privileges
-   - Equality before law for women (Article 14)
+   - Equality before law for women `(Article 14)`
    -  The State not to  discriminate  against any citizen  on grounds only  of religion, race, caste , sex , place of birth or  any  of them   `(Article 15(i))`
    -  The State to make any special provision in favour of women and children `(Article 15 (3))`
    -  Equality of opportunity for all citizens in matters relating to employment or appointment to any office
 under the State `(Article 16)`.
    -  The State to direct its policy towards securing for men and women equally the right to an adequate
-means of livelihood (Article 39(a)); and equal pay for equal work for both men and women `(Article 39(d))`.
+means of livelihood `(Article 39(a))`; and equal pay for equal work for both men and women `(Article 39(d))`.
    -  To promote justice, on a basis of equal opportunity and to provide free legal aid by suitable legislation
 or scheme or in any other way to ensure that opportunities for securing justice are not denied to any
 citizen by reason of economic or other disabilities `(Article 39 A)`.
@@ -92,7 +92,7 @@ Some acts have special provisions to safeguard women and their interests like
   </p> 
   
  
-## 3 SPECIAL INITIATIVES FOR WOMEN 
+## 3. SPECIAL INITIATIVES FOR WOMEN 
  - `National Commission for Women` : In January 1992, the Government set-up this statutory body with a
 specific mandate to study and monitor all matters relating to the constitutional and legal safeguards
 provided for women, review the existing legislation to suggest amendments wherever necessary, etc.
