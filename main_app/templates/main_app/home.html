@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <style>
         .mySlides {
@@ -195,35 +196,42 @@
         }
     </script>
 
-    <footer class="page-footer" style="background-color:rgb(21,48,78);">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h2 class="white-text"><b>Our Motto</b></h2>
-                    <p class="white-text text-lighten-4">
-                        <h3>"FIGHT BACK! BE ALERT!"</h3>
-                    </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <ul>
-                        <li>
-                            <a class="white-text " data-position="right" href="/home">
-                                <h3>Back to Top</h3>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="white-text " data-position="right" href="/developers">
-                                <h3>Developers</h3>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<footer>
+    <div class="footer-content">
+        <div class="info">
+            <h2>Rescue.</h2>
+            <p>Prevents the crime before happening to the women by notifying through alert messages to respective contacts.</p>
         </div>
-        <div class="footer-copyright">
+        <div class="newsletter">
+            <h4>Get the latest News from Rescue</h4>
+            <form action="">
+                <input type="email" placeholder="Your Email">
+                <input type="submit" value="Subscribe">
+            </form>
         </div>
-    </footer>
+        <div class="pages">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="helpline_numbers.html">Helpline No.</a></li>
+                <li><a href="womwn_laws.html">Women Laws</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social">
+        <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="https://github.com/swapnilsparsh/Rescue">Github</a></li>
+        </ul>
+    </div>
+    <hr>
+        <div class="copy-info">
+            &copy;2020 Rescue. , All Rights Reserved.
+        </div>
+        
+    
+  </footer>
 </body>
 
 </html>
