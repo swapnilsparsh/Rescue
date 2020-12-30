@@ -47,6 +47,11 @@ python manage.py runserver
 Read [how to contribute.](https://github.com/smriti1313/Rescue/blob/master/Contributing.md)
 
 
+## Code Of Conduct
+
+You can find our Code of Conduct [here](/Code_of_Conduct.md).
+
+
 ## 📄License
 
 <a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
