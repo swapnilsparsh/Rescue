@@ -1,0 +1,18 @@
+
+.carousel-container{
+    padding: 3% 0;
+}
+.carousel-item{
+    
+    height: initial !important;
+    width: inherit !important;
+    visibility: visible !important;
+    position: relative !important;
+    top: 0;
+    left: 0;
+
+}
+
+.carousel{
+    height: initial !important;
+}
