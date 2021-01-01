@@ -92,7 +92,7 @@ def create_contact(request):
 def update_contact(request, pk):
     curr_contact = contact.objects.get(id=pk)
     name = curr_contact.name
-    form = ContactForm
+    form = ContactForm(initial={'name':name,'email':curr_contact.email,'relation':curr_contact.relation})
     if request.method == 'POST':
         form = ContactForm(request.POST, instance=curr_contact)
         if form.is_valid():
