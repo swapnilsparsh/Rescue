@@ -2,20 +2,20 @@
 {% load static %}
 <html lang="en">
     <head>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
     </head>
@@ -113,24 +113,41 @@
 
             {% endblock %}
 
-        <footer class="page-footer" style="background-color:rgb(21,48,78);">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h4 class="white-text"><b>OUR MOTTO</b></h4>
-                <p class="grey-text text-lighten-4"><h4>"FIGHT BACK! BE ALERT!"</h4></p>
+            <footer>
+              <div class="footer-content">
+                  <div class="info">
+                      <h2>Rescue.</h2>
+                      <p>Prevents the crime before happening to the women by notifying through alert messages to respective contacts.</p>
+                  </div>
+                  <div class="newsletter">
+                      <h4>Get the latest News from Rescue</h4>
+                      <form action="">
+                          <input type="email" placeholder="Your Email">
+                          <input type="submit" value="Subscribe">
+                      </form>
+                  </div>
+                  <div class="pages">
+                      <ul>
+                          <li><a href="">About</a></li>
+                          <li><a href="">Contact Us</a></li>
+                          <li><a href="helpline_numbers.html">Helpline No.</a></li>
+                          <li><a href="womwn_laws.html">Women Laws</a></li>
+                      </ul>
+                  </div>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <ul>
-                  <li><a class="white-text"  data-position="right"  href="/home"><h4>Return To Home</h4></a></li>
-
-                  <li><a class="white-text" data-position="right"  href="/developers"><h4>Developers</h4></a></li>
-                </ul>
+              <div class="social">
+                  <ul>
+                      <li><a href="">Facebook</a></li>
+                      <li><a href="">Twitter</a></li>
+                      <li><a href="https://github.com/swapnilsparsh/Rescue">Github</a></li>
+                  </ul>
               </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-          </div>
-        </footer>
+              <hr>
+                  <div class="copy-info">
+                      &copy;2020 Rescue. , All Rights Reserved.
+                  </div>
+                  
+              
+            </footer>
     </body>
 </html>
