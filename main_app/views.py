@@ -125,6 +125,8 @@ def emergency(request):
     if curr == 0:
         return redirect("main_app:login")
     contacts = contact.objects.filter(user=request.user)
+    total_contacts = contacts.count()
+    context = {'contacts': contacts, 'total_contacts': total_contacts, 'user':request.user}
     emails = []
     for j in contacts:
         emails.append(j._meta.get_field("email"))
@@ -132,7 +134,7 @@ def emergency(request):
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
         send_email(name, c.email, link)
-    return render(request,'main_app/emergency_contact.html')
+    return render(request,'main_app/emergency_contact.html',context)
 
 
 def helpline_numbers(request):
