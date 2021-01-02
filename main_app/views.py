@@ -92,7 +92,7 @@ def create_contact(request):
 def update_contact(request, pk):
     curr_contact = contact.objects.get(id=pk)
     name = curr_contact.name
-    form = ContactForm
+    form = ContactForm(initial={'name':name,'email':curr_contact.email,'relation':curr_contact.relation})
     if request.method == 'POST':
         form = ContactForm(request.POST, instance=curr_contact)
         if form.is_valid():
@@ -125,6 +125,8 @@ def emergency(request):
     if curr == 0:
         return redirect("main_app:login")
     contacts = contact.objects.filter(user=request.user)
+    total_contacts = contacts.count()
+    context = {'contacts': contacts, 'total_contacts': total_contacts, 'user':request.user}
     emails = []
     for j in contacts:
         emails.append(j._meta.get_field("email"))
@@ -132,7 +134,7 @@ def emergency(request):
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
         send_email(name, c.email, link)
-    return render(request,'main_app/emergency_contact.html')
+    return render(request,'main_app/emergency_contact.html',context)
 
 
 def helpline_numbers(request):
