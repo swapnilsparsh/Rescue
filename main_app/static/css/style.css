@@ -4,7 +4,7 @@
 
 footer {
     padding: 0.2em 1em;
-    background: #045762;
+    background: rgb(21,48,78) !important; 
     color: #f3f2da;
 
 }
@@ -23,37 +23,13 @@ a {
     align-items: center;
 }
 .info {
-    flex-basis: 20%;
+    flex-basis: 45%;
     margin: 0 auto;
     flex-grow: 1;
 }
-footer h4 {
-    font-size: 2em;
-    margin: 0.6em;
-}
-.newsletter {
-    max-width: 100%;
-    text-align: center;
-    flex-grow: 1;
-}
-input {
-    font-size: 1.4em;
-    padding: 0.5rem;
-    text-align: center;
-    max-width: 60%;
-    background: #ffffff !important;
-}
-input[type=submit] {
-    width: fit-content;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-    background: #e05297 !important;
-    color: #ffffff;
-    border: none;
-}
 .pages {
     text-align: center;
-    flex-basis: 20%;
+    flex-basis: 45%;
     flex-grow: 1;
     margin: 0 auto;
 }
@@ -65,14 +41,6 @@ input[type=submit] {
 
 footer a:hover{
     text-decoration: underline;
-}
-.social {
-    text-align: center;
-    margin: 0 auto;
-}
-.social li {
-    display: inline-block;
-    padding: 0.5em;
 }
 .copy-info {
     text-align: center;
