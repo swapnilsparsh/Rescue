@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 
 <html lang="en">
 
 <head>
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -132,7 +132,21 @@
         $(document).ready(function () {
           $('.tooltipped').tooltip();
         });
-      </script>
+      </script>          
+     </div>
+    </nav>
+
+    {% if messages %} {% for message in messages %}
+    <script>
+        M.toast({
+            html: "{{message}}",
+            classes: 'blue rounded',
+            displayLength: 4000
+        });
+    </script>
+    {% endfor %} {% endif %}
+    <div>
+        <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
     </div>
   </nav>
 
@@ -180,7 +194,6 @@
         <div class="carousel-item">
           <img class="w-100" src="{% static 'Images/slideshow/ss5.png' %}" alt="Third slide">
         </div>
-
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
