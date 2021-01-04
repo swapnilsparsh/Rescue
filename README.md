@@ -46,6 +46,10 @@ python manage.py runserver
 
 Read [how to contribute.](https://github.com/smriti1313/Rescue/blob/master/Contributing.md)
 
+## Our Contributors
+
+[CONTRIBUTORS.md](/CONTRIBUTORS.md)
+
 
 ## Code Of Conduct
 
