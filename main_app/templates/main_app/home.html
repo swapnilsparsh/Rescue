@@ -36,6 +36,10 @@
     .parallax-container {
       height: 650px;
     }
+
+    .dropdown-item:hover{
+        background-color: #0f3057;
+    }     
   </style>
 
   <link rel="stylesheet" href="../../static/css/styles.css">
@@ -43,98 +47,62 @@
 </head>
 
 <body style="padding:0px; margin:0px;">
-  <nav class="navbar navbar-expand-lg "
-    style="background-color:rgb(21,48,78); height:100px; padding:None; position:absolute;">
-    <a href="/home"><i class="material-icons medium white-text" style="margin: 25px;">home</i></a>
+    <header>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg py-3 px-4"  style="background-color:rgb(21,48,78); height:100px; padding:None; ">
+        <a class="navbar-brand" href="/home"><i class="material-icons large text-white">home</i></a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:rgb(21,48,78); color: white;">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
+                  &nbsp;&nbsp; Emergency Contacts
+                </a>
+              </li>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+                &nbsp;&nbsp; More
+              </a>
+              <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1" style="background-color: #00587a;">
+                <a class="dropdown-item" style="color: white;" href="/women_rights" >Women's Rights</a>
+                <a class="dropdown-item" style="color: white;" href="/women_laws" >Women's Safety Laws </a>
+                <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
+              </div>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
+                   <h4> &nbsp;&nbsp;  {{user.username}} </h4>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: #00587a;">
+                  <a class="dropdown-item" style="color: white;" href="/logout" >Logout</a>
+                </div>
+              </li>
+              {% else %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+                    &nbsp;&nbsp;  User 
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: #00587a;">
+                  <a class="dropdown-item" style="color: white;" href="/register">Register</a>
+                  <a class="dropdown-item" style="color: white;" href="/login" >Login</a>
+                </div>
+              </li>
+              {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="/emergency" style="color: white; font-size: 18px;">
+                    &nbsp;&nbsp;  EMERGENCY !
+                </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
 
-        <!-- Dropdown Trigger -->
-
-        <li class="nav-item">
-          <a class="nav-link " data-position="right" href="/emergency_contact" style="color:rgb(217,48,37);">
-            <h3><strong> Emergency Contacts </strong></h3>
-          </a>
-        </li>
-
-        <li class="nav-item" style="padding-left:10px">
-          <a class="dropdown-trigger nav-link " data-position="right" href='#' data-target='dropdown2'
-            style="color: white;">
-            <h3> More </h3>
-          </a>
-        </li>
-        <!-- Dropdown Structure -->
-        <ul id='dropdown2' class='dropdown-content' style="background-color: white; ">
-          <li><a style="color: black;" href="/women_rights" data-position="right">Women's Rights</a></li>
-          <li class="divider" tabindex="-1"></li>
-          <li><a style="color: black;" href="/women_laws" data-position="right">Women's Safety Laws </a></li>
-          <li class="divider" tabindex="-1"></li>
-          <li><a style="color: black;" href="/helpline_numbers" data-position="right">Women Helpline Numbers</a></li>
-          <li class="divider" tabindex="-1"></li>
-        </ul>
-        <script>
-          $('.dropdown-trigger').dropdown({
-            coverTrigger: false
-          });
-        </script>
-
-      </ul>
-
-      <ul>
-        {% if user.is_authenticated %}
-        <li>
-          <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" style="color:white;" href="#"
-            data-target="dropdown3" data-position="left">
-            <h3>{{user.username}}</h3>
-          </a>
-        </li>
-        <ul id='dropdown3' class='dropdown-content' style="background-color: white;">
-          <li><a style="color: #000000;" href="/logout" data-position="left">Logout</a></li>
-        </ul>
-        <script>
-          $('.dropdown-trigger').dropdown({
-            coverTrigger: false
-          });
-        </script>
-        {% else %}
-        <li>
-          <a class="nav-link nav-item dropdown-trigger navbar-nav mr-auto" data-position="left" style="color:white;"
-            href="#" data-target="dropdown4" data-position="left">
-            <h3> User</h3>
-          </a>
-        </li>
-        <ul id='dropdown4' class='dropdown-content' style="background-color: white;">
-          <li class="nav-item">
-            <a style="color: black;" href="/register" data-position="left">Register</a>
-          </li>
-          <li class="divider" tabindex="-1"></li>
-          <li class="nav-item">
-            <a style="color: black;" href="/login" data-position="left">Login</a>
-          </li>
-        </ul>
-        <script>
-          $('.dropdown-trigger').dropdown({
-            coverTrigger: false
-          });
-        </script>
-        {% endif %}
-        <li><a class="nav-link nav-item" data-position="left" href="/emergency" style="color: rgb(217,48,37);">
-            <h3><b>EMERGENCY !</b></h3>
-          </a></li>
-
-      </ul>
-      <script>
-        $(document).ready(function () {
-          $('.tooltipped').tooltip();
-        });
-      </script>          
-     </div>
-    </nav>
+      </header>
 
     {% if messages %} {% for message in messages %}
     <script>
@@ -148,8 +116,6 @@
     <div>
         <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
     </div>
-  </nav>
-
 
 
   <div class="jumbotron" style="background-color: white;">
