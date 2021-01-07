@@ -47,28 +47,6 @@ python manage.py runserver
 
 Read [how to contribute.](https://github.com/smriti1313/Rescue/blob/master/Contributing.md)
 
-## Code Of Conduct
-
-You can find our Code of Conduct [here](/Code_of_Conduct.md).
-
-
-## 📄License
-
-<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
-<img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
-</a>
-
-## 📱Connect with me
-
-
-<div align="left">
-<a href="https://github.com/swapnilsparsh" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>
-</div>
 
 ## ✨Our Contributors
 
@@ -80,7 +58,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
       <td align="center"><a href="https://github.com/swapnilsparsh"><img src="https://avatars0.githubusercontent.com/u/69387608?s=400&u=6fe789d1b208bcbd21f6b95f641338fea7e999b9&v=4" width="100px;" alt=""/><br /><sub><b>Swapnil Srivastava
-</b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=swapnilsparsh" title="Code">💻</a><a href="https://github.com/swapnilsparsh/Rescue" title="Mentoring">🧑‍🏫</a>📆</td>
+</b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=swapnilsparsh" title="Code">💻</a>📆</td>
       <td align="center"><a href="https://github.com/Assertor1"><img src="https://avatars1.githubusercontent.com/u/69422566?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Utkarsh Mall
 </b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=Assertor1" title="Code">💻</a>📆</td>
       <td align="center"><a href="https://github.com/U-c0de"><img src="https://avatars3.githubusercontent.com/u/72260739?s=400&u=d3a3c8b828e87940d5a41723d19e074eac232bff&v=4" width="100px;" alt=""/><br /><sub><b>Utkarsh Sharma
@@ -105,4 +83,28 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=sourav-coder" title="Code">💻</a></td> 
      <td align="center"><a href="https://github.com/sakshikhachane"><img src="https://avatars1.githubusercontent.com/u/53635792?s=460&u=d33610db9174c55ca00f0817249d019004b9ae80&v=4" width="100px;" alt=""/><br /><sub><b>Sakshi Khachane
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=sakshikhachane" title="Code">💻</a></td> 
+<table>
+  
 
+## Code Of Conduct
+
+You can find our Code of Conduct [here](/Code_of_Conduct.md).
+
+
+## 📄License
+
+<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
+<img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
+</a>
+
+## 📱Connect with me
+
+
+<div align="left">
+<a href="https://github.com/swapnilsparsh" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+</div>
