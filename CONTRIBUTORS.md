@@ -8,7 +8,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
       <td align="center"><a href="https://github.com/swapnilsparsh"><img src="https://avatars0.githubusercontent.com/u/69387608?s=400&u=6fe789d1b208bcbd21f6b95f641338fea7e999b9&v=4" width="100px;" alt=""/><br /><sub><b>Swapnil Srivastava
-</b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=swapnilsparsh" title="Code">💻</a><a href="https://github.com/swapnilsparsh/Rescue" title="Mentoring">🧑‍🏫</a>📆</td>
+</b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=swapnilsparsh" title="Code">💻</a>📆</td>
       <td align="center"><a href="https://github.com/Assertor1"><img src="https://avatars1.githubusercontent.com/u/69422566?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Utkarsh Mall
 </b></sub></a><br />Project Admin<br><a href="https://github.com/swapnilsparsh/Rescue/commits?author=Assertor1" title="Code">💻</a>📆</td>
       <td align="center"><a href="https://github.com/U-c0de"><img src="https://avatars3.githubusercontent.com/u/72260739?s=400&u=d3a3c8b828e87940d5a41723d19e074eac232bff&v=4" width="100px;" alt=""/><br /><sub><b>Utkarsh Sharma
