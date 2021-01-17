@@ -14,7 +14,8 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,9 +24,12 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+    integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+    integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
 
 
 
@@ -38,9 +42,21 @@
       height: 650px;
     }
 
-    .dropdown-item:hover{
-        background-color: #0f3057;
-    }     
+    .dropdown-item:hover {
+      background-color: #0f3057;
+    }
+
+    #navbarSupportedContent {
+      display: flex !important;
+      align-items: center !important;
+      height: 100%;
+    }
+
+    #navbarDropdown2 {
+      padding-top: 5%;
+    }
+
+    .User {}
   </style>
 
   <link rel="stylesheet" href="../../static/css/styles.css">
@@ -48,75 +64,82 @@
 </head>
 
 <body style="padding:0px; margin:0px;">
-    <header>
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg py-3 px-4"  style="background-color:rgb(21,48,78); height:100px; padding:None; ">
-        <a class="navbar-brand" href="/home"><i class="material-icons large text-white">home</i></a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:rgb(21,48,78); color: white;">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
-                  &nbsp;&nbsp; Emergency Contacts
-                </a>
-              </li>
+  <header>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg py-3 px-4"
+      style="background-color:rgb(21,48,78); height:100px; padding:None; ">
+      <a class="navbar-brand" href="/home"><i class="material-icons large text-white">home</i></a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
-                &nbsp;&nbsp; More
-              </a>
-              <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1" style="background-color: #00587a;">
-                <a class="dropdown-item" style="color: white;" href="/women_rights" >Women's Rights</a>
-                <a class="dropdown-item" style="color: white;" href="/women_laws" >Women's Safety Laws </a>
-                <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
-              </div>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
-                   <h4> &nbsp;&nbsp;  {{user.username}} </h4>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: #00587a;">
-                  <a class="dropdown-item" style="color: white;" href="/logout" >Logout</a>
-                </div>
-              </li>
-              {% else %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
-                    &nbsp;&nbsp;  User 
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: #00587a;">
-                  <a class="dropdown-item" style="color: white;" href="/register">Register</a>
-                  <a class="dropdown-item" style="color: white;" href="/login" >Login</a>
-                </div>
-              </li>
-              {% endif %}
-            <li class="nav-item">
-                <a class="nav-link" href="/emergency" style="color: white; font-size: 18px;">
-                    &nbsp;&nbsp;  EMERGENCY !
-                </a>
-            </li>
-          </ul>
-          
-        </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="background-color:rgb(21,48,78); color: white;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; Emergency Contacts
+            </a>
+          </li>
 
-      </header>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; More
+            </a>
+            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
+              style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/women_rights">Women's Rights</a>
+              <a class="dropdown-item" style="color: white;" href="/women_laws">Women's Safety Laws </a>
+              <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
+            </div>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown User">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
+              <h4 id="name"> &nbsp;&nbsp; {{user.username}} </h4>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/logout">Logout</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; User
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/register">Register</a>
+              <a class="dropdown-item" style="color: white;" href="/login">Login</a>
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="/emergency" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; EMERGENCY !
+            </a>
+          </li>
+        </ul>
 
-    {% if messages %} {% for message in messages %}
-    <script>
-        M.toast({
-            html: "{{message}}",
-            classes: 'blue rounded',
-            displayLength: 4000
-        });
-    </script>
-    {% endfor %} {% endif %}
-    <div>
-        <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
-    </div>
+      </div>
+    </nav>
+
+  </header>
+
+  {% if messages %} {% for message in messages %}
+  <script>
+    M.toast({
+      html: "{{message}}",
+      classes: 'blue rounded',
+      displayLength: 4000
+    });
+  </script>
+  {% endfor %} {% endif %}
+  <div>
+    <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
+  </div>
 
 
   <div class="jumbotron" style="background-color: white;">
@@ -164,29 +187,29 @@
   </div>
 
 
-
- <footer class="page-footer" style="background-color:rgb(21,48,78); padding-top:3%; padding-bottom:1%">
-      <div class="row" style="margin:0px">
-        <div class="col l6 s12" style="margin-left:15%;">
-          <h2 class="white-text"><b>Rescue</b></h2>
-          <p class="white-text text-lighten-4">
-          <h3>We are here to help women against crimes . and to aware about laws for women</h3>
+  <footer class="page-footer" style="background-color:rgb(21,48,78);">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h4 class="white-text"><b>OUR MOTTO</b></h4>
+          <p class="grey-text text-lighten-4">
+          <h4>"FIGHT BACK! BE ALERT!"</h4>
           </p>
         </div>
-        <div class="row" style="margin-right:10%">
-          <ul class="col" style="margin-top:5px;">
-            <li style="margin:10px;"><a class="white-text " href="/developers">
-                <h3>Developers</h3>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="white-text" data-position="right" href="/home">
+                <h4>Return To Home</h4>
               </a></li>
-               <li style="margin:10px;"><a class="white-text" href="/developers">
-                <h3>Helpline No.</h3>
+
+            <li><a class="white-text" data-position="right" href="/developers">
+                <h4>Developers</h4>
               </a></li>
           </ul>
         </div>
       </div>
 
   </footer>
-
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
