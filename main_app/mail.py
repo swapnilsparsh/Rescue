@@ -14,7 +14,7 @@ def send_email(name, dest, link):
     server.starttls()
 
     # Enter your Email and Password
-    server.login("Email ID", "Password")
+    server.login("achyut662cs@gmail.com", "662cs@12345")
     email_html = open('main_app/templates/main_app/email.html')
     email_body = email_html.read().format(name=name, link=link)
     msg = MIMEMultipart()
@@ -22,8 +22,8 @@ def send_email(name, dest, link):
     msg.attach(MIMEText(email_body, 'html'))
     
     # Again enter your Email ID
-    msg['From'] = formataddr(("TEAM RESCUE", "Email ID"))
+    msg['From'] = formataddr(("TEAM RESCUE", "achyut662cs@gmail.com"))
 
     # One last time add your email
-    server.sendmail("Email ID", dest, msg.as_string())
+    server.sendmail("achyut662cs@gmail.com", dest, msg.as_string())
     server.quit()
