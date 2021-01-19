@@ -48,7 +48,7 @@
 
     .User {
       font-size: 1.25rem;
-
+      margin-top: 2%;
 
     }
 
@@ -89,6 +89,33 @@
     .dropdown-toggle::after {
       display: none;
     }
+
+    .navbar-brand{
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+
+    .navbar-toggler-icon{
+      margin-top: -95px;
+      margin-right: 30px;
+    }
+    
+    .show{
+      margin-top: -19px;
+    }
+
+    .dropdown-menu{
+      margin-top: 10px;
+    }
+
+    .show .dropdown {
+      margin-top: 5px;
+    }
+
+    .dropdown-more{
+      margin-top: 4%;
+    }
+    
   </style>
 
   <link rel="stylesheet" href="../../static/css/styles.css">
@@ -97,16 +124,16 @@
 
 <body style="padding:0px; margin:0px;">
   <header>
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg py-3 px-4"
+    <nav class="navbar-nav fixed-top navbar-light navbar-expand-lg"
       style="background-color:rgb(21,48,78); height:100px; padding:None; ">
       <a class="navbar-brand" href="/home"><i class="material-icons large text-white">home</i></a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <div class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
-        style="display: flex; height: 100%; align-items: center; padding-top: 0%; background-color:rgb(21,48,78); color: white;">
+        style="background-color:rgb(21,48,78); color: white;">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
@@ -114,7 +141,7 @@
             </a>
           </li>
 
-          <li class="nav-item dropdown" style="margin-top: 4.0%;">
+          <li class="nav-item dropdown dropdown-more">
             <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
               <h4 class="new">&nbsp;&nbsp; More</h4>
@@ -127,7 +154,7 @@
             </div>
           </li>
           {% if user.is_authenticated %}
-          <li class="nav-item dropdown" style="margin-top: 3.8%;">
+          <li class="nav-item dropdown" style="margin-top: 3%;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
               <h4 class="User"> &nbsp;&nbsp; {{user.username}} </h4>
@@ -137,7 +164,7 @@
             </div>
           </li>
           {% else %}
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" style="margin-top: 0%;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
               &nbsp;&nbsp; User
