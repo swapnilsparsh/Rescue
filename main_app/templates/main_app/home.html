@@ -72,7 +72,11 @@
       border-left: .3em solid transparent;
     }
 
-
+@media only screen and( max-width: 600px){
+.new{
+  margin-top:0px;
+}
+}
     .User::after {
       display: inline-block;
       width: 0;
@@ -102,35 +106,34 @@
 
 <body style="padding:0px; margin:0px;">
   <header>
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg py-3 px-4"
-      style="background-color:rgb(21,48,78); height:100px; padding:None; ">
-      <a class="navbar-brand" href="/home"><i class="material-icons large text-white">home</i></a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color:rgb(21,48,78); height:100px; padding:None; ">
+  <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent"
-        style="display: flex; height: 100%; align-items: center; padding-top: 0%; background-color:rgb(21,48,78); color: white;">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color:rgb(21,48,78);padding:None;">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
               &nbsp;&nbsp; Emergency Contacts
             </a>
           </li>
-
           <li class="nav-item dropdown" style="margin-top: 4.0%;">
-            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
               <h4 class="new">&nbsp;&nbsp; More</h4>
             </a>
-            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
-              style="background-color: #00587a;">
+            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1" style="background-color: #00587a;">
               <a class="dropdown-item" style="color: white;" href="/women_rights">Women's Rights</a>
               <a class="dropdown-item" style="color: white;" href="/women_laws">Women's Safety Laws </a>
               <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
             </div>
           </li>
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li> -->
           {% if user.is_authenticated %}
           <li class="nav-item dropdown" style="margin-top: 3.8%;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
@@ -159,10 +162,8 @@
             </a>
           </li>
         </ul>
-
       </div>
     </nav>
-
   </header>
 
   {% if messages %} {% for message in messages %}
@@ -242,7 +243,7 @@
               <h3>Helpline No.</h3>
             </a></li>
         </ul>
-      </div>
+      </div> -->
     </div>
 
   </footer>
@@ -259,8 +260,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-  <script>
+<script>
     var slideIndex = 1;
     showDivs(slideIndex);
 
