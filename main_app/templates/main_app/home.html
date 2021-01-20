@@ -89,6 +89,11 @@
     .dropdown-toggle::after {
       display: none;
     }
+
+    .responsive {
+      width: 100%;
+      height: auto;
+    }
   </style>
 
   <link rel="stylesheet" href="../../static/css/styles.css">
@@ -170,7 +175,7 @@
   </script>
   {% endfor %} {% endif %}
   <div>
-    <div><img height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
+    <div><img class="responsive" height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
   </div>
 
 
