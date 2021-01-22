@@ -14,6 +14,7 @@ def send_email(name, dest, link):
     server.starttls()
 
     # Enter your Email and Password
+
     server.login("Email ID", "Password")
     email_html = open('main_app/templates/main_app/email.html')
     email_body = email_html.read().format(name=name, link=link)
