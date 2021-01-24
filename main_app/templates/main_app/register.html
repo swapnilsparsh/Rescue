@@ -2,10 +2,9 @@
 {% extends "main_app/common.html" %}
 {% load static %}
 
-<html lang="en">
-
+<body lang="en">
 {% block content %}
-<body style="background-color:white;margin-top: 55px;">
+<body style="background-color:white;margin-top: 55px;flex-grow: 1;">
     <div class="container">
             <br>
             <div class="jumbotron" style="background-color: white; text-align: center;" >
@@ -25,10 +24,8 @@
             <br>
             <strong>Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62);" ><strong><b><u>Sign In</u></b></strong></a>
             <br>
+            <br />
+            <br />
     </div>
-</body>
-<br>
-<br>
 {% endblock %}
-
 </html>
