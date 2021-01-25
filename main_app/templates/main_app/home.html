@@ -1,45 +1,46 @@
-<!DOCTYPE html> {% load static %}
+<!DOCTYPE html> 
+{% load static %}
 
 <html lang="en">
 
 <head>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
     integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
     integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
-<link rel="stylesheet" href="../../static/css/styles.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../static/css/styles.css">
   <style>
-    html,body{
-      margin: 0;
-      padding: 0;
-      height: 100%;
+        body{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .mySlides {
-      display: none;
-    }
-
-    .parallax-container {
-      height: 650px;
-    }
+     .my-bottom{
+       position:absolute;
+       bottom:0
+     }
 
     .dropdown-item:hover {
       background-color: #0f3057;
@@ -48,12 +49,10 @@
     .User {
       font-size: 1.25rem;
 
-
     }
 
     .new {
       font-size: 1.2rem;
-      margin-top: 2%;
     }
 
     .new::after {
@@ -70,7 +69,9 @@
       border-bottom: 0;
       border-left: .3em solid transparent;
     }
-        .User::after {
+
+
+    .User::after {
       display: inline-block;
       width: 0;
       height: 0;
@@ -83,7 +84,6 @@
       border-left: .3em solid transparent;
     }
 
-
 @media only screen and( max-width: 600px){
 .new{
   margin-top:0px;
@@ -91,11 +91,6 @@
 }
     .dropdown-toggle::after {
       display: none;
-    }
-
-    .responsive {
-      width: 100%;
-      height: auto;
     }
   </style>
 </head>
@@ -127,9 +122,7 @@ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navig
               <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
             </div>
           </li>
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li> -->
+    
           {% if user.is_authenticated %}
           <li class="nav-item dropdown" style="margin-top: 3.8%;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
@@ -220,29 +213,27 @@ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navig
     </div>
   </div>
 
-
-    <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto;display: flex;flex-wrap: nowrap;">
-    <div class="row" style="margin:0px;">
-      <div class="col l6 s12" style="margin-left:15%;">
-        <h2 class="white-text"><b>Rescue</b></h2>
-        <p class="white-text text-lighten-4" style="color: white;">
-        <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
-        </p>
-      </div>
-      <div class="row" style="margin-right:10%">
-        <ul class="col" style="margin-top:5px;">
-          <li style="margin:10px;"><a class="white-text " href="/developers">
-              <h3>Developers</h3>
-            </a></li>
-          <li style="margin:10px;"><a class="white-text" href="/developers">
-              <h3>Helpline No.</h3>
-            </a></li>
-        </ul>
-      </div>
+<footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
+  <div class="row" style="margin:0px;">
+    <div class="col l6 s12" style="margin-left:15%;">
+      <h2 class="white-text"><b>Rescue</b></h2>
+      <p class="white-text text-lighten-4" style="color: white;">
+      <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
+      </p>
     </div>
+    <div class="row" style="margin-right:10%">
+      <ul class="col" style="margin-top:5px;">
+        <li style="margin:10px;"><a class="white-text " href="/developers">
+            <h3>Developers</h3>
+          </a></li>
+        <li style="margin:10px;"><a class="white-text" href="/developers">
+            <h3>Helpline No.</h3>
+          </a></li>
+      </ul>
+    </div>
+  </div>
 
-  </footer>
-
+</footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
