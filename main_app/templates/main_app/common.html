@@ -31,6 +31,27 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="../../static/css/styles.css">
   <style>
+   
+    body{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* footer { */
+      /* position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#ccc; */
+    /* position: absolute; */
+/* bottom: 0; */
+    /* } */
+     
+     .my-bottom{
+       position:absolute;
+       bottom:0
+     }
+
     .dropdown-item:hover {
       background-color: #0f3057;
     }
@@ -164,12 +185,12 @@
 
   {% endblock %}
 
-  <footer class="page-footer" style="background-color:rgb(21,48,78); padding-bottom:3%; padding-top:3%; margin-top:15%">
+  <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
     <div class="row" style="margin:0px;">
       <div class="col l6 s12" style="margin-left:15%;">
         <h2 class="white-text"><b>Rescue</b></h2>
-        <p class="white-text text-lighten-4">
-        <h3>We are here to help women against crimes . and to aware about laws for women</h3>
+        <p class="white-text text-lighten-4" style="color: white;">
+        <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
         </p>
       </div>
       <div class="row" style="margin-right:10%">
@@ -185,7 +206,6 @@
     </div>
 
   </footer>
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -196,8 +216,5 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
 </body>
-
 </html>

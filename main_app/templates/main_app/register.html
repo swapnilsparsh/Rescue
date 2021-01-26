@@ -2,10 +2,9 @@
 {% extends "main_app/common.html" %}
 {% load static %}
 
-<html lang="en">
-
+<body lang="en">
 {% block content %}
-<body style="background-color:white; margin-top: 55px;">
+<body style="background-color:white;margin-top: 55px;flex-grow: 1;">
 
     <div class="container">
             <br>
@@ -27,11 +26,10 @@
                 <br>
                 <strong style="margin-left: 25%; font-size: 1vw;" >Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62); font-size: 1vw;" ><b><u>Sign In</u></b></a>
             </form>
-            </div>
+            <br>
+            <strong>Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62);" ><strong><b><u>Sign In</u></b></strong></a>
     </div>
-</body>
-<br>
-<br>
+    <br>
+    <br>
 {% endblock %}
-
 </html>
