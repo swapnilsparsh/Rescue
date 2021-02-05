@@ -6,25 +6,94 @@
 {% block content %}
 <br>
 
-<body style="background-color:white;margin-top: 20px;">
-    <div class="container">
-        <div class="jumbotron" style="background-color:white;">
-            <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-            <h1 class="display-4" style="color: black; font-family: 'Bangers', cursive; margin-top: 6%;">Women's Safety
-                Laws</h1>
+<head>
+    <style>
+        .btn {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -60%;
+            margin-left: 31%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+
+        .collapsible-header:hover {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible-header {
+            background-color: white;
+            font-family: 'Alegreya', serif;
+            font-size: 20px;
+        }
+
+        .collapsible-header.active {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible {
+            margin-top: -15%;
+        }
+
+        .collapsible-body {
+            text-align: justify;
+            font-family: 'Arvo', serif;
+        }
+
+        .wb-stl-heading1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
+    <div class="row justify-content-center"
+        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <div class="column">
+            <img src="{% static 'Images/law.jpg' %}" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
+        </div>
+
+        <div class="column">
+            <h1 class="wb-stl-heading1">
+                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                    <font color="black">Women's Safety Laws</font>
+                </strong>
+                <img src="{% static 'Images/law_pic.jpg' %}" alt="24 * 7" height="50vw">
+            </h1>
             <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
             <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Always REMEMBER Awareness without Action is
                     Worthless"</b></p>
             <hr class="my-10">
-            <a style="color:white; background-color:black;" class="btn btn-primary btn-lg"
-                href="https://en.wikipedia.org/wiki/Women_in_India#Women's_safety_laws" role="button"
-                target="_blank">For More Details</a>
+            <a class="btn" href="https://en.wikipedia.org/wiki/Women_in_India#Women's_safety_laws"
+                target="_blank"><b>MORE DETAILS</b></a>
         </div>
+    </div>
 
+    <div class="container">
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>The Commission of Sati (prevention) Act(1987)</h5>
                 </div>
                 <div class="collapsible-body">
@@ -50,8 +119,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Protection of Women Against Domestic Violence Act(2005) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -81,8 +150,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>The Prohibition of Child Marriage Act(2006) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -101,8 +170,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>The Immoral Traffic (Prevention) Act(1956) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -143,8 +212,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Special Marriage Act(1954) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -161,8 +230,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Dowry Prohibition Act(1961) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -184,8 +253,8 @@
             <br>
 
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Indian Divorce Act(1969) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -198,8 +267,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Medical Termination of Pregnancy Act(1971) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -213,8 +282,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Maternity Benefit Act(1861) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -229,8 +298,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>The Criminal Law (Amendment) Act(2013) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -259,8 +328,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Sexual Harassment of Women at Workplace</h5>
                 </div>
                 <div class="collapsible-body">
@@ -277,8 +346,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Indecent Representation of Women(Prevention) Act(1986) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -289,8 +358,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>National Commission for Women Act(1990) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -305,8 +374,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Equal Remuneration Act(1976) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -321,8 +390,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Family Courts Act(1984) </h5>
                 </div>
                 <div class="collapsible-body">
@@ -339,6 +408,9 @@
             </li>
         </ul>
         <br>
+    </div>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" class="img-responsive" alt="">
     </div>
 </body>
 
