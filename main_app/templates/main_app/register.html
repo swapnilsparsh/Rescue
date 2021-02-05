@@ -3,34 +3,88 @@
 {% load static %}
 
 <body lang="en">
-{% block content %}
-<body style="background-color:white;margin-top: 55px;flex-grow: 1;">
+    {% block content %}
 
-    <div class="container">
-            <br>
-            <div class="jumbotron" style="background-color: white; " >
-                <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-                <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive;">Register</h1>
-                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-                <p class="lead" style="font-family: 'Overpass', sans-serif; text-align: center;"><b>Create Your Account</b></p>
-              
-             <!-- <img src="{% static 'Images/signup-image.jpg' %}" alt="" srcset="" style=""> -->
-            <form method="POST" class="form-style"
-            style="background-color: white;  padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 60px; margin-left: 20%; margin-right: 20%; margin-top: 5%;   ">
-            <img src="{% static 'Images/signup-image.jpg' %}" alt="Sign Up" style="margin-left: 30%; height: 35%; width: 35%;">
-                {% csrf_token %}
-                {{form.as_p}}
+    <body style="background-color:white; margin-top: 60px; ">
+
+        <div class="register-page">
+
+            <div class=" container">
                 <br>
-                <button class="btn btn-success" style="border-radius: 25px; margin-left: 35%; " type="submit"><b>Register</b></button>
+                <div class="jumbotron" style="background-color: white;">
+                    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+                    <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive; ">
+                        Register</h1>
+                    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap"
+                        rel="stylesheet">
+                    <p class="lead" style="font-family: 'Overpass', sans-serif; text-align: center;"><b>Create Your
+                            Account</b></p>
+
+                    <!-- <img src="{% static 'Images/signup-image.jpg' %}" alt="" srcset="" style=""> -->
+                    <form method="POST" class="form-style" style="background-color: white; margin-top: 5%;   ">
+                        <img src="{% static 'Images/signup-image.jpg' %}" alt="Sign Up"
+                            style="margin-left: 32%; height: 35%; width: 35%;"><br><br>
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <br>
+                        <div style=" margin-top: 3rem; display: flex; align-items: center;
+                    justify-content: center;">
+                            <button class="btn btn-success" style=" border-radius: 25px;"
+                                type="submit"><b>Register</b></button>
+                        </div>
+                        <br>
+                        <br>
+                        <div style="display: flex; align-items: center;
+                    justify-content: center;">
+                            <strong>Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62);"><b
+                                    class="sign-in"><u>Sign
+                                        In</u></b></a>
+                        </div>
+                    </form>
+
+                </div>
                 <br>
                 <br>
-                <strong style="margin-left: 25%; font-size: 1vw;" >Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62); font-size: 1vw;" ><b><u>Sign In</u></b></a>
-            </form>
-            
-    </div>
-    <br>
-    <br>
-    </div>
+            </div>
+        </div>
+
+        <style>
+            @media screen and (max-device-width: 768px) {
+
+                label {
+                    font-size: 1.5rem;
+                }
+
+                body {
+                    font-size: 2rem;
+                }
+
+                .register-page {
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    transform: translate(-50%, 5%)
+                }
+            }
+
+            @media screen and (min-device-width: 425px) and (max-device-width: 768px) {
+                body {
+                    font-size: 1.5rem;
+                }
+
+                label {
+                    font-size: 1.5rem;
+                }
+            }
+
+            @media only screen and (min-width:768px) {
+                .register-page {
+                    position: relative;
+                }
+            }
+        </style>
+
     </body>
-{% endblock %}
-</html>
+    {% endblock %}
+
+    </html>
