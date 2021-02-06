@@ -84,7 +84,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <td align="center"><a href="https://github.com/akrish4"><img src="https://avatars1.githubusercontent.com/u/61831021?s=400&u=31f7ece09fb07c20b3b97673f448e762dc0946b0&v=4" width="100px;" alt=""/><br /><sub><b>Ananthakrishnan Nair RS
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=akrish4" title="Code">💻</a></td>   
       <td align="center"><a href="https://github.com/smriti1313"><img src="https://avatars3.githubusercontent.com/u/52624997?s=400&u=fe00d69251e7ed30455c55ca0698bc88dc149cce&v=4" width="100px;" alt=""/><br /><sub><b>Smriti
-</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=smriti1313" title="Doc">📖</a></td> 
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=smriti1313" title="Doc">📖</a></td>
+  <td align="center"><a href="https://github.com/m-code12"><img src="https://avatars.githubusercontent.com/u/53649201?s=400&u=de5cda61d311b064c772eb73414bb3c43a62310c&v=4" width="100px;" alt=""/><br /><sub><b>Monika Jha
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=m-code12" title="Doc">📖</a></td> 
+  <td align="center"><a href="https://github.com/jatiinyadav"><img src="https://avatars.githubusercontent.com/u/73248007?s=400&u=689c6131cdead6c052bfd6f8d083e62fbfd67d22&v=4" width="100px;" alt=""/><br /><sub><b>Jatin Yadav
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=jatiinyadav" title="Code">💻</a></td> 
  
 <table>
   
