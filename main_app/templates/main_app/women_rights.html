@@ -5,25 +5,90 @@
 {% block content %}
 <br>
 
-<body style="background-color:white;margin-top: 20px;">
+<head>
+    <style>
+        .collapsible-header:hover {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible-header {
+            background-color: white;
+            font-family: 'Alegreya', serif;
+        }
+
+        .collapsible-header.active {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible {
+            margin-top: -15%;
+        }
+
+        .collapsible-body {
+            font-family: 'Arvo', serif;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -50%;
+            margin-left: 40%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
     <div class="container">
-        <div class="jumbotron" style="background-color:white;">
-            <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-            <h1 class="display-4" style="color: black; font-family: 'Bangers', cursive; margin-top: 6%;">Women's Rights
-            </h1>
-            <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-            <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Awareness about Your Rights gives You the
-                    Might to Treated Right"</b></p>
-            <hr class="my-10">
-            <a style="color:white; background-color:black;" class="btn btn-primary btn-lg"
-                href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
-                role="button" target="_blank"><b>DETAILS</b></a>
+
+        <div class="row justify-content-center"
+            style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+            <div class="column">
+                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="Rights"
+                    style="margin-top: -200px;">
+            </div>
+
+            <div class="column">
+                <h1 class="wb-stl-heading1"
+                    style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
+                    <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                        <font color="black">Women's Rights</font>
+                    </strong>
+                    <img src="{% static 'Images/rights.jpg' %}" alt="24 * 7" height="50vw">
+                </h1>
+                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+                <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Awareness about Your Rights gives You
+                        the
+                        Might to Treated Right"</b></p>
+                <hr class="my-10">
+                <a class="btn"
+                    href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
+                    target="_blank"><b>MORE DETAILS</b></a>
+            </div>
         </div>
 
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Legal Services Authorities</h5>
                 </div>
                 <div class="collapsible-body">
@@ -32,8 +97,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right against workplace harassment</h5>
                 </div>
                 <div class="collapsible-body">
@@ -45,8 +110,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have a right to Zero FIR</h5>
                 </div>
                 <div class="collapsible-body">
@@ -58,8 +123,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have a right against domestic violence</h5>
                 </div>
                 <div class="collapsible-body">
@@ -71,8 +136,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection)</h5>
                 </div>
                 <div class="collapsible-body">
@@ -84,8 +149,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right to get free legal aid</h5>
                 </div>
                 <div class="collapsible-body">
@@ -95,8 +160,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right to equal pay</h5>
                 </div>
                 <div class="collapsible-body">
@@ -107,8 +172,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Female sexual assault victims have the right to keep their identity anonymous</h5>
                 </div>
                 <div class="collapsible-body">
@@ -119,8 +184,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have right not to be arrested at night</h5>
                 </div>
                 <div class="collapsible-body">
@@ -132,8 +197,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right to register virtual complaints</h5>
                 </div>
                 <div class="collapsible-body">
@@ -145,8 +210,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Hindu Succession Act</h5>
                 </div>
                 <div class="collapsible-body">
@@ -155,8 +220,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right against indecent representation</h5>
                 </div>
                 <div class="collapsible-body">
@@ -167,8 +232,8 @@
             </li>
             <br>
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right against being stalked</h5>
                 </div>
                 <div class="collapsible-body">
@@ -181,8 +246,8 @@
             <br>
 
             <li>
-                <div class="collapsible-header" style="background-color:white ;">
-                    <i class="material-icons" style="margin-top:18px;">arrow_drop_down</i>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
                     <h5>Women have the right to dignity and decency</h5>
                 </div>
                 <div class="collapsible-body">
@@ -192,6 +257,9 @@
             </li>
         </ul>
         <br>
+    </div>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" alt="" class="img-responsive">
     </div>
 </body>
 {% endblock %}
