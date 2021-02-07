@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 {% load static %}
 
 <html lang="en">
@@ -32,15 +32,16 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="../../static/css/styles.css">
   <style>
-        body{
+    body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
-     .my-bottom{
-       position:absolute;
-       bottom:0
-     }
+
+    .my-bottom {
+      position: absolute;
+      bottom: 0
+    }
 
     .dropdown-item:hover {
       background-color: #0f3057;
@@ -84,11 +85,12 @@
       border-left: .3em solid transparent;
     }
 
-@media only screen and( max-width: 600px){
-.new{
-  margin-top:0px;
-}
-}
+    @media only screen and(max-width: 600px) {
+      .new {
+        margin-top: 0px;
+      }
+    }
+
     .dropdown-toggle::after {
       display: none;
     }
@@ -97,12 +99,14 @@
 
 <body style="padding:0px; margin:0px;">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color:rgb(21,48,78); height:100px; padding:None; ">
-  <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
-  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+      style="background-color:rgb(21,48,78); height:100px; padding:None; ">
+      <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color:white">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color:rgb(21,48,78);padding:None;">
         <ul class="navbar-nav ml-auto">
@@ -112,17 +116,18 @@ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navig
             </a>
           </li>
           <li class="nav-item dropdown" style="margin-top: 4.0%;">
-            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
               <h4 class="new">&nbsp;&nbsp; More</h4>
             </a>
-            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1" style="background-color: #00587a;">
+            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
+              style="background-color: #00587a;">
               <a class="dropdown-item" style="color: white;" href="/women_rights">Women's Rights</a>
               <a class="dropdown-item" style="color: white;" href="/women_laws">Women's Safety Laws </a>
               <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
             </div>
           </li>
-    
+
           {% if user.is_authenticated %}
           <li class="nav-item dropdown" style="margin-top: 3.8%;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
@@ -213,27 +218,27 @@ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navig
     </div>
   </div>
 
-<footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
-  <div class="row" style="margin:0px;">
-    <div class="col l6 s12" style="margin-left:15%;">
-      <h2 class="white-text"><b>Rescue</b></h2>
-      <p class="white-text text-lighten-4" style="color: white;">
-      <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
-      </p>
+  <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
+    <div class="row" style="margin:0px;">
+      <div class="col l6 s12" style="margin-left:15%;">
+        <h2 class="white-text"><b>Rescue</b></h2>
+        <p class="white-text text-lighten-4" style="color: white;">
+        <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
+        </p>
+      </div>
+      <div class="row" style="margin-right:10%">
+        <ul class="col" style="margin-top:5px;">
+          <li style="margin:10px;"><a class="white-text " href="/developers">
+              <h3>Developers</h3>
+            </a></li>
+          <li style="margin:10px;"><a class="white-text" href="/helpline_numbers">
+              <h3>Helpline No.</h3>
+            </a></li>
+        </ul>
+      </div>
     </div>
-    <div class="row" style="margin-right:10%">
-      <ul class="col" style="margin-top:5px;">
-        <li style="margin:10px;"><a class="white-text " href="/developers">
-            <h3>Developers</h3>
-          </a></li>
-        <li style="margin:10px;"><a class="white-text" href="/developers">
-            <h3>Helpline No.</h3>
-          </a></li>
-      </ul>
-    </div>
-  </div>
 
-</footer>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -246,7 +251,7 @@ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navig
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script>
+  <script>
     var slideIndex = 1;
     showDivs(slideIndex);
 
