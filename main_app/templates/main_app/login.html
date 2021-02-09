@@ -2,32 +2,46 @@
 {% extends "main_app/common.html" %}
 {% load static %}
 <html lang="en">
-    {% block content %}
-    <body style="background-color:white;margin-top: 55px;">
+{% block content %}
+
+<body style="background-color:white;margin-top: 60px;">
+
+    <div class="login-page">
 
         <div class="container">
             <br>
             <div class="jumbotron" style="background-color:white; ">
                 <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-                <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive;">WELCOME</h1>
+                <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive;">WELCOME
+                </h1>
                 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-                <p class="lead" style="text-align: center; font-family: 'Overpass', sans-serif;"><b>Login through Registered Account</b></p>
-                         
-            <form method="POST"  style="background-color: white;  padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 60px; margin-left: 20%; margin-right: 20%; margin-top: 5%;   ">
-                <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in" style="margin-left: 30%; height: 35%; width: 35%;">
-                {% csrf_token %}
-                {{form.as_p}}
-            <br>
-                <button style="border-radius: 25px; margin-left: 35%;" class="btn btn-success" type="submit"><b>Sign In</b></button>
-                <br>
-                <br>
-                <strong style="margin-left: 20%; font-size: 1vw;" > New to Rescue? <a href="/register" style="color:rgb(30,142,62); font-size: 1vw;"></strong><strong><u><b> Create an Account</b></u></strong></a>
-            </form>         
+                <p class="lead" style="text-align: center; font-family: 'Overpass', sans-serif;"><b>Login through
+                        Registered
+                        Account</b></p>
+
+                <form method="POST" style="background-color: white;">
+                    <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in"
+                        style="margin-left: 30%; height: 35%; width: 35%;">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <br>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <button style="border-radius: 25px;" class="btn btn-success" type="submit"><b>Sign
+                                In</b></button>
+                    </div>
+                    <br>
+                    <br>
+                    <strong class="new-button" style="display: flex; align-items: center; justify-content: center;">
+                        New to Rescue? <a href="/register" style="color:rgb(30,142,62);"><u><b>
+                                    Create an
+                                    Account</b></u></strong></a>
+                </form>
+            </div>
         </div>
-        </div>
+    </div>
     <br />
     <br />
-     {% endblock %}
+    {% endblock %}
     <br>
 
 

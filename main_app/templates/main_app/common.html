@@ -65,6 +65,10 @@
       font-size: 1.2rem;
     }
 
+    .new-button {
+      font-size: 1.2rem;
+    }
+
     .new::after {
       position: relative;
       left: 4px;
@@ -94,14 +98,62 @@
       border-left: .3em solid transparent;
     }
 
-    @media only screen and(max-width: 600px) {
+    @media only screen and (max-device-width: 600px) {
       .new {
         margin-top: 0px;
+      }
+
+      .new-button {
+        font-size: 1.5rem;
       }
     }
 
     .dropdown-toggle::after {
       display: none;
+    }
+
+
+    @media only screen and (max-device-width:320px) {
+      .login-page {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+
+    @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
+      .login-page {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 40%);
+      }
+    }
+
+    @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
+      .login-page {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 30%);
+      }
+    }
+
+    @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
+      .login-page {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 7%);
+      }
+    }
+
+    @media only screen and (min-width:768px) {
+      .login-page {
+        position: relative;
+      }
     }
   </style>
 </head>
