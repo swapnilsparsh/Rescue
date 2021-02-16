@@ -85,6 +85,13 @@
       border-left: .3em solid transparent;
     }
 
+    .responsive {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 5%;
+    }
+
     @media only screen and(max-width: 600px) {
       .new {
         margin-top: 0px;
@@ -170,7 +177,7 @@
   </script>
   {% endfor %} {% endif %}
   <div>
-    <div><img class="responsive" height="800" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
+    <div><img class="responsive" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
   </div>
 
 
