@@ -1,4 +1,5 @@
-<img align="center" src="https://miro.medium.com/max/1080/1*hxEKr8Rse2vtEEUeo_qf2Q.jpeg" width="100%" height="60%">
+<div style="height: 40vh; margin-left: 8vh;"><img style="text-align:center; margin: 0 auto; object-fit: contain" src="https://miro.medium.com/max/1080/1*hxEKr8Rse2vtEEUeo_qf2Q.jpeg" width="90%" height="100%">
+</div>
 
 # WOMEN SAFETY LAWS
 - ‘Police’ and ‘Public Order’ are State subjects under the Seventh Schedule to the Constitution of India. State Governments are thus responsible for safety and security of the citizens including women and girls. Here are some constitutional provisions and government initiatives that have been made for ensuring women safety and security:
@@ -12,8 +13,8 @@
 
 - ## GOVERNMENT INITIATIVES 
 
-<img src="https://i1.wp.com/smartprep.in/wp-content/uploads/2017/07/Key-Government-Initiatives-Programs-and-Schemes-of-Ministry-of-Women-and-Child-Development-PDF-Free-Download.jpg?fit=960%2C720&ssl=1" width="100%" height="55%">
-<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202003/International_Women_s_Day_.jpeg?tzrurrAJzz2wytPEKePlySnmMseXwcrj&size=770:433" width="100%" height="44%"><br>
+<img src="https://i1.wp.com/smartprep.in/wp-content/uploads/2017/07/Key-Government-Initiatives-Programs-and-Schemes-of-Ministry-of-Women-and-Child-Development-PDF-Free-Download.jpg?fit=960%2C720&ssl=1" width="36%" height="24%">
+<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202003/International_Women_s_Day_.jpeg?tzrurrAJzz2wytPEKePlySnmMseXwcrj&size=770:433" width="50%" height="24%"><br>
 
 <br>
 
