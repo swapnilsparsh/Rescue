@@ -1,32 +1,92 @@
 <!DOCTYPE html>
-{%  extends 'main_app/common.html' %}
+{% extends 'main_app/common.html' %}
 {% load static %}
 {% block content %}
 <html lang="en">
-	<body style="background-color:white;margin-top:60px;">
+
+<body style="background-color:white;margin-top:60px;">
 	<br><br>
+	<div class="delete-page">
+		<div class="container">
+			<br>
+			<!-- <div class="row"> -->
+			<!-- <div class="col-md-6"> -->
+			<div class="card card-body" style="background-color:rgb(217,48,37); border-radius: 10px;">
 
-	<div class="container">
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body" style="background-color:rgb(217,48,37); border-radius: 10px;" >
 
+				<p style="color: white;"><strong>Are you sure you want to permanently remove {{item}} contact
+						?</strong></p>
 
-					<p style="color: white;" ><strong>Are you sure you want to permanently remove {{item}} contact ?</strong></p>
+				<form action="{% url 'main_app:delete_contact' item.id  %}" method="POST">
 
-					<form action="{% url 'main_app:delete_contact' item.id  %}" method="POST">
+					{% csrf_token %}
+					<a style="color:black; background-color:white; border-radius: 20px;" class="btn btn-warning"
+						href="{% url 'main_app:emergency_contact' %}"><b>Cancel</b></b></a>
 
-						{% csrf_token %}
-						<a style="color:black; background-color:white; border-radius: 20px;" class="btn btn-warning" href="{% url 'main_app:emergency_contact' %}"><b>Cancel</b></b></a>
-
-						<input style="color:black; background-color:white; border-radius: 20px; font-weight: 700;" class="btn btn-danger" type="submit" name="Yes">
-					</form>
-				</div>
+					<input style="color:black; background-color:white; border-radius: 20px; font-weight: 700;"
+						class="btn btn-danger" type="submit" name="Yes">
+				</form>
 			</div>
 		</div>
 	</div>
 
+	<style>
+		.delete-page {
+			width: 50%;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			text-align: center;
+		}
 
-{% endblock %}
+		@media screen and (min-device-width: 425px) and (max-device-width: 768px) {
+
+			body {
+				font-size: 2rem;
+			}
+
+			.delete-page {
+				width: 80%;
+				position: absolute;
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, 50%)
+			}
+		}
+
+		@media screen and (min-device-width: 375px) and (max-device-width: 425px) {
+
+			body {
+				font-size: 2rem;
+			}
+
+			.delete-page {
+				width: 80%;
+				position: absolute;
+				top: 33%;
+				left: 50%;
+				transform: translate(-50%, 50%)
+			}
+		}
+
+		@media screen and (max-device-width: 375px) {
+
+			body {
+				font-size: 2rem;
+			}
+
+			.delete-page {
+				width: 80%;
+				position: absolute;
+				top: 35%;
+				left: 50%;
+				transform: translate(-50%, 50%)
+			}
+		}
+	</style>
+
+
+	{% endblock %}
+
 </html>
