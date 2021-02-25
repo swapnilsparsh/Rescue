@@ -53,8 +53,7 @@ Read [how to contribute.](https://github.com/smriti1313/Rescue/blob/master/Contr
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+
 <table>
   <tr>
       <td align="center"><a href="https://github.com/swapnilsparsh"><img src="https://avatars0.githubusercontent.com/u/69387608?s=400&u=6fe789d1b208bcbd21f6b95f641338fea7e999b9&v=4" width="100px;" alt=""/><br /><sub><b>Swapnil Srivastava
