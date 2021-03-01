@@ -88,7 +88,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=m-code12" title="Doc">📖</a></td> 
   <td align="center"><a href="https://github.com/jatiinyadav"><img src="https://avatars.githubusercontent.com/u/73248007?s=400&u=689c6131cdead6c052bfd6f8d083e62fbfd67d22&v=4" width="100px;" alt=""/><br /><sub><b>Jatin Yadav
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=jatiinyadav" title="Code">💻</a></td> 
- 
 <table>
   
 
