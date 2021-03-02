@@ -73,13 +73,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/muthuannamalai12"><img src="https://avatars0.githubusercontent.com/u/64524822?s=400&u=c1f8f317ca1eb1340f411b69b3b7c85446303ae5&v=4" width="100px;" alt=""/><br /><sub><b>Muthu Annamalai.V
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=muthuannamalai12" title="Code">💻</a></td>
 </tr>
-<tr>
      <td align="center"><a href="https://github.com/abhinav-huria"><img src="https://avatars0.githubusercontent.com/u/69974975?s=400&u=d26001ae0a2c98c61972ac95b6a37acbc278ab1b&v=4" width="100px;" alt=""/><br /><sub><b>Abhinav Huria
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=abhinav-huria" title="Code">💻</a></td> 
      <td align="center"><a href="https://github.com/SubhradeepSS"><img src="https://avatars3.githubusercontent.com/u/46227193?s=400&v=4" width="100px;" alt=""/><br /><sub><b>SubhradeepSS
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=SubhradeepSS" title="Code">💻</a></td>
      <td align="center"><a href="https://github.com/sourav-coder"><img src="https://avatars0.githubusercontent.com/u/55509336?s=460&u=4f0467a7d1ee18798a685327ae0979e66c3feb9d&v=4" width="100px;" alt=""/><br /><sub><b>SOURAV SARKAR
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=sourav-coder" title="Code">💻</a></td>
+
   <td align="center"><a href="https://github.com/akrish4"><img src="https://avatars1.githubusercontent.com/u/61831021?s=400&u=31f7ece09fb07c20b3b97673f448e762dc0946b0&v=4" width="100px;" alt=""/><br /><sub><b>Ananthakrishnan Nair RS
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=akrish4" title="Code">💻</a></td>   
       <td align="center"><a href="https://github.com/smriti1313"><img src="https://avatars3.githubusercontent.com/u/52624997?s=400&u=fe00d69251e7ed30455c55ca0698bc88dc149cce&v=4" width="100px;" alt=""/><br /><sub><b>Smriti
@@ -88,6 +88,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=m-code12" title="Doc">📖</a></td> 
   <td align="center"><a href="https://github.com/jatiinyadav"><img src="https://avatars.githubusercontent.com/u/73248007?s=400&u=689c6131cdead6c052bfd6f8d083e62fbfd67d22&v=4" width="100px;" alt=""/><br /><sub><b>Jatin Yadav
 </b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=jatiinyadav" title="Code">💻</a></td> 
+  <td align="center"><a href="https://github.com/jatinjain001"><img src="https://avatars.githubusercontent.com/u/46483236?s=400&u=7aaaaa037e704a2c1e0a6907f82a1c205b05c518&v=4" width="100px;" alt=""/><br /><sub><b>Jatin Jain
+  </tr>
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=jatinjain001" title="Code">💻</a></td> 
+  <td align="center"><a href="https://github.com/Akshu-on-github"><img src="https://avatars.githubusercontent.com/u/61582763?s=400&u=016894455dd1669c3a0fceff1c049cb66f50b4b0&v=4" width="100px;" alt=""/><br /><sub><b>Akshu
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=Akshu-on-github" title="Code">💻</a></td>
+  <td align="center"><a href="https://github.com/Sloth-Panda"><img src="https://avatars.githubusercontent.com/u/70213384?s=400&u=e9943a17413e20376627fd81f618da46d8fdef8b&v=4" width="100px;" alt=""/><br /><sub><b>Achyut Kumar Panda
+</b></sub></a><br /><a href="https://github.com/swapnilsparsh/Rescue/commits?author=Sloth-Panda" title="Code">💻</a></td>
 <table>
   
 
