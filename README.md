@@ -6,7 +6,7 @@
   <h2 align="center"><b>Rescue(Women Safety Website)</b></h2>
 
   <p align="center">
-    📧<i>A women safety website which sends emails to your trusted ones.</i> 📧
+    📧<i>A women safety website which sends emails to your trusted ones.</i> 🚺
     <br />
   </p>
 </p>
