@@ -1,277 +1,406 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-<head>
+    <!-- Compiled and minified JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
 
-  <!-- Compiled and minified JavaScript -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+      integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+      integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../static/css/styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
-    integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
-    integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../../static/css/styles.css">
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* footer { */
-    /* position: relative;
+      /* footer { */
+      /* position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     background:#ccc; */
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* } */
+      /* position: absolute; */
+      /* bottom: 0; */
+      /* } */
 
-    .my-bottom {
-      position: absolute;
-      bottom: 0
-    }
+      .my-bottom {
+        position: absolute;
+        bottom: 0;
+      }
 
-    .dropdown-item:hover {
-      background-color: #0f3057;
-    }
+      .dropdown-item:hover {
+        background-color: #0f3057;
+      }
 
-    .User {
-      font-size: 1.25rem;
+      .User {
+        font-size: 1.25rem;
+      }
 
-    }
-
-    .new {
-      font-size: 1.2rem;
-    }
-
-    .new-button {
-      font-size: 1.2rem;
-    }
-
-    .new::after {
-      position: relative;
-      left: 4px;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: .255em;
-      vertical-align: .255em;
-      content: "";
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
-      border-bottom: 0;
-      border-left: .3em solid transparent;
-    }
-
-
-    .User::after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: .255em;
-      vertical-align: .255em;
-      content: "";
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
-      border-bottom: 0;
-      border-left: .3em solid transparent;
-    }
-
-    @media only screen and (max-device-width: 600px) {
       .new {
-        margin-top: 0px;
+        font-size: 1.2rem;
       }
 
       .new-button {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
-    }
 
-    .dropdown-toggle::after {
-      display: none;
-    }
-
-
-    @media only screen and (max-device-width:320px) {
-      .login-page {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, 50%);
-      }
-    }
-
-
-    @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
-      .login-page {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, 40%);
-      }
-    }
-
-    @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
-      .login-page {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, 30%);
-      }
-    }
-
-    @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
-      .login-page {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, 7%);
-      }
-    }
-
-    @media only screen and (min-width:768px) {
-      .login-page {
+      .new::after {
         position: relative;
+        left: 4px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-      style="background-color:rgb(21,48,78); height:100px; padding:None; ">
-      <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
-        style="background-color:white">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      .User::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+      }
 
-      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color:rgb(21,48,78);padding:None;">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
-              &nbsp;&nbsp; Emergency Contacts
-            </a>
-          </li>
-          <li class="nav-item dropdown" style="margin-top: 4.0%;">
-            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
-              <h4 class="new">&nbsp;&nbsp; More</h4>
-            </a>
-            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
-              style="background-color: #00587a;">
-              <a class="dropdown-item" style="color: white;" href="/women_rights">Women's Rights</a>
-              <a class="dropdown-item" style="color: white;" href="/women_laws">Women's Safety Laws </a>
-              <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
-            </div>
-          </li>
-          <!-- <li class="nav-item active">
+      @media only screen and (max-device-width: 600px) {
+        .new {
+          margin-top: 0px;
+        }
+
+        .new-button {
+          font-size: 1.5rem;
+        }
+      }
+
+      .dropdown-toggle::after {
+        display: none;
+      }
+
+      @media only screen and (max-device-width: 320px) {
+        .login-page {
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+
+      @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
+        .login-page {
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, 40%);
+        }
+      }
+
+      @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
+        .login-page {
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 30%);
+        }
+      }
+
+      @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
+        .login-page {
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 7%);
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .login-page {
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top"
+        style="background-color: rgb(6, 17, 31); height: 80px; padding: None"
+      >
+        <a class="navbar-brand" href="/home"
+          ><i
+            class="material-icons large text-white"
+            style="width: 80%; font-size: 45px"
+            >home</i
+          ></a
+        >
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+          style="background-color: rgb(6, 17, 31); padding: None"
+        >
+          <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-danger btn-sm"
+                href="/emergency"
+                style="
+                  color: white;
+                  font-size: 18px;
+                  margin-top: 20px;
+                  width: 280px;
+                "
+              >
+                &nbsp;&nbsp; CLICK IF IN EMERGENCY !
+              </a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown" style="margin-top: 20px">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown2"
+                style="background-color: #00587a"
+              >
+                <a class="dropdown-item" style="color: white" href="/logout"
+                  >Logout</a
+                >
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown3"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                &nbsp;&nbsp; User
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown3"
+                style="background-color: #00587a"
+              >
+                <a class="dropdown-item" style="color: white" href="/register"
+                  >Register</a
+                >
+                <a class="dropdown-item" style="color: white" href="/login"
+                  >Login</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown" style="margin-top: 22px">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-target="#navbarDopdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                <h4 class="new">&nbsp;&nbsp; More</h4>
+              </a>
+              <div
+                class="dropdown-menu"
+                id="navbarDropdown1"
+                aria-labelledby="navbarDropdown1"
+                style="background-color: #00587a"
+              >
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="/women_rights"
+                  >Women's Rights</a
+                >
+                <a class="dropdown-item" style="color: white" href="/women_laws"
+                  >Women's Safety Laws
+                </a>
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="/helpline_numbers"
+                  >Women Helpline Numbers</a
+                >
+              </div>
+            </li>
+            <!-- <li class="nav-item active">
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li> -->
-          {% if user.is_authenticated %}
-          <li class="nav-item dropdown" style="margin-top: 3.8%;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
-              <h4 class="User"> &nbsp;&nbsp; {{user.username}} </h4>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: #00587a;">
-              <a class="dropdown-item" style="color: white;" href="/logout">Logout</a>
-            </div>
-          </li>
-          {% else %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
-              &nbsp;&nbsp; User
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: #00587a;">
-              <a class="dropdown-item" style="color: white;" href="/register">Register</a>
-              <a class="dropdown-item" style="color: white;" href="/login">Login</a>
-            </div>
-          </li>
-          {% endif %}
-          <li class="nav-item">
-            <a class="nav-link" href="/emergency" style="color: white; font-size: 18px;">
-              &nbsp;&nbsp; EMERGENCY !
-            </a>
-          </li>
-        </ul>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/emergency_contact"
+                style="color: white; font-size: 18px"
+              >
+                &nbsp;&nbsp; Emergency Contacts
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    {% if messages %} {% for message in messages %}
+    <script>
+      M.toast({
+        html: "{{message}}",
+        classes: "blue rounded",
+        displayLength: 4000,
+      });
+    </script>
+    {% endfor %} {% endif %} {% block content %} {% endblock %}
+
+    <footer
+      class=""
+      style="
+        background-color: rgb(21, 48, 78);
+        padding-bottom: 3%;
+        padding-top: 3%;
+        margin-top: auto;
+      "
+    >
+      <div class="row" style="margin: 0px">
+        <div class="col l6 s12" style="margin-left: 15%">
+          <h2 class="white-text"><b>Rescue</b></h2>
+          <p class="white-text text-lighten-4" style="color: white"></p>
+          <h3 style="color: white">
+            We are here to help women against crimes . and to aware about laws
+            for women
+          </h3>
+        </div>
+        <div class="row" style="margin-right: 10%">
+          <ul class="col" style="margin-top: 5px">
+            <li style="margin: 10px">
+              <a class="white-text" href="/developers">
+                <h3>Developers</h3>
+              </a>
+            </li>
+            <li style="margin: 10px">
+              <a class="white-text" href="/helpline_numbers">
+                <h3>Helpline No.</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-
-  </header>
-
-  {% if messages %}
-  {% for message in messages %}
-  <script>M.toast({
-      html: "{{message}}", classes: 'blue rounded',
-      displayLength: 4000
-    });</script>
-  {% endfor %}
-  {% endif %}
-
-
-  {% block content %}
-
-  {% endblock %}
-
-  <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
-    <div class="row" style="margin:0px;">
-      <div class="col l6 s12" style="margin-left:15%;">
-        <h2 class="white-text"><b>Rescue</b></h2>
-        <p class="white-text text-lighten-4" style="color: white;">
-        <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
-        </p>
-      </div>
-      <div class="row" style="margin-right:10%">
-        <ul class="col" style="margin-top:5px;">
-          <li style="margin:10px;"><a class="white-text " href="/developers">
-              <h3>Developers</h3>
-            </a></li>
-          <li style="margin:10px;"><a class="white-text" href="/helpline_numbers">
-              <h3>Helpline No.</h3>
-            </a></li>
-        </ul>
-      </div>
-    </div>
-
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
