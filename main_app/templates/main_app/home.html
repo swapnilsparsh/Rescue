@@ -104,10 +104,68 @@
     .dropdown-toggle::after {
       display: none;
     }
+    
+
+    /* prelaoder css  */
+    #preloader{
+    width: 100%;
+    height: 100vh;
+    background-color: #0f3057;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    position: fixed;
+    z-index: 9999;
+
+  }
+  .loader-div{
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+  }
+  .rot{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-right:3px solid #fff;
+    border-left:3px solid #fff;
+    border-radius: 1rem;
+    animation:rot 1s linear  infinite;
+    }
+  .preloader-img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+  }
+  @keyframes rot{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+  }
   </style>
+    <script>
+      window.onload=function(){
+     var preloader=document.getElementById("preloader");
+     setTimeout(function(){
+      preloader.style.display='none';
+  
+     },700)
+   }
+  </script>
+  
 </head>
 
 <body style="padding:0px; margin:0px;">
+  <div id="preloader">
+    <div class="loader-div">
+        <div class="rot"></div>
+        <img src="{% static 'Images/rescues.gif' %}" class="preloader-img" alt="">
+    </div> 
+  </div>
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top"
       style="background-color:rgb(21,48,78); height:100px; padding:None; ">
