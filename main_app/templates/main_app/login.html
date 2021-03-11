@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-{% extends "main_app/common.html" %}
-{% load static %}
+<!DOCTYPE html> {% extends "main_app/common.html" %} {% load static %}
 <html lang="en">
 {% block content %}
 
@@ -20,10 +18,7 @@
                         Account</b></p>
 
                 <form method="POST" style="background-color: white;">
-                    <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in"
-                        style="margin-left: 30%; height: 35%; width: 35%;">
-                    {% csrf_token %}
-                    {{form.as_p}}
+                    <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in" style="margin-left: 30%; height: 35%; width: 35%;"> {% csrf_token %} {{form.as_p}}
                     <br>
                     <div style="display: flex; align-items: center; justify-content: center;">
                         <button style="border-radius: 25px;" class="btn btn-success" type="submit"><b>Sign
@@ -40,8 +35,7 @@
         </div>
     </div>
     <br />
-    <br />
-    {% endblock %}
+    <br /> {% endblock %}
     <br>
 
 
