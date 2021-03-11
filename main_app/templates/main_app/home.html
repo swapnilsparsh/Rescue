@@ -80,7 +80,7 @@
       }
 
       .dropdown-item:hover {
-        background-color:  rgb(6, 17, 31);
+        background-color: rgb(77, 82, 87);
       }
 
       .User {
@@ -106,6 +106,13 @@
         border-left: 0.3em solid transparent;
       }
 
+      .nav-link:hover {
+        color: rgb(220, 53, 69) !important;
+      }
+
+      .nav-link2:hover {
+        color: #fff !important;
+      }
       .User::after {
         display: inline-block;
         width: 0;
@@ -142,10 +149,12 @@
     <header>
       <nav
         class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 80px; padding: None;"
+        style="background-color: rgb(6, 17, 31); height: 85px; padding: None"
       >
         <a class="navbar-brand" href="/home"
-          ><i class="material-icons large text-white" style="width: 80%; font-size: 45px;"
+          ><i
+            class="material-icons large text-white"
+            style="width: 80%; font-size: 45px"
             >home</i
           ></a
         >
@@ -170,11 +179,17 @@
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
             <li class="nav-item">
               <a
-                class="nav-link btn btn-danger btn-sm"
+                class="nav-link btn btn-danger btn-sm nav-link2"
                 href="/emergency"
-                style="color: white; font-size: 18px; margin: 20px; width: 280px;"
+                style="
+                  color: white;
+                  font-size: 18px;
+                  margin: 20px;
+                  width: 300px;
+                  height: 45px;
+                "
               >
-                &nbsp;&nbsp; CLICK IF IN EMERGENCY!
+                CLICK IF IN EMERGENCY!
               </a>
             </li>
             {% if user.is_authenticated %}
@@ -194,7 +209,7 @@
               <div
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdown2"
-                style="background-color:   rgb(6, 17, 31)"
+                style="background-color: rgb(6, 17, 31)"
               >
                 <a class="dropdown-item" style="color: white" href="/logout"
                   >Logout</a
@@ -218,7 +233,7 @@
               <div
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdown3"
-                style="background-color:  rgb(6, 17, 31)"
+                style="background-color: rgb(6, 17, 31)"
               >
                 <a class="dropdown-item" style="color: white" href="/register"
                   >Register</a
@@ -229,7 +244,7 @@
               </div>
             </li>
 
-            <li class="nav-item dropdown" style="margin-top:22px">
+            <li class="nav-item dropdown" style="margin-top: 22px">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -246,7 +261,7 @@
                 class="dropdown-menu"
                 id="navbarDropdown1"
                 aria-labelledby="navbarDropdown1"
-                style="background-color:   rgb(6, 17, 31)"
+                style="background-color: rgb(6, 17, 31)"
               >
                 <a
                   class="dropdown-item"
