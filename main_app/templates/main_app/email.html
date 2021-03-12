@@ -6,6 +6,22 @@
   <title>HELP!</title>
 </head>
 <body style="padding: 0; margin: 0;">
+   <script>
+	window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+	 
+	</script>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <h1 style="text-align: center; background-color:rgb(217,48,37);color: black;font-family: 'Anton', sans-serif;">EMERGENCY!! EMERGENCY!! EMERGENCY!!</h1>
   <h1 style="color:rgb(74,131,135); text-align: center;font-family: 'Anton', sans-serif;">{name:} is in emergency and need your help immediately.
