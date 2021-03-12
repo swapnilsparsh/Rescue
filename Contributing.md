@@ -13,12 +13,19 @@ Refer to the following articles on the basics of Git and Github and can also con
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=git&logoColor=white)](https://github.com/swapnilsparsh/Rescue/pulls)[![CodeFactor](https://www.codefactor.io/repository/github/vinitshahdeo/portscanner/badge)](https://www.codefactor.io/repository/github/swapnilsparsh/Rescue) [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/swapnilsparsh/Rescue)
 
 * Take a look at the Existing [Issues](https://github.com/swapnilsparsh/Rescue/issues) or create your own Issues!
+* Participants have to comment on issues they would like to work on, and mentors will assign you.
 * Wait for the Issue to be assigned to you after which you can start working on it.
 * Fork the Repo and create a Branch for any Issue that you are working upon.
 * Read the [Code of Conduct](https://github.com/swapnilsparsh/Rescue/blob/master/Code_of_Conduct.md)
 * Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 * Add Screenshots to help us know what this Script is all about.
 * You can discuss with other people working on the same project about your idea on [discord.](https://discord.com/channels/731001496417730611/792257592322949121)
+* Issues will be assigned on a first-come, first-serve basis.
+* Participants can also open their issues, but it needs to be verified by a mentor.
+* Each participant will be assigned 2 issues (max) at a time to work.
+* Participants/contributors have max 4 days to complete issues. After that issues will be assigned to others.
+* Participants are expected to follow project guidelines and coding style.
+* It might take a maximum of 2 days to review your pull request. Please have patience.
 
 ## ⭐HOW TO MAKE A PULL REQUEST:
 
