@@ -229,21 +229,6 @@
           style="background-color: rgb(6, 17, 31); padding: None"
         >
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            <li class="nav-item">
-              <a
-                class="nav-link btn btn-danger btn-sm nav-link2"
-                href="/emergency"
-                style="
-                  color: white;
-                  font-size: 18px;
-                  margin: 20px;
-                  width: 300px;
-                  height: 45px;
-                "
-              >
-                CLICK IF IN EMERGENCY !
-              </a>
-            </li>
             {% if user.is_authenticated %}
             <li class="nav-item dropdown" style="margin-top: 20px">
               <a
@@ -342,6 +327,21 @@
                 style="color: white; font-size: 18px"
               >
                 &nbsp;&nbsp; Emergency Contacts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-danger btn-sm nav-link2"
+                href="/emergency"
+                style="
+                  color: white;
+                  font-size: 18px;
+                  margin: 20px;
+                  width: 300px;
+                  height: 45px;
+                "
+              >
+                EMERGENCY !
               </a>
             </li>
             {% endif %}
