@@ -116,35 +116,45 @@
     place-items: center;
     position: fixed;
     z-index: 9999;
+    background-image: url( "{% static 'images/cubes.png' %}");
+  }
+  .preloader-heading{
+    color: transparent;
+    font-size: 4rem;
+    position: relative;
 
   }
-  .loader-div{
-    position: relative;
-    width: 18rem;
-    height: 18rem;
+  .preloader-div{
+    width: 80%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+    align-items: center;
   }
-  .rot{
+  .preloader-heading::before{
+    content:"~LOADING~";
+    width: 100%;
+    color: #fff;
     position: absolute;
-    width: 15rem;
-    height: 15rem;
-    border-right:3px solid #fff;
-    border-left:3px solid #fff;
-    border-radius: 1rem;
-    animation:rot 1s linear  infinite;
+    top: 0;
+    left: 0;
+    border-right: 0.4rem solid #fff;
+    animation: slide 2s linear infinite;
+    -webkit-animation:slide 2s linear infinite;
+    overflow: hidden;
+
+}
+@keyframes slide{
+    0%{
+        width: 0%;
     }
-  .preloader-img{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-  }
-  @keyframes rot{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform:rotate(360deg);
-  }
-  }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
   </style>
     <script>
       window.onload=function(){
@@ -152,7 +162,7 @@
      setTimeout(function(){
       preloader.style.display='none';
   
-     },700)
+     },900)
    }
   </script>
   
@@ -160,10 +170,11 @@
 
 <body style="padding:0px; margin:0px;">
   <div id="preloader">
-    <div class="loader-div">
-        <div class="rot"></div>
-        <img src="{% static 'Images/rescues.gif' %}" class="preloader-img" alt="">
-    </div> 
+    <div class="preloader-div">
+    <img src="{% static 'Images/rights.jpg' %}" style="width:400px; height: 300px; border-radius:1rem"  alt="">
+    <br/>
+    <h1 class="preloader-heading">~LOADING~</h1></div>
+
   </div>
 
   <header>
