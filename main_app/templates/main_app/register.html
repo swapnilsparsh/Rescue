@@ -5,7 +5,6 @@
 <body lang="en">
     {% block content %}
 
-    <body style="background-color:white; margin-top: 60px; ">
 
         <div class="register-page">
             <div class="container">
@@ -32,30 +31,11 @@
 
         <style>
             @media screen and (max-device-width: 768px) {
-
-                label {
-                    font-size: 1.5rem;
-                }
-
-                body {
-                    font-size: 2rem;
-                }
-
                 .register-page {
                     position: absolute;
                     top: 0%;
                     left: 50%;
                     transform: translate(-50%, 5%)
-                }
-            }
-
-            @media screen and (min-device-width: 425px) and (max-device-width: 768px) {
-                body {
-                    font-size: 1.5rem;
-                }
-
-                label {
-                    font-size: 1.5rem;
                 }
             }
 
@@ -66,7 +46,8 @@
             }
             /* Register Page styling */
             .register-page{
-                margin-top: 5em;
+                margin-top: 8em;
+                margin-bottom: 4em;
             }
             .register-page-img {
                 width: 35%;
@@ -140,7 +121,5 @@
 
         </style>
 
-    </body>
     {% endblock %}
-
-    </html>
+</body>
