@@ -1,310 +1,195 @@
 <!DOCTYPE html>
-{% extends "main_app/common.html" %} {% load static %}
+{% extends "main_app/common.html" %}
+{% load static %}
 
 <html lang="en">
-  {% block content %}
+{% block content %}
 
-  <head>
+<head>
     <style>
-
-      .btn-danger:hover {
-        background-color: #dc3545 ;
-      }
-      .center_block {
-        text-align: justify;
-        padding: 0 10% 0 10%;
-      }
-
-      .active {
-        background-color: #eeeeee;
-      }
-
-      .content {
-        padding: 4% 4% 4% 4%;
-        display: none;
-        overflow: hidden;
-        background-color: white;
-        text-align: center;
-        color: black;
-        font-size: 18px;
-      }
-
-      .womenhp {
-        font-size: 25px;
-        font-family: "Alegreya", serif;
-      }
-
-      .womenhp1 {
-        padding: 2% 2% 0% 2%;
-        font-size: 100px;
-      }
-
-      tr:hover {
-        background-color: #bbbbbb;
-      }
-
-      .img-responsive,
-      .img1-responsive {
-        height: auto;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .wb-stl-heading1 {
-        text-align: center;
-        margin-top: 10vh;
-        font-size: 40px;
-        font-family: "Roboto Slab", serif;
-        margin-bottom: 5vh;
-      }
-
-      @media (max-width: 1092px) {
-        .wb-stl-heading1 {
-          margin-top: -120px;
-          margin-right: auto;
-          margin-left: auto;
-          margin-bottom: 5vh;
+        .btn-danger:hover {
+        background-color: #dc3545;}
+        
+        .center_block {
+            text-align: justify;
+            padding: 0 10% 0 10%;
         }
-      }
-    </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body style="background-color: white; margin-top: 150px">
+        .active {
+            background-color: #eeeeee;
+        }
+
+        .content {
+            padding: 4% 4% 4% 4%;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
+            color: black;
+            font-size: 18px;
+        }
+
+        .womenhp {
+            font-size: 25px;
+            font-family: 'Alegreya', serif;
+        }
+
+        .womenhp1 {
+            padding: 2% 2% 0% 2%;
+            font-size: 100px;
+        }
+
+        tr:hover {
+            background-color: #bbbbbb;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wb-stl-heading1 {
+            text-align: center;
+            margin-top: 10vh;
+            font-size: 40px;
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 5vh;
+        }
+
+        @media (max-width: 1092px) {
+            .wb-stl-heading1 {
+                margin-top: -120px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 5vh;
+
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top:150px;">
     <!-- Table -->
-    <div
-      class="row justify-content-center"
-      style="
-        width: 100%;
-        background-color: white;
-        font-size: 200px;
-        text-shadow: 0 0 20px white;
-      "
-    >
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
-        rel="stylesheet"
-      />
-      <div class="column">
-        <img
-          src="{% static 'Images/women-helpline.jpg' %}"
-          alt="24 * 7"
-          class="img1-responsive"
-          style="margin-top: -200px"
-        />
-      </div>
-      <div class="column">
-        <h1 class="wb-stl-heading1">
-          <strong style="text-shadow: 2px 2px grey; text-align: center">
-            <font color="black">WOMEN HELPLINE NUMBERS</font>
-          </strong>
-          <img
-            src="{% static 'Images/helpline.png' %}"
-            alt="24 * 7"
-            height="50vw"
-          />
-        </h1>
-      </div>
+    <div class="row justify-content-center"
+        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <div class="column">
+            <img src="{% static 'Images/women-helpline.jpg' %}" alt="24 * 7" class="img1-responsive"
+                style="margin-top: -200px;">
+        </div>
+        <div class="column">
+            <h1 class="wb-stl-heading1">
+                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                    <font color="black">WOMEN HELPLINE NUMBERS</font>
+                </strong>
+                <img src="{% static 'Images/helpline.png' %}" alt="24 * 7" height="50vw">
+            </h1>
+        </div>
     </div>
 
     <div class="container">
-      <table
-        class="table table-striped"
-        cellpadding="20"
-        cellspacing="4"
-        style="
-          background-color: white;
-          color: black;
-          font-family: lobster, lobster, sans-serif;
-          font-size: 3vw;
-          width: 100%;
-        "
-        width="1250px"
-      >
-        <tbody class="womenhp">
-          <tr>
-            <td style="height: 100px; padding-top: 35px" width="275px">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                    &nbsp;Women Helpline - All India</span
-                  ></span
-                >
-              </p>
-            </td>
-            <td style="height: 100px; width: 150px; padding-top: 35px">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"><span>1091</span></span>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="height: 100px; padding-top: 35px" width="275">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                    &nbsp;Women Helpline - Domestic Abuse</span
-                  ></span
-                >
-              </p>
-            </td>
-            <td style="height: 100px; width: 150px; padding-top: 35px">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"><span>181</span></span>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="height: 100px; padding-top: 35px" width="275">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                    &nbsp;National Commison For Women (NCW)</span
-                  ></span
-                >
-              </p>
-            </td>
-            <td style="height: 100px; width: 150px; padding-top: 35px">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><strong><span>011-26942369, 26944754</span></strong></span
-                >
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="height: 100px; padding-top: 35px" width="275">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                    &nbsp;Delhi Commision For Women</span
-                  ></span
-                >
-              </p>
-            </td>
-            <td style="height: 100px; width: 150px; padding-top: 35px">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><strong
-                    ><span>011-23378044, 23378317, 23370597</span></strong
-                  ></span
-                >
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="height: 100px; padding-top: 35px" width="275">
-              <p class="wb-stl-normal">
-                <span class="wb-stl-special"
-                  ><span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                    &nbsp;Outer Delhi Helpline</span
-                  ></span
-                >
-              </p>
-            </td>
-            <td style="height: 100px; width: 150px; padding-top: 35px">
-              <p class="wb-stl-normal">
-                <strong
-                  ><span class="wb-stl-special"
-                    ><span>011-27034873, 27034874</span>
-
-                    <tr>
-                      <td style="height: 100px; padding-top: 35px" width="275">
-                        <p class="wb-stl-normal">
-                          <span class="wb-stl-special"
-                            ><span
-                              ><i class="fa fa-phone" aria-hidden="true"></i
-                              >&nbsp; &nbsp;Student Child Helpline</span
-                            ></span
-                          >
-                        </p>
-                      </td>
-                      <td
-                        style="height: 100px; width: 150px; padding-top: 35px"
-                      >
-                        <p class="wb-stl-normal">
-                          <strong
-                            ><span class="wb-stl-special"
-                              ><span>1098</span></span
-                            ></strong
-                          >
-                        </p>
-                      </td>
-                    </tr></span
-                  >
-
-                  <tr>
-                    <td style="height: 100px; padding-top: 35px" width="275">
-                      <p class="wb-stl-normal">
-                        <span class="wb-stl-special"
-                          ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                          &nbsp;National Human Right Commision</span
-                        >
-                      </p>
+        <table class="table table-striped " cellpadding="20" cellspacing="4" style="background-color:white;color:black;font-family:lobster,lobster,sans-serif;
+        font-size:3vw; width:100%; " width="1250px">
+            <tbody class="womenhp">
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275px">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;Women Helpline - All India</span></span></p>
                     </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px">
-                      <p class="wb-stl-normal">
-                        <strong
-                          ><span class="wb-stl-special"
-                            >011-23385368, 9810298900</span
-                          ></strong
-                        >
-                      </p>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>1091</span></span></p>
                     </td>
-                  </tr>
-                  <tr>
-                    <td style="height: 100px; padding-top: 35px" width="275">
-                      <p class="wb-stl-normal">
-                        <span class="wb-stl-special"
-                          ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-                          &nbsp;National Commision for Women</span
-                        >
-                      </p>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;Women Helpline - Domestic
+                                    Abuse</span></span></p>
                     </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px">
-                      <p class="wb-stl-normal">
-                        <strong
-                          ><span class="wb-stl-special"
-                            >011-23237166, 23234918</span
-                          ></strong
-                        >
-                      </p>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>181</span></span></p>
                     </td>
-                  </tr>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;National Commison For Women
+                                    (NCW)</span></span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><strong><span>011-26942369,
+                                        26944754</span></strong></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;Delhi Commision For Women</span></span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><strong><span>011-23378044, 23378317,
+                                        23370597</span></strong></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;Outer Delhi Helpline</span></span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><strong><span class="wb-stl-special"><span>011-27034873,
+                                        27034874</span></strong></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
+                                        aria-hidden="true"></i>&nbsp; &nbsp;Student Child Helpline</span></span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><strong><span
+                                    class="wb-stl-special"><span>1098</span></span></strong></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><i class="fa fa-phone"
+                                    aria-hidden="true"></i>&nbsp; &nbsp;National Human Right Commision</span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23385368,
+                                    9810298900</span></strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; padding-top: 35px;" width="275">
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><i class="fa fa-phone"
+                                    aria-hidden="true"></i>&nbsp; &nbsp;National Commision for Women</span></p>
+                    </td>
+                    <td style="height: 100px; width: 150px; padding-top: 35px;">
+                        <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23237166,
+                                    23234918</span></strong></p>
+                    </td>
+                </tr>
 
-                  <br />
-                  <br />
-                  <br />
 
-                  <div>
-                    <img
-                      src="{% static 'Images/women-picture.jpg' %}"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </div>
-
-                  {% endblock %}
-                </strong>
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
     </div>
-  </body>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" class="img-responsive" alt="">
+    </div>
+</body>
+
+{% endblock %}
+
 </html>
