@@ -65,6 +65,30 @@
 
             }
         }
+
+   html {
+	scroll-behavior:smooth;
+   }
+   #myBtn {
+     display: none; 
+     position: fixed; 
+     bottom: 20px;  
+     right: 30px; 
+     z-index: 99; 
+     border: 2px black solid; 
+     outline: none; 
+     background-image:url("{% static 'Images/top.png' %}"); 
+	 background-position:center;
+	 background-repeat:no-repeat;
+     background-color:black;
+     cursor: pointer; 
+     padding: 1.4rem;
+     border-radius: 25rem;
+    }
+	#myBtn:hover {
+      background-color: white;
+      background-image:url("{% static 'Images/toph.png' %}"); 
+   }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
@@ -72,6 +96,22 @@
 </head>
 
 <body style="background-color:white;margin-top:150px;">
+    <script>
+	window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+	 
+	</script>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
     <!-- Table -->
     <div class="row justify-content-center"
         style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
@@ -96,8 +136,8 @@
             <tbody class="womenhp">
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275px">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;Women Helpline - All India</span></span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:1091"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;Women Helpline - All India</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><span class="wb-stl-special"><span>1091</span></span></p>
@@ -105,8 +145,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;Women Helpline - Domestic
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:181"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;Women Helpline - Domestic
                                     Abuse</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
@@ -115,8 +155,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;National Commison For Women
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:011-26942369"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;National Commison For Women
                                     (NCW)</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
@@ -126,8 +166,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;Delhi Commision For Women</span></span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:011-23378044"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;Delhi Commision For Women</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><span class="wb-stl-special"><strong><span>011-23378044, 23378317,
@@ -136,8 +176,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;Outer Delhi Helpline</span></span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:011-27034873"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;Outer Delhi Helpline</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><strong><span class="wb-stl-special"><span>011-27034873,
@@ -146,8 +186,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><i class="fa fa-phone"
-                                        aria-hidden="true"></i>&nbsp; &nbsp;Student Child Helpline</span></span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><span><a href="tel:1098"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>&nbsp; &nbsp;Student Child Helpline</span></span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><strong><span
@@ -156,8 +196,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><i class="fa fa-phone"
-                                    aria-hidden="true"></i>&nbsp; &nbsp;National Human Right Commision</span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><a href="tel:011-23385368"><i class="fa fa-phone"
+                                    aria-hidden="true"></i></a>&nbsp; &nbsp;National Human Right Commision</span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23385368,
@@ -166,8 +206,8 @@
                 </tr>
                 <tr>
                     <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><i class="fa fa-phone"
-                                    aria-hidden="true"></i>&nbsp; &nbsp;National Commision for Women</span></p>
+                        <p class="wb-stl-normal"><span class="wb-stl-special"><a href="tel:011-23237166"><i class="fa fa-phone"
+                                    aria-hidden="true"></i></a>&nbsp; &nbsp;National Commision for Women</span></p>
                     </td>
                     <td style="height: 100px; width: 150px; padding-top: 35px;">
                         <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23237166,
