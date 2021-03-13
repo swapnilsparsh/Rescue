@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="../../static/css/styles.css">
+  <title>Rescue</title>
   <style>
     body {
       min-height: 100vh;
@@ -40,15 +41,15 @@
       flex-direction: column;
     }
 
-    /* footer { */
-    /* position: relative;
-    bottom: 0;
+    .footer { 
+     position: fixed;
+    /*bottom: 0;
     left: 0;
     right: 0;
-    background:#ccc; */
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* } */
+    background:#ccc; 
+    position: absolute;
+    bottom: 0; */
+   } 
 
     .my-bottom {
       position: absolute;
@@ -164,7 +165,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-      style="background-color:rgb(21,48,78); height:100px; padding:None; ">
+      style="background-color:rgb(21,48,78); height: 80px;  padding:None; ">
       <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
@@ -240,28 +241,6 @@
   {% block content %}
 
   {% endblock %}
-
-  <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
-    <div class="row" style="margin:0px;">
-      <div class="col l6 s12" style="margin-left:15%;">
-        <h2 class="white-text"><b>Rescue</b></h2>
-        <p class="white-text text-lighten-4" style="color: white;">
-        <h3 style="color: white;">We are here to help women against crimes and to make them aware about the laws for women safety so that they are safe anywhere they go.</h3>
-        </p>
-      </div>
-      <div class="row" style="margin-right:10%">
-        <ul class="col" style="margin-top:5px;">
-          <li style="margin:10px;"><a class="white-text " href="/developers">
-              <h3>Developers</h3>
-            </a></li>
-          <li style="margin:10px;"><a class="white-text" href="/helpline_numbers">
-              <h3>Helpline No.</h3>
-            </a></li>
-        </ul>
-      </div>
-    </div>
-
-  </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -273,5 +252,18 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
-
+<footer class="footer fixed-bottom" style="background-color:rgb(21,48,78);">
+    <p class="white-text text-lighten-4" style="color: white;">
+      <h3 style="color: white; font-size: 15px; margin-left: 2%;">We are here to help women against crimes and to make them aware about the laws for women safety so that they are safe anywhere they go.</h3>
+      
+      <ul class="col" style="margin-bottom: 1%">
+          <li style=" font-size: 10px; margin-right: 2%; float: right;" ><a class="white-text" href="/developers">
+              <h6>Developers</h6>
+            </a></li>
+          <li style="font-size: 10px; margin-right: 2%; float: right;"><a class="white-text" href="/helpline_numbers">
+              <h6>Helpline No.</h6>
+            </a></li>
+        </ul>
+    </p>
+  </footer>
 </html>
