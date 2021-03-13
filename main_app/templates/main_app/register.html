@@ -8,43 +8,25 @@
     <body style="background-color:white; margin-top: 60px; ">
 
         <div class="register-page">
-
             <div class="container">
-                <br>
-                <div class="jumbotron" style="background-color: white;">
-                    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-                    <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive; ">
-                        Register</h1>
-                    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap"
-                        rel="stylesheet">
-                    <p class="lead" style="font-family: 'Overpass', sans-serif; text-align: center;"><b>Create Your
-                            Account</b></p>
+                
+                <h1 class="register-page-title">WELCOME TO RESCUE</h1>
+                <p class="register-page-text">Create Your Account</p>
+                        
+                <img class="container register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
+                
+                <form method="POST" class="form-style">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    
+                    <br>
 
-                    <!-- <img src="{% static 'Images/signup-image.jpg' %}" alt="" srcset="" style=""> -->
-                    <form method="POST" class="form-style" style="background-color: white; margin-top: 5%;   ">
-                        <img src="{% static 'Images/signup-image.jpg' %}" alt="Sign Up"
-                            style="margin-left: 32%; height: 35%; width: 35%;"><br><br>
-                        {% csrf_token %}
-                        {{form.as_p}}
-                        <br>
-                        <div style=" margin-top: 3rem; display: flex; align-items: center;
-                    justify-content: center;">
-                            <button class="btn btn-success" style=" border-radius: 25px;"
-                                type="submit"><b>Register</b></button>
-                        </div>
-                        <br>
-                        <br>
-                        <div style="display: flex; align-items: center;
-                    justify-content: center;">
-                            <strong>Already on RESCUE? </strong><a href="/login" style="color: rgb(30,142,62);"><b
-                                    class="sign-in"><u>Sign
-                                        In</u></b></a>
-                        </div>
-                    </form>
-
-                </div>
-                <br>
-                <br>
+                    <div class="register-sign-in">
+                        <input type="submit" value="Register">
+                        <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
+                    </div>
+                </form>
+                
             </div>
         </div>
 
@@ -82,6 +64,80 @@
                     position: relative;
                 }
             }
+            /* Register Page styling */
+            .register-page{
+                margin-top: 5em;
+            }
+            .register-page-img {
+                width: 35%;
+                height: 35%;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 0.5em;
+            }
+
+            .register-page-title {
+                font-size: 2.75rem;
+                font-family: sans-serif;
+                font-weight: 900;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+
+            .register-page-text {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .form-style {
+                font-size: 1.15rem;
+            }
+
+            label {
+                font-size: 1.75rem;
+                color: #6C63FF;
+                margin: 1em 0 0.5em 0;
+                font-weight: 500;
+            }
+
+            input[type="submit"] {
+                background-color: #FFF;
+                color: #6C63FF;
+                font-weight: bold;
+                font-size: 1.5rem;
+                padding: 0.5em 1.5em;
+                margin: 1em 0;
+                width: unset;
+                cursor: pointer;
+                border: 2px solid #6C63FF;
+                border-radius: 5em;
+                transition: all 0.3s ease-in-out;
+            }
+
+            input[type="submit"]:hover {
+                color: #FFF;
+                background-color: #6C63FF;
+                border: 2px solid #6C63FF;
+                cursor: pointer;
+            }
+
+            .register-sign-in {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1.5em 0;
+            }
+
+            .register-sign-in a {
+                text-decoration: none;
+                color: #6C63FF;
+                transition: all 0.5s ease-in-out;
+            }
+            .register-sign-in a:hover {
+                text-decoration: underline;
+            }
+
         </style>
 
     </body>
