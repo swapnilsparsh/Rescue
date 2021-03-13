@@ -8,7 +8,22 @@
 
 
 <body style="background-color:white;margin-top:50px;">
-
+    <script>
+	window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+	 
+	</script>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 	<div class="developers-page">
 
 		<div class="container">
@@ -286,6 +301,29 @@
 		.desing-card .maincontent h4 {
 			color: rgb(160, 10, 10);
 		}
+		html {
+	scroll-behavior:smooth;
+   }
+		#myBtn {
+     display: none; 
+     position: fixed; 
+     bottom: 20px;  
+     right: 30px; 
+     z-index: 99; 
+     border: 2px black solid; 
+     outline: none; 
+     background-image:url("{% static 'Images/top.png' %}"); 
+	 background-position:center;
+	 background-repeat:no-repeat;
+     background-color:black; 
+     cursor: pointer; 
+     padding: 1.4rem;
+     border-radius: 25rem;
+    }
+	#myBtn:hover {
+      background-color: white;
+      background-image:url("{% static 'Images/toph.png' %}"); 
+   }
 	</style>
 
 </body>
