@@ -30,28 +30,14 @@
         </div>
 
         <style>
-            @media screen and (max-device-width: 768px) {
-                .register-page {
-                    position: absolute;
-                    top: 0%;
-                    left: 50%;
-                    transform: translate(-50%, 5%)
-                }
-            }
-
-            @media only screen and (min-width:768px) {
-                .register-page {
-                    position: relative;
-                }
-            }
+            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+            
             /* Register Page styling */
             .register-page{
-                margin-top: 8em;
-                margin-bottom: 4em;
+                margin-top: 12em;
             }
             .register-page-img {
-                width: 35%;
-                height: 35%;
+                width: 45%;
                 display: block;
                 margin: 0 auto;
                 margin-bottom: 0.5em;
@@ -117,6 +103,34 @@
             }
             .register-sign-in a:hover {
                 text-decoration: underline;
+            }
+
+            @media screen and (max-device-width: 768px) {
+                .register-page {
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    transform: translate(-50%, 5%)
+                }
+            }
+            
+            @media only screen and (max-width: 768px){
+                .register-page-img {
+                    width: 360px;
+                    margin-top: 2em;
+                }
+            }
+
+            @media only screen and (min-width:768px) {
+                .register-page {
+                    position: relative;
+                    margin-bottom: 4em;
+                }
+                
+                .register-page-img {
+                    width: 470px;
+                    margin-top: 2em;
+                }
             }
 
         </style>
