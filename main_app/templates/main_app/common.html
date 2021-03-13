@@ -149,10 +149,6 @@
         }
       }
 
-      .dropdown-toggle::after {
-        display: none;
-      }
-
       @media only screen and (max-device-width: 320px) {
         .login-page {
           position: absolute;
@@ -232,7 +228,7 @@
             {% if user.is_authenticated %}
             <li class="nav-item dropdown" style="margin-top: 20px">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link"
                 href="#"
                 id="navbarDropdown2"
                 role="button"
@@ -283,9 +279,9 @@
             {% endif %}
             <li class="nav-item dropdown" style="margin-top: 22px">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link"
                 href="#"
-                data-target="#navbarDopdown1"
+                data-target="#navbarDropdown1"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
