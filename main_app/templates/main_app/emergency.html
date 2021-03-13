@@ -21,7 +21,7 @@
     }
 	 
 	</script>
-	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
     <div class="container" style="height:65%; max-width:100%">
 
         <h1 style="color:rgb(217,48,37); text-align: center;"><b>EMERGENCY SITUATION!!</b></h1>
@@ -46,17 +46,15 @@
      z-index: 99; 
      border: 2px black solid; 
      outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
      background-color:black; 
      cursor: pointer; 
-     padding: 1.4rem;
+	 color:white;
+     padding: 1rem 1.4rem 1rem 1.4rem;
      border-radius: 25rem;
     }
 	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
+      background-color:white;
+	  color:black;
    }
   </style> 
 {% endblock %}
