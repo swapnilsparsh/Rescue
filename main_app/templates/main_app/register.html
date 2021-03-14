@@ -5,46 +5,161 @@
 <body lang="en">
     {% block content %}
     <style>
-    html {
-	scroll-behavior:smooth;
-   }
-	#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
-  </style> 
-      <script>
-	   window.onscroll = function() {scrollFunction()};
-       function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         document.getElementById("myBtn").style.display = "block";
-      } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-    }
-    function topFunction() {
-       document.body.scrollTop = 0; // For Safari
-       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-	 
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        html {
+            scroll-behavior:smooth;
+        }
+        /* CSS for back to top button */
+        #myBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 20px;  
+            right: 30px; 
+            z-index: 99; 
+            border: 2px black solid; 
+            outline: none; 
+            background-image:url("{% static 'Images/top.png' %}"); 
+            background-position:center;
+            background-repeat:no-repeat;
+            background-color:black; 
+            cursor: pointer; 
+            padding: 1.4rem;
+            border-radius: 25rem;
+        }
+        #myBtn:hover {
+            background-color: white;
+            background-image:url("{% static 'Images/toph.png' %}"); 
+        }
+
+        /* Register Page styling */
+        .register-page{
+            margin-top: 10em;
+        }
+        .register-page-img {
+            width: 45%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5em;
+        }
+
+        .register-page-title {
+            font-size: 2.75rem;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5em;
+        }
+
+        .register-page-text {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .form-style {
+            font-size: 1.15rem;
+        }
+
+        label {
+            font-size: 1.75rem;
+            color: #6C63FF;
+            margin: 1em 0 0.5em 0;
+            font-weight: 500;
+        }
+
+        input[type="submit"] {
+            background-color: #FFF;
+            color: #6C63FF;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 0.5em 1.5em;
+            margin: 1em 0;
+            width: unset;
+            cursor: pointer;
+            border: 2px solid #6C63FF;
+            border-radius: 5em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            color: #FFF;
+            background-color: #6C63FF;
+            border: 2px solid #6C63FF;
+            cursor: pointer;
+        }
+
+        .register-sign-in {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5em 0;
+        }
+
+        .register-sign-in a {
+            text-decoration: none;
+            color: #6C63FF;
+            transition: all 0.5s ease-in-out;
+            margin: 0 auto;
+        }
+        .register-sign-in a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-device-width: 768px){
+            html, body {
+                font-size: 1rem;
+            }
+            body {
+                margin-top: unset;
+            }
+
+            .register-page-img {
+                width: 360px;
+                margin-top: unset;
+            }
+
+            form.form-style {
+                width: 90%;
+                margin: 0 auto;
+                font-size: 2.25rem;
+            }
+        }
+
+        @media only screen and (min-device-width:768px) {
+            .register-page {
+                position: relative;
+                margin-bottom: 4em;
+            }
+            
+            .register-page-img {
+                width: 470px;
+                margin-top: 2em;
+            }
+
+            form.form-style {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    </style> 
+    <script>
+	    window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        } 
 	</script>
-	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+	
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
         <div class="register-page">
             <div class="container">
                 
@@ -69,120 +184,7 @@
         </div>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-            /* Register Page styling */
-            .register-page{
-                margin-top: 10em;
-            }
-            .register-page-img {
-                width: 45%;
-                display: block;
-                margin: 0 auto;
-                margin-bottom: 0.5em;
-            }
-
-            .register-page-title {
-                font-size: 2.75rem;
-                font-family: "Bebas Neue", sans-serif;
-                font-weight: 900;
-                text-align: center;
-                letter-spacing: 0.2em;
-                margin-bottom: 0.5em;
-            }
-
-            .register-page-text {
-                font-size: 2rem;
-                text-align: center;
-            }
-
-            .form-style {
-                font-size: 1.15rem;
-            }
-
-            label {
-                font-size: 1.75rem;
-                color: #6C63FF;
-                margin: 1em 0 0.5em 0;
-                font-weight: 500;
-            }
-
-            input[type="submit"] {
-                background-color: #FFF;
-                color: #6C63FF;
-                font-weight: bold;
-                font-size: 1.5rem;
-                padding: 0.5em 1.5em;
-                margin: 1em 0;
-                width: unset;
-                cursor: pointer;
-                border: 2px solid #6C63FF;
-                border-radius: 5em;
-                transition: all 0.3s ease-in-out;
-            }
-
-            input[type="submit"]:hover {
-                color: #FFF;
-                background-color: #6C63FF;
-                border: 2px solid #6C63FF;
-                cursor: pointer;
-            }
-
-            .register-sign-in {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 1.5em 0;
-            }
-
-            .register-sign-in a {
-                text-decoration: none;
-                color: #6C63FF;
-                transition: all 0.5s ease-in-out;
-                margin: 0 auto;
-            }
-            .register-sign-in a:hover {
-                text-decoration: underline;
-            }
-
-            @media only screen and (max-device-width: 768px){
-                html, body {
-                    font-size: 1rem;
-                }
-                body {
-                    margin-top: unset;
-                }
-
-                .register-page-img {
-                    width: 360px;
-                    margin-top: unset;
-                }
-
-                form.form-style {
-                    width: 90%;
-                    margin: 0 auto;
-                    font-size: 2.25rem;
-                }
-            }
-
-            @media only screen and (min-device-width:768px) {
-                .register-page {
-                    position: relative;
-                    margin-bottom: 4em;
-                }
-                
-                .register-page-img {
-                    width: 470px;
-                    margin-top: 2em;
-                }
-
-                form.form-style {
-                    width: 60%;
-                    margin: 0 auto;
-                }
-            }
-
+            
         </style>
 
     {% endblock %}
