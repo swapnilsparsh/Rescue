@@ -29,7 +29,6 @@
       background-image:url("{% static 'Images/toph.png' %}"); 
    }
   </style> 
-    <body style="background-color:white; margin-top: 60px; ">
       <script>
 	   window.onscroll = function() {scrollFunction()};
        function scrollFunction() {
@@ -149,12 +148,15 @@
 
             @media only screen and (max-device-width: 768px){
                 html, body {
-                    font-size: 1.5em;
+                    font-size: 1rem;
+                }
+                body {
+                    margin-top: unset;
                 }
 
                 .register-page-img {
                     width: 360px;
-                    margin-top: 2em;
+                    margin-top: unset;
                 }
 
                 form.form-style {
