@@ -22,7 +22,7 @@
 
                     <div class="register-sign-in">
                         <input type="submit" value="Register">
-                        <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
+                        <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">SignIn</a></h3>
                     </div>
                 </form>
                 
@@ -33,7 +33,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
             /* Register Page styling */
             .register-page{
-                margin-top: 12em;
+                margin-top: 10em;
             }
             .register-page-img {
                 width: 45%;
@@ -89,6 +89,7 @@
             }
 
             .register-sign-in {
+                text-align: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -100,28 +101,29 @@
                 text-decoration: none;
                 color: #6C63FF;
                 transition: all 0.5s ease-in-out;
+                margin: 0 auto;
             }
             .register-sign-in a:hover {
                 text-decoration: underline;
             }
 
-            @media screen and (max-device-width: 768px) {
-                .register-page {
-                    position: absolute;
-                    top: 0%;
-                    left: 50%;
-                    transform: translate(-50%, 5%)
+            @media only screen and (max-device-width: 768px){
+                html {
+                    font-size: 1.25em;
                 }
-            }
-            
-            @media only screen and (max-width: 768px){
+
                 .register-page-img {
                     width: 360px;
                     margin-top: 2em;
                 }
+
+                form.form-style {
+                    width: 90%;
+                    margin: 0 auto;
+                }
             }
 
-            @media only screen and (min-width:768px) {
+            @media only screen and (min-device-width:768px) {
                 .register-page {
                     position: relative;
                     margin-bottom: 4em;
@@ -130,6 +132,11 @@
                 .register-page-img {
                     width: 470px;
                     margin-top: 2em;
+                }
+
+                form.form-style {
+                    width: 60%;
+                    margin: 0 auto;
                 }
             }
 
