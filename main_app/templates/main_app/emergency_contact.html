@@ -5,7 +5,22 @@
 <html lang="en">
 
 <body style="background-color:white;">
-
+    <script>
+	window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+	 
+	</script>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
 	<div class="emergency-contact-page">
 
 
@@ -67,6 +82,27 @@
 	</div>
 	</div>
 	<style>
+	    html {
+	scroll-behavior:smooth;
+   }
+	#myBtn {
+     display: none; 
+     position: fixed; 
+     bottom: 20px;  
+     right: 30px; 
+     z-index: 99; 
+     border: 2px black solid; 
+     outline: none; 
+     color:white;
+     background-color:black; 
+     cursor: pointer; 
+     padding: 1rem 1.4rem 1rem 1.4rem;
+     border-radius: 20rem;
+    }
+	#myBtn:hover {
+      background-color: white;
+      color:black;
+   }
 		.contacts {
 			width: 40%;
 			max-width: 100rem;
@@ -188,6 +224,8 @@
 				position: relative;
 			}
 		}
+
+    
 	</style>
 	<br><br><br>
 
