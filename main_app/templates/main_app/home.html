@@ -2,104 +2,109 @@
 {% load static %}
 
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-<head>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
-
-  <!-- Compiled and minified JavaScript -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
-    integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
-    integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../../static/css/styles.css">
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .my-bottom {
-      position: absolute;
-      bottom: 0
-    }
-
-    .dropdown-item:hover {
-      background-color: #0f3057;
-    }
-
-    .User {
-      font-size: 1.25rem;
-
-    }
-
-    .new {
-      font-size: 1.2rem;
-    }
-
-    .new::after {
-      position: relative;
-      left: 4px;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: .255em;
-      vertical-align: .255em;
-      content: "";
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
-      border-bottom: 0;
-      border-left: .3em solid transparent;
-    }
-
-
-    .User::after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: .255em;
-      vertical-align: .255em;
-      content: "";
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
-      border-bottom: 0;
-      border-left: .3em solid transparent;
-    }
-
-    .responsive {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 5%;
-    }
-
-    @media only screen and(max-width: 600px) {
-      .new {
-        margin-top: 0px;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+      integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+      integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../static/css/styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
-    }
+
+      .my-bottom {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .dropdown-item:hover {
+        background-color: rgb(77, 82, 87);
+      }
+
+      .User {
+        font-size: 1.25rem;
+      }
+
+      .new {
+        font-size: 1.2rem;
+      }
+      
+      .new::after {
+        position: relative;
+        left: 4px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+      }
 
     .dropdown-toggle::after {
       display: none;
@@ -246,122 +251,396 @@
     <div><img class="responsive" width="100%" src="{% static 'Images/rescues.gif' %}"></div>
   </div>
 
-
-  <div class="jumbotron" style="background-color: white;">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <h3 class="display-4" style="color: black; font-family: 'Bangers', cursive; text-align: center;"><u>Wonder Women of
-        India</u></h3>
-  </div>
-
-  <div class="container carousel-container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="w-100" src="../../static/Images/slideshow/ss1.png" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="w-100" src="{% static 'Images/slideshow/ss2.png' %}" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="w-100" src="{% static 'Images/slideshow/ss3.png' %}" alt="Third slide">
-        </div>
-        <div class="carousel-item">
-          <img class="w-100" src="{% static 'Images/slideshow/ss4.png' %}" alt="Third slide">
-        </div>
-        <div class="carousel-item">
-          <img class="w-100" src="{% static 'Images/slideshow/ss5.png' %}" alt="Third slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-  <footer class="" style="background-color:rgb(21,48,78);padding-bottom:3%; padding-top:3%;margin-top: auto">
-    <div class="row" style="margin:0px;">
-      <div class="col l6 s12" style="margin-left:15%;">
-        <h2 class="white-text"><b>Rescue</b></h2>
-        <p class="white-text text-lighten-4" style="color: white;">
-        <h3 style="color: white;">We are here to help women against crimes . and to aware about laws for women</h3>
-        </p>
-      </div>
-      <div class="row" style="margin-right:10%">
-        <ul class="col" style="margin-top:5px;">
-          <li style="margin:10px;"><a class="white-text " href="/developers">
-              <h3>Developers</h3>
-            </a></li>
-          <li style="margin:10px;"><a class="white-text" href="/helpline_numbers">
-              <h3>Helpline No.</h3>
-            </a></li>
-        </ul>
-      </div>
-    </div>
-
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = x.length }
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      .nav-link:hover {
+        color: rgb(220, 53, 69) !important;
       }
-      x[slideIndex - 1].style.display = "block";
-      setTimeout(showDivs, 3000);
-    }
-  </script>
 
-  <script>
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      .nav-link2:hover {
+        color: #fff !important;
       }
-      myIndex++;
-      if (myIndex > x.length) { myIndex = 1 }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 3000); // Change image every 5 seconds
-    }
-  </script>
+      .User::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+      }
 
-</body>
+      .responsive {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 5%;
+      }
 
+      @media only screen and(max-width: 600px) {
+        .new {
+          margin-top: 0px;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="padding: 0px; margin: 0px">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top"
+        style="background-color: rgb(6, 17, 31); height: 85px; padding: None"
+      >
+        <a class="navbar-brand" href="/home"
+          ><i
+            class="material-icons large text-white"
+            style="width: 80%; font-size: 45px"
+            >home</i
+          ></a
+        >
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+          style="background-color: rgb(6, 17, 31); padding: None"
+        >
+          <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown" style="margin-top: 20px">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown2"
+                style="background-color: rgb(6, 17, 31)"
+              >
+                <a class="dropdown-item" style="color: white" href="/logout"
+                  >Logout</a
+                >
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown3"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                &nbsp;&nbsp; User
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown3"
+                style="background-color: rgb(6, 17, 31)"
+              >
+                <a class="dropdown-item" style="color: white" href="/register"
+                  >Register</a
+                >
+                <a class="dropdown-item" style="color: white" href="/login"
+                  >Login</a
+                >
+              </div>
+            </li>
+            {% endif %}
+            <li class="nav-item dropdown" style="margin-top: 22px">
+              <a
+                class="nav-link"
+                href="#"
+                data-target="#navbarDopdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white; font-size: 18px"
+              >
+                <h4 class="new">&nbsp;&nbsp; More</h4>
+              </a>
+              <div
+                class="dropdown-menu"
+                id="navbarDropdown1"
+                aria-labelledby="navbarDropdown1"
+                style="background-color: rgb(6, 17, 31)"
+              >
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="/women_rights"
+                  >Women's Rights</a
+                >
+                <a class="dropdown-item" style="color: white" href="/women_laws"
+                  >Women's Safety Laws
+                </a>
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="/helpline_numbers"
+                  >Women Helpline Numbers</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/emergency_contact"
+                style="color: white; font-size: 18px"
+              >
+                &nbsp;&nbsp; Emergency Contacts
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-danger btn-sm nav-link2"
+                href="/emergency"
+                style="
+                  color: white;
+                  font-size: 18px;
+                  margin: 20px;
+                  width: 140px;
+                  height: 45px;
+                "
+              >
+                EMERGENCY!
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    {% if messages %} {% for message in messages %}
+    <script>
+      M.toast({
+        html: "{{message}}",
+        classes: "blue rounded",
+        displayLength: 4000,
+      });
+    </script>
+    {% endfor %} {% endif %}
+    <div>
+      <div>
+        <img
+          class="responsive"
+          width="100%"
+          src="{% static 'Images/rescues.gif' %}"
+        />
+      </div>
+    </div>
+    <div class="jumbotron" style="background-color: white">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+        rel="stylesheet"
+      />
+      <h3
+        class="display-4"
+        style="
+          color: black;
+          font-family: 'Bangers', cursive;
+          text-align: center;
+        "
+      >
+        <u>Wonder Women of India</u>
+      </h3>
+    </div>
+
+    <div class="container carousel-container">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="w-100"
+              src="../../static/Images/slideshow/ss1.png"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100"
+              src="{% static 'Images/slideshow/ss2.png' %}"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100"
+              src="{% static 'Images/slideshow/ss3.png' %}"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100"
+              src="{% static 'Images/slideshow/ss4.png' %}"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100"
+              src="{% static 'Images/slideshow/ss5.png' %}"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <footer
+      class=""
+      style="
+        background-color: rgb(21, 48, 78);
+        padding-bottom: 3%;
+        padding-top: 3%;
+        margin-top: auto;
+      "
+    >
+      <div class="row" style="margin: 0px">
+        <div class="col l6 s12" style="margin-left: 15%">
+          <h2 class="white-text"><b>Rescue</b></h2>
+          <p class="white-text text-lighten-4" style="color: white"></p>
+          <h3 style="color: white">
+            We are here to help women against crimes . and to aware about laws
+            for women
+          </h3>
+        </div>
+        <div class="row" style="margin-right: 10%">
+          <ul class="col" style="margin-top: 5px">
+            <li style="margin: 10px">
+              <a class="white-text" href="/developers">
+                <h3>Developers</h3>
+              </a>
+            </li>
+            <li style="margin: 10px">
+              <a class="white-text" href="/helpline_numbers">
+                <h3>Helpline No.</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(showDivs, 3000);
+      }
+    </script>
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000); // Change image every 5 seconds
+      }
+    </script>
+  </body>
 </html>
