@@ -3,32 +3,104 @@
 {% load static %}
 <html lang="en">
 {% block content %}
-<style>
-html {
-	scroll-behavior:smooth;
-   }
-	#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
-</style>   
+   
 <body style="background-color:white;margin-top: 60px;">
+    <style>
+        html {
+            scroll-behavior:smooth;
+           }
+            #myBtn {
+             display: none; 
+             position: fixed; 
+             bottom: 20px;  
+             right: 30px; 
+             z-index: 99; 
+             border: 2px black solid; 
+             outline: none; 
+             background-image:url("{% static 'Images/top.png' %}"); 
+             background-position:center;
+             background-repeat:no-repeat;
+             background-color:black; 
+             cursor: pointer; 
+             padding: 1.4rem;
+             border-radius: 25rem;
+            }
+            #myBtn:hover {
+              background-color: white;
+              background-image:url("{% static 'Images/toph.png' %}"); 
+           }
+           .form-style {
+                    font-size: 1.15rem;
+                }
+        
+                label {
+                    font-size: 1.75rem;
+                    color: #6C63FF;
+                    margin: 1em 0 0.5em 0;
+                    font-weight: 500;
+                }
+        
+                input[type="submit"] {
+                    background-color: #FFF;
+                    color: #6C63FF;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    padding: 0.5em 1.5em;
+                    margin: 1em 0;
+                    width: unset;
+                    cursor: pointer;
+                    border: 2px solid #6C63FF;
+                    border-radius: 5em;
+                    transition: all 0.3s ease-in-out;
+                }
+        
+                input[type="submit"]:hover {
+                    color: #FFF;
+                    background-color: #6C63FF;
+                    border: 2px solid #6C63FF;
+                    cursor: pointer;
+                }
+        
+                .login {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1.5em 0;
+                }
+        
+                .login a {
+                    text-decoration: none;
+                    color: #6C63FF;
+                    transition: all 0.5s ease-in-out;
+                    margin: 0 auto;
+                }
+                .login a:hover {
+                    text-decoration: underline;
+                }
+        
+                @media only screen and (max-device-width: 768px){
+                    label {
+                        font-size: 2.5rem;
+                    }
+                    body {
+                        margin-top: unset;
+                    }
+                    form.form-style {
+                        width: 90%;
+                        margin: 0 auto;
+                        font-size: 2rem;
+                    }
+                }
+        
+                @media only screen and (min-device-width:768px){
+                    form.form-style {
+                        width: 60%;
+                        margin: 0 auto;
+                    }
+                }
+        </style>
     <script>
 	window.onscroll = function() {scrollFunction()};
      function scrollFunction() {
@@ -58,22 +130,18 @@ html {
                         Registered
                         Account</b></p>
 
-                <form method="POST" style="background-color: white;">
+                <form method="POST" class="form-style">
                     <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in"
                         style="margin-left: 30%; height: 35%; width: 35%;">
                     {% csrf_token %}
                     {{form.as_p}}
+                    
                     <br>
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                        <button style="border-radius: 25px;" class="btn btn-success" type="submit"><b>Sign
-                                In</b></button>
+                    
+                    <div class="login">
+                        <input type="submit" value="Sign In">
+                        <h3 class="login-text">New to Rescue? <a href="/register">Create an account</a></h3>
                     </div>
-                    <br>
-                    <br>
-                    <strong class="new-button" style="display: flex; align-items: center; justify-content: center;">
-                        New to Rescue? <a href="/register" style="color:rgb(30,142,62);"><u><b>
-                                    Create an
-                                    Account</b></u></strong></a>
                 </form>
             </div>
         </div>
