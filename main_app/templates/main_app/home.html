@@ -106,41 +106,149 @@
         border-left: 0.3em solid transparent;
       }
 
-      .nav-link:hover {
-        color: rgb(220, 53, 69) !important;
-      }
+    .dropdown-toggle::after {
+      display: none;
+    }
+    
 
-      .nav-link2:hover {
-        color: #fff !important;
-      }
-      .User::after {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        margin-left: 0.255em;
-        vertical-align: 0.255em;
-        content: "";
-        border-top: 0.3em solid;
-        border-right: 0.3em solid transparent;
-        border-bottom: 0;
-        border-left: 0.3em solid transparent;
-      }
+    /* prelaoder css  */
+    #preloader{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(21,18,48);
+    display: grid;
+    align-items: center;
+    place-items: center;
+    position: fixed;
+    z-index: 9999;
+  }
+  .preloader-div{
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+  }
+  .rotator{
+    width: 30rem;
+    height:30rem;
+    border-radius: 50%;
+    animation: rotator 1s linear infinite;
+    border-right:3px solid #fff;
+  }
+  .preloader-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+@keyframes rotator{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
-      .responsive {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 5%;
-      }
+  </style>
+    <script>
+      window.onload=function(){
+     var preloader=document.getElementById("preloader");
+     setTimeout(function(){
+      preloader.style.display='none';
+  
+     },1000)
+   }
+  </script>
+  
+</head>
 
-      @media only screen and(max-width: 600px) {
-        .new {
-          margin-top: 0px;
-        }
-      }
-    </style>
-  </head>
+<body style="padding:0px; margin:0px;">
+  <div id="preloader">
+    <div class="preloader-div">
+      <div class="rotator"></div>
+    <img class="preloader-img" src="{% static 'Images/rescues.gif' %}"  alt="">
 
+  </div>
+  </div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+      style="background-color:rgb(21,48,78);  padding:None; ">
+      <a class="navbar-brand" href="/home"><i class="material-icons large text-white" style="width:80%">home</i></a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color:white">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color:rgb(21,48,78);padding:None;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; Emergency Contacts
+            </a>
+          </li>
+          <li class="nav-item dropdown" style="margin-top: 4.0%;">
+            <a class="nav-link dropdown-toggle" href="#" data-target="#navbarDopdown1" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+              <h4 class="new">&nbsp;&nbsp; More</h4>
+            </a>
+            <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
+              style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/women_rights">Women's Rights</a>
+              <a class="dropdown-item" style="color: white;" href="/women_laws">Women's Safety Laws </a>
+              <a class="dropdown-item" style="color: white;" href="/helpline_numbers">Women Helpline Numbers</a>
+            </div>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown" style="margin-top: 3.8%;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style=" color: white; font-size: 18px;">
+              <h4 class="User"> &nbsp;&nbsp; {{user.username}} </h4>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/logout">Logout</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; User
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: #00587a;">
+              <a class="dropdown-item" style="color: white;" href="/register">Register</a>
+              <a class="dropdown-item" style="color: white;" href="/login">Login</a>
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="/emergency" style="color: white; font-size: 18px;">
+              &nbsp;&nbsp; EMERGENCY !
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  {% if messages %} {% for message in messages %}
+  <script>
+    M.toast({
+      html: "{{message}}",
+      classes: 'blue rounded',
+      displayLength: 4000
+    });
+  </script>
+  {% endfor %} {% endif %}
+  
+    
   <body style="padding: 0px; margin: 0px">
     <header>
       <nav
