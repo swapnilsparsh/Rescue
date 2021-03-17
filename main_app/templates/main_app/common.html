@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <!-- Compiled and minified CSS -->
 
-    <!---Bootstrarp Icon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -143,39 +140,6 @@
         border-left: 0.3em solid transparent;
       }
 
-      .footer{
-      height:auto;
-      background-color:rgb(21,48,78);
-      color:white;
-      padding:20px 70px 20px 70px;
-    }
-
-
-    #footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    font-size:20px;
-    -webkit-text-decoration-skip: objects;
-    }
-
-    #footer ul.quick-links li{
-      padding: 3px 0;
-      -webkit-transition: .5s all ease;
-      -moz-transition: .5s all ease;
-      transition: .5s all ease;
-    }
-    #footer ul.quick-links li:hover{
-      padding: 3px 0;
-      margin-left:5px;
-      font-weight:700;
-    }
-    #footer ul.quick-links li a i{
-      margin-right: 5px;
-    }
-    #footer ul.quick-links li:hover a i {
-        font-weight: 700;
-    }
 
       @media only screen and (max-device-width: 600px) {
         .new {
@@ -392,32 +356,7 @@
     </script>
     {% endfor %} {% endif %} {% block content %} {% endblock %}
 
-    <footer class="footer" id="footer">
-      <div class="row text-center text-xs-center text-sm-left text-md-left">
-       <div class="col-xs-12 col-sm-8 col-md-8">
-         <h2 class="white-text"><b>Rescue</b></h2>
-         <p style="color: white;font-size: 20px;">We are here to help women against crimes  and to aware about laws for women</p>
-         <ul style="padding-top:10px;" class="quick-links">
-           <li><a class="white-text" href="/developers"><i class="bi bi-people-fill" style="padding-right:8px;"></i>Developers</a></li>
-           <li><a class="white-text" href="/helpline_numbers"><i class="bi bi-telephone-fill" style="padding-right:8px;"></i>Helpline No.</a></li>
-         </ul>
-       </div>
-       <div  class="col-xs-12 col-sm-4 col-md-4"   style="text-decoration: none;"  class="list-unstyled quick-links">
-           <h3 style="border-left: 5px solid white;padding:8px;">Quick Links</h3>
-           <br/>
-           <ul class="list-unstyled quick-links">
-             <li><a href="/home"><i class="fa fa-angle-double-right"></i>Home</a></li>
-             <li><a href="/emergency"><i class="fa fa-angle-double-right"></i>Emergency</a></li>
-             <li><a href="/register"><i class="fa fa-angle-double-right"></i>Register</a></li>
-             <li><a href="/login"><i class="fa fa-angle-double-right"></i>Login</a></li>
-           </ul>
-       </div>
- 
-      </div>
-      <h5 style="text-align: center;">Copyright © 2021 Rescue. All rights reserved.</h5>
-     </footer>
-
-    <!-- <footer
+    <footer
       class=""
       style="
         background-color: rgb(21, 48, 78);
@@ -450,7 +389,7 @@
           </ul>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
