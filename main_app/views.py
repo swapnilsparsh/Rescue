@@ -12,7 +12,7 @@ from .location import lat, log, location, city, state
 # Create your views here
 
 def home(request):
-    context = {}    
+    context = {}
     return render(request, 'main_app/home.html', context)
 
 

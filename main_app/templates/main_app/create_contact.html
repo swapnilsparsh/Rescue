@@ -9,26 +9,56 @@
 	scroll-behavior:smooth;
    }
 	#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 99;
+     border: 2px black solid;
+     outline: none;
+     background-image:url("{% static 'Images/top.png' %}");
 	 background-position:center;
 	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
+     background-color:black;
+     cursor: pointer;
      padding: 1.4rem;
      border-radius: 25rem;
     }
+
 	#myBtn:hover {
       background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
+      background-image:url("{% static 'Images/toph.png' %}");
    }
-  </style> 
+   .form-control{
+    background-color: #e5f5f7;
+    border: 1px solid #02386d;
+    font-size: 15px;
+   }
+
+   label {
+    font-size: 18px;
+    color: black}
+
+
+#id_email.form-control{
+    border-bottom: 1px solid #02386d;
+
+  }
+
+#id_name.form-control{
+    border-bottom: 1px solid #02386d;
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #f6f6f6;
+    border-radius: .3rem;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.05rem + 0.5px);
+}
+
+  </style>
     <body style="background-color:white;margin-top:150px;">
 	<script>
 	window.onscroll = function() {scrollFunction()};
@@ -43,18 +73,29 @@
        document.body.scrollTop = 0; // For Safari
        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-	 
+
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
         <br>
         <div class="container">
+          <div class="jumbotron">
+             <h1 class="display-4">Create a new contact!</h1>
+                     <p class="lead">Create contacts of your trustworthy people who can help you in your difficult times.</p>
+                     <hr class="my-4">
+                     <p>It will notify them when you are in danger!!</p>
+                     <br>
+                     <br>
+             <p></p>
             <form method="POST">
                 {% csrf_token %}
                 {{form.as_p}}
                 <br>
-                <button style="color:white; background-color:rgb(30,142,62);  border-radius: 25px;" 
-                class="btn" name="submit" type="submit"><b>Create</b></button>
-            </form>
+                <br>
+                <div class="text-center">
+                <button style="color:white;   border-radius: 25px; padding-bottom:35px"
+                class="btn btn-success btn-lg"  name="submit" type="submit"><b>Create</b></button></div>
+          </div>
+</div>
         </div>
     <br><br><br><br>
     <br><br><br>
