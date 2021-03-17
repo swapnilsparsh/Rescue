@@ -18,7 +18,7 @@
 
 <br>
 
-- The Government of India has setup different projects and intiatives for women safety and securoty and they are as follows:
+- The Government of India has setup different projects and intiatives for women safety and security and they are as follows:
 
     - The Government has set up Nirbhaya Fund for projects for safety and  security  of  women, for  which  Ministry  of  Women and Child Development is the nodal authority for appraising/ recommending the proposals / schemes to be funded under Nirbhaya Fund.
 
