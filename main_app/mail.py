@@ -25,5 +25,5 @@ def send_email(name, dest, link):
     msg['From'] = formataddr(("TEAM RESCUE", "Email"))
 
     # One last time add your email
-    server.sendmail("zaverisanya@gmail.com", dest, msg.as_string())
+    server.sendmail("Email", dest, msg.as_string())
     server.quit()
