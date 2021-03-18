@@ -3,31 +3,33 @@
 {% load static %}
 <html lang="en">
 {% block content %}
-<style>
-html {
-	scroll-behavior:smooth;
-   }
-	#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
+<head>
+    <style>
+    html {
+        scroll-behavior:smooth;
     }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
-</style>   
+        #myBtn {
+        display: none; 
+        position: fixed; 
+        bottom: 20px;  
+        right: 30px; 
+        z-index: 99; 
+        border: 2px black solid; 
+        outline: none; 
+        background-image:url("{% static 'Images/top.png' %}"); 
+        background-position:center;
+        background-repeat:no-repeat;
+        background-color:black; 
+        cursor: pointer; 
+        padding: 1.4rem;
+        border-radius: 25rem;
+        }
+        #myBtn:hover {
+        background-color: white;
+        background-image:url("{% static 'Images/toph.png' %}"); 
+    }
+    </style>   
+</head>
 <body style="background-color:white;margin-top: 60px;">
     <script>
 	window.onscroll = function() {scrollFunction()};
@@ -45,11 +47,8 @@ html {
 	 
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-    <div class="login-page">
-
-        <div class="container">
-            <br>
-            <div class="jumbotron" style="background-color:white; ">
+        <div class="container">     
+            <div style="background-color:white;padding:100px;">
                 <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
                 <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive;">WELCOME
                 </h1>
@@ -82,7 +81,5 @@ html {
     <br />
     {% endblock %}
     <br>
-
-
-
+</body>
 </html>
