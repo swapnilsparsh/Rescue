@@ -43,16 +43,35 @@ git clone https://github.com/<your-github-username>/Rescue
 ```bash
 cd Rescue
 ```
+**4.** Add the original repo as the upstream.
+```bash
+git remote add upstream https://github.com/swapnilsparsh/Rescue.git
+```
 
-**4.** Create a new branch.
+**5.** Before creating the branch make sure the master branch of forked repo is even with the master branch of original repo.
+```bash
+# Pull code from original repo
+git pull upstream master
+
+# Update the forked repo
+git push origin master
+```
+
+**6.** Create a new branch.
 
 ```bash
 git checkout -b <your_branch_name>
 ```
 
-**5.** Make changes in source code.
+**7.** Make changes in source code.
 
-**6.** Stage your changes and commit
+**8.** Make current branch even with the master branch
+```bash
+git pull origin master
+```
+**9.** Resolve all the conflicts
+
+**10.** Stage your changes and commit
 
 ```bash
 # Add changes to Index
@@ -62,15 +81,15 @@ git add .
 git commit -m "<your_commit_message>"
 ```
 
-**7.** Push your local commits to the remote repo.
+**11.** Push your local commits to the remote repo.
 
 ```bash
-git push -u origin <your_branch_name>
+git push origin <your_branch_name>
 ```
 
-**8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
+**12.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
 
-**9.** **Congratulations!** Sit and relax, you've made your contribution to [Rescue](https://github.com/swapnilsparsh/Rescue) project.
+**13.** **Congratulations!** Sit and relax, you've made your contribution to [Rescue](https://github.com/swapnilsparsh/Rescue) project.
 
 
 ## 💥 Issues:

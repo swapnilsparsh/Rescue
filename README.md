@@ -45,7 +45,7 @@ python manage.py runserver
 ```
 ## First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-Read [how to contribute.](https://github.com/smriti1313/Rescue/blob/master/Contributing.md)
+Read [how to contribute.](https://github.com/swapnilsparsh/Rescue/blob/master/Contributing.md)
 
 
 ## ✨Our Contributors
