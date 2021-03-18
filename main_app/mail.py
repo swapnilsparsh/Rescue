@@ -23,7 +23,7 @@ def send_email(name, dest, link):
     email_html = open('main_app/templates/main_app/email.html')
     email_body = email_html.read().format(name=name, link=link)
     msg = MIMEMultipart()
-    msg['Subject'] = name+'IN EMERGENCY'
+    msg['Subject'] = name+' IN EMERGENCY'
     msg.attach(MIMEText(email_body, 'html'))
     
     msg['From'] = formataddr(("TEAM RESCUE", Email))
