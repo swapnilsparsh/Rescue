@@ -5,8 +5,9 @@ from django.contrib import messages
 from .forms import ContactForm
 from .models import contact
 from django.contrib.auth.models import User
-from .mail import send_email
-from .location import lat, log, location, city, state
+from .mail import send_email, send_Update_email
+import requests
+import time
 
 
 # Create your views here
@@ -131,9 +132,54 @@ def emergency(request):
     for j in contacts:
         emails.append(j._meta.get_field("email"))
     name = request.user.username
+
+    #LOCATION RETRIEVAL
+    res = requests.get('https://ipinfo.io/')
+    data = res.json()
+    # city = data['city']
+    # state = data['region']
+    location = data['loc'].split(',')
+    lat = location[0]
+    log = location[1]
+
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
         send_email(name, c.email, link)
+    return render(request,'main_app/emergency_contact.html',context)
+
+
+def loc_update_email(request):
+    users = User.objects.all()
+    curr = 0
+    for user in users:
+        if request.user.is_authenticated:
+            curr = user
+            break
+    if curr == 0:
+        return redirect("main_app:login")
+    contacts = contact.objects.filter(user=request.user)
+    total_contacts = contacts.count()
+    context = {'contacts': contacts, 'total_contacts': total_contacts, 'user':request.user}
+    emails = []
+    for j in contacts:
+        emails.append(j._meta.get_field("email"))
+    name = request.user.username
+
+    #Sending updates every 10 mins for 30mins duration i.e. 3 updates in 30 mins.
+    for _ in range(3):
+        #LOCATION RETRIEVAL
+        res = requests.get('https://ipinfo.io/')
+        data = res.json()
+        # city = data['city']
+        # state = data['region']
+        location = data['loc'].split(',')
+        lat = location[0]
+        log = location[1]
+
+        link = "http://www.google.com/maps/place/"+lat+","+log
+        for c in contacts:
+            send_Update_email(name, c.email, link)
+        time.sleep(600)
     return render(request,'main_app/emergency_contact.html',context)
 
 
