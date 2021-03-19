@@ -45,11 +45,33 @@ html {
         justify-content: center;
     }
 
-    .sign-btn{
-        border-radius: 25px;
-        color: white;
-        text-transform: bold;
-        background-color:rgb(30,142,62);
+    .register-text{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size: .8em;
+        font-weight: bold;
+    }
+
+    input[type="submit"] {
+        background-color: #FFF;
+        color: rgb(30,142,62);
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 0.5em 1.5em;
+        margin: 1em 0;
+        width: unset;
+        cursor: pointer;
+        border: 2px solid rgb(30,142,62);
+        border-radius: 5em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+        color: #FFF;
+        background-color: rgb(30,142,62);
+        border: 2px solid rgb(30,142,62);
+        cursor: pointer;
     }
 
     .display-4{
@@ -91,6 +113,9 @@ html {
         .log-img{
             height: 500px;
         }
+        .register-text{
+            font-size: 1em;
+        }
     }
 </style>   
 <body style="background-color:white;margin-top: 60px;">
@@ -126,10 +151,11 @@ html {
                     {{form.as_p}}
                     <br>
                     <div class="button">
-                        <b><input class="sign-btn" type="submit" value="Sign In"></b>
+                        <b><input type="submit" value="Sign In"></b>
                     </div>
-                    <br>
-                    <strong class="button">New to Rescue? <a href="/register" style="color:rgb(30,142,62);"><u><b>Create an Account</b></u></a></strong>
+                    <div class="register-text">
+                        New to Rescue? <a href="/register" style="color:rgb(30,142,62);">&nbsp Create an Account</a>
+                    </div>
                 </div>
             </form>
         </div>
