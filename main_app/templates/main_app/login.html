@@ -27,6 +27,96 @@ html {
       background-color: white;
       background-image:url("{% static 'Images/toph.png' %}"); 
    }
+   .login-page{
+    margin-top: 10em;
+    margin-bottom: 8em;
+   }
+   .form-div{
+    width: 80%;
+    font-size: 1.8em;
+   }
+   label {
+        font-size: 1.8rem;
+    }
+
+    .button{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .register-text{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size: .8em;
+        font-weight: bold;
+    }
+
+    input[type="submit"] {
+        background-color: #FFF;
+        color: rgb(30,142,62);
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 0.5em 1.5em;
+        margin: 1em 0;
+        width: unset;
+        cursor: pointer;
+        border: 2px solid rgb(30,142,62);
+        border-radius: 5em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+        color: #FFF;
+        background-color: rgb(30,142,62);
+        border: 2px solid rgb(30,142,62);
+        cursor: pointer;
+    }
+
+    .display-4{
+        text-align: center;
+        color: black; 
+        font-family: 'Bangers', cursive;
+    }
+
+    .lead{
+        text-align: center; 
+        font-family: 'Overpass', sans-serif;
+    }
+
+    @media only screen and (max-device-width: 768px){
+        .login-page{
+            margin-top: -10em;
+            margin-bottom: -5em;
+        }
+        .form-div{
+            width: 80%;
+            margin-left: 3.7em;
+        }
+        label {
+            font-size: 2.5rem;
+        }
+        .button{
+            font-size: 1.3em;
+        }
+        .sign-btn{
+            font-size: 1.3em;
+            border-radius: 35px;
+        }
+        .display-4{
+            font-size: 5.5em;
+        }
+        .lead{
+            font-size: 2.5rem;
+        }
+        .log-img{
+            height: 500px;
+        }
+        .register-text{
+            font-size: 1em;
+        }
+    }
 </style>   
 <body style="background-color:white;margin-top: 60px;">
     <script>
@@ -46,36 +136,28 @@ html {
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
     <div class="login-page">
-
-        <div class="container">
-            <br>
-            <div class="jumbotron" style="background-color:white; ">
-                <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-                <h1 class="display-4" style="text-align: center; color: black; font-family: 'Bangers', cursive;">WELCOME
-                </h1>
+        <div class="row">
+            <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+            <div class="col-sm-12 col-md-12 col-lg-6" align="center">
+                <h1 class="display-4">WELCOME </h1>
                 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-                <p class="lead" style="text-align: center; font-family: 'Overpass', sans-serif;"><b>Login through
-                        Registered
-                        Account</b></p>
+                <p class="lead"><b>Login through Registered Account</b></p>
+                <img src="{% static 'Images/signup-image.jpg' %}" class="log-img">
+            </div>
 
-                <form method="POST" style="background-color: white;">
-                    <img src="{% static 'Images/signup-image.jpg' %}" alt="Log in"
-                        style="margin-left: 30%; height: 35%; width: 35%;">
-                    {% csrf_token %}
+            <form class="col-sm-12 col-md-12 col-lg-6" method="POST" style="background-color: white; margin-top: 3em;">
+                {% csrf_token %}
+                <div class="form-div">
                     {{form.as_p}}
                     <br>
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                        <button style="border-radius: 25px;" class="btn btn-success" type="submit"><b>Sign
-                                In</b></button>
+                    <div class="button">
+                        <b><input type="submit" value="Sign In"></b>
                     </div>
-                    <br>
-                    <br>
-                    <strong class="new-button" style="display: flex; align-items: center; justify-content: center;">
-                        New to Rescue? <a href="/register" style="color:rgb(30,142,62);"><u><b>
-                                    Create an
-                                    Account</b></u></strong></a>
-                </form>
-            </div>
+                    <div class="register-text">
+                        New to Rescue? <a href="/register" style="color:rgb(30,142,62);">&nbsp Create an Account</a>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <br />
