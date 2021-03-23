@@ -12,8 +12,6 @@
             background-color: black;
             color: white;
             text-align: center;
-            margin-top: -60%;
-            margin-left: 31%;
         }
 
         .btn:hover {
@@ -36,9 +34,6 @@
             background-color: #f6f5f5;
         }
 
-        .collapsible {
-            margin-top: -15%;
-        }
 
         .collapsible-body {
             text-align: justify;
@@ -47,7 +42,6 @@
 
         .wb-stl-heading1 {
             text-align: center;
-            margin-top: 40px;
             font-size: 40px;
             font-family: 'Roboto Slab', serif;
         }
@@ -56,8 +50,6 @@
         .img1-responsive {
             height: auto;
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
         }
   
   html {
@@ -83,13 +75,51 @@
       background-color: white;
       background-image:url("{% static 'Images/toph.png' %}"); 
    }
+
+   /*css added by arpit*/
+   body {
+            margin-top: 20vh;
+        }
+        @media only screen and (max-width:990px)
+        {
+            body {
+                margin-top: 10vh;
+            }
+            .column
+            {
+                text-align: center
+            }
+            .wb-stl-heading1
+            {
+                font-size: 4.9rem;
+            }
+            .lead
+            {
+                font-family: 'Overpass', sans-serif;
+                font-size: 2rem;
+            }
+            .btn
+            {
+                font-size: 2rem;
+                font-weight: 500;
+                padding-bottom: 3.5rem;
+            }
+            .container .collapsible .collapsible-header h5
+            {
+                font-size: 3rem;
+            }
+            .container .collapsible .collapsible-body p
+            {
+                font-size: 2rem;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color:white;margin-top: 150px;">
+<body>
     <script>
 	window.onscroll = function() {scrollFunction()};
      function scrollFunction() {
@@ -106,30 +136,35 @@
 	 
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-    <div class="row justify-content-center"
-        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <div class="container my-3 py-3">
+    <div class="row justify-content-center">
+        <!-- moved to head -->
         <div class="column">
-            <img src="{% static 'Images/law.jpg' %}" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
+            <img src="{% static 'Images/law.jpg' %}" class="img1-responsive" alt="Rights">
         </div>
 
-        <div class="column">
+        <div class="column mt-5">
             <h1 class="wb-stl-heading1">
                 <strong style="text-shadow: 2px 2px grey; text-align: center; ">
-                    <font color="black">Women's Safety Laws</font>
+                    Women's Safety Laws
                 </strong>
                 <img src="{% static 'Images/law_pic.jpg' %}" alt="24 * 7" height="50vw">
             </h1>
             <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-            <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Always REMEMBER Awareness without Action is
-                    Worthless"</b></p>
+            <p class="lead"><b>"Always REMEMBER Awareness without Action is
+                Worthless"</b></p>
             <hr class="my-10">
-            <a class="btn" href="https://en.wikipedia.org/wiki/Women_in_India#Women's_safety_laws"
-                target="_blank"><b>MORE DETAILS</b></a>
+            <a class="btn"
+                href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
+                target="_blank">MORE DETAILS</a>
         </div>
     </div>
 
-    <div class="container">
+    <br>
+</div>
+
+
+    <div class="container my-3 py-3">
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">
