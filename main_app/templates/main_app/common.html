@@ -73,17 +73,7 @@
         flex-direction: column;
       }
 
-      /* footer { */
-      /* position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background:#ccc; */
-      /* position: absolute; */
-      /* bottom: 0; */
-      /* } */
-
-      .my-bottom {
+            .my-bottom {
         position: absolute;
         bottom: 0;
       }
@@ -138,7 +128,7 @@
       .navbar
     {
       background-color: black;
-      height:13vh;
+      height:auto;
     }nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons
     {
       font-size:3rem;
@@ -229,7 +219,8 @@
       nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons
     {
       font-size:7rem;
-      margin-bottom: 2rem;;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
     .navbar-light .navbar-toggler
     {
@@ -238,7 +229,7 @@
     .navbar
     {
       background-color: black;
-      height:9vh;
+      height:auto;
     }
     .navbar-light .navbar-nav .nav-link
     {
@@ -338,8 +329,8 @@
     {% endfor %} {% endif %} {% block content %} {% endblock %}
 
     <footer class="footer pt-5 pb-2">
-      <div class="row" style="margin: 0px">
-        <div class="col l6 s12" style="margin-left: 15%">
+      <div class="row">
+        <div class="col-lg-5 col-sm-7 mx-auto">
           <h2 class="white-text"><b>Rescue</b></h2>
           <p class="white-text text-lighten-4" style="color: white"></p>
           <h3 style="color: white">
@@ -347,14 +338,14 @@
             for women
           </h3>
         </div>
-        <div class="row" style="margin-right: 10%">
-          <ul class="col" style="margin-top: 5px">
-            <li style="margin: 10px">
+        <div class="col-lg-5 col-sm-3 mx-auto">
+          <ul class="list-group">
+            <li >
               <a class="white-text" href="/developers">
                 <h3>Developers</h3>
               </a>
             </li>
-            <li style="margin: 10px">
+            <li >
               <a class="white-text" href="/helpline_numbers">
                 <h3>Helpline No.</h3>
               </a>
