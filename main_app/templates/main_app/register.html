@@ -33,10 +33,10 @@
 
         /* Register Page styling */
         .register-page{
-            margin-top: 10em;
+            margin-top: 7em;
         }
         .register-page-img {
-            width: 45%;
+            width: 50%;
             display: block;
             margin: 0 auto;
             margin-bottom: 0.5em;
@@ -58,6 +58,13 @@
 
         .form-style {
             font-size: 1.15rem;
+        }
+        .form-div1{
+            margin-top: 8em;
+        }
+        .form-div2{
+            width: 80%;
+            margin-top: 3em;
         }
 
         label {
@@ -108,41 +115,22 @@
         }
 
         @media only screen and (max-device-width: 768px){
+            .form-div1{
+                margin-top: 5em;
+            }
+            .form-div2{
+                width: 80%;
+                margin-left: 3.7em;
+            }
             label {
                 font-size: 2.5rem;
             }
-            body {
-                margin-top: unset;
-            }
-
-            .register-page-img {
-                width: 360px;
-                margin-top: unset;
-            }
-
             form.form-style {
-                width: 90%;
                 margin: 0 auto;
                 font-size: 2rem;
             }
         }
 
-        @media only screen and (min-device-width:768px) {
-            .register-page {
-                position: relative;
-                margin-bottom: 4em;
-            }
-            
-            .register-page-img {
-                width: 470px;
-                margin-top: 2em;
-            }
-
-            form.form-style {
-                width: 60%;
-                margin: 0 auto;
-            }
-        }
     </style> 
     <script>
 	    window.onscroll = function() {scrollFunction()};
@@ -161,25 +149,23 @@
 	
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
         <div class="register-page">
-            <div class="container">
-                <h1 class="register-page-title">WELCOME TO RESCUE</h1>
-                <p class="register-page-text">Create Your Account</p>
-                        
-                <img class="container register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
-                
-                <form method="POST" class="form-style">
-                    {% csrf_token %}
-                    {{form.as_p}}
-                    
-                    <br>
-
-                    <div class="register-sign-in">
-                        <input type="submit" value="Register">
-                        <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
+            <form method="POST" class="form-style"> 
+                {% csrf_token %}         
+                <div class="row">   
+                    <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <h1 class="register-page-title">WELCOME TO RESCUE</h1>
+                        <p class="register-page-text">Create Your Account</p>
+                        <img class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
                     </div>
-                </form>
-                
-            </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="form-div2">{{form.as_p}}</div>
+                    </div>
+                </div>  
+                <div class="register-sign-in" align="center">
+                    <input type="submit" value="Register">
+                    <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
+                </div>
+            </form>
         </div>
 
         <style>
