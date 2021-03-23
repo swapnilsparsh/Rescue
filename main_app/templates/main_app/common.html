@@ -21,8 +21,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
 
-    <!---BootStrap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+     <!---BootStrap Icons-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
 
     <!-- Compiled and minified JavaScript -->
     <script
@@ -75,7 +76,17 @@
         display: flex;
         flex-direction: column;
       }
-      
+
+      /* footer { */
+      /* position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#ccc; */
+      /* position: absolute; */
+      /* bottom: 0; */
+      /* } */
+
       .my-bottom {
         position: absolute;
         bottom: 0;
@@ -97,10 +108,6 @@
       }
 
       .new {
-        font-size: 1.2rem;
-      }
-
-      .new-button {
         font-size: 1.2rem;
       }
 
@@ -152,6 +159,11 @@
     .ic:hover {
         opacity: 0.7;
     }
+
+      .new-button {
+        font-size: 1.2rem;
+      }
+
       .new::after {
         position: relative;
         left: 4px;
@@ -188,57 +200,33 @@
         .new-button {
           font-size: 1.5rem;
         }
-        .login-page{
-          margin-bottom:20%;
-        }
       }
 
       @media only screen and (max-device-width: 320px) {
         .login-page {
-          position: absolute;
-          top: 0%;
-          margin-bottom:60%;
-          left: 50%;
-          transform: translate(-50%, 50%);
-        }
-      }
-
-      @media only screen and (max-device-width: 270px) {
-        .login-page {
-          position: absolute;
-          top: 0%;
-          margin-bottom:80%;
-          left: 50%;
-          transform: translate(-50%, 50%);
+          padding-top:35%;
+          padding-bottom:35%;
         }
       }
 
       @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
         .login-page {
-          position: absolute;
-          top: 20%;
-          margin-bottom:40%;
-          left: 50%;
-          transform: translate(-50%, 40%);
+          padding-top:30%;
+          padding-bottom:30%;
         }
       }
 
       @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
         .login-page {
-          position: absolute;
-          top: 0%;
-          margin-bottom:40%;
-          left: 50%;
-          transform: translate(-50%, 30%);
+          padding-top:30%;
+          padding-bottom:30%;
         }
       }
 
       @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
         .login-page {
-          position: absolute;
-          top: 0%;
-          left: 50%;
-          transform: translate(-50%, 7%);
+          padding-top:30%;
+          padding-bottom:30%;
         }
       }
       @media only screen and (min-width: 768px) {
@@ -441,9 +429,8 @@
         </div>
       </div>
       <h5 style="text-align: center;">Copyright © 2021 Rescue. All rights reserved.</h5>
-    </footer>
-
-
+    </footer>  
+      
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
