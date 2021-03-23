@@ -20,9 +20,7 @@
             background-color: #f6f5f5;
         }
 
-        .collapsible {
-            margin-top: -15%;
-        }
+        
 
         .collapsible-body {
             font-family: 'Arvo', serif;
@@ -32,8 +30,7 @@
             background-color: black;
             color: white;
             text-align: center;
-            margin-top: -50%;
-            margin-left: 40%;
+            
         }
 
         .btn:hover {
@@ -46,85 +43,128 @@
         .img1-responsive {
             height: auto;
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
+            
         }
-   
-   html {
-	scroll-behavior:smooth;
-   }
-   #myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: 2px black solid;
+            outline: none;
+            background-image:url("{% static 'Images/top.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+            cursor: pointer;
+            padding: 1.4rem;
+            border-radius: 25rem;
+        }
+
+        #myBtn:hover {
+            background-color: white;
+            background-image:url("{% static 'Images/toph.png' %}");
+        }
+
+        /*Css added by arpit*/
+        body {
+            margin-top: 20vh;
+        }
+        @media only screen and (max-width:990px)
+        {
+            body {
+                margin-top: 10vh;
+            }
+            .column
+            {
+                text-align: center
+            }
+            .wb-stl-heading1
+            {
+                font-size: 5rem;
+            }
+            .lead
+            {
+                font-family: 'Overpass', sans-serif;
+                font-size: 2rem;
+            }
+            .btn
+            {
+                font-size: 2rem;
+                font-weight: 500;
+                padding-bottom: 3.5rem;
+            }
+            .container .collapsible .collapsible-header h5
+            {
+                font-size: 3rem;
+            }
+            .container .collapsible .collapsible-body p
+            {
+                font-size: 2rem;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color:white;margin-top: 150px;">
+<body>
     <script>
-	window.onscroll = function() {scrollFunction()};
-     function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-    }
-    function topFunction() {
-       document.body.scrollTop = 0; // For Safari
-       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-	 
-	</script>
-	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-    <div class="container">
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
 
-        <div class="row justify-content-center"
-            style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- moved to head -->
             <div class="column">
-                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="Rights"
-                    style="margin-top: -200px;">
+                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="Rights">
             </div>
 
-            <div class="column">
-                <h1 class="wb-stl-heading1"
-                    style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
+            <div class="column mt-5">
+                <h1 class="wb-stl-heading1">
                     <strong style="text-shadow: 2px 2px grey; text-align: center; ">
-                        <font color="black">Women's Rights</font>
+                       Women's Rights
                     </strong>
                     <img src="{% static 'Images/rights.jpg' %}" alt="24 * 7" height="50vw">
                 </h1>
                 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-                <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Awareness about Your Rights gives You
+                <p class="lead"><b>"Awareness about Your Rights gives You
                         the
                         Might to Treated Right"</b></p>
                 <hr class="my-10">
                 <a class="btn"
                     href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
-                    target="_blank"><b>MORE DETAILS</b></a>
+                    target="_blank">MORE DETAILS</a>
             </div>
         </div>
 
+        <br>
+    </div>
+
+
+    <div class="container my-3 py-3">
+        
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">
@@ -296,8 +336,8 @@
                 </div>
             </li>
         </ul>
-        <br>
     </div>
+
     <div>
         <img src="{% static 'Images/women-picture.jpg' %}" alt="" class="img-responsive">
     </div>
