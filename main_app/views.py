@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
-from .forms import ContactForm
-from .models import contact
+from .forms import *
+from .models import *
 from django.contrib.auth.models import User
 from .mail import send_email
 from .location import lat, log, location, city, state
+
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here
@@ -16,21 +18,7 @@ def home(request):
     return render(request, 'main_app/home.html', context)
 
 
-def register(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f"New Account Created Successfully: {username}")
-            login(request, user)
-            messages.info(request, f"Logged in as {username}")
-            return redirect('main_app:home')
-        else:
-            for msg in form.error_messages:
-                messages.error(request, f"{msg}: form.error_messages[msg]")
-    form = UserCreationForm
-    return render(request, 'main_app/register.html', context={'form': form})
+
 
 
 def logout_request(request):
@@ -154,3 +142,59 @@ def women_rights(request):
 
 def page_not_found(request):
     return render(request, 'main_app/404.html', {'title': '404_error'})
+
+
+# def register(request):
+#     if request.method == 'POST':
+#         form = UserRegisterForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             messages.success(request, f'Your account has been created! You are now able to log in')
+#             return redirect('login')
+#     else:
+#         form = UserRegisterForm()
+#     return render(request, 'users/register.html', {'form': form})
+
+def register(request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f"New Account Created Successfully: {username}")
+            login(request, user)
+            messages.info(request, f"Logged in as {username}")
+            return redirect('main_app:home')
+        else:
+            for msg in form.error_messages:
+                messages.error(request, f"{msg}: form.error_messages[msg]")
+    form = UserRegisterForm()
+    return render(request, 'main_app/register.html', context={'form': form})
+
+@login_required
+def profile(request):
+    
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('main_app:profileview')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    P = Profile.image
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form,
+        'P' : P,
+    } 
+    return render(request, 'main_app/profile.html', context)

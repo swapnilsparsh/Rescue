@@ -18,5 +18,7 @@ urlpatterns = [
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
     path("developers/", views.developers, name="developers"),
-    path("404_error/", views.page_not_found, name="404_error")
+    path("404_error/", views.page_not_found, name="404_error"),
+    path("profileview/", views.profile, name="profileview"),
+
               ]

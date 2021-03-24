@@ -1,0 +1,42 @@
+{% extends "main_app/common.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+    <h1 style="color: rgba(21, 48, 78); margin-top: 150px; text-align: center;">MY PROFILE</h1>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="{{user.profile.image.url}}" style="height: 300px; width: 300px; border-radius: 50%; display: block; margin: 0 auto 20px auto;">
+        
+            </div>
+            <div class="col-sm-7" style="padding: 0 50px">
+                <div class="content-section" style="  border:solid 2px rgba(0, 37, 80, 0.856); padding: 30px 120px;  border-radius: 20px;">
+                    <div class="">
+                      <div class="media-body">
+                        <h3 class="">Username - {{ user.username }}</h3>
+                        <p class="">Email id - {{ user.email }}</p>
+                        
+                      </div>
+                    </div>
+                    <form method="POST" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        <fieldset class="form-group" >
+                            
+                            {{ u_form|crispy }}
+                            {{ p_form|crispy }}
+                        </fieldset>
+                        <div class="form-group">
+                            <button class="btn bg-dark" type="submit">Update</button>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+{% endblock content %}
