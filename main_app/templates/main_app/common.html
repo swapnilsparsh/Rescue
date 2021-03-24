@@ -139,6 +139,28 @@
         border-left: 0.3em solid transparent;
       }
 
+      /* back to top button */
+      #back-to-top-btn {
+        position: fixed;
+        bottom: 5%;
+        right: 3%;
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        background-color: #FFF;
+        color: #6C63FF;
+        cursor: pointer;
+        border: 2px solid #6C63FF;;
+        border-radius: 5em;
+        transition: all 0.5s ease-in-out;
+        align-items: center;
+      } 
+      #back-to-top-btn:hover {
+        background-color: #6C63FF;
+        color: #FFF;
+        border: 2px solid #FFF;
+      }
+
       @media only screen and (max-device-width: 600px) {
         .new {
           margin-top: 0px;
@@ -354,6 +376,11 @@
     </script>
     {% endfor %} {% endif %} {% block content %} {% endblock %}
 
+    
+    <!-- Back to top button -->
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <script src="../../static/js/index.js"></script>
+
     <footer
       class=""
       style="
@@ -387,7 +414,7 @@
           </ul>
         </div>
       </div>
-    </footer>
+  </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
