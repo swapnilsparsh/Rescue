@@ -7,7 +7,7 @@ class contact(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="contact", null=True)
     name = models.CharField(max_length=100)
     email = models.EmailField()
-
+    mobile_no = models.CharField(max_length=15)
     Father = 'Father'
     Mother = 'Mother'
     Brother = 'Brother'

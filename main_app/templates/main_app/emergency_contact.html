@@ -58,6 +58,7 @@
 					<th>Name</th>
 					<th>Relation</th>
 					<th>Email</th>
+					<th>Mobile No.</th>
 					<th>Update</th>
 					<th>Delete</th>
 				</tr>
@@ -69,6 +70,7 @@
 					<td>{{contact.name}}</td>
 					<td>{{contact.relation}}</td>
 					<td>{{contact.email}}</td>
+					<td>{{contact.mobile_no}}</td>
 					<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
 							href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
 					<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
