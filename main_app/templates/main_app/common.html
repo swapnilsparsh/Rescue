@@ -124,7 +124,7 @@
         border-bottom: 0;
         border-left: 0.3em solid transparent;
       }
-      /*css added by arpit after removing inline CSS */
+     
       .navbar
     {
       background-color: black;
@@ -162,7 +162,7 @@
     {
       background-color: rgb(21, 48, 78);
     }
-    /*arpit css end*/
+    
       @media only screen and (max-device-width: 600px) {
         .new {
           margin-top: 0px;
@@ -213,7 +213,7 @@
           position: relative;
         }
       }
-     /* media query added by arpit for font-sizes*/
+     
       @media only screen and (max-width:990px)
     {
       nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons
@@ -233,10 +233,11 @@
     }
     .navbar-light .navbar-nav .nav-link
     {
-      font-size: 2rem;;
+      font-size: 2.5rem;
+      font-weight: 500;
     } 
     .new ,.dropdown-item{
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating
     {
@@ -244,7 +245,7 @@
       margin-top:10px;
       margin-bottom: 10px;
       padding: 0.45rem 0.75rem;
-      
+      margin-left: 2rem;
     }
     }
     </style>
@@ -266,10 +267,10 @@
           style="background-color: rgb(6, 17, 31); padding: None">
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
             {% if user.is_authenticated %}
-            <li class="nav-item dropdown" style="margin-top: 20px">
+            <li class="nav-item dropdown">
               <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" >
-                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+                &nbsp;&nbsp; {{user.username}}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
