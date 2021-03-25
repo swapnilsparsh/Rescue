@@ -243,6 +243,7 @@
                 aria-labelledby="navbarDropdown2"
                 style="background-color: rgb(6, 17, 31)"
               >
+              <a class="dropdown-item" style="color: white" href="/changepassword">Change Password</a>
                 <a class="dropdown-item" style="color: white" href="/logout"
                   >Logout</a
                 >
@@ -328,7 +329,7 @@
                 &nbsp;&nbsp; Emergency Contacts
               </a>
             </li>
-            
+
             <li class="nav-item">
               <a
                 class="nav-link btn btn-danger btn-sm nav-link2"
@@ -344,11 +345,14 @@
                 EMERGENCY !
               </a>
             </li>
-            
+
           </ul>
         </div>
       </nav>
     </header>
+
+    {% block body %}
+    {% endblock %}
 
     {% if messages %} {% for message in messages %}
     <script>

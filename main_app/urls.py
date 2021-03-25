@@ -13,11 +13,12 @@ urlpatterns = [
     path("create_contact/", views.create_contact , name="create_contact"),
     path("update_contact/<str:pk>/", views.update_contact, name="update_contact"),
     path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
-    path("emergency/", views.emergency, name="emergency"), 
+    path("emergency/", views.emergency, name="emergency"),
     path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
     path('ngo_details/', views.ngo_details, name='ngo_details'),
     path("developers/", views.developers, name="developers"),
+    path('changepassword/', views.changepassword, name='changepassword'),
     path("404_error/", views.page_not_found, name="404_error")
               ]

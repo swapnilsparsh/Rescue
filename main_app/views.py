@@ -11,7 +11,7 @@ from .forms import UserCreateForm , LoginForm
 # Create your views here
 
 def home(request):
-    context = {}    
+    context = {}
     return render(request, 'main_app/home.html', context)
 
 def register(request):
@@ -168,3 +168,27 @@ def women_rights(request):
 
 def page_not_found(request):
     return render(request, 'main_app/404.html', {'title': '404_error'})
+
+def changepassword(request):
+    users = User.objects.all()
+    curr = 0
+    for user in users:
+        if request.user.is_authenticated:
+            curr = user
+            break
+    if curr == 0:
+        return redirect("main_app:login")
+    error=""
+    if request.method == 'POST':
+        o = request.POST['old']
+        n = request.POST['new']
+        c = request.POST['confirm']
+        if c==n:
+            u = User.objects.get(username__exact = request.user.username)
+            u.set_password(n)
+            u.save()
+            error="no"
+        else:
+            error="yes"
+    context={'error':error}
+    return render(request, 'main_app/changepassword.html',context)
