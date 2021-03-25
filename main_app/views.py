@@ -141,6 +141,10 @@ def helpline_numbers(request):
     return render(request, 'main_app/helpline_numbers.html', {'title': 'helpline_numbers'})
 
 
+def ngo_details(request):
+    return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
+
+
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
 
