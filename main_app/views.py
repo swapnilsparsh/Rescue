@@ -3,35 +3,38 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import ContactForm
-from .models import contact
-from django.contrib.auth.models import User
+from .models import contact,Login
+from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .location import lat, log, location, city, state
-
-
+from .forms import UserCreateForm , LoginForm
 # Create your views here
 
 def home(request):
     context = {}    
     return render(request, 'main_app/home.html', context)
 
-
 def register(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
+    if request.method == 'POST':
+        form = UserCreateForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f"New Account Created Successfully: {username}")
+            user = authenticate(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password1']
+            )
             login(request, user)
             messages.info(request, f"Logged in as {username}")
             return redirect('main_app:home')
         else:
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: form.error_messages[msg]")
-    form = UserCreationForm
-    return render(request, 'main_app/register.html', context={'form': form})
-
+        
+    else:
+        form = UserCreateForm()
+    return render(request, 'main_app/register.html', {'form': form})
 
 def logout_request(request):
     logout(request)
@@ -40,22 +43,29 @@ def logout_request(request):
 
 
 def login_request(request):
-    if request.method == "POST":
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                messages.info(request, f"Successfully logged in as {username} !")
-                return redirect("main_app:home")
-            else:
-                messages.error(request, f"Invalid username or password {username} ")
-        else:
-            messages.error(request, "Invalid username or password  ")
+    form = LoginForm(request.POST)
+    username = request.POST.get('Username_or_Email')
+    password = request.POST.get('password')
+    if request.method == "POST":            
+            if(User.objects.filter(username=username).exists()):
+                user=auth.authenticate(username=username,password=password)
+                if user is not None:
+                    login(request, user)
+                    messages.info(request, f"Successfully logged in as {username} !")
+                    return redirect("main_app:home")
 
-    form = AuthenticationForm
+            elif(User.objects.filter(email=username).exists()):
+                user=User.objects.get(email=username)
+                user=auth.authenticate(username=user.username,password=password)
+                if user is not None:
+                    login(request, user)
+                    messages.info(request, f"Successfully logged in as {username} !")
+                    return redirect("main_app:home")
+            else:
+                messages.error(request, f"Invalid username or password")
+                return redirect("main_app:login")
+            
+    form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
 

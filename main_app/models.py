@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
-
 # Create your models here.
 class contact(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="contact", null=True)
@@ -29,3 +28,9 @@ class contact(models.Model):
     relation = models.CharField(max_length=10, choices=relations, default=Other)
     def __str__(self):
         return self.name
+
+
+class Login(models.Model):
+    
+    Username_or_Email= models.CharField(max_length=100)
+    password = models.CharField(max_length=32)
