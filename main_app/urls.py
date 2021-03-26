@@ -18,6 +18,7 @@ urlpatterns = [
     path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
+    path('ngo_details/', views.ngo_details, name='ngo_details'),
     path("developers/", views.developers, name="developers"),
     path("404_error/", views.page_not_found, name="404_error"),
     path('reset_password/',auth_views.PasswordResetView.as_view(template_name = "main_app/password_reset.html"),name="reset_password"),

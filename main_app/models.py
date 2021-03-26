@@ -34,3 +34,4 @@ class Login(models.Model):
     
     Username_or_Email= models.CharField(max_length=100)
     password = models.CharField(max_length=32)
+
