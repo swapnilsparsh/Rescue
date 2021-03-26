@@ -8,6 +8,7 @@ from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .location import lat, log, location, city, state
 from .forms import UserCreateForm , LoginForm
+from django.core.mail import send_mail
 # Create your views here
 
 def home(request):
@@ -31,7 +32,7 @@ def register(request):
         else:
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: form.error_messages[msg]")
-        
+
     else:
         form = UserCreateForm()
     return render(request, 'main_app/register.html', {'form': form})
@@ -46,7 +47,7 @@ def login_request(request):
     form = LoginForm(request.POST)
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
-    if request.method == "POST":            
+    if request.method == "POST":
             if(User.objects.filter(username=username).exists()):
                 user=auth.authenticate(username=username,password=password)
                 if user is not None:
@@ -64,7 +65,7 @@ def login_request(request):
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
-            
+
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
@@ -192,3 +193,22 @@ def changepassword(request):
             error="yes"
     context={'error':error}
     return render(request, 'main_app/changepassword.html',context)
+
+def contact_user(request):
+	if request.method == "POST":
+		message_name = request.POST['message-name']
+		message_email = request.POST['message-email']
+		message = request.POST['message']
+
+		# send an email
+		send_mail(
+			message_name, # subject
+			message, # message
+			message_email, # from email
+			['rescue@gmail.com'], # To Email
+			)
+
+		return render(request, 'main_app/contact_user.html', {'message_name': message_name})
+
+	else:
+		return render(request, 'main_app/contact_user.html', {})

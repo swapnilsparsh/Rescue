@@ -20,5 +20,6 @@ urlpatterns = [
     path('ngo_details/', views.ngo_details, name='ngo_details'),
     path("developers/", views.developers, name="developers"),
     path('changepassword/', views.changepassword, name='changepassword'),
+    path('contact_user/', views.contact_user , name="contact_user"),
     path("404_error/", views.page_not_found, name="404_error")
               ]
