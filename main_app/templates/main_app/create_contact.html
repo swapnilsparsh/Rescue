@@ -37,19 +37,23 @@
       background-color: #f3f3f3;
       margin-left: auto;
       margin-right: auto;
-      width:60%;
+      width:65%;
     }
 	 
      @media screen and (min-device-width: 270px) and (max-device-width: 425px) {
     .jumbotron {
       position: absolute;
-      top: 15%;
+      top: 20%;
       left: 50%;
-      transform: translate(-50%, 40%);
+      transform: translate(-50%, 7%);
+      width:70%;
+      height:1000px;
     }
-    .container {
-      max-width: 1000px;
-
+    .create{
+      margin-top: 100px;
+    }
+    label{
+      margin-top: 70px;
     }
   }
     p{
@@ -91,9 +95,10 @@
                 {% csrf_token %}
                 {{form.as_p}}
                 <br>
+		 <div class="create">
                 <div class="text-center">
                   <button style="color:white;   border-radius: 25px; padding-bottom:35px"
-                  class="btn btn-success btn-lg"  name="submit" type="submit"><b>Create</b></button></div>
+                  class="btn btn-success btn-lg"  name="submit" type="submit"><b>Create</b></button></div></div>
             </form>
         </div>
     </div>
