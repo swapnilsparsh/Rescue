@@ -154,7 +154,12 @@
         border-radius: 5em;
         transition: all 0.5s ease-in-out;
         align-items: center;
-      } 
+        outline: none;
+      }
+
+      #back-to-top-btn:focus, button:focus {
+        outline: none !important; 
+      }
       #back-to-top-btn:hover {
         background-color: #6C63FF;
         color: #FFF;
@@ -378,7 +383,7 @@
 
     
     <!-- Back to top button -->
-    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <button id="back-to-top-btn" onclick="this.style.outline='none'"><i class="fas fa-angle-double-up"></i></button>
     <script src="../../static/js/index.js"></script>
 
     <footer
