@@ -8,6 +8,15 @@ from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .location import lat, log, location, city, state
 from .forms import UserCreateForm , LoginForm
+from django.core.mail import EmailMessage
+from django.views import View
+from django.utils.encoding import force_bytes , force_text , DjangoUnicodeDecodeError
+from django.utils.http  import urlsafe_base64_encode , urlsafe_base64_decode
+from django.contrib.sites.shortcuts import get_current_site
+from django.urls import reverse
+from .utils import account_activation_token
+from django.http import HttpResponse
+
 # Create your views here
 
 def home(request):
@@ -20,13 +29,27 @@ def register(request):
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f"New Account Created Successfully: {username}")
-            user = authenticate(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password1']
+            email=form.cleaned_data.get('email')
+            user.is_active=False
+            user.save()
+
+            uidb64=urlsafe_base64_encode(force_bytes(user.pk))
+            domain=get_current_site(request).domain
+            link=reverse('activate',kwargs={'uidb64':uidb64,'token':account_activation_token.make_token(user)})
+            
+            activate_url = 'http://'+domain+link
+
+            email_subject="Rescue - Activate you Account!"
+            email_body= "Hi  "+user.username+"  ,  Please use this link to verify your account\n" + activate_url
+            email = EmailMessage(
+                email_subject,
+                email_body,
+                'noreply@gmail.com',
+                [email],
             )
-            login(request, user)
-            messages.info(request, f"Logged in as {username}")
+            messages.success(request, f"New Account Created Successfully: {username}")
+            messages.success(request, f"Check your email to Activate your account!")
+            email.send(fail_silently=False)
             return redirect('main_app:home')
         else:
             for msg in form.error_messages:
@@ -35,6 +58,29 @@ def register(request):
     else:
         form = UserCreateForm()
     return render(request, 'main_app/register.html', {'form': form})
+
+class VerificationView(View):
+    def get(self, request, uidb64, token):
+        try:
+            id = force_text(urlsafe_base64_decode(uidb64))
+            user = User.objects.get(pk=id)
+
+            if not account_activation_token.check_token(user, token):
+                return redirect('main_app:login'+'?message='+'User already activated')
+
+            if user.is_active:
+                return redirect('main_app:login')
+            user.is_active = True
+            user.save()
+
+            messages.success(request, f'Account activated successfully')
+            return redirect('main_app:login')
+
+        except Exception as ex:
+            pass
+
+        return redirect('main_app:login')
+ 
 
 def logout_request(request):
     logout(request)
@@ -46,24 +92,36 @@ def login_request(request):
     form = LoginForm(request.POST)
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
-    if request.method == "POST":            
+    if request.method == "POST":  
+        if username and password:          
             if(User.objects.filter(username=username).exists()):
                 user=auth.authenticate(username=username,password=password)
-                if user is not None:
-                    login(request, user)
-                    messages.info(request, f"Successfully logged in as {username} !")
-                    return redirect("main_app:home")
+                if user:
+                    if user.is_active:
+                        login(request, user)
+                        messages.success(request, 'Welcome, ' +
+                                        user.username+' you are now logged in')
+                        return redirect('main_app:home')
+                    
+                messages.error(request, "Account is not active,please check your email")
+                    
 
             elif(User.objects.filter(email=username).exists()):
                 user=User.objects.get(email=username)
                 user=auth.authenticate(username=user.username,password=password)
-                if user is not None:
-                    login(request, user)
-                    messages.info(request, f"Successfully logged in as {username} !")
-                    return redirect("main_app:home")
+                if user:
+                    if user.is_active:
+                        login(request, user)
+                        messages.success(request, 'Welcome, ' +
+                                        user.username+' you are now logged in')
+                        return redirect('main_app:home')
+                    
+                messages.error(request, "Account is not active,please check your email")
+                    
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
+        
             
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})

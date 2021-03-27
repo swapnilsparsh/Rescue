@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from main_app import views
 from django.urls import path
+from  main_app.views import VerificationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_app.urls')),
     path('register/', views.register, name='register'),   
+    path('activate/<uidb64>/<token>',
+         VerificationView.as_view(), name='activate'),
 ]

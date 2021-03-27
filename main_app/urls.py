@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .views import VerificationView 
+from django.views.decorators.csrf import csrf_exempt
 
 app_name = "main_app"
 
@@ -18,5 +20,6 @@ urlpatterns = [
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
     path("developers/", views.developers, name="developers"),
-    path("404_error/", views.page_not_found, name="404_error")
-              ]
+    path("404_error/", views.page_not_found, name="404_error"),        
+    path("activate/<uidb64>/<token>", VerificationView.as_view() ,name= "activate"),      
+           ]
