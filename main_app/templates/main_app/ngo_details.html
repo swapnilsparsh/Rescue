@@ -8,6 +8,10 @@
 
 <head>
     <style>
+    a h3
+    {
+        text-decoration: none;
+    }
         .btn {
             background-color: black;
             color: white;
@@ -91,6 +95,10 @@
    button:hover{
        background-color: #dc354587;
    }
+   .footer
+   {
+       margin-top:2vh
+   }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
@@ -98,7 +106,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color:white;margin-top: 150px;">
+<body style="background-color:white;">
     <script>
 	window.onscroll = function() {scrollFunction()};
      function scrollFunction() {
@@ -116,7 +124,7 @@
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
     <div class="row justify-content-center"
-        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        style="width: 100%;margin-top: 150px; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <div class="column">
             <img src="{% static 'Images/ngo.jpg' %}" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
@@ -294,5 +302,3 @@
 </body>
 
 {% endblock %}
-
-</html>
