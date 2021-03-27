@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 .carousel-container{
     padding: 3% 0;
