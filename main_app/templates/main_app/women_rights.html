@@ -14,6 +14,7 @@
         .collapsible-header {
             background-color: white;
             font-family: 'Alegreya', serif;
+            font-size: 20px;
         }
 
         .collapsible-header.active {
@@ -25,6 +26,7 @@
         }
 
         .collapsible-body {
+            text-align: justify;
             font-family: 'Arvo', serif;
         }
 
@@ -96,19 +98,17 @@
 	 
 	</script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-    <div class="container">
 
         <div class="row justify-content-center"
             style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
             <div class="column">
-                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="Rights"
+                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="27 * 7"
                     style="margin-top: -200px;">
             </div>
 
             <div class="column">
-                <h1 class="wb-stl-heading1"
-                    style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
+                <h1 class="wb-stl-heading1" style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
                     <strong style="text-shadow: 2px 2px grey; text-align: center; ">
                         <font color="black">Women's Rights</font>
                     </strong>
@@ -125,6 +125,7 @@
             </div>
         </div>
 
+        <div class="container">
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">

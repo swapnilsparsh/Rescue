@@ -36,11 +36,11 @@
 				<form action="{% url 'main_app:delete_contact' item.id  %}" method="POST">
 
 					{% csrf_token %}
-					<a style="color:black; background-color:white; border-radius: 20px;" class="btn btn-warning"
-						href="{% url 'main_app:emergency_contact' %}"><b>Cancel</b></b></a>
+					<a style="color:black; background-color:white; border-radius: 20px; margin:10px;" class="btn btn-warning"
+						href="{% url 'main_app:emergency_contact' %}"><b>NO</b></b></a>
 
 					<input style="color:black; background-color:white; border-radius: 20px; font-weight: 700;"
-						class="btn btn-danger" type="submit" name="Yes">
+						class="btn btn-danger" type="submit" name="Yes"  value="YES">
 				</form>
 			</div>
 		</div>
