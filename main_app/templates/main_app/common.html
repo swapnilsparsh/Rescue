@@ -103,13 +103,6 @@
       .nav-link2:hover {
         color: #fff !important;
       }
-      .User {
-        font-size: 1.25rem;
-      }
-
-      .new {
-        font-size: 1.2rem;
-      }
 
       .footer{
         height:auto;
@@ -146,20 +139,13 @@
           font-weight: 700;
       }
 
-    .ic {      
-      margin-left:15px; 
-      padding: 10px;
-      font-size: 20px;
-      width: 35px;
-      text-align: center;
-      text-decoration: none;
-      margin-left: 10px;
-      border-radius: 50%;
-    }
+      .User {
+        font-size: 1.25rem;
+      }
 
-    .ic:hover {
-        opacity: 0.7;
-    }
+      .new {
+        font-size: 1.2rem;
+      }
 
       .new-button {
         font-size: 1.2rem;
@@ -193,6 +179,33 @@
         border-left: 0.3em solid transparent;
       }
 
+      /* back to top button */
+      #back-to-top-btn {
+        position: fixed;
+        bottom: 5%;
+        right: 3%;
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        background-color: #FFF;
+        color: #6C63FF;
+        cursor: pointer;
+        border: 2px solid #6C63FF;;
+        border-radius: 5em;
+        transition: all 0.5s ease-in-out;
+        align-items: center;
+        outline: none;
+      }
+
+      #back-to-top-btn:focus, button:focus {
+        outline: none !important; 
+      }
+      #back-to-top-btn:hover {
+        background-color: #6C63FF;
+        color: #FFF;
+        border: 2px solid #FFF;
+      }
+
       @media only screen and (max-device-width: 600px) {
         .new {
           margin-top: 0px;
@@ -203,38 +216,57 @@
         }
       }
 
+      @media only screen and (max-device-width: 319px) {
+        .login-page {
+          position: absolute;
+          padding-top:98%;
+          padding-bottom:98%;
+         }
+      }
+
       @media only screen and (max-device-width: 320px) {
         .login-page {
-          padding-top:35%;
-          padding-bottom:35%;
-        }
+          position: absolute;
+          padding-top:48%;
+          padding-bottom:48%;
+         }
       }
 
       @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
         .login-page {
-          padding-top:30%;
-          padding-bottom:30%;
+          position: absolute;
+          padding-top:48%;
+          padding-bottom:48%;
+        
         }
       }
 
       @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
         .login-page {
+          position: absolute;
           padding-top:30%;
-          padding-bottom:30%;
+          padding-bottom:30%; 
         }
       }
 
       @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
         .login-page {
+          position: absolute;
+          top: 0%;
+          left: 50%;
           padding-top:30%;
           padding-bottom:30%;
+          transform: translate(-50%, 7%);
         }
       }
+
+      
       @media only screen and (min-width: 768px) {
         .login-page {
           position: relative;
         }
       }
+
     </style>
   </head>
 
@@ -356,6 +388,12 @@
                   href="/helpline_numbers"
                   >Women Helpline Numbers</a
                 >
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="/ngo_details"
+                  >NGOs for Women</a
+                >
               </div>
             </li>
 
@@ -400,33 +438,31 @@
     </script>
     {% endfor %} {% endif %} {% block content %} {% endblock %}
 
+    
+    <!-- Back to top button -->
+    <button id="back-to-top-btn" onclick="this.style.outline='none'"><i class="fas fa-angle-double-up"></i></button>
+    <script src="../../static/js/index.js"></script>
+
     <footer class="footer" id="footer">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
        <div class="col-xs-12 col-sm-5 col-md-5" style="padding-right:60px;padding-left:40px;">
          <h2 class="white-text"><b>Rescue</b></h2>
          <p style="color: white;font-size: 20px;">We are here to help women against crimes  and to aware about laws for women</p>
        </div>
-       <div  class="col-xs-12 col-sm-3 col-md-3"   style="text-decoration: none;"  class="list-unstyled quick-links">
-           <h3 style="border-left: 5px solid white;padding:8px;">Quick Links</h3>
-           <br/>
-           <ul class="list-unstyled quick-links">
-             <li><a href="/developers"><i class="bi bi-people-fill"></i>Developers</a></li>
-             <li><a href="/helpline_numbers"><i class="bi bi-telephone-fill"></i>Helpline Numbers</a></li>
-             <li><a href="/emergency_contact"><i class="bi bi-person-lines-fill"></i>Emergency Contacts</a></li>
-           </ul>
-       </div>
-        <div class="col-xs-12 col-sm-4 col-md-4" style="padding-left:20px;">
-          <h3 style="border-left: 5px solid white;padding:8px;margin-left:10px;">Contact us</h3>
-          <br/><br/>
-          <a href="https://github.com/swapnilsparsh/Rescue"><i style="background: #55ACEE;" class="bi bi-twitter ic"></i></a>
-          <a href="https://github.com/swapnilsparsh/Rescue"><i style="background: #3B5998;" class="bi bi-facebook ic"></i></a>
-          <a href="https://github.com/swapnilsparsh/Rescue"><i style="background: #007bb5;" class="bi bi-linkedin ic"></i></a>
-          <a href="https://github.com/swapnilsparsh/Rescue"><i style="background: salmon;" class="bi bi-envelope-fill ic"></i></a>
-          <a href="https://github.com/swapnilsparsh/Rescue"><i style="background:black;" class="bi bi bi-github ic"></i></a>
+        <div class="col-xs-12 col-sm-4 col-md-4" >
+          
+        </div>
+        <div  class="col-xs-12 col-sm-3 col-md-3"   style="text-decoration: none;"  class="list-unstyled quick-links">
+          <ul class="list-unstyled quick-links">
+           <li><a href="/developers"><i class="bi bi-people-fill"></i>Developers</a></li>
+           <li><a href="/helpline_numbers"><i class="bi bi-telephone-fill"></i>Helpline Numbers</a></li>
+           <li><a href="/emergency_contact"><i class="bi bi-person-lines-fill"></i>Emergency Contacts</a></li>
+           <li><a href="#"><i class="bi bi-chat-right-text-fill"></i>Contact Us</a></li>
+          </ul>
         </div>
       </div>
-    </footer>  
-      
+   </footer>  
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
