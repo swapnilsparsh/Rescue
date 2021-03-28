@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+<html lang="en">
+{% block content %}
+<br>
+
+<head>
+    <style>
+        .btn {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -60%;
+            margin-left: 31%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+
+        .collapsible-header:hover {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible-header {
+            background-color: white;
+            font-family: 'Alegreya', serif;
+            font-size: 20px;
+        }
+
+        .collapsible-header.active {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible {
+            margin-top: -15%;
+        }
+
+        .collapsible-body {
+            text-align: justify;
+            font-family: 'Arvo', serif;
+        }
+
+        .wb-stl-heading1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  
+  html {
+	scroll-behavior:smooth;
+ } 
+ #myBtn {
+     display: none; 
+     position: fixed; 
+     bottom: 20px;  
+     right: 30px; 
+     z-index: 99; 
+     border: 2px black solid; 
+     outline: none; 
+     background-image:url("{% static 'Images/top.png' %}"); 
+	 background-position:center;
+	 background-repeat:no-repeat;
+     background-color:black; 
+     cursor: pointer; 
+     padding: 1.4rem;
+     border-radius: 25rem;
+    }
+	#myBtn:hover {
+      background-color: white;
+      background-image:url("{% static 'Images/toph.png' %}"); 
+   }
+   button{
+       border-radius: 20px;
+       border: 0px;
+       padding: 10px;
+   }
+   button:hover{
+       background-color: #dc354587;
+   }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
+    <script>
+	window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+	 
+	</script>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div class="row justify-content-center"
+        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <div class="column">
+            <img src="{% static 'Images/ngo.jpg' %}" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
+        </div>
+
+        <div class="column">
+            <h1 class="wb-stl-heading1">
+                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                    <font color="black">NGOs for Women</font>
+                </strong>
+                <img src="{% static 'Images/ngologo.png' %}" alt="24 * 7" height="50vw">
+            </h1>
+            <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+            <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Don't feel Helpless. Someone is there to help you."</b></p>
+            <hr class="my-10">
+            <a class="btn" href="https://ngosindia.com/ngos-of-india/"
+                target="_blank"><b>MORE DETAILS</b></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Gauri India</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Pioneered in the year 1993 by Ajeet Singh, Guria, a 36 member NGO in India, works towards fighting the sexual exploitation of women & children, especially forced prostitution & sex trafficking which has further become severe and complex due to sex tourism and spread of HIV/AIDS. The blue print of the foundation was laid out way back in 1988 when Mr. Singh adopted three children of a woman from a red light area. 
+                    </p>
+                <a href="tel:+915422504253" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:guria.freedomnow@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="http://guriaindia.org/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>ActionAid Association </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>ActionAid Association is an organisation working for social and ecological justice. ActionAid has been engaged with the most marginalised communities in India since 1972. In 2006, ActionAid Association was registered as an Indian organisation, governed by an independent General Assembly and a Governing Board. Together with supporters, communities, institutions and governments, we strive for equality, fraternity and liberty for all. ActionAid Association works in 24 states and two union territories, with several partners and allied organisations.
+
+                    ActionAid Association is part of a global federation and a full affiliate of ActionAid International, that has presence in over 40 countries worldwide.
+                    </p>
+                    <a href="tel:+918025586293" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:fundindia@actionaid.org" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="https://www.actionaidindia.org/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Majlis Legal Center </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>The founder members of Majlis have been a part of the women’s movement in India since 1980. Majlis started in 1991 as a response to a growing need for lawyers with a gender perspective who are dedicated to evolving innovative legal practices to defend women’s rights. Headed by Adv. Flavia Agnes we are an all women team comprising of lawyers and social activists. Our agenda for social change is – quality legal representation for individual women in court, changing mindsets through advocacy and training and evolving gender just ideology through campaigns and interventions.
+                    </p>
+                    <a href="tel:+912226662394" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:majlislaw@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="http://majlislaw.com/en/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Gramya Resource Center for Women </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Gramya's vision is to create a society, which will provide political, social and economic opportunities for women, especially tribal and dalit women, to help them achieve their rights, to improve their lives and livelihoods and to realize their full potential. Issues that they focus on are - 
+                        <ol>
+                            <li>Securing the rights of women and girls, especially to confront violence through organizing and capacity building</li>
+                            <li>Eradication of female infanticide and sale of girl babies</li>
+                            <li>Access to credit through self-help initiatives</li>
+                            <li>Improvement of livelihoods for women and their families</li>
+                            <li>Strengthening healthcare systems to ensure women's reproductive rights</li>
+                        </ol>
+                    </p>
+                    <a href="tel:+919440860271" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:vijayrukminirao@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="http://gramya.org.in/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Prajwala </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Prajwala is a pioneering anti-trafficking organization working on the issue of sex trafficking and sex crime. Established in the year 1996 in South India, Prajwala has pan India and International operations. Prajwala works on the five pillars of Prevention, Protection, Rescue, Rehabilitation & Reintegration. As one of the most powerful voices advocating nationally and globally for victim centred services, Prajwala in its 25 years of existence has assisted the police in rescuing over 24,000 women and girls from sex slavery and facilitating their journey for recovery.</p>
+                        <a href="tel:+918414237304" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:praj_2010@yahoo.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="https://www.prajwalaindia.com/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>NARII Foundation
+                        (New Age Revolution In India Foundation) </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>NARII Foundation, established in the year 2016 is a non-government organisation catering to the welfare of women and not-so-privileged girl child. Since inception, NARII is working seamlessly towards the improved quality of life, health, education, women empowerment and mankind at large. NARII works towards establishing a connection between the different monetary and social dimensions of the society in order to provide a powerful force making an impact to the society with peace, healing, smiles and a positive shift in the cultural dimensions. </p>
+                        <a href="tel:+911126397166" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:nariifoundation@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="http://nariifoundation.com/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Chhanv Foundation </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Chhanv Foundation is a Non-Profit Organisation in India working for the rehabilitation of acid attack survivors. Chhanv Foundation raised the unheard voices of acid attack survivors through its campaign Stop Acid Attacks in 2013. We redefined the definition of rehabilitation by advocacy for the acid attacks followed by providing Medical Assistance, Legal Assistance, Education help then at last but not least by providing the Employment at Cafe Sheroes Hangout located in Agra & Lucknow respectively.
+                    <br>
+                    Headquarter in Noida Sector 46. The operations, strategy, and co-ordinations are supervised by the Headquarter. The organization is founded by a group of young people mostly from a journalism background and who are also prominent figures in social activism and advocacy in India. The organization is founded by Mr. Alok Dixit, a prominent Social Activist & headed by him as Counselling Director and Mr.Ashish Shukla as Executive Director. </p>
+                        <a href="tel:+919958066951" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:chhanvfoundation@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="https://www.chhanv.org/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Sakhya Women Guidance Cell </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>In 1987, SAKHYA, Anti-dowry and Women’s Guidance Cell was started by the College of Social Work, Nirmala Niketan, Mumbai, at the request of and in collaboration with the District Vigilance Commission, Government of Maharashtra. From 1985 to 2003 it continued to be run as a field action project of Nirmala Niketan run by the Religious Congregation of the Daughters of the Heart of Mary. From 2004 it became an independent entity under the aegis of Nirmala Institute. From 1987 the focus of Sakhya was addressing dowry related harassment and working on the issue of domestic violence. Besides this, Sakhya has been offering services in the form of counseling, legal aid, providing shelter to women in distress, conducting awareness programs on gender issues, educational programs to youth on family life, HIV/AIDS, value education, gender sensitization in schools, colleges, institutions and low-income group communities.</p>
+                        <a href="tel:+919890312402" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:sakhya_87@rediffmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="http://sakhyawgc.org/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Vimochana </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Vimochana is a Bangalore-based NGO founded in 1979. It is an activist group that provided a forum for women’s rights. Angala, a centre in Vimochana, helps the women who approach them to get jobs. Besides, they find admission for their child/children in orphanages if the mother is not able to look after them and provide medical treatment to women in need. Vimochana works on issues of violence against women and empowering female survivors of violence based in Bangalore. The organization has been running for more than 40 years. They believe in understanding violence against women at a personal level, which they call Crisis Intervention.</p>
+                        <a href="tel:+918025492781" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:vimochana79@gmail.com" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="https://www.vimochana.co.in/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>CARE India – An NGO Epowering Women & Girls </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>CARE has been working in India for 70 years, focusing on alleviating poverty and social exclusion. We do this through well-planned and comprehensive programmes in health, education, livelihoods and disaster preparedness and response. CARE India is collaborating with development partners in fighting COVID-19 health crisis. We are helping frontline workers stay safe with PPE, distributing dry rations to feed the needy, raising awareness in our programme areas. We are part of the CARE International Confederation working in over 100 countries for a world where all people live with dignity and security. CARE India offices are present across different states in India including Rajasthan, Uttar Pradesh, Delhi, Madhya Pradesh, Orissa, Gujrat, etc.</p>
+                        <a href="tel:+911204048250" target=""><button><span class="fa fa-phone fa-lg"></span><b> Contact</b></button></a>
+                <a href="mailto:cbox-ap@careindia.org" target="_blank"><button><span class="fa fa-envelope-o fa-lg"></span><b> Email</b></button></a>
+                <a href="https://www.careindia.org/" target="_blank"><button><span class="fa fa-external-link fa-lg"></span><b> Website</b></button></a>
+                </div>
+            </li>
+        </ul>
+        <br>
+    </div>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" class="img-responsive" alt="">
+    </div>
+</body>
+
+{% endblock %}
+
+</html>
