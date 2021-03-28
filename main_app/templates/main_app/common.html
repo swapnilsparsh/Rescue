@@ -21,7 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
 
-   <!-- Compiled and minified JavaScript -->
+    <!-- Compiled and minified JavaScript -->
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-2.1.1.min.js"
@@ -107,7 +107,7 @@
         font-size: 1.2rem;
       }
 
-     .new-button {
+      .new-button {
         font-size: 1.2rem;
       }
 
@@ -178,29 +178,37 @@
 
       @media only screen and (max-device-width: 320px) {
         .login-page {
-          padding-top:35%;
-          padding-bottom:35%;
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 50%);
         }
       }
 
       @media screen and (min-device-width: 321px) and (max-device-width: 425px) {
         .login-page {
-          padding-top:30%;
-          padding-bottom:30%;
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, 40%);
         }
       }
 
       @media screen and (min-device-width: 425px) and (max-device-width: 475px) {
         .login-page {
-          padding-top:30%;
-          padding-bottom:30%;
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 30%);
         }
       }
 
       @media screen and (min-device-width: 475px) and (max-device-width: 594px) {
         .login-page {
-          padding-top:30%;
-          padding-bottom:30%;
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, 7%);
         }
       }
       @media only screen and (min-width: 768px) {
@@ -379,7 +387,7 @@
     </script>
     {% endfor %} {% endif %} {% block content %} {% endblock %}
 
-  
+    
     <!-- Back to top button -->
     <button id="back-to-top-btn" onclick="this.style.outline='none'"><i class="fas fa-angle-double-up"></i></button>
     <script src="../../static/js/index.js"></script>
@@ -418,7 +426,6 @@
         </div>
       </div>
   </footer>
-
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
