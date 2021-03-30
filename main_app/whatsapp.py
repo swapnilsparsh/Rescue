@@ -1,4 +1,5 @@
-import pywhatkit 
+import pywhatkit as kit
+import pyautogui as pg
 from datetime import datetime, timedelta
 
 def send_whatsapp(numbers, name, link):
@@ -14,4 +15,5 @@ Click the link below for location
 		minute = minute[1]
 	hour, minute = int(hour), int(minute)
 	for x in range(len(numbers)):
-		pywhatkit.sendwhatmsg(numbers[x], message, hour, minute+int(x), wait_time=20)
+		kit.sendwhatmsg(numbers[x], message, hour, minute+int(x), wait_time=20)
+		pg.press('enter')
