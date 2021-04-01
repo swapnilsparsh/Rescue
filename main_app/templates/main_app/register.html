@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
 {% load static %}
+{% load socialaccount %}
 
 <body lang="en">
     {% block content %}
@@ -101,7 +102,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1.5em 0;
+            /* padding: 1.5em 0; */
         }
 
         .register-sign-in a {
@@ -131,24 +132,28 @@
             }
         }
 
+        /* google button css */
+              .gg{
+    width:240px;
+    height:40px;
+    border:0px;
+    border-radius: 50px;
+    background-color: #DB4437;
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    color:white;
+  }
+  .gg i{
+    margin-left: -20px;
+    padding-right:8px;
+  }
+  .or{
+      font-size: 2em;
+      padding-bottom: 20px;
+  }
+
     </style> 
-    <script>
-	    window.onscroll = function() {scrollFunction()};
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-            document.getElementById("myBtn").style.display = "none";
-            }
-        }
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        } 
-	</script>
-	
-    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-        <div class="register-page">
+	    <div class="register-page">
             <form method="POST" class="form-style"> 
                 {% csrf_token %}         
                 <div class="row">   
@@ -164,13 +169,20 @@
                 <div class="register-sign-in" align="center">
                     <input type="submit" value="Register">
                     <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
+                    
                 </div>
             </form>
+        <center>
+            <div class="or">
+                or
+            </div>
+            <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
+                    <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
+                </button></p>
+        </center>
+        
         </div>
 
-        <style>
-            
-        </style>
 
     {% endblock %}
 </body>

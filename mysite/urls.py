@@ -25,4 +25,6 @@ urlpatterns = [
     path('register/', views.register, name='register'),   
     path('activate/<uidb64>/<token>',
          VerificationView.as_view(), name='activate'),
+    path('accounts/', include('allauth.urls')),
+
 ]

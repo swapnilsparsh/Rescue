@@ -34,6 +34,9 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="../../static/css/styles.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       min-height: 100vh;
       display: flex;
@@ -133,6 +136,28 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    /* back to top button */
+    #back-to-top-btn {
+      position: fixed;
+      bottom: 5%;
+      right: 3%;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      background-color: #FFF;
+      color: #6C63FF;
+      cursor: pointer;
+      border: 2px solid #6C63FF;
+      border-radius: 5em;
+      transition: all 0.5s ease-in-out;
+      align-items: center;
+      outline: none;
+    } 
+    #back-to-top-btn:hover {
+      background-color: #6C63FF;
+      color: #FFF;
+      border: 2px solid #FFF;
+    }
 
     @keyframes rotator {
       0% {
@@ -213,6 +238,7 @@
                 <a class="dropdown-item" style="color: white" href="/women_laws">Women's Safety Laws
                 </a>
                 <a class="dropdown-item" style="color: white" href="/helpline_numbers">Women Helpline Numbers</a>
+                <a class="dropdown-item" style="color: white" href="/ngo_details">NGOs for Women</a>
               </div>
             </li>
             <li class="nav-item">
@@ -312,6 +338,10 @@
         </a>
       </div>
     </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <script src="../../static/js/index.js"></script>
 
     <footer class="" style="
         background-color: rgb(21, 48, 78);
