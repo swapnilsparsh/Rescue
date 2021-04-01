@@ -4,6 +4,7 @@
 {% load socialaccount %}
 <html lang="en">
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <style>
 html {
 	scroll-behavior:smooth;
@@ -133,6 +134,10 @@ html {
     margin-left: -20px;
     padding-right:8px;
   }
+  body > div.login-page > div > form > div > p:nth-child(2){
+        display: inline-block;
+        width: 98%;
+    }
 </style>   
 <body style="background-color:white;margin-top: 60px;">
     <div class="login-page">
@@ -149,6 +154,9 @@ html {
                 {% csrf_token %}
                 <div class="form-div">
                     {{form.as_p}}
+                    <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+
+                    
                     <br>
                     <div class="button">
                         <b><input type="submit" value="Sign In"></b>
@@ -169,6 +177,19 @@ html {
     </div>
     <br />
     <br />
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#id_password');
+    
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    
+    </script>
     {% endblock %}
     <br>
 
