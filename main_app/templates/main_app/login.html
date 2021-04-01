@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
 {% load static %}
+{% load socialaccount %}
 <html lang="en">
 {% block content %}
 <style>
@@ -117,6 +118,21 @@ html {
             font-size: 1em;
         }
     }
+    /* google button css */
+      .gg{
+    width:240px;
+    height:40px;
+    border:0px;
+    border-radius: 50px;
+    background-color: #DB4437;
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    color:white;
+  }
+  .gg i{
+    margin-left: -20px;
+    padding-right:8px;
+  }
 </style>   
 <body style="background-color:white;margin-top: 60px;">
     <div class="login-page">
@@ -143,6 +159,13 @@ html {
                     <div class="register-text">
                         <a href="/reset_password" style="color:rgb(30,142,62);">&nbsp Forgot Password?</a>
                     </div>
+                    <center><p>or</p>
+
+                    <!-- google -->
+                    <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
+                            <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
+                        </button></p>
+                        </center>
                 </div>
             </form>
         </div>
