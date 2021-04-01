@@ -32,12 +32,13 @@
 "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202003/International_Women_s_Day_.jpeg?tzrurrAJzz2wytPEKePlySnmMseXwcrj&size=770:433"
 width="50%" height="24%"><br>
 
+
 <br>
 - The Government of India has setup different ==projects== and ==intiatives== for women safety and security which are as follows:
     - The Government has set up `Nirbhaya Fund` for projects for **safety and security of women**, for which **Ministry of Women and Child Development** is the nodal authority for:
         - appraising/ recommending the proposals
         - organising schemes to be funded under Nirbhaya Fund.
-     - In order to facilitate States/UTs, MHA has launched an online analytic tool for police on 19th February 2019 called `“Investigation Tracking System for Sexual Offences”` to :
+    - In order to facilitate States/UTs, MHA has launched an online analytic tool for police on 19th February 2019 called `“Investigation Tracking System for Sexual Offences”` to :
        - monitor and 
        - track 
        time-bound investigation in sexual assault cases in accordance with :
@@ -45,11 +46,11 @@ width="50%" height="24%"><br>
     - MHA has launched the `“National Database on Sexual Offenders”(NDSO) on 20th September 2018` to facilitate :
        - investigation 
        - tracking of sexual offenders across the country 
-       by law enforcement agencies. 
-    ==NDSO== has data of over 5 lakh sexual offenders.
+        by law enforcement agencies. 
+        ==NDSO== has data of over 5 lakh sexual offenders.
     - `Emergency Response Support System`, which provides single emergency number(==112==) based on  computer aided dispatch of field resources to the location of distress has been operationalized in **20 States/ UTs in 2018-19**.
     - MHA has launched a `cyber-crime portal` on `20th September 2018` for citizens to report obscene content. 
-     Further, `Cyber Crime Forensic Labs` have been set up in several States, and training of over **3,664 personnel**, including **410 Public Prosecutors** and **Judicial Officers** in:
+      Further, `Cyber Crime Forensic Labs` have been set up in several States, and training of over **3,664 personnel**, including **410 Public Prosecutors** and **Judicial Officers** in:
         - identifying
         - detecting and 
         - resolving cyber-crimes against women and children 
