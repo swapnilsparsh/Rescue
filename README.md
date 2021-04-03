@@ -85,3 +85,12 @@ You can find our Code of Conduct [here](/Code_of_Conduct.md).
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
 </div>
+
+## Open-source Programs 👾
+### This Project is a part of the following Open Source Program
+<br />
+<p align="center">
+  <a href="https://gssoc.girlscript.tech/"  target="_blank"> 
+    <img src="gssoc.png" alt="GSSoC" /> 
+  </a>
+</p>
