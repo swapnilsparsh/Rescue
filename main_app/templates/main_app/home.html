@@ -43,31 +43,35 @@
       flex-direction: column;
     }
     .navbar{
+      height:85px;
+      background-color: #000;
+      
+    }
+    .navbar-nav{
+      background-color: #000;
+
+    }
+    .navbar-collapse{
       background-color: #000;
     }
-
+ 
     .my-bottom {
       position: absolute;
       bottom: 0;
     }
+    
     .nav-item {
       color: #f1f1f1;
-      text-align: right;
-      float: right;
+      
       font-weight: bold;
      
   }
   
-  .navbar-nav {
-    
-      text-align: right;
-      width: 75% !important;
-      margin-left:60rem;
- 
-    
-  }
   
-  .nav-link {
+  
+  
+  
+   .nav-link {
     font-size:18px;
         color:#f1f1f1;
       padding: 0.3rem 1rem;
@@ -81,10 +85,7 @@
   border-bottom: 3px solid white;
 
   
-  }
-  
-  
-  
+  } 
   .dropdown-menu{
     background-color:#000;
   }
@@ -102,10 +103,10 @@
   }
  
   .dropdown-item:hover,
-  .dropdown-item:active{
+  .dropdown-item:focus{
     text-decoration: none;
   }
- 
+  
 
   .nav-link2:hover {
     font-weight: 700;
@@ -131,30 +132,6 @@
       text-decoration: underline;
       padding: 20px;
     }
-
-    /*.new {
-      font-size: 1.2rem;
-    }
-
-    .new::after {
-      position: relative;
-      left: 4px;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: 0.255em;
-      vertical-align: 0.255em;
-      content: "";
-      border-top: 0.3em solid;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0;
-      border-left: 0.3em solid transparent;
-    }*/
-
-    
-    
-
-
     /* prelaoder css  */
     #preloader {
       width: 100%;
@@ -224,6 +201,14 @@
         transform: rotate(360deg);
       }
     }
+    @media only screen and (max-device-width: 1000px) {
+        
+      .nav-item{
+        padding-left: 1.6rem;
+       
+      }
+    
+    }
   </style>
   <script>
     
@@ -254,7 +239,8 @@
     <a class="navbar-brand" href="/home">
       <i class="material-icons large text-white"
         style="width: 80%; font-size: 45px">home</i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"  aria-expanded="false" aria-controls="navbarNavDropdown" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"  aria-expanded="false" aria-controls="navbarNavDropdown" aria-label="Toggle navigation" style="background-color: orange">
+    <span class="sr-only">Toggle navigation</span>
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

@@ -87,29 +87,28 @@
       li {
         list-style: none !important;
     }
+    .navbar{
+      height:85px;
+      background-color: #000;
+      
+    }
     .nav-col {
-      background-color: #f5407f;
-      opacity: 0.8;
+      background-color: #000;
+     
   }
      
     
     
   .nav-item {
       color: #f1f1f1;
-      text-align: right;
-      float: right;
+      background-color: #000;
+     
       font-weight: bold;
      
   }
   
-  .navbar-nav {
-    
-      text-align: right;
-      width: 75% !important;
-      margin-left:60rem;
- 
-    
-  }
+  
+  
   
   .nav-link {
     font-size:18px;
@@ -129,7 +128,6 @@
     background-color:#000;
   }
  
-  
   .dropdown-item{
     padding:0.1rem 1rem 0.2rem 1rem;
      font-weight: bold;
@@ -179,14 +177,13 @@
         border: 2px solid #FFF;
       }
 
-      @media only screen and (max-device-width: 600px) {
-        .new {
-          margin-top: 0px;
+      @media only screen and (max-device-width: 1000px) {
+        
+        .nav-item{
+          padding-left: 1.6rem;
+         
         }
-
-        .new-button {
-          font-size: 1.5rem;
-        }
+      
       }
 
       @media only screen and (max-device-width: 320px) {
@@ -239,12 +236,12 @@
   <a class="navbar-brand" href="/home"><i class="material-icons large text-white"style="width: 80%; font-size: 45px"
     >home</i></a>
 
-  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"  style="background-color: orange">
   <span class="navbar-toggler-icon"></span></button>
 
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"> 
   <ul class="navbar-nav">
     {% if user.is_authenticated %}
     <li class="nav-item dropdown" >
@@ -294,7 +291,7 @@
         class=" btn btn-danger  nav-link2"
         href="/emergency"
         style="
-        background-color:#000;
+          background-color:#000;
           color: #f1f1f1;
           font-size: 18px;
           margin-top:1rem;
@@ -303,6 +300,7 @@
           padding:0.5rem 0.5rem;
           text-align:center;
           margin-bottom: 0.5rem;
+            
         "> 
                 EMERGENCY !
               </a>
