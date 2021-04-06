@@ -6,6 +6,7 @@ from .forms import ContactForm
 from .models import contact,Login
 from django.contrib.auth.models import User , auth
 from .mail import send_email
+from .whatsapp import send_whatsapp
 from .location import lat, log, location, city, state
 from .forms import UserCreateForm , LoginForm
 from django.core.mail import EmailMessage
@@ -160,7 +161,7 @@ def create_contact(request):
 def update_contact(request, pk):
     curr_contact = contact.objects.get(id=pk)
     name = curr_contact.name
-    form = ContactForm(initial={'name':name,'email':curr_contact.email,'relation':curr_contact.relation})
+    form = ContactForm(initial={'name':name,'email':curr_contact.email,'mobile_no':curr_contact.mobile_no,'relation':curr_contact.relation})
     if request.method == 'POST':
         form = ContactForm(request.POST, instance=curr_contact)
         if form.is_valid():
@@ -195,13 +196,18 @@ def emergency(request):
     contacts = contact.objects.filter(user=request.user)
     total_contacts = contacts.count()
     context = {'contacts': contacts, 'total_contacts': total_contacts, 'user':request.user}
-    emails = []
+    emails, mobile_numbers = [], []
     for j in contacts:
         emails.append(j._meta.get_field("email"))
+        mobile_numbers.append(str(j.mobile_no).replace(" ", ""))
     name = request.user.username
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
         send_email(name, c.email, link)
+    try:
+        send_whatsapp(mobile_numbers, name, link)
+    except:
+        messages.error(request, "your contact numbers contains number without country code.")
     return render(request,'main_app/emergency_contact.html',context)
 
 
