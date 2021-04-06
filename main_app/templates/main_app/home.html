@@ -4,6 +4,8 @@
 <html lang="en">
 
 <head>
+  <!-- Added the meta tag for media queries to work -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -32,6 +34,9 @@
     integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Link to one of the fonts used -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../static/css/styles.css" />
   <style>
     html {
@@ -168,6 +173,57 @@
         transform: rotate(360deg);
       }
     }
+
+    /* Code for the slidshow to be responsive */
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 600px) {
+      .w-100{
+        height: 250px;
+      }
+      #gridchild2{
+        padding:30px;
+      }
+      #gridh1{
+        font-size: 20px;
+      }
+      #gridh3{
+        padding-top: 0px;
+        font-size: 15px;
+      }
+      #gridbutton{
+        margin-top: 8px !important;
+        height: 20px;
+        font-size: 6px;
+      }
+    }
+
+    @media(min-width: 600px) {
+      .w-100{
+        height: 500px;
+      }
+      #gridchild2{
+        padding:60px !important;
+      }
+      #gridh1{
+        padding:45px;
+        font-size: 50px;
+      }
+      #gridh3{
+        padding:20px;
+        padding-top: 0px !important;
+        font-size: 30px;
+      }
+      #gridbutton{
+        margin-top: 10px !important;
+      }
+    }
+    
+
   </style>
   <script>
     
@@ -310,23 +366,215 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+          <!-- For loop to create slide index indicators -->
+
+        {% for slide in all_slideshow %}
+
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter|add:4}}"></li>
+
+        {% endfor %}
+
+        <!-- For loop for slide index indicators End here -->
         </ol>
+
+
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="w-100" src="../../static/Images/slideshow/ss1.png" alt="First slide" />
+
+        <!-- First Slide -->
+
+          <div class="carousel-item active">        
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/Images/slideshow/ss1.png" alt="First slide">
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">RUKMINI RAO</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">She founded the Gramya Resource Centre for Women, to tackle various issues of land rights for women, their right to education, prevention of violence against women and girls, etc.</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="https://yourstory.com/2015/05/rukmini-rao" target="_blank"><button id="gridbutton" class="btn btn-btn-success" style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
           </div>
+          
+          
+
+          <!-- Second Slide-->
+          
           <div class="carousel-item">
-            <img class="w-100" src="{% static 'Images/slideshow/ss2.png' %}" alt="Second slide" />
+
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/Images/slideshow/ss2.png" alt="First slide">
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">SONAL KAPOOR</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">She founded Protsahan India Foundation, with a vision to eradicate child abuse, by breaking the intergenerational cycle of child abuse and poverty in urban and rural India</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="https://www.thebetterindia.com/29118/sonal-kapoor-protsahan/" target="_blank"><button id="gridbutton" class="btn btn-btn-success" style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
           </div>
+          
+          
+
+          <!-- Third Slide -->
+          
           <div class="carousel-item">
-            <img class="w-100" src="{% static 'Images/slideshow/ss3.png' %}" alt="Third slide" />
+
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/Images/slideshow/ss3.png" alt="First slide">
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">TRISHA SHETTY</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">Trisha Shetty is an activist for gender equity and the founder of SheSays. She is known for human rights advocacy, especially advocating for gender-sensitive policies.</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="https://parispeaceforum.org/place/trisha-shetty/" target="_blank"><button id="gridbutton" class="btn btn-btn-success" style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
           </div>
+          
+          
+
+          <!-- Fourth Slide -->
+          
           <div class="carousel-item">
-            <img class="w-100" src="{% static 'Images/slideshow/ss4.png' %}" alt="Third slide" />
+
+          
+          
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/Images/slideshow/ss4.png" alt="First slide">
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">SUNITHA KRISHNAN</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">She is an Indian social activist and chief functionary and co-founder of Prajwala, a non-governmental organization that rescues, rehabilitates and reintegrates sex- trafficked victims into society.</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="https://www.vitalvoices.org/people/sunitha-krishnan-2/" target="_blank"><button id="gridbutton" class="btn btn-btn-success" style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
           </div>
+          
+          
+
+          <!-- Fifth Slide -->
+          
           <div class="carousel-item">
-            <img class="w-100" src="{% static 'Images/slideshow/ss5.png' %}" alt="Third slide" />
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/Images/slideshow/ss5.png" alt="First slide">
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">LAXMI AGARWAL</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">She is an Indian acid attack survivor, a campaigner for rights of acid attack victims. She was attacked in 2005 in New Delhi at the age of 16. She was the former director of Chhanv Foundation.</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="https://www.huffpost.com/archive/in/entry/chhappak-laxmi-agarwal-deepika-padukone-lawyer-acid-attack_in_5e1f5f6ec5b674e44b919c22" target="_blank"><button id="gridbutton" class="btn btn-btn-success" style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
           </div>
+
+          <!-- For loop to display the slides starts here -->
+          {% for slide in all_slideshow %}
+
+          <div class="carousel-item">
+          
+            <div class="grid-container">
+              
+              <!-- Left part of the slide contains the image -->
+              <div class="grid-child">
+                <img class="w-100" src="/static/{{slide.image}}" alt="slide" />
+              </div>
+              
+              <!-- Right part contains the name and content with read more button -->
+              <div class="grid-child" style="text-align: center;background-color:#CA8045">
+                <div id="#gridchild2">
+
+                  <!-- Name of the person -->
+                  <h1 id="gridh1" style="font-family: 'Abril Fatface';color:white">{{slide.name}}</h1>
+
+                  <!-- Content or about -->
+                  <h3 id="gridh3">{{slide.content|slice:'0:200'}}</h3>
+
+                  <!-- Read more button pointing to the link-->
+                  <a href="{{slide.read_more}}" target="_blank"><button id="gridbutton" class="btn btn-btn-success"
+                      style="margin-top: 20px;">Read More</button></a>
+
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          
+          {% endfor %}
+
+          <!-- For loop ends here -->
+          
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
