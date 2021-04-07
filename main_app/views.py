@@ -11,7 +11,8 @@ from .forms import UserCreateForm , LoginForm
 # Create your views here
 
 def home(request):
-    context = {}
+    # passing all the slideshow items to the home.html to render
+    context = {"all_slideshow":SlideShowItem.objects.all()}
     return render(request, 'main_app/home.html', context)
 
 def register(request):
@@ -31,7 +32,7 @@ def register(request):
         else:
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: form.error_messages[msg]")
-        
+
     else:
         form = UserCreateForm()
     return render(request, 'main_app/register.html', {'form': form})
@@ -46,7 +47,7 @@ def login_request(request):
     form = LoginForm(request.POST)
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
-    if request.method == "POST":            
+    if request.method == "POST":
             if(User.objects.filter(username=username).exists()):
                 user=auth.authenticate(username=username,password=password)
                 if user is not None:
@@ -64,7 +65,7 @@ def login_request(request):
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
-            
+
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
