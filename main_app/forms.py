@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class ContactForm(ModelForm):
     class Meta:
         model = contact
-        fields = ['name', 'email', 'relation']
+        fields = ['name', 'email', 'mobile_no', 'relation']
         Father = 'Father'
         Mother = 'Mother'
         Brother = 'Brother'

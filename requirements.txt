@@ -50,3 +50,6 @@ urllib3==1.25.8
 widgetsnbextension==3.5.1
 wrapt==1.12.1
 zipp==3.1.0
+bcrypt
+argon2-cffi
+django-allauth
