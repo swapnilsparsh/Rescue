@@ -47,20 +47,78 @@
       display: flex;
       flex-direction: column;
     }
+    .navbar{
+      height:85px;
+      background-color: #000;
+      
+    }
+    .navbar-nav{
+      background-color: #000;
 
+    }
+    .navbar-collapse{
+      background-color: #000;
+    }
+ 
     .my-bottom {
       position: absolute;
       bottom: 0;
     }
+    
+    .nav-item {
+      color: #f1f1f1;
+      
+      font-weight: bold;
+     
+  }
+  
+  
+  
+  
+  
+   .nav-link {
+    font-size:18px;
+        color:#f1f1f1;
+      padding: 0.3rem 1rem;
+  }
+  .nav-link:hover{
+    text-decoration: none;
+    color:white;
+    
+    background-color: #3ea37b;
+    border-top: 3px solid white;
+  border-bottom: 3px solid white;
 
-    .dropdown-item:hover {
-      background-color: rgb(77, 82, 87);
-    }
+  
+  } 
+  .dropdown-menu{
+    background-color:#000;
+  }
+ 
+  .dropdown-item{
+    padding:0.1rem 1rem 0.2rem 1rem;
+     font-weight: bold;
+      font-size: 15px;
+     text-decoration: none !important;   
+      color:white;
+  
+  }
+  a:hover{
+    text-decoration: none;
+  }
+ 
+  .dropdown-item:hover,
+  .dropdown-item:focus{
+    text-decoration: none;
+  }
+  
 
-    .User {
-      font-size: 1.25rem;
-    }
-
+  .nav-link2:hover {
+    font-weight: 700;
+     background-color: red !important;
+      }
+    
+      
     .objectives p {
       font-size: 30px;
       color: #B82E44;
@@ -79,31 +137,6 @@
       text-decoration: underline;
       padding: 20px;
     }
-
-    .new {
-      font-size: 1.2rem;
-    }
-
-    .new::after {
-      position: relative;
-      left: 4px;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: 0.255em;
-      vertical-align: 0.255em;
-      content: "";
-      border-top: 0.3em solid;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0;
-      border-left: 0.3em solid transparent;
-    }
-
-    .dropdown-toggle::after {
-      display: none;
-    }
-
-
     /* prelaoder css  */
     #preloader {
       width: 100%;
@@ -172,7 +205,16 @@
       100% {
         transform: rotate(360deg);
       }
+   
+    @media only screen and (max-device-width: 1000px) {
+        
+      .nav-item{
+        padding-left: 1.6rem;
+       
+      }
+    
     }
+
 
     /* Code for the slidshow to be responsive */
 
@@ -224,6 +266,7 @@
     }
     
 
+
   </style>
   <script>
     
@@ -247,79 +290,80 @@
     </div>
   </div>
   
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 85px; padding: None">
-        <a class="navbar-brand" href="/home"><i class="material-icons large text-white"
-            style="width: 80%; font-size: 45px">home</i></a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
-          style="background-color: white">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown"
-          style="background-color: rgb(6, 17, 31); padding: None">
-          <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown" style="margin-top: 20px">
-              <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
-                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
-                <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
-              </div>
-            </li>
-            {% else %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
-                &nbsp;&nbsp; User
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="background-color: rgb(6, 17, 31)">
-                <a class="dropdown-item" style="color: white" href="/register">Register</a>
-                <a class="dropdown-item" style="color: white" href="/login">Login</a>
-              </div>
-            </li>
-            {% endif %}
-            <li class="nav-item dropdown" style="margin-top: 22px">
-              <a class="nav-link" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
-                <h4 class="new">&nbsp;&nbsp; More</h4>
-              </a>
-              <div class="dropdown-menu" id="navbarDropdown1" aria-labelledby="navbarDropdown1"
-                style="background-color: rgb(6, 17, 31)">
-                <a class="dropdown-item" style="color: white" href="/women_rights">Women's Rights</a>
-                <a class="dropdown-item" style="color: white" href="/women_laws">Women's Safety Laws
+<header>
+  
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    
+    <a class="navbar-brand" href="/home">
+      <i class="material-icons large text-white"
+        style="width: 80%; font-size: 45px">home</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"  aria-expanded="false" aria-controls="navbarNavDropdown" aria-label="Toggle navigation" style="background-color: orange">
+    <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown" >
+          <a class="nav-link text-white "href="#"  role="button"  id="navbarNavDropdown1" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">
+            
+              {{user.username}}
+          </a>
+          <div
+            class="dropdown-menu" aria-labelledby="navbarNavDropdown1">
+            <a class="dropdown-item"  href="/logout">Logout</a>
+          </div>
+        </li>
+        {% else %}
+          <li class="nav-item dropdown" >
+      
+        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarNavDropdown2" role="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User<span class="sr-only">(current)</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarNavDropdown2">
+        <a class="dropdown-item"  href="/register">Register</a>
+        <a class="dropdown-item"  href="/login">Login</a>
+        </div> 
+        </li>
+      {% endif %}
+      <li class="nav-item dropdown">
+        
+      <a class="nav-link text-white dropdown-toggle" href="#" id ="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+      
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/women_rights">Women's Rights</a>
+        <a class="dropdown-item"  href="/women_laws"> Women's Safety Laws</a>
+        <a class="dropdown-item"href="/helpline_numbers">Women Helpline Numbers</a>
+        <a class="dropdown-item" href="/ngo_details">NGOs for Women</a>
+      </div>
+       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-white"href="/emergency_contact">Emergency Contacts </a>
+      </li>
+      
+      <li class="nav-item">
+        <a
+          class=" btn btn-danger  nav-link2"
+          href="/emergency"
+          style="
+          background-color:#B82E44;
+          color: #f1f1f1;
+          font-size: 18px;
+          margin-top:1rem;
+          width: 10rem;
+          height: 3rem;
+          padding:0.5rem 0.5rem;
+          text-align:center;
+          margin-bottom: 0.5rem;
+            
+            
+          "> 
+                  EMERGENCY !
                 </a>
-                <a class="dropdown-item" style="color: white" href="/helpline_numbers">Women Helpline Numbers</a>
-                <a class="dropdown-item" style="color: white" href="/ngo_details">NGOs for Women</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/emergency_contact" style="color: white; font-size: 18px">
-                &nbsp;&nbsp; Emergency Contacts
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link btn btn-danger btn-sm nav-link2" href="/emergency" style="
-                  color: white;
-                  font-size: 18px;
-                  margin: 20px;
-                  width: 140px;
-                  height: 45px;
-                ">
-                EMERGENCY!
-              </a>
-            </li>
-
-
-          </ul>
-        </div>
-      </nav>
-    </header>
+              </li>
+            </ul>
+    </div>
+   </nav> 
+</header>
 
     {% if messages %} {% for message in messages %}
     <script>
