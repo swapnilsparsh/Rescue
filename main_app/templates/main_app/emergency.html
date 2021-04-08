@@ -5,6 +5,7 @@
 <html lang="en">
 {% block content %}
 
+
 <body style="height:1000px; max-width:100%; background-color:white;">
     <div class="container" style="height:65%; max-width:100%">
 
@@ -18,6 +19,7 @@
 
     </div>
 </body>
+
 <style>
     html {
 	scroll-behavior:smooth;
@@ -38,9 +40,24 @@
     }
 	#myBtn:hover {
       background-color:white;
-	  color:black;
+	  color:red;
    }
   </style> 
+
+<body style="height:1000px; max-width:100%; background-color:white;margin-top:60px;">
+    <div class="container" style="height:65%; max-width:100%">
+
+        <h1 style="color:rgb(217,48,37); text-align: center;"><b>EMERGENCY SITUATION!!</b></h1>
+        <br>
+        {% for contact in contacts %}
+        <h4 style="color:black">Message delievered to {{contact.name}} at {{contact.phone}}</h4>
+        <h4 style="color:black">Email delievered to {{contact.name}} at {{contact.email}}</h4>
+        <br>
+        {% endfor %}
+
+    </div>
+</body>
+
 {% endblock %}
 
 </html>
