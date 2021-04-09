@@ -189,6 +189,73 @@
         </div>
 
     <script>
+        $(".form-style").submit(function(){
+            console.log($("#id_password1").val())
+            console.log($("#id_password2").val())
+            if($("#username_alert").length > 0 || $("#email_alert").length > 0){
+                alert("Please make sure the Username and Email are unique!")
+                return false
+            }
+            else{
+                if($("#id_password1").val() != $("#id_password2").val()){
+                    console.log("here")
+                    alert("The passwords don't match")
+                    return false
+                }
+            }
+        })
+
+        $('#id_username').on('input', function () {
+                $.ajax({
+                    url: "/check_username",
+                    data: {
+                        'name':this.value
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if(data.exists == "yes"){
+                            if($("#username_alert").length == 0){
+                                var newNode = document.createElement('small');
+                                newNode.id = "username_alert"
+                                newNode.style = "color: red;font-size: 17px;"
+                                newNode.innerHTML = "username already exists <br>"
+                                var referenceNode = document.querySelector("#id_username");
+                                referenceNode.after(newNode);
+                            }
+                        }
+                        else{
+                            $("#username_alert").remove()
+                        }
+                    }
+                })
+            });
+
+
+            $('#id_email').on('input', function () {
+                $.ajax({
+                    url: "/check_email",
+                    data: {
+                        'email':this.value
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if(data.exists == "yes"){
+                            if($("#email_alert").length == 0){
+                                var newNode = document.createElement('small');
+                                newNode.id = "email_alert"
+                                newNode.style = "color:red;font-size: 17px;"
+                                newNode.innerHTML = "email already exists"
+                                var referenceNode = document.querySelector("#id_email");
+                                referenceNode.after(newNode);
+                            }
+                        }
+                        else{
+                            $("#email_alert").remove()
+                        }
+                    }
+                })
+            });
+
 
         // Adding the eye icon for the first password field
         addNode(1,"id_password1")
