@@ -6,7 +6,6 @@ from django.core.files.storage import FileSystemStorage
 # Pointer to the Filesystem where we store our static files
 fs = FileSystemStorage(location=settings.STATICFILES_DIRS[0])
 
-
 # Create your models here.
 class contact(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="contact", null=True)
@@ -56,6 +55,5 @@ class SlideShowItem(models.Model):
     def __str__(self):
         return self.name
     
-
 
 
