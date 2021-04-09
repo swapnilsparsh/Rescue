@@ -149,6 +149,8 @@ html {
                 {% csrf_token %}
                 <div class="form-div">
                     {{form.as_p}}
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" data-sitekey="6Lfp2KIaAAAAALSpy1C27y940lzNVmZD6ZqJ3N-n"></div>
                     <br>
                     <div class="button">
                         <b><input type="submit" value="Sign In"></b>

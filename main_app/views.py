@@ -5,9 +5,12 @@ from django.contrib import messages
 from .forms import ContactForm
 from .models import contact,Login
 from django.contrib.auth.models import User , auth
+from django.conf import settings
 from .mail import send_email
 from .location import lat, log, location, city, state
 from .forms import UserCreateForm , LoginForm
+import json
+import urllib
 # Create your views here
 
 def home(request):
@@ -51,6 +54,18 @@ def login_request(request):
                 user=auth.authenticate(username=username,password=password)
                 if user is not None:
                     login(request, user)
+                    ''' Begin reCAPTCHA validation '''
+                    recaptcha_response = request.POST.get('g-recaptcha-response')
+                    url = 'https://www.google.com/recaptcha/api/siteverify'
+                    values = {
+                        'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                        'response': recaptcha_response
+                    }
+                    data = urllib.parse.urlencode(values).encode()
+                    req =  urllib.request.Request(url, data=data)
+                    response = urllib.request.urlopen(req)
+                    result = json.loads(response.read().decode())
+                    ''' End reCAPTCHA validation '''
                     messages.info(request, f"Successfully logged in as {username} !")
                     return redirect("main_app:home")
 
