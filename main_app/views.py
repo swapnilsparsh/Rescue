@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import ContactForm
-from .models import contact,Login,SlideShowItem
+from .models import contact,Login
 from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .whatsapp import send_whatsapp
@@ -21,10 +21,7 @@ from django.http import HttpResponse
 # Create your views here
 
 def home(request):
-
-    # passing all the slideshow items to the home.html to render
-    context = {"all_slideshow":SlideShowItem.objects.all()}
-    
+    context = {}    
     return render(request, 'main_app/home.html', context)
 
 def register(request):
