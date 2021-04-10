@@ -5,24 +5,7 @@
 <html lang="en">
 
 <body style="background-color:white;">
-    <script>
-	window.onscroll = function() {scrollFunction()};
-     function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-    }
-    function topFunction() {
-       document.body.scrollTop = 0; // For Safari
-       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-	 
-	</script>
-	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
 	<div class="emergency-contact-page">
-
 
 		<div class="jumbotron" style="background-color: white;margin-top:10px;">
 			<div>
@@ -58,6 +41,7 @@
 					<th>Name</th>
 					<th>Relation</th>
 					<th>Email</th>
+					<th>Mobile No.</th>
 					<th>Update</th>
 					<th>Delete</th>
 				</tr>
@@ -69,6 +53,7 @@
 					<td>{{contact.name}}</td>
 					<td>{{contact.relation}}</td>
 					<td>{{contact.email}}</td>
+					<td>{{contact.mobile_no}}</td>
 					<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
 							href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
 					<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
