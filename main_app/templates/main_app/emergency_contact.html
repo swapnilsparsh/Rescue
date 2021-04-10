@@ -35,35 +35,37 @@
 		<a style="color:white; background-color:rgb(30,142,62);" class="btn btn-primary  btn-sm btn-block"
 			href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
 		<br>
-		<table class="table">
-			<thead class="thead" style="color:black; background-color:#E9ECEF;">
-				<tr>
-					<th>Name</th>
-					<th>Relation</th>
-					<th>Email</th>
-					<th>Mobile No.</th>
-					<th>Update</th>
-					<th>Delete</th>
-				</tr>
-			</thead>
-
-			{% for contact in contacts.all %}
-			<tbody class="table-striped">
-				<tr>
-					<td>{{contact.name}}</td>
-					<td>{{contact.relation}}</td>
-					<td>{{contact.email}}</td>
-					<td>{{contact.mobile_no}}</td>
-					<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
-							href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
-					<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
-							href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
-				</tr>
-			</tbody>
-			<br>
-			{% endfor %}
-
-		</table>
+		<div class="table-responsive">
+			<table class="table">
+				<thead class="thead" style="color:black; background-color:#E9ECEF;">
+					<tr>
+						<th>Name</th>
+						<th>Relation</th>
+						<th>Email</th>
+						<th>Mobile No.</th>
+						<th>Update</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+	
+				{% for contact in contacts.all %}
+				<tbody class="table-striped">
+					<tr>
+						<td>{{contact.name}}</td>
+						<td>{{contact.relation}}</td>
+						<td>{{contact.email}}</td>
+						<td>{{contact.mobile_no}}</td>
+						<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
+								href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
+						<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
+								href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
+					</tr>
+				</tbody>
+				<br>
+				{% endfor %}
+	
+			</table>
+		</div>
 	</div>
 	</div>
 	<style>
@@ -99,7 +101,6 @@
 
 		.emergency-contact-page {
 			text-align: center;
-			position: absolute;
 			top: 0%;
 			left: 50%;
 			transform: translate(-50%, 5%);
@@ -116,13 +117,15 @@
 			}
 
 			.emergency-contact-page {
-				position: absolute;
 				top: 0%;
 				left: 50%;
 				transform: translate(-50%, 5%)
 			}
+			.emergency-contact-page{
+				margin-top:5%;
+			}
 			.contacts{
-				margin-bottom:70%;
+				margin-bottom:25%;
 			}
 		
 		}
@@ -134,7 +137,6 @@
 
 			.emergency-contact-page {
 				text-align: center;
-				position: absolute;
 				top: 0%;
 				left: 50%;
 				transform: translate(-50%, 60%);
@@ -152,9 +154,12 @@
 			.sub-heading h6 {
 				font-size: 2rem;
 			}
-			.contacts{
-				margin-bottom:40%;
+			.emergency-contact-page{
+				margin-top:5%;
 			}
+			.contacts{
+				margin-bottom:10%;
+			}	
 		}
 
 		@media screen and (min-device-width: 320px) and (max-device-width: 375px) {
@@ -163,8 +168,7 @@
 			}
 
 			.emergency-contact-page {
-				text-align: center;
-				position: absolute;
+				text-align: center;;
 				top: 0%;
 				left: 50%;
 				transform: translate(-50%, 75%);
@@ -175,16 +179,18 @@
 				width: 80%;
 				max-width: 100rem;
 				margin: 30rem auto;
-				position: relative;
 				text-align: center;
 			}
 
 			.sub-heading h6 {
 				font-size: 2rem;
 			}
-			.contacts{
-				margin-bottom:70%;
+			.emergency-contact-page{
+				margin-top:0%;
 			}
+			.contacts{
+				margin-bottom:20%;
+			}	
 		}
 
 		@media screen and (max-device-width: 320px) {
@@ -194,7 +200,7 @@
 
 			.emergency-contact-page {
 				text-align: center;
-				position: absolute;
+			
 				top: 0%;
 				left: 50%;
 				transform: translate(-50%, 70%);
@@ -213,11 +219,11 @@
 				font-size: 2rem;
 			}
 			.emergency-contact-page{
-				margin-top:30%;
+				margin-top:20%;
 			}
 			.contacts{
-				margin-bottom:70%;
-			}
+				margin-bottom:20%;
+			}	
 		}
 
 		@media only screen and (min-width:768px) {
