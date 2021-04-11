@@ -245,7 +245,7 @@
 
                         if(data.exists == "yes"){
                                 x.style = "color: red;font-size: 17px;"
-                                x.innerHTML = "<br>username not available <br>"
+                                x.innerHTML = "<br>Username not available <br>"
                                 y.innerHTML = "x"
                                 y.style = "color: red;margin-left: -23px;"
                         }
@@ -253,7 +253,7 @@
                             // If the input field is not empty and the username is available
                             if($('#id_username').val() != ""){
                                 x.style = "color: green;font-size: 17px;"
-                                x.innerHTML = "<br>username is available <br>"
+                                x.innerHTML = "<br>Username is available <br>"
                                 y.innerHTML = "✓"
                                 y.style = "color: green;margin-left: -23px;"
                             }
@@ -279,7 +279,7 @@
                         y = document.getElementById("validationmark2")
                         if(data.exists == "yes"){
                                 x.style = "color: red;font-size: 17px;"
-                                x.innerHTML = "<br>email not available <br>"
+                                x.innerHTML = "<br>Email not available <br>"
                                 y.innerHTML = "x"
                                 y.style = "color: red;margin-left: -23px;"
                         }
@@ -287,7 +287,7 @@
                             // If the input is not empty and the entered email is valid
                             if($('#id_email').val() != "" && document.getElementById("id_email").checkValidity()){
                                 x.style = "color: green;font-size: 17px;"
-                                x.innerHTML = "<br>email is available <br>"
+                                x.innerHTML = "<br>Email is available <br>"
                                 y.innerHTML = "✓"
                                 y.style = "color: green;margin-left: -23px;"
                             }
