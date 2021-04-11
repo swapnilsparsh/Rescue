@@ -157,6 +157,10 @@
     width: 98%;
   }
 
+  #id_username,#id_email{
+    width: 92% !important;
+  }
+
     </style> 
 	    <div class="register-page">
             <form method="POST" class="form-style"> 
@@ -189,6 +193,28 @@
         </div>
 
     <script>
+
+        // Creating nodes for the mark and alert text
+        var newNode = document.createElement('span');
+        newNode.id = "validationmark1"
+        var referenceNode = document.querySelector("#id_username");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('small');
+        newNode.id = "username_alert"
+        var referenceNode = document.querySelector("#validationmark1");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('span');
+        newNode.id = "validationmark2"
+        var referenceNode = document.querySelector("#id_email");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('small');
+        newNode.id = "email_alert"
+        var referenceNode = document.querySelector("#validationmark2");
+        referenceNode.after(newNode);
+
         $(".form-style").submit(function(){
             console.log($("#id_password1").val())
             console.log($("#id_password2").val())
@@ -213,18 +239,28 @@
                     },
                     dataType: 'json',
                     success: function (data) {
+                        //Getting mark and alert text elements
+                        x = document.getElementById("username_alert")
+                        y = document.getElementById("validationmark1")
+
                         if(data.exists == "yes"){
-                            if($("#username_alert").length == 0){
-                                var newNode = document.createElement('small');
-                                newNode.id = "username_alert"
-                                newNode.style = "color: red;font-size: 17px;"
-                                newNode.innerHTML = "username already exists <br>"
-                                var referenceNode = document.querySelector("#id_username");
-                                referenceNode.after(newNode);
-                            }
+                                x.style = "color: red;font-size: 17px;"
+                                x.innerHTML = "<br>username not available <br>"
+                                y.innerHTML = "x"
+                                y.style = "color: red;margin-left: -23px;"
                         }
                         else{
-                            $("#username_alert").remove()
+                            // If the input field is not empty and the username is available
+                            if($('#id_username').val() != ""){
+                                x.style = "color: green;font-size: 17px;"
+                                x.innerHTML = "<br>username is available <br>"
+                                y.innerHTML = "✓"
+                                y.style = "color: green;margin-left: -23px;"
+                            }
+                            else{
+                                x.innerHTML = ""
+                                y.innerHTML = ""
+                            }
                         }
                     }
                 })
@@ -239,18 +275,26 @@
                     },
                     dataType: 'json',
                     success: function (data) {
+                        x = document.getElementById("email_alert")
+                        y = document.getElementById("validationmark2")
                         if(data.exists == "yes"){
-                            if($("#email_alert").length == 0){
-                                var newNode = document.createElement('small');
-                                newNode.id = "email_alert"
-                                newNode.style = "color:red;font-size: 17px;"
-                                newNode.innerHTML = "email already exists"
-                                var referenceNode = document.querySelector("#id_email");
-                                referenceNode.after(newNode);
-                            }
+                                x.style = "color: red;font-size: 17px;"
+                                x.innerHTML = "<br>email not available <br>"
+                                y.innerHTML = "x"
+                                y.style = "color: red;margin-left: -23px;"
                         }
                         else{
-                            $("#email_alert").remove()
+                            // If the input is not empty and the entered email is valid
+                            if($('#id_email').val() != "" && document.getElementById("id_email").checkValidity()){
+                                x.style = "color: green;font-size: 17px;"
+                                x.innerHTML = "<br>email is available <br>"
+                                y.innerHTML = "✓"
+                                y.style = "color: green;margin-left: -23px;"
+                            }
+                            else{
+                                x.innerHTML = ""
+                                y.innerHTML = ""
+                            }
                         }
                     }
                 })
