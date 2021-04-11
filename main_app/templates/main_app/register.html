@@ -152,6 +152,11 @@
       padding-bottom: 20px;
   }
 
+  body > div.register-page > form > div.row > div:nth-child(2) > div > p:nth-child(6),p:nth-child(3){
+    display: initial;
+    width: 98%;
+  }
+
     </style> 
 	    <div class="register-page">
             <form method="POST" class="form-style"> 
@@ -183,6 +188,46 @@
         
         </div>
 
+    <script>
+
+        // Adding the eye icon for the first password field
+        addNode(1,"id_password1")
+
+        //Adding the eye icon for second password field
+        addNode(2,"id_password2")
+
+        // This function will help us add the icon in between the form just after the input field
+
+        function addNode(id,referenceNode){
+            var newNode = document.createElement('i');
+            newNode.className = "far fa-eye";
+            newNode.id = `togglePassword${id}`;
+            newNode.style = "margin-left: -30px; cursor: pointer;"
+
+            var referenceNode = document.querySelector(`#${referenceNode}`);
+
+            referenceNode.after(newNode);
+        }
+
+        // Assigning the toggle action for 2 icons
+        toggleAction(1)
+
+        toggleAction(2)
+
+        // This function adds the event listener to the icon for respective password field
+        function toggleAction(id){
+            const togglePassword = document.querySelector(`#togglePassword${id}`);
+            const password = document.querySelector(`#id_password${id}`);
+            togglePassword.addEventListener('click', function (e) {
+                // toggle the type attribute
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                // toggle the eye slash icon
+                this.classList.toggle('fa-eye-slash');
+            });
+    }
+
+    </script>
 
     {% endblock %}
 </body>
