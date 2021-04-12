@@ -12,6 +12,10 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
+  <!---BootStrap Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+
   <!--Favicon-->
   <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
 
@@ -167,6 +171,32 @@
       100% {
         transform: rotate(360deg);
       }
+    }
+    #footer a {
+      color: #ffffff;
+      text-decoration: none !important;
+      background-color: transparent;
+      font-size:20px;
+      -webkit-text-decoration-skip: objects;
+    }
+
+    #footer ul.quick-links li{
+      padding: 3px 0;
+      -webkit-transition: .5s all ease;
+      -moz-transition: .5s all ease;
+      transition: .5s all ease;
+    }
+
+    #footer ul.quick-links li:hover{
+      padding: 3px 0;
+      margin-left:5px;
+      font-weight:700;
+    }
+    #footer ul.quick-links li a i{
+      margin-right: 5px;
+    }
+    #footer ul.quick-links li:hover a i {
+        font-weight: 700;
     }
   </style>
   <script>
@@ -343,35 +373,36 @@
     <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
     <script src="../../static/js/index.js"></script>
 
-    <footer class="" style="
-        background-color: rgb(21, 48, 78);
-        padding-bottom: 3%;
-        padding-top: 3%;
+    <footer id="footer" style="
+        background-color: rgb(6, 17, 31);
+        padding-top: 1%;
         margin-top: auto;
       ">
       <div class="row" style="margin: 0px">
-        <div class="col l6 s12" style="margin-left: 15%">
+        <div class="col l6 s12" style="margin-left: 5%;margin-right: 5%;">
           <h2 class="white-text"><b>Rescue</b></h2>
           <p class="white-text text-lighten-4" style="color: white"></p>
-          <h3 style="color: white">
-            We are here to help women against crimes . and to aware about laws
-            for women
-          </h3>
+          <p style="color: white;font-size: 20px;">
+            We are here to help women against crimes  and to aware about laws for women
+          </p>
         </div>
         <div class="row" style="margin-right: 10%">
-          <ul class="col" style="margin-top: 5px">
+          <ul class="col  list-unstyled quick-links">
             <li style="margin: 10px">
-              <a class="white-text" href="/developers">
-                <h3>Developers</h3>
-              </a>
+              <a href="/developers"><i class="bi bi-people-fill"></i>Developers</a>
             </li>
             <li style="margin: 10px">
-              <a class="white-text" href="/helpline_numbers">
-                <h3>Helpline No.</h3>
-              </a>
+              <a href="/helpline_numbers"><i class="bi bi-telephone-fill"></i>Helpline Numbers</a>
+            </li>
+            <li style="margin: 10px">
+              <a href="/emergency_contact"><i class="bi bi-person-lines-fill"></i>Emergency Contacts</a>
             </li>
           </ul>
         </div>
+        <div class="row" style="margin-right: 10%"  class="list-unstyled quick-links">
+          <ul class="col" style="margin-top: 5px">
+            <li ><a href="#" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+          </ul>
       </div>
     </footer>
 
