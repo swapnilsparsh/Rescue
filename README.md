@@ -40,7 +40,9 @@ main_app/mail.py
 
 4. Run the website by following command in the terminal
 ```sh
+python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser
 python manage.py runserver
 ```
 ## First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
