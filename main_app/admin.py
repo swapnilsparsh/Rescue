@@ -1,8 +1,5 @@
 from django.contrib import admin
-from .models import contact,SlideShowItem
+from .models import contact
 
 # Register your models here.
 admin.site.register(contact)
-
-# Registered the model
-admin.site.register(SlideShowItem)
