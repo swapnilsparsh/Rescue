@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 800px;
+            /* Maximum width */
+            margin: 0 auto;
+            /* Center it */
+        }
+        
+        .container .content {
+            position: absolute;
+            /* Position the background text */
+            bottom: 0;
+            /* At the bottom. Use top:0 to append it to the top */
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            /* Grey text */
+            width: 100%;
+            /* Full width */
+            padding: 20px;
+            /* Some padding */
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: 2px black solid;
+            outline: none;
+            background-image:url("{% static 'Images/top.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+            cursor: pointer;
+            padding: 1.4rem;
+            border-radius: 25rem;
+        }
+        
+        #myBtn:hover {
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+    <h1 class="wb-stl-heading1;" style="text-align:center;">
+        <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+        <font color="black" style="margin-top: 9%; text-align: center;"><i>IMAGE GALLERY</i></font>
+    </strong></h1>
+
+    <img src="{% static 'Images/header.png' %}" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5%;">
+
+
+
+
+    <h1 style="text-align: center;"><b><i>Nature-Wise Report of the Complaints Received by NCW in the Year : 2020</i></b></h1>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/acid attack.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Acid Attack</h1>
+                <h2>11 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/polygamy.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Polygamy</h1>
+                <h2>141 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/cyber.png' %}" style="width:100%;">
+            <div class="content">
+                <h1>Cyber Crime</h1>
+                <h2>704 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/dowryhar.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Dowry Harrassment</h1>
+                <h2>3788 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/molest.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Women Molestation</h1>
+                <h2>1679 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/apathy.jpeg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Apathy</h1>
+                <h2>1276 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/domestic.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Domestic violence</h1>
+                <h2>5297 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/rape.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Rape</h1>
+                <h2>1236 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/honour.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Honour Crimes</h1>
+                <h2>460 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/dignity.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Dignity</h1>
+                <h2>7715 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/assault.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Sexual Assault</h1>
+                <h2>486 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="container">
+            <img src="{% static 'Images/prostitute.jpg' %}" style="width:100%;">
+            <div class="content">
+                <h1>Trafficking</h1>
+                <h2>40 Reports</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div>
+        <h2 style="text-align: center; margin-top: 29%;"><b><u>
+            <span style = "margin-bottom: 29%; margin-top: 29%;">WOMEN'S RIGHTS ACTIVISTS</span>
+        </u></b></h2>
+        <h4>
+            <marquee>WOMEN"S RIGHTS ACTIVISTS</marquee>
+        </h4>
+    </div>
+
+
+
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="pramila.jpg">
+                <img src="{% static 'Images/pramila.jpg' %}" alt="Pramila" width="600" height="300">
+            </a>
+            <div class="desc">
+                <h1>Pramila Nesargi</h1><br>Pramila Nesargi (born 25 March 1938) is an Indian lawyer, an educationist, a well-known women's rights activist and Director of several companies. Pramila heads Samragni Swa Udyog Trust, an organisation whose objective
+                is to uplift women and special children. In 2018, Power Brands awarded her the Bharatiya Manavata Vikas Puraskar for being a powerful negotiator for the law and working for women’s rights and the underprivileged.</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="MALALA.jpg">
+                <img src="{% static 'Images/MALALA.jpg' %}" alt="Forest" width="600" height="600">
+            </a>
+            <div class="desc">
+                <h1>Malala Yousafzai</h1><br>Malala Yousafzai was born on July 12, 1997, in Mingora, the largest city in the Swat Valley in what is now the Khyber Pakhtunkhwa Province of Pakistan.Malala developed a thirst for knowledge .Her father, a passionate
+                education advocate himself, ran a learning institution in the city, and school was a big part of Malala’s family.In October 2014, Malala, along with Indian children’s rights activist Kailash Satyarthi, was named a Nobel Peace Prize winner.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="manasi-of-Mrs.jpg">
+                <img src="{% static 'Images/manasi-of-Mrs.jpg' %}" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">
+                <h1>Manasi Pradhan</h1><br>Manasi Pradhan (born 4 October 1962) is an Indian women's rights activist and author. She is the founder of Honour for Women National Campaign, a nationwide movement to end violence against women in India . In 2014,
+                she was conferred with Rani Laskhmibai Stree Shakti Puraskar by the President of India. Along with Mary Prema Pierick, global head of the Missionaries of Charity, she won the 'Outstanding Women Award' in 2011.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="kamlabhasin.png">
+                <img src="{% static 'Images/kamlabhasin.png' %}" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">
+                <h1>Kamla Bhasin</h1><br>Kamla Bhasin (born 24 April 1946) is an Indian developmental feminist activist, poet, author and social scientist. Bhasin's work, that began in 1970, focuses on gender, education, human development and the media. She
+                is best known for her work with Sangat - A Feminist Network and for her poem Kyunki main ladki hoon, mujhe padhna hai. In 1995, she recited a refurbished, feminist version of the popular poem Azadi (Freedom) in a conference.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="indirajaisingh.png">
+                <img src="{% static 'Images/indirajaisingh.png' %}" alt="Forest" width="600" height="600">
+            </a>
+            <div class="desc">
+                <h1>Indira Jaisingh</h1><br>Indira Jaising (born 3 June 1940)is an Indian lawyer who is noted for her legal activism in promoting human rights . Gued several cases relating to discrimination against women, including Mary Roy's case, which
+                led to the grant of equal inheritance rights for Syrian Christian women in Kerala and Rupan Deol Bajaj, the IAS officer who had prosecuted KPS Gill for outraging her modesty. This was one of the first cases of sexual harassment, successfully
+                prosecuted.
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Bethune and capital - Museum Educator.jpg">
+                <img src="{% static 'Images/Bethune and capital - Museum Educator.jpg' %}" alt="Forest" width="600" height="600">
+            </a>
+            <div class="desc">
+                <h1>Mary Bethune</h1><br>Born on July 10, 1875 near Maysville, a champion of racial and gender equality, South Carolina, Bethune was one of the last of Samuel and Patsy McLeod’s seventeen children. Mary Jane McLeod Bethune became one of the
+                most important black educators, civil and women’s rights leaders and government officials of the twentieth century. The college she founded set educational standards for today’s black colleges.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Alice-Paul-1920-108881621a1-56aa21cc5f9b58b7d000f7ad.png">
+                <img src="{% static 'Images/Alice-Paul-1920-108881621a1-56aa21cc5f9b58b7d000f7ad.png' %}" alt="Forest" width="600" height="600">
+            </a>
+            <div class="desc">
+                <h1>Alice Stokes Paul</h1><br>Alice Stokes Paul Born on January 11, 1885 in Mount Laurel, New Jersey,was an American Quaker, suffragist, feminist, and women's rights activist, and one of the main leaders of the campaign for the Nineteenth
+                Amendment to the U.S. Constitution, which prohibits sex discrimination in the right to vote.Afterward, Paul focused on the Equal Rights Amendment (ERA) to guarantee women constitutional protection from discrimination. </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="930636-ramabai-ranade.jpg">
+                <img src="{% static 'Images/930636-ramabai-ranade.jpg' %}" alt="Forest" width="600" height="600">
+            </a>
+            <div class="desc">
+                <h1>Ramabai Ranade</h1><br>Ramabai Ranade (25 January 1862)was an Indian social worker and one of the first women's rights activists.She was married to Justice Mahadev Govind Ranade, who was a distinguished Indian scholar and social reformer.
+                In that era of social inequality, women were not allowed to go to school and become literate. She began working for Prarthana Samaj in Bombay. She established a branch of Arya Mahila Samaj (Arya women's society) in the city. </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="clearfix"></div>
+
+
+</body>
+
+</html>
