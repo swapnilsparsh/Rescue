@@ -43,6 +43,19 @@
       flex-direction: column;
     }
 
+    
+    .parallax{
+      background-image:url( "{% static 'Images/red-bg.jpg' %}");
+      min-height:auto; 
+      background-attachment: fixed;
+      background-position: center;
+      padding-left:5%;
+      padding-right:5%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color:white;
+    }
+
     .my-bottom {
       position: absolute;
       bottom: 0;
@@ -77,6 +90,14 @@
 
     .new {
       font-size: 1.2rem;
+    }
+
+    .svg-img{
+      width:50%;
+      margin-left:25%;
+      margin-right:25%;
+      margin-bottom:5%;
+      height:50%;
     }
 
     .new::after {
@@ -158,6 +179,10 @@
       color: #FFF;
       border: 2px solid #FFF;
     }
+    .parallax p{
+      font-size:16px;
+    }
+
 
     @keyframes rotator {
       0% {
@@ -291,6 +316,35 @@
       </p>
     </div>
 
+    
+
+    <div class="parallax" >
+      <h1 style="padding:20px;" class="text-center">How it works</h1>
+      <div class="row text-center">
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/id.svg' %}">
+          <h4>REGISTER YOURSELF</h4>
+          <p>Register using your email-id.</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/contact.svg' %}">
+          <h4>ADD EMERGENCY CONTACTS</h4>
+          <p>Save the mobile number of your trusted contacts</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/empowerment.svg' %}">
+          <h4>YOU ARE ALL SET!</h4>
+          <p>Click on the EMERGENCY button! Now you are ready to fight against the victim</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/help.svg' %}">
+          <h4>ANY QUESTION?</h4>
+          <p>Please follow our <a href="">Frequently asked questions (FAQ)</a></p>
+        </div>       
+      </div>
+    </div>
+
+    
     <div class="jumbotron" style="background-color: white">
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
       <h3 class="display-4" style="
