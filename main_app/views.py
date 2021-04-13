@@ -223,6 +223,11 @@ def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
 
 
+def safety_tips(request):
+    return render(request, 'main_app/safety_tips.html', {'title': 'safety_tips'})
+
+
+
 def developers(request):
     return render(request, 'main_app/developers.html', {'title': 'developers'})
 
