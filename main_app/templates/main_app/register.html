@@ -12,24 +12,24 @@
         }
         /* CSS for back to top button */
         #myBtn {
-            display: none; 
-            position: fixed; 
-            bottom: 20px;  
-            right: 30px; 
-            z-index: 99; 
-            border: 2px black solid; 
-            outline: none; 
-            background-image:url("{% static 'Images/top.png' %}"); 
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: 2px black solid;
+            outline: none;
+            background-image:url("{% static 'Images/top.png' %}");
             background-position:center;
             background-repeat:no-repeat;
-            background-color:black; 
-            cursor: pointer; 
+            background-color:black;
+            cursor: pointer;
             padding: 1.4rem;
             border-radius: 25rem;
         }
         #myBtn:hover {
             background-color: white;
-            background-image:url("{% static 'Images/toph.png' %}"); 
+            background-image:url("{% static 'Images/toph.png' %}");
         }
 
         /* Register Page styling */
@@ -157,11 +157,11 @@
     width: 98%;
   }
 
-    </style> 
+    </style>
 	    <div class="register-page">
-            <form method="POST" class="form-style"> 
-                {% csrf_token %}         
-                <div class="row">   
+            <form method="POST" class="form-style">
+                {% csrf_token %}
+                <div class="row">
                     <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
                         <h1 class="register-page-title">WELCOME TO RESCUE</h1>
                         <p class="register-page-text">Create Your Account</p>
@@ -169,12 +169,15 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="form-div2">{{form.as_p}}</div>
+                        <br>
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <div class="g-recaptcha" data-sitekey="6Lfp2KIaAAAAALSpy1C27y940lzNVmZD6ZqJ3N-n"></div>
                     </div>
-                </div>  
+                </div>
                 <div class="register-sign-in" align="center">
                     <input type="submit" value="Register">
                     <h3 class="register-sign-in-text">Already on Rescue? <a href="/login">Sign In</a></h3>
-                    
+
                 </div>
             </form>
         <center>
@@ -185,7 +188,7 @@
                     <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
                 </button></p>
         </center>
-        
+
         </div>
 
     <script>

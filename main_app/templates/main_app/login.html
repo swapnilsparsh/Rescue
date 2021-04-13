@@ -9,24 +9,24 @@ html {
 	scroll-behavior:smooth;
    }
 	#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 99;
+     border: 2px black solid;
+     outline: none;
+     background-image:url("{% static 'Images/top.png' %}");
 	 background-position:center;
 	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
+     background-color:black;
+     cursor: pointer;
      padding: 1.4rem;
      border-radius: 25rem;
     }
 	#myBtn:hover {
       background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
+      background-image:url("{% static 'Images/toph.png' %}");
    }
    .login-page{
     margin-top: 10em;
@@ -41,14 +41,14 @@ html {
     }
 
     .button{
-        display: flex; 
-        align-items: center; 
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 
     .register-text{
-        display: flex; 
-        align-items: center; 
+        display: flex;
+        align-items: center;
         justify-content: center;
         font-size: .8em;
         font-weight: bold;
@@ -77,12 +77,12 @@ html {
 
     .display-4{
         text-align: center;
-        color: black; 
+        color: black;
         font-family: 'Bangers', cursive;
     }
 
     .lead{
-        text-align: center; 
+        text-align: center;
         font-family: 'Overpass', sans-serif;
     }
 
@@ -137,7 +137,7 @@ html {
         display: inline-block;
         width: 98%;
     }
-</style>   
+</style>
 <body style="background-color:white;margin-top: 60px;">
     <div class="login-page">
         <div class="row">
@@ -154,8 +154,9 @@ html {
                 <div class="form-div">
                     {{form.as_p}}
                     <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+										<script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" data-sitekey="6Lfp2KIaAAAAALSpy1C27y940lzNVmZD6ZqJ3N-n"></div>
 
-                    
                     <br>
                     <div class="button">
                         <b><input type="submit" value="Sign In"></b>
@@ -182,7 +183,7 @@ html {
     <script>
         const togglePassword = document.querySelector('#togglePassword');
         const password = document.querySelector('#id_password');
-    
+
         togglePassword.addEventListener('click', function (e) {
             // toggle the type attribute
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -190,7 +191,7 @@ html {
             // toggle the eye slash icon
             this.classList.toggle('fa-eye-slash');
         });
-    
+
     </script>
     {% endblock %}
     <br>

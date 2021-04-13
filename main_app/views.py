@@ -17,11 +17,14 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
 from django.http import HttpResponse
+from django.conf import settings
+import json
+import urllib
 
 # Create your views here
 
 def home(request):
-    context = {}    
+    context = {}
     return render(request, 'main_app/home.html', context)
 
 def register(request):
@@ -37,7 +40,7 @@ def register(request):
             uidb64=urlsafe_base64_encode(force_bytes(user.pk))
             domain=get_current_site(request).domain
             link=reverse('activate',kwargs={'uidb64':uidb64,'token':account_activation_token.make_token(user)})
-            
+
             activate_url = 'http://'+domain+link
 
             email_subject="Rescue - Activate you Account!"
@@ -48,6 +51,18 @@ def register(request):
                 'noreply@gmail.com',
                 [email],
             )
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            data = urllib.parse.urlencode(values).encode()
+            req =  urllib.request.Request(url, data=data)
+            response = urllib.request.urlopen(req)
+            result = json.loads(response.read().decode())
+            ''' End reCAPTCHA validation '''
             messages.success(request, f"New Account Created Successfully: {username}")
             messages.success(request, f"Check your email to Activate your account!")
             email.send(fail_silently=False)
@@ -55,7 +70,7 @@ def register(request):
         else:
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: form.error_messages[msg]")
-        
+
     else:
         form = UserCreateForm()
     return render(request, 'main_app/register.html', {'form': form})
@@ -81,7 +96,7 @@ class VerificationView(View):
             pass
 
         return redirect('main_app:login')
- 
+
 
 def logout_request(request):
     logout(request)
@@ -93,19 +108,31 @@ def login_request(request):
     form = LoginForm(request.POST)
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
-    if request.method == "POST":  
-        if username and password:          
+    if request.method == "POST":
+        if username and password:
             if(User.objects.filter(username=username).exists()):
                 user=auth.authenticate(username=username,password=password)
                 if user:
                     if user.is_active:
                         login(request, user)
+                        ''' Begin reCAPTCHA validation '''
+                        recaptcha_response = request.POST.get('g-recaptcha-response')
+                        url = 'https://www.google.com/recaptcha/api/siteverify'
+                        values = {
+                            'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                            'response': recaptcha_response
+                        }
+                        data = urllib.parse.urlencode(values).encode()
+                        req =  urllib.request.Request(url, data=data)
+                        response = urllib.request.urlopen(req)
+                        result = json.loads(response.read().decode())
+                        ''' End reCAPTCHA validation '''
                         messages.success(request, 'Welcome, ' +
                                         user.username+' you are now logged in')
                         return redirect('main_app:home')
-                    
+
                 messages.error(request, "Account is not active,please check your email")
-                    
+
 
             elif(User.objects.filter(email=username).exists()):
                 user=User.objects.get(email=username)
@@ -116,14 +143,14 @@ def login_request(request):
                         messages.success(request, 'Welcome, ' +
                                         user.username+' you are now logged in')
                         return redirect('main_app:home')
-                    
+
                 messages.error(request, "Account is not active,please check your email")
-                    
+
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
-        
-            
+
+
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
