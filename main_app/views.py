@@ -83,6 +83,9 @@ def emergency_contact(request):
     context = {'contacts': contacts, 'total_contacts': total_contacts, 'user':request.user}
     return render(request, 'main_app/emergency_contact.html', context)
 
+def gallery(request):
+    context = {}    
+    return render(request, 'main_app/gallery.html', context)
 
 def create_contact(request):
     inst = contact(user=request.user)
