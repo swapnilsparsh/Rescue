@@ -10,6 +10,7 @@ urlpatterns = [
     path('logout/', views.logout_request, name="logout"),
     path('login/', views.login_request, name="login"),
     path('emergency_contact/', views.emergency_contact, name="emergency_contact"),
+    path('gallery/', views.gallery, name="gallery"),
     path("create_contact/", views.create_contact , name="create_contact"),
     path("update_contact/<str:pk>/", views.update_contact, name="update_contact"),
     path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
