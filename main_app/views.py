@@ -16,7 +16,7 @@ from django.utils.http  import urlsafe_base64_encode , urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 
 # Create your views here
 
