@@ -218,6 +218,8 @@ def helpline_numbers(request):
 def ngo_details(request):
     return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
 
+def FAQ(request):
+    return render(request, 'main_app/FAQ.html', {'title': 'FAQ'})    
 
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
