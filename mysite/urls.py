@@ -37,4 +37,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('delete_account/<str:username>', views.delete_account, name='delete_account'),
 
-]
+
+
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
