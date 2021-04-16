@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import ContactForm
-from .models import contact,Login
+from .models import contact,Login,register_table
 from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .whatsapp import send_whatsapp
@@ -261,3 +261,34 @@ def check_email(request):
     if User.objects.filter(email=email).exists():
         return JsonResponse({"exists":"yes"})
     return JsonResponse({"exists":"no"})
+
+def profile(request):
+    context = {}
+    check = register_table.objects.filter(user__id=request.user.id)
+    if len(check)>0:
+        data = register_table.objects.get(user__id=request.user.id)
+        context["data"]=data    
+    if request.method=="POST":
+        fn = request.POST["fname"]
+        ln = request.POST["lname"]
+        em = request.POST["email"]
+        con = request.POST["contact"]
+        age = request.POST["age"]
+        ct = request.POST["city"]
+        gen = request.POST["gender"]
+
+        usr = User.objects.get(id=request.user.id)
+        usr.first_name = fn
+        usr.last_name = ln
+        usr.email = em
+        usr.save()
+
+        data.contact_number = con
+        data.age = age
+        data.city = ct
+        data.gender = gen
+        data.save()
+
+
+        
+    return render(request,'main_app/profile.html')
