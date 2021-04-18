@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
 {% load static %}
-
 <html lang="en">
 {% block content %}
 <br>
 
 <head>
     <style>
-        .btn {
-            background-color: black;
-            color: white;
-            text-align: center;
-            margin-top: -60%;
-            margin-left: 31%;
-        }
-
-        .btn:hover {
-            background-color: #f1f1f1;
-            color: black;
-            text-align: center;
-        }
-
         .collapsible-header:hover {
             background-color: #f6f5f5;
         }
@@ -29,7 +14,6 @@
         .collapsible-header {
             background-color: white;
             font-family: 'Alegreya', serif;
-            font-size: 20px;
         }
 
         .collapsible-header.active {
@@ -41,15 +25,21 @@
         }
 
         .collapsible-body {
-            text-align: justify;
             font-family: 'Arvo', serif;
         }
 
-        .wb-stl-heading1 {
+        .btn {
+            background-color: black;
+            color: white;
             text-align: center;
-            margin-top: 40px;
-            font-size: 40px;
-            font-family: 'Roboto Slab', serif;
+            margin-top: -50%;
+            margin-left: 40%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
         }
 
         .img-responsive,
@@ -59,11 +49,11 @@
             margin-left: auto;
             margin-right: auto;
         }
-  
-  html {
+   
+   html {
 	scroll-behavior:smooth;
- } 
- #myBtn {
+   }
+   #myBtn {
      display: none; 
      position: fixed; 
      bottom: 20px;  
@@ -88,7 +78,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
-
         <!-- ion icons -->
         <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../../static/css/FAQstyles.css" 
