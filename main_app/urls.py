@@ -14,6 +14,7 @@ urlpatterns = [
     path("create_contact/", views.create_contact , name="create_contact"),
     path("update_contact/<str:pk>/", views.update_contact, name="update_contact"),
     path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
+    path("change_password/",auth_views.PasswordChangeView.as_view(template_name='main_app/change_password.html',success_url = '/'), name='change_password'),
     path("emergency/", views.emergency, name="emergency"), 
     path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
     path("women_laws/", views.women_laws, name="women_laws"),
