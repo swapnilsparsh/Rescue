@@ -31,23 +31,14 @@
                             <input type="number" class="form-control" name="age" placeholder="Enter Age" min="15" max="99"
                             value="{{data.age}}">
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
                         <div class="col-md-6">
                             <label>Contact Number</label>
                             <input type="text" value="{{data.contact_number}}" class="form-control" name="contact" placeholder="Enter Contact Number" pattern="[0-9]{10}" title="Number must contain 10 digits only!!">
                         </div>
-                        <div class="col-md-6">
-                            <label>City</label>
-                            <input type="text" class="form-control" name="city" placeholder="Enter City" value="{{data.city}}">
-                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row">
-                        
                         <div class="col-md-6">
                             <label>Gender</label>
                   
@@ -67,10 +58,14 @@
                                 {% endif %}
                             </select>
                         </div>
+                        <div class="col-md-6">
+                            <label>City</label>
+                            <input type="text" class="form-control" name="city" placeholder="Enter City" value="{{data.city}}">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="changeprofile" value="Save Changes" class="btn btn-primary" style="width:50%;border-radius:20px;">
+                    <input type="submit" name="changeprofile" value="Save Changes" class="btn btn-primary" style="margin-left: 20%;width:50%;border-radius:20px;">
                 </div>
 
 
