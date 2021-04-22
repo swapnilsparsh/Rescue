@@ -318,4 +318,7 @@ def change_password(request,backend='django.contrib.auth.backends.ModelBackend')
             context["msz"] = "Incorrect Current Password"
             context["col"] = "alert-danger"
 
-    return render(request,"change_password.html",context)
+    return render(request,"main_app/change_password.html",context)
+
+
+
