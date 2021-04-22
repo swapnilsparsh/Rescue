@@ -71,8 +71,6 @@
 
     .User {
       font-size: 1.25rem;
-      margin-top:-5px;
-      text-decoration: none;
     }
 
     .objectives p {
@@ -263,19 +261,21 @@
           style="background-color: rgb(6, 17, 31); padding: None">
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
             {% if user.is_authenticated %}
-            <li class="nav-item dropdown" style="margin-top: 20px">
-              <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            
+            <li class="nav-item dropdown" style="margin-top: 22px">
+              <a class="nav-link" href="#" data-target="#navbarDopdown1" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
-                <a href="/profile/"><h4 class="User">{{user.username}}</h4></a>
-                
+                <h4 class="new">&nbsp;&nbsp; {{user.username}}</h4>
               </a>
-              
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
+                <a class="dropdown-item" style="color: white" href="/profile">Update profile</a>
+                <a class="dropdown-item" style="color: white" href="/change_password">Update password</a>
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
                 <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
               </div>
             </li>
-            <a href="/change_password/"><h4 style="margin-top: 29px; font-size: 20px;">Update password</h4></a>
+
+            
             {% else %}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
