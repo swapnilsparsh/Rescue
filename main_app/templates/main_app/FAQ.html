@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
 {% load static %}
+
 <html lang="en">
 {% block content %}
 <br>
 
 <head>
     <style>
+        .btn {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -60%;
+            margin-left: 31%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+
         .collapsible-header:hover {
             background-color: #f6f5f5;
         }
@@ -14,6 +29,7 @@
         .collapsible-header {
             background-color: white;
             font-family: 'Alegreya', serif;
+            font-size: 20px;
         }
 
         .collapsible-header.active {
@@ -25,21 +41,15 @@
         }
 
         .collapsible-body {
+            text-align: justify;
             font-family: 'Arvo', serif;
         }
 
-        .btn {
-            background-color: black;
-            color: white;
+        .wb-stl-heading1 {
             text-align: center;
-            margin-top: -50%;
-            margin-left: 40%;
-        }
-
-        .btn:hover {
-            background-color: #f1f1f1;
-            color: black;
-            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            font-family: 'Roboto Slab', serif;
         }
 
         .img-responsive,
@@ -49,11 +59,11 @@
             margin-left: auto;
             margin-right: auto;
         }
-   
-   html {
+  
+  html {
 	scroll-behavior:smooth;
-   }
-   #myBtn {
+ } 
+ #myBtn {
      display: none; 
      position: fixed; 
      bottom: 20px;  
@@ -78,154 +88,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
-        <!-- ion icons -->
-        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../static/css/FAQstyles.css" 
 
 <body style="background-color:white;margin-top: 150px;">
-    <div class="container">
-
-        <div class="row justify-content-center"
-            style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-            <div class="column">
-                <img src="/static/Images/FAQs_pic.jpg" class="img1-responsive" alt="Rights" 
-                     style="margin-top: 10px;margin-left: -20%;width: 120%;">
-            </div>
-
-            <div class="column"style=" margin-top: 20%;margin-left: 3%;">
-                <h1 class="wb-stl-heading1"
-                    style="text-align: center; margin-top: 40px; font-size:80px;font-family: 'Roboto Slab', serif;">
-                    <strong style="text-shadow: 2px 2px grey; text-align: center; ">
-                        <font color="black">FAQs</font>
-                    </strong>
-                </h1>
-                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-                <p class="lead" style="font-family: 'Overpass', sans-serif;"><b style="font-size: 140%;">"It is not the answer that 
-                                        enlightens
-                                        but the question"</b></p>
-                <hr class="my-10">
-            </div>
+    <div class="row justify-content-center"
+        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <div class="column">
+            <img src="/static/Images/FAQs_pic.jpg" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;width: 120%;margin-left: -8%;">
         </div>
-        <section>
-          <div class="container">
-             <div class="FAQ">
-                 <div class="FAQ-item" id="question1">
-                     <a class="FAQ-link" href="#question1">
-                          Is this website is free to register ?
-                         <i class="icon ion-md-add"></i>
-                         <i class="icon ion-md-remove"></i>
-                     </a>
-                      <div class="answer">
-                        <p>
-                          Yes this website is completely free to register and use.
-                        </p> 
-                      </div>
-                 </div>
-                 <div class="FAQ-item" id="question2">
-                  <a class="FAQ-link" href="#question2">
-                      What does emergency button do ?
-                      <i class="icon ion-md-add"></i>
-                      <i class="icon ion-md-remove"></i>
-                  </a>
-                   <div class="answer">
-                      <p>
-                      Emergency button sends the location and alert message to the persons whom contacts you have saved in the emergency contacts.
-                        </p> 
-                   </div>
-              </div>
-              <div class="FAQ-item" id="question3">
-                  <a class="FAQ-link" href="#question3">
-                      What is the aim of this website ?
-                      <i class="icon ion-md-add"></i>
-                      <i class="icon ion-md-remove"></i>
-                  </a>
-                   <div class="answer">
-                      <p>
-                          To have a responsive website to help women in panic and unsafe situations and Our main aim is to help women with the support of new technologies.
-                        </p> 
-                   </div>
-              </div>
-              <div class="FAQ-item" id="question4">
-                  <a class="FAQ-link" href="#question4">
-                      How can i save my emergency numbers ?
-                      <i class="icon ion-md-add"></i>
-                      <i class="icon ion-md-remove"></i>
-                  </a>
-                   <div class="answer">
-                      <p>
-                          Log in to your account then click on the emergency contacts tab in the navigation bar a new page will come up then click on the create contact and fill in the details and click on the create button to save.
-                      </p> 
-                   </div>
-              </div>
-             </div>
-             <div class="FAQ-item" id="question5">
-                  <a class="FAQ-link" href="#question5">
-                      Where can i share my personal problem ?
-                      <i class="icon ion-md-add"></i>
-                      <i class="icon ion-md-remove"></i>
-              </a>
-               <div class="answer">
-                      <p>
-                         You can share your personal problems in the contact us page of rescue website or you can share them with the given women helpline numbers.
-                      </p> 
-               </div>
-          </div>
-          <div class="FAQ-item" id="question6">
-              <a class="FAQ-link" href="#question6">
-                  Who is the admin of this website ?
-                  <i class="icon ion-md-add"></i>
-                  <i class="icon ion-md-remove"></i>
-              </a>
-               <div class="answer">
-                  <p>
-                    Swapnil Srivastava is the admin of this website.
-                  </p> 
-               </div>
-          </div>
-          <div class="FAQ-item" id="question7">
-              <a class="FAQ-link" href="#question7">
-                  Can a man use this website ?
-                  <i class="icon ion-md-add"></i>
-                  <i class="icon ion-md-remove"></i>
-              </a>
-               <div class="answer">
-                  <p>
-                      Yes anyone who wants can use this website.
-                  </p> 
-               </div>
-          </div>
-          <div class="FAQ-item" id="question8">
-              <a class="FAQ-link" href="#question8">
-                  What are the things which are sent when I press emergency button ?
-                  <i class="icon ion-md-add"></i>
-                  <i class="icon ion-md-remove"></i>
-              </a>
-               <div class="answer">
-                  <p>
-                      Your location with a alert message are sent to the emergency contacts that you have saved via phone and gmail at that very moment.
-                  </p> 
-               </div>
-          </div>
-          <div class="FAQ-item" id="question9">
-              <a class="FAQ-link" href="#question9">
-                  Is it safe to use this website ?
-                  <i class="icon ion-md-add"></i>
-                  <i class="icon ion-md-remove"></i>
-              </a>
-               <div class="answer">
-                  <p>
-                     Yes this website is completely safe and secure your data and contacts will also be secured by the password.
-                  </p> 
-               </div>
-          </div>
-          </div>
-      </section>
+
+        <div class="column" style="margin-top: -1%; margin-left: 5%;">
+            <h1 class="wb-stl-heading1">
+                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                    <font color="black" style="font-size: 250%;margin-top: %;">FAQs</font>
+                </strong>
+            </h1>
+            <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+            <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"It is not the answer that enlightens but the question"</b></p>
+            <hr class="my-10">
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="collapsible popout" data-collapsible="accordion" style="margin-top: 4%;">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Is this website is free to register ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes this website is completely free to register and use. </p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What does emergency button do ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Emergency button sends the location and alert message to the persons whom contacts you have saved in the emergency contacts.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What is the aim of this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>To have a responsive website to help women in panic and unsafe situations and Our main aim is to help women with the support of new technologies.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>How can i save my emergency numbers ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Log in to your account then click on the emergency contacts tab in the navigation bar a new page will come up then click on the create contact and fill in the details and click on the create button to save.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Where can i share my personal problem ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>You can share your personal problems in the contact us page of rescue website or you can share them with the given women helpline numbers.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Who is the admin of this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Swapnil Srivastava is the admin of this website.</p>
+                </div>
+            </li>
+            <br>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Can a man use this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes anyone who wants can use this website.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What are the things which are sent when I press emergency button ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Your location with a alert message are sent to the emergency contacts that you have saved via phone and gmail at that very moment.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Is it safe to use this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes this website is completely safe and secure your data and contacts will also be secured by the password.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+        </ul>
+        <br>
     </div>
     <div>
-        <img src="{% static 'Images/women-picture.jpg' %}" alt="" class="img-responsive">
+        <img src="{% static 'Images/women-picture.jpg' %}" class="img-responsive" alt="">
     </div>
 </body>
+
 {% endblock %}
 
 </html>
