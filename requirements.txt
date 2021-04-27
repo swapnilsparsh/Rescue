@@ -53,3 +53,4 @@ zipp==3.1.0
 bcrypt
 argon2-cffi
 django-allauth
+pywhatkit
