@@ -21,7 +21,7 @@ from django.conf import settings
 from main_app import views
 from django.urls import path
 from  main_app.views import VerificationView
-
+from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,5 +35,7 @@ urlpatterns = [
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name="main_app/password_reset_form.html"), name="password_reset_confirm"),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="main_app/password_reset_done.html"), name="password_reset_complete"),
     path('accounts/', include('allauth.urls')),
+    path("404_error/", views.page_not_found, name="404_error"),        
 
 ]
+handler404 = 'main_app.views.page_not_found'

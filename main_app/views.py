@@ -230,5 +230,6 @@ def developers(request):
 def women_rights(request):
     return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})
 
-def page_not_found(request):
-    return render(request, 'main_app/404.html', {'title': '404_error'})
+def page_not_found(request,exception):
+    return render(request,'main_app/404.html')
+    
