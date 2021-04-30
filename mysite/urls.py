@@ -36,6 +36,7 @@ urlpatterns = [
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="main_app/password_reset_done.html"), name="password_reset_complete"),
     path('accounts/', include('allauth.urls')),
     path("404_error/", views.page_not_found, name="404_error"),        
+    path('delete_account/<str:username>', views.delete_account, name='delete_account'),
 
 ]
 handler404 = 'main_app.views.page_not_found'
