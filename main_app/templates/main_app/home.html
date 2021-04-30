@@ -268,6 +268,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
+                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
               </div>
             </li>
             {% else %}
