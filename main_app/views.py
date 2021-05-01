@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm ,PasswordChangeForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import ContactForm
 from .models import contact,Login
+from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.models import User , auth
 from .mail import send_email
 from .location import lat, log, location, city, state
@@ -146,6 +147,24 @@ def emergency(request):
         send_email(name, c.email, link)
     return render(request,'main_app/emergency_contact.html',context)
 
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('main_app:home')
+        else:
+            for msg in form.error_messages:
+                messages.error(request,f"{form.error_messages[msg]}")
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'main_app/change_password.html', {
+        'form': form
+    })
 
 def helpline_numbers(request):
     return render(request, 'main_app/helpline_numbers.html', {'title': 'helpline_numbers'})
