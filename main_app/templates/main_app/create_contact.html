@@ -34,6 +34,9 @@
         <div class="container">
             <form method="POST">
                 {% csrf_token %}
+                <div class="alert alert-info" role="alert">
+                  <p align="center"><b>Note : </b>Your mobile number must include your country code such as +91, and must not contain spaces.</p>
+                </div>
                 {{form.as_p}}
                 <br>
                 <button style="color:white; background-color:rgb(30,142,62);  border-radius: 25px;" 
