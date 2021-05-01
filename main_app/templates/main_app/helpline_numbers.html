@@ -109,120 +109,153 @@
       background-color: white;
       background-image:url("{% static 'Images/toph.png' %}"); 
    }
+    
+    /* intro section styling */
+    .intro-section {
+        padding-top: 6em;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro-section img {
+        width: 275px;
+        flex: 0 1 auto;
+    }
+
+    .intro-title {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .intro-title h1 {
+        font-size: 2.75rem;
+        margin: 1em 0;
+    }
+
+    /* styling for table */
+    .table-section {
+        margin: 3em auto;
+        padding: 0px;
+    }
+    table {
+        padding: 0;
+    }
+
+    table, thead, tbody, td, th {
+        text-align: left;
+        align-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .table-bordered th, tr, td {
+        border: 1px solid #6C63FF;
+    }
+    tr:hover {
+        background-color: unset;
+    }
+    td a {
+        margin-right: 1em;
+        text-decoration: none;
+        color: #6C63FF;
+        display: block;
+    }
+    td a:hover {
+        font-weight: bolder;
+        text-decoration: none;
+        color: #6C63FF;
+    }
+    .table-primary {
+        background-color: #6C63FF;
+        color: #fff;
+    }
+
+    @media (min-width:768px) {
+        .intro-section {
+            flex-direction: row;
+            margin-bottom: 2em;
+        }
+        .intro-section img {
+            width: 375px;
+        }
+        td a {
+            display: inline-block;
+        }
+    }
+
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color:white;margin-top:150px;">
-    <!-- Table -->
-    <div class="row justify-content-center"
-        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-        <div class="column">
-            <img src="{% static 'Images/women-helpline.jpg' %}" alt="24 * 7" class="img1-responsive"
-                style="margin-top: -200px;">
-        </div>
-        <div class="column">
-            <h1 class="wb-stl-heading1">
-                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
-                    <font color="black">WOMEN HELPLINE NUMBERS</font>
-                </strong>
-                <img src="{% static 'Images/helpline.png' %}" alt="24 * 7" height="50vw">
-            </h1>
-        </div>
-    </div>
 
-    <div class="container">
-        <table class="table table-striped " cellpadding="20" cellspacing="4" style="background-color:white;color:black;font-family:lobster,lobster,sans-serif;
-        font-size:3vw; width:100%; " width="1250px">
-            <tbody class="womenhp">
-			    <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275px">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp;Women Helpline - All India</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>1091 &nbsp; &nbsp;<a href="tel:1091"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></span></p>
+<body>
+    <section class="container intro-section">
+        <img src="../../static/Images/helpline.svg" alt="person making a phone call">
+        <div class="intro-title">
+            <h1>WOMEN HELPLINE NUMBERS</h1>
+            <h2>Click "<u>Call</u>" to get help or dial</h2>
+        </div>
+    </section>
+
+    <section class="container table-section">
+        <table class="table table-striped table-bordered">
+            <thead class="table-primary">
+                <tr>
+                    <th>HELPLINE</th>
+                    <th>PHONE NUMBER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Women Helpline - All India</td>
+                    <td><a href="tel:1091">Call</a>1091</td>
+                </tr>
+                <tr>
+                    <td>Women Helpline - Domestic Abuse</td>
+                    <td><a href="tel:181">Call</a>181</td>
+                </tr>
+                <tr>
+                    <td>National Commission for Women (NCW)</td>
+                    <td>
+                        <a href="tel:011-26942369">Call</a>011-26942369<br>
+                        <a href="tel:011-26944754">Call</a>011-26944754
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp;Women Helpline - Domestic
-                                    Abuse</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>181 &nbsp; &nbsp;<a href="tel:181"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></span></p>
+                    <td>Delhi Commission for Women</td>
+                    <td>
+                        <a href="tel:011-23378044">Call</a>011-23378044<br>
+                        <a href="tel:011-23378317">Call</a>011-23378317<br>
+                        <a href="tel:011-23370597">Call</a>011-23370597
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp;National Commison For Women
-                                    (NCW)</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><strong><span>011-26942369 &nbsp; &nbsp;<a href="tel:011-26942369"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a>
-										<br>
-                                        26944754 &nbsp; &nbsp;<a href="tel:26944754"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></strong></span></p>
+                    <td>Outer Delhi Helpline</td>
+                    <td>
+                        <a href="tel:011-27034873">Call</a>011-27034873<br>
+                        <a href="tel:011-27034874">Call</a>011-27034874
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp; Delhi Commision For Women</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><strong><span>011-23378044 &nbsp; &nbsp;<a href="tel:011-23378044"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a><br> 23378317 &nbsp; &nbsp;<a href="tel:23378317"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a><br>
-                                        23370597 &nbsp; &nbsp;<a href="tel: 23370597"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></strong></span></p>
+                    <td>Student Child Helpline</td>
+                    <td><a href="tel:1098">Call</a>1098</td>
+                </tr>
+                <tr>
+                    <td>National Human Right's Commission</td>
+                    <td>
+                        <a href="tel:011-23385368">Call</a>011-23385368<br>
+                        <a href="tel:9810298900">Call</a>9810298900                    
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp;Outer Delhi Helpline</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><strong><span class="wb-stl-special"><span>011-27034873 &nbsp; &nbsp;<a href="tel:011-27034873"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a>&nbsp; &nbsp;<br>
-                                        27034874 &nbsp; &nbsp;<a href="tel:27034874"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></strong></span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special"><span>&#8226; &nbsp; &nbsp;Student Child Helpline</span></span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><strong><span
-                                    class="wb-stl-special"><span>1098 &nbsp; &nbsp;<a href="tel:1098"><i class="fa fa-phone"
-                                        aria-hidden="true"></i></a></span></span></strong></span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special">&#8226; &nbsp; &nbsp; National Human Right Commision</span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23385368 &nbsp; &nbsp;<a href="tel:011-23385368"><i class="fa fa-phone"
-                                    aria-hidden="true"></i></a>&nbsp; &nbsp;<br>
-                                    9810298900 &nbsp; &nbsp;<a href="tel:9810298900"><i class="fa fa-phone"
-                                    aria-hidden="true"></i></a></span></strong></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="height: 100px; padding-top: 35px;" width="275">
-                        <p class="wb-stl-normal"><span class="wb-stl-special">&#8226; &nbsp; &nbsp; National Commision for Women</span></p>
-                    </td>
-                    <td style="height: 100px; width: 150px; padding-top: 35px;">
-                        <p class="wb-stl-normal"><strong><span class="wb-stl-special">011-23237166 &nbsp; &nbsp;<a href="tel:011-23237166"><i class="fa fa-phone"
-                                    aria-hidden="true"></i></a>&nbsp; &nbsp;
-                                    <br>23234918 &nbsp; &nbsp;<a href="tel:23234918"><i class="fa fa-phone"
-                                    aria-hidden="true"></i></a></span></strong></p>
+                    <td>National Commission for Women</td>
+                    <td>
+                        <a href="tel:011-23237166">Call</a>011-23237166<br>
+                        <a href="tel:011-23234918">Call</a>011-23234918
                     </td>
                 </tr>
             </tbody>
