@@ -5,3 +5,6 @@ from .models import contact
 # Register your models here.
 admin.site.register(contact)
 admin.site.register(register_table)
+
+
+
