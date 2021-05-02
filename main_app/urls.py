@@ -33,6 +33,4 @@ urlpatterns = [
     path('check_username',views.check_username,name="check_username"),
     path('check_email',views.check_email,name="check_email"),
     path('profile/', views.profile,name="profile"),
-    path('change_password/', views.change_password,name="change_password")
               ]
-
