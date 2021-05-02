@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -53,8 +54,8 @@
       min-height:auto; 
       background-attachment: fixed;
       background-position: center;
-      padding-left:5%;
-      padding-right:5%;
+      padding: 4em 2em;
+      margin: 2em 0;
       background-repeat: no-repeat;
       background-size: cover;
       color:white;
@@ -73,23 +74,38 @@
       font-size: 1.25rem;
     }
 
+    .objectives {
+      font-size: 1rem;
+      text-align: center;
+      padding: 2em;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width:698px) {
+      .objectives {
+        width: 100%;
+      }
+    }
+
+    .objectives h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 3.75rem;
+      text-decoration: underline;
+      padding: 0.2em;
+    }
+
     .objectives p {
-      font-size: 30px;
+      font-size: 1.5rem;
       color: #B82E44;
       font-weight: 500;
       font-family: 'Roboto Slab', serif;
     }
 
-    .objectives {
-      text-align: center;
-      padding: 60px;
-    }
-
-    .objectives h1 {
+    .carousel-heading {
       font-family: 'Bangers', cursive;
-      font-size: 60px;
+      text-align: center;
       text-decoration: underline;
-      padding: 20px;
     }
 
     .new {
@@ -375,16 +391,9 @@
       </div>
     </div>
 
-    
     <div class="jumbotron" style="background-color: white">
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
-      <h3 class="display-4" style="
-          color: black;
-          font-family: 'Bangers', cursive;
-          text-align: center;
-        ">
-        <u>Wonder Women of India</u>
-      </h3>
+      <h1 class="display-4 carousel-heading">Wonder Women of India</h1>
     </div>
 
     <div class="container carousel-container">
