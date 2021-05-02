@@ -256,7 +256,6 @@ def profile(request):
     if request.method=="POST":
         fn = request.POST["fname"]
         ln = request.POST["lname"]
-        em = request.POST["email"]
         con = request.POST["contact"]
         age = request.POST["age"]
         ct = request.POST["city"]
@@ -265,7 +264,6 @@ def profile(request):
         usr = User.objects.get(id=request.user.id)
         usr.first_name = fn
         usr.last_name = ln
-        usr.email = em
         usr.save()
 
         data.contact_number = con
@@ -274,36 +272,6 @@ def profile(request):
         data.gender = gen
         data.save()
 
-
+    context["status"] = "Changes Saved Successfully"
         
-    return render(request,'main_app/profile.html')
-
-
-def change_password(request,backend='django.contrib.auth.backends.ModelBackend'):
-    context={}
-    ch = register_table.objects.filter(user__id=request.user.id)
-    if len(ch)>0:
-        data = register_table.objects.get(user__id=request.user.id)
-        context["data"] = data
-    if request.method=="POST":
-        current = request.POST["cpwd"]
-        new_pas = request.POST["npwd"]
-        
-        user = User.objects.get(id=request.user.id)
-        un = user.username
-        check = user.check_password(current)
-        if check==True:
-            user.set_password(new_pas)
-            user.save()
-            context["msz"] = "Password Changed Successfully!!!"
-            context["col"] = "alert-success"
-            user = User.objects.get(username=un)
-            login(request,user,backend='django.contrib.auth.backends.ModelBackend')
-        else:
-            context["msz"] = "Incorrect Current Password"
-            context["col"] = "alert-danger"
-
-    return render(request,"main_app/change_password.html",context)
-
-
-
+    return render(request,'main_app/profile.html',context)
