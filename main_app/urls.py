@@ -24,6 +24,7 @@ urlpatterns = [
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
     path('ngo_details/', views.ngo_details, name='ngo_details'),
+    path('main_app/FAQ.html', views.FAQ, name='FAQ'),
     path("developers/", views.developers, name="developers"),
     path("404_error/", views.page_not_found, name="404_error"),        
     path("activate/<uidb64>/<token>", VerificationView.as_view() ,name= "activate"),      
