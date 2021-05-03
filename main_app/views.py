@@ -89,6 +89,19 @@ def logout_request(request):
     return redirect("main_app:home")
 
 
+
+def delete_account(request,username):     
+    try:
+        user = User.objects.get(username = username)
+        user.delete()
+        messages.success(request,user.username+", Your account is deleted successfully!")            
+
+    except User.DoesNotExist:
+        messages.error(request, "User doesnot exist")    
+    
+    return redirect('main_app:home')
+
+
 def login_request(request):
     form = LoginForm(request.POST)
     username = request.POST.get('Username_or_Email')
@@ -218,6 +231,8 @@ def helpline_numbers(request):
 def ngo_details(request):
     return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
 
+def FAQ(request):
+    return render(request, 'main_app/FAQ.html', {'title': 'FAQ'})    
 
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})

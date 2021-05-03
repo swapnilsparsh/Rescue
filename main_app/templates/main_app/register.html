@@ -119,10 +119,12 @@
         @media only screen and (max-device-width: 768px){
             .form-div1{
                 margin-top: 5em;
+                margin: 0 auto;
             }
             .form-div2{
                 width: 80%;
                 margin-left: 3.7em;
+                margin: 0 auto;
             }
             label {
                 font-size: 2.5rem;
@@ -131,27 +133,30 @@
                 margin: 0 auto;
                 font-size: 2rem;
             }
+            .row {
+                margin: unset;
+            }
         }
 
         /* google button css */
-              .gg{
-    width:240px;
-    height:40px;
-    border:0px;
-    border-radius: 50px;
-    background-color: #DB4437;
-    font-family: 'Roboto', sans-serif;
-    font-size:20px;
-    color:white;
-  }
-  .gg i{
-    margin-left: -20px;
-    padding-right:8px;
-  }
-  .or{
-      font-size: 2em;
-      padding-bottom: 20px;
-  }
+        .gg{
+            width:240px;
+            height:40px;
+            border:0px;
+            border-radius: 50px;
+            background-color: #DB4437;
+            font-family: 'Roboto', sans-serif;
+            font-size:20px;
+            color:white;
+        }
+        .gg i{
+            margin-left: -20px;
+            padding-right:8px;
+        }
+        .or{
+            font-size: 2em;
+            padding-bottom: 20px;
+        }
 
   body > div.register-page > form > div.row > div:nth-child(2) > div > p:nth-child(6),p:nth-child(3){
     display: initial;
@@ -314,7 +319,7 @@
             var newNode = document.createElement('i');
             newNode.className = "far fa-eye";
             newNode.id = `togglePassword${id}`;
-            newNode.style = "margin-left: -30px; cursor: pointer;"
+            newNode.style = "margin-left: -32px; cursor: pointer;"
 
             var referenceNode = document.querySelector(`#${referenceNode}`);
 
