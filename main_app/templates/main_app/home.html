@@ -47,6 +47,19 @@
       flex-direction: column;
     }
 
+    
+    .parallax{
+      background-image:url( "{% static 'Images/red-bg.jpg' %}");
+      min-height:auto; 
+      background-attachment: fixed;
+      background-position: center;
+      padding-left:5%;
+      padding-right:5%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color:white;
+    }
+
     .my-bottom {
       position: absolute;
       bottom: 0;
@@ -81,6 +94,14 @@
 
     .new {
       font-size: 1.2rem;
+    }
+
+    .svg-img{
+      width:50%;
+      margin-left:25%;
+      margin-right:25%;
+      margin-bottom:5%;
+      height:50%;
     }
 
     .new::after {
@@ -162,6 +183,10 @@
       color: #FFF;
       border: 2px solid #FFF;
     }
+    .parallax p{
+      font-size:16px;
+    }
+
 
     @keyframes rotator {
       0% {
@@ -243,6 +268,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
+                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
               </div>
             </li>
             {% else %}
@@ -269,6 +295,7 @@
                 </a>
                 <a class="dropdown-item" style="color: white" href="/helpline_numbers">Women Helpline Numbers</a>
                 <a class="dropdown-item" style="color: white" href="/ngo_details">NGOs for Women</a>
+                <a class="dropdown-item" style="color: white" href="../main_app/FAQ.html">FAQ's</a>
               </div>
             </li>
             <li class="nav-item">
@@ -321,6 +348,35 @@
       </p>
     </div>
 
+    
+
+    <div class="parallax" >
+      <h1 style="padding:20px;" class="text-center">How it works</h1>
+      <div class="row text-center">
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/id.svg' %}">
+          <h4>REGISTER YOURSELF</h4>
+          <p>Register using your email-id.</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/contact.svg' %}">
+          <h4>ADD EMERGENCY CONTACTS</h4>
+          <p>Save the mobile number of your trusted contacts</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/empowerment.svg' %}">
+          <h4>YOU ARE ALL SET!</h4>
+          <p>Click on the EMERGENCY button! Now you are ready to fight against the victim</p>
+        </div>
+        <div class="col">
+          <img class="svg-img" src="{% static 'Images/help.svg' %}">
+          <h4>ANY QUESTION?</h4>
+          <p>Please follow our <b><a href="" style="color:cyan;">Frequently asked questions (FAQ)</a></b></p>
+        </div>       
+      </div>
+    </div>
+
+    
     <div class="jumbotron" style="background-color: white">
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
       <h3 class="display-4" style="
@@ -402,6 +458,8 @@
         <div class="row" style="margin-right: 10%"  class="list-unstyled quick-links">
           <ul class="col" style="margin-top: 5px">
             <li ><a href="#" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+            <li><a href="https://github.com/swapnilsparsh/Rescue" target="_blank" style="font-size:25px;"><i class="bi bi-github">
+                </i>Contribute Here</a></li>
           </ul>
       </div>
     </footer>

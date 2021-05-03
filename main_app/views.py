@@ -16,7 +16,7 @@ from django.utils.http  import urlsafe_base64_encode , urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 
 # Create your views here
 
@@ -87,6 +87,19 @@ def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
     return redirect("main_app:home")
+
+
+
+def delete_account(request,username):     
+    try:
+        user = User.objects.get(username = username)
+        user.delete()
+        messages.success(request,user.username+", Your account is deleted successfully!")            
+
+    except User.DoesNotExist:
+        messages.error(request, "User doesnot exist")    
+    
+    return redirect('main_app:home')
 
 
 def login_request(request):
@@ -218,6 +231,8 @@ def helpline_numbers(request):
 def ngo_details(request):
     return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
 
+def FAQ(request):
+    return render(request, 'main_app/FAQ.html', {'title': 'FAQ'})    
 
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
@@ -232,3 +247,17 @@ def women_rights(request):
 
 def page_not_found(request):
     return render(request, 'main_app/404.html', {'title': '404_error'})
+
+
+def check_username(request):
+    username = request.GET.get("name")
+    if User.objects.filter(username=username).exists():
+        return JsonResponse({"exists":"yes"})
+    return JsonResponse({"exists":"no"})
+    
+
+def check_email(request):
+    email = request.GET.get("email")
+    if User.objects.filter(email=email).exists():
+        return JsonResponse({"exists":"yes"})
+    return JsonResponse({"exists":"no"})
