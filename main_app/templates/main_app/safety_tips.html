@@ -66,11 +66,20 @@
    p{
     font-family: 'Arvo', serif;
     font-size: medium;
-    color:darkblue; 
    }
    html {
 	scroll-behavior:smooth;
    }
+   .column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+   }
+   .row1::after {
+  content: "";
+  clear: both;
+  display: table;
+    }
    #myBtn {
      display: none; 
      position: fixed; 
@@ -112,18 +121,16 @@
                     <strong style="text-shadow: 2px 2px grey; text-align: center; ">
                         <font color="black">Women's Safety Tips</font>
                     </strong>
-                    <img src="{% static 'Images/Safety_2.jpg' %}" alt="24 * 7" height="50vw">
+                    <img src="{% static 'Images/Safety_2.jpg' %}" alt="Safety" height="50vw">
                 </h1>
                 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
                 <p class="lead" style="font-family: 'Overpass', sans-serif; text-align:center"><b>"Be Safe. Not Sorry"</b><br>
                     <b>"Safety is a full time job, don't make it a part time practice."</b></p>
                 <hr class="my-10">
-                <a class="btn"
-                    href="https://timesofindia.indiatimes.com/blogs/the-next-step/safety-tips-for-women/"
-                    target="_blank"><b>MORE DETAILS</b></a>
+                <a class="btn" href="https://timesofindia.indiatimes.com/blogs/the-next-step/safety-tips-for-women/" target="_blank"><b>MORE DETAILS</b></a>
             </div>
         </div>
-
+        <br><br>
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">
@@ -131,13 +138,8 @@
                     <h5>General Guidelines</h5>
                 </div>
                 <div class="collapsible-body">
-                    <div class="card text-justified flex-row flex-wrap text-white ">
-                        <div class="card-header">
-                            <img class="card-img-left" src="{% static 'Images/Safety_2.jpg' %}" alt="Card image cap">
-                        </div>
-                        <div class="card-block px-2">
-                                <h4 class="card-title"><b>General Guidelines</b></h4>
-                                <p class="card-text" > 1.  Be aware of your surroundings. Don’t let your guard down.
+                    <img class="card-img-left" src="{% static 'Images/Safety_2.jpg' %}" alt="Card image cap">
+                    <p style="float:right"> 1.  Be aware of your surroundings. Don’t let your guard down.
                                     <br>
                                     2.  Please trust and make good use of your ‘gut feel’ or ‘intuition’ or ‘sixth sense’ in each & every place <br>and situation.
                                     <br>
@@ -147,16 +149,13 @@
                                     <br>
                                     5.  While using 2 wheeler be sure to wear helmet at all times (especially at night). Don’t stop for any<br> stranger.
                                     In case attacked, use your helmet to defend yourself.
-                                </p>
+                    </p>
+                    <br><br>
+                    <b>Hack # 1 : If you wear a fake wedding ring when you have to be out late at night by yourself or are traveling through an 
+                        unfamiliar place, you could deter somebody from following you home because they think you live with somebody.</b>
                         </div>
-                    
-                            <div class="card-footer w-100 text-white">
-                                Hack # 1 : If you wear a fake wedding ring when you have to be out late at night by yourself or are traveling through an 
-                                unfamiliar place, you could deter somebody from following you home because they think you live with somebody.
-                            </div>
-                      </div>
-                </div>
             </li>
+            <br>
             <br>
             <li>
                 <div class="collapsible-header">
@@ -164,112 +163,155 @@
                     <h5>Safety tips when you are driving</h5>
                 </div>
                 <div class="collapsible-body">
-                    <div class="card text-justified flex-row flex-wrap text-white ">
-                        <div class="card-header">
-                            <img class="card-img-left" src="{% static 'Images/girl-car.jpg' %}" alt="Card image cap">
-                        </div>
-                        <div class="card-block px-2">
-                                <h4 class="card-title"><b>While driving a car:</b></h4>
-                                <p class="card-text"> 1.Avoid parking at desolate areas.<br>
+                    <img class="card-img-left" src="{% static 'Images/girl-car.jpg' %}" alt="Card image cap">
+                    <p style="float:right"> 1.Avoid parking at desolate areas.<br>
                                     2.Look inside the car especially the back seat before unlocking & entering.<br>
                                     3.Lock the doors immediately after entering the car.<br>
                                     4.Start the car & drive off rather then call someone. Calls can wait.<br>
                                     5.Don’t give lift to strangers.Don’t stop your car for strangers, especially at night.<br>
                                     6.Take known routes, avoid short cuts which you don’t know.    
-                                </p>
-                        </div>
-                    
-                            <div class="card-footer w-100 text-white">
-                                Hack # 2 : Buy a portable alarm.Portable alarms can be set off from anywhere. If someone has covered your mouth, 
-                                or you’re somewhere so isolated your screams wouldn’t be heard, a portable alarm will make a lot of noise, and your 
-                                attacker will need time to figure out how to disarm it.
-                            </div>
-                      </div>
-                </div>
+                    </p>
+                     <br><br>   
+                     <b>Hack # 2 : Buy a portable alarm.Portable alarms can be set off from anywhere. If someone has covered your mouth, 
+                     or you’re somewhere so isolated your screams wouldn’t be heard, a portable alarm will make a lot of noise, and your 
+                     attacker will need time to figure out how to disarm it.</b>
+                    </div>
             </li>
-            <br>
+            <br><br>
             <li>
                 <div class="collapsible-header">
                     <i class="material-icons">arrow_drop_down</i>
                     <h5>Safety tips when you use a cell phone in public places</h5>
                 </div>
                 <div class="collapsible-body">
-                    <div class="card text-justified flex-row flex-wrap text-white ">
-                        <div class="card-header">
-                            <img class="card-img-left" src="{% static 'Images/phone.jpg' %}" alt="Card image cap">
-                        </div>
-                        <div class="card-block px-2">
-                                <h4 class="card-title"><b>Cell Phone precautions:</b></h4>
-                                <p class="card-text"> 1.While travelling at night don’t keep your phone in your hand.Remember phone is the first <br>thing your attacker will throw away.<br>
+                    <img class="card-img-left" src="{% static 'Images/phone.jpg' %}" alt="Card image cap">
+                        <p style="float:right"> 1.While travelling at night don’t keep your phone in your hand.Remember phone is the first <br>thing your attacker will throw away.<br>
                                     2.Activate your speed dials which can be used to dial numbers in emergency.<br>
                                     3.Keep it in your pocket or at a place from where you can easily take it out & dial a number & leave it on.<br>
                                     4.Once the number has been dialled start shouting & try to speak out your location so that the <br>other person can inform police about your location.<br>
                                     5.If you have a smart phone then install emergency apps which can send sms to known people & can<br> even dial police no. in case of emergency.<br> 
-                                </p>
-                        </div>
+                                </p><br><br>
+                               <b> Hack # 3 : Bring a selfie stick.Once you hand somebody your phone to take a photo of you, they can look around in it and grab information like your address. 
+                                Bring a selfie stick where you go so you don’t need a photographer.</b>
                     
-                            <div class="card-footer w-100 text-white">
-                                Hack # 3 : Bring a selfie stick.Once you hand somebody your phone to take a photo of you, they can look around in it and grab information like your address. 
-                                Bring a selfie stick where you go so you don’t need a photographer.
                             </div>
-                      </div>
-                </div>
             </li>
             <br>
-        </ul>
-
+            <hr><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What should a woman do if she finds herself alone in the company of a strange male as she prepares to enter a lift in a high-rise apartment late at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Enter the lift.If you need to reach the 13th floor, press all the buttons up to your destination. No one will dare attack you in a lift that stops on every floor.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What to do if a stranger tries to attack you when you are alone in your house?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say : Run into the kitchen . You alone know where the chilli powder and turmeric are kept.And where the knives and plates are. All these can be turned into deadly weapons. If nothing else, start throwing plates and utensils all over.
+                Let them break. Scream. Remember that noise is his greatest enemy. He does not want to be caught.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What precautions should be followed while taking an Auto or Taxi at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Before getting into an auto at night, note down it's registration number. Then use your mobile to call your family or friend and
+                pass on the details to them in the language the driver understands. Even if no one answers your call, petend you are in a conversation. The driver 
+                now knows someone has his details and he will be in serious trouble if anything goes wrong. He is bound to take you home safe and sound.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What if one is stalked at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Enter a shop or a house and explain your predicament.If it is night and shops are not open, go inside an ATM box. ATM centers always have security guards. They are also monitored by 
+                close circuit television. Fearing identification, no one will dare attack you.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What if the driver turns into a street he is not supposed to and you feel you are entering a danger zone?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Use the handle of your purse or your dupatta to wrap around his neck and pull him back. Within seconds he will feel choked and helpless.
+                In case you don't have a purse or dupatta, just pull him back by his collar. The top button of his shirt would do the same trick.</p>
+        </div>
+    </li>
+    <hr>
+    <br>
+    </ul>
   
 
-  <h3 style="margin: 1% 17% 0.5% 37%;"><b>Specific Situations</b></h3>
-  <p><b>Question: What should a woman do if she finds herself alone in the company of a strange male as she prepares to enter a lift in a high-rise apartment late at night?</b><br>
-  Experts Say: Enter the lift.If you need to reach the 13th floor, press all the buttons up to your destination. No one will dare attack you in a lift that stops on every floor.<br><hr></p>
-  <p><b>Question: What to do if a stranger tries to attack you when you are alone in your house?</b><br>
-  Experts Say : Run into the kitchen . You alone know where the chilli powder and turmeric are kept.And where the knives and plates are. All these can be turned into deadly weapons. If nothing else, start throwing plates and utensils all over.
-  Let them break. Scream. Remember that noise is his greatest enemy. He does not want to be caught.<br><hr></p>
-  <p><b>Question: What precautions should be followed while taking an Auto or Taxi at night?</b><br>
-  Experts Say: Before getting into an auto at night, note down it's registration number. Then use your mobile to call your family or friend and
-  pass on the details to them in the language the driver understands. Even if no one answers your call, petend you are in a conversation. The driver 
-  now knows someone has his details and he will be in serious trouble if anything goes wrong. He is bound to take you home safe and sound. <br><hr></p>
-  <p><b>Question: What if one is stalked at night?</b><br>
-  Experts Say: Enter a shop or a house and explain your predicament.If it is night and shops are not open, go inside an ATM box. ATM centers always have security guards. They are also monitored by 
-  close circuit television. Fearing identification, no one will dare attack you. <br><hr></p>
-  <p><b>Question: What if the driver turns into a street he is not supposed to and you feel you are entering a danger zone?</b><br>
-  Experts Say: Use the handle of your purse or your dupatta to wrap around his neck and pull him back. Within seconds he will feel choked and helpless.
-  In case you don't have a purse or dupatta, just pull him back by his collar. The top button of his shirt would do the same trick.<br> </p>
-
   <h3 style="margin: 1% 17% 0.5% 37%;"><b>Self Defence Tips</b></h3>
+
   <a href="https://www.healthline.com/health/womens-health/self-defense-tips-escape" style="margin: 1% 17% 0.5% 43%;">Read More</a><br>
-  <h4 style="margin: 0.5% 17% 0.5% 38%;">1. Hammer strike</h4><br>
-    <video width="50%" height="360" style="margin: 1% 25%;" controls>
-    <source src="{% static 'Images/hammer.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls>
-    <source src="{% static 'Images/method2.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <h4 style="margin: 0.5% 17% 0.5% 38%;">2. Groin kick</h4><br>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls>
-    <source src="{% static 'Images/kick.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <h4 style="margin: 0.5% 17% 0.5% 38%;">3. Heel palm strike</h4><br>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls>
-    <source src="{% static 'Images/heel-palm.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <h4 style="margin: 0.5% 17% 0.5% 35%;">4. Escape from a ‘bear hug attack’</h4><br>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls >
-    <source src="{% static 'Images/bear.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <h4 style="margin: 0.5% 17% 0.5% 38%;">5. Escape with hands trapped</h4><br>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls>
-    <source src="{% static 'Images/hands.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <h4 style="margin: 0.5% 17% 0.5% 38%;">6. Escape from side headlock</h4><br>
-  <video width="50%" height="340" style="margin: 1% 25%;" controls>
+  <div class="row1">
+    <h4 style="margin: 0.5% 17% 0.5% 38%; font-size: medium;">1. Hammer strike</h4>
+    <div class="column1">
+        <video width="100%" height="300" style="margin: 1% 40% 1% 40%;" controls>
+            <source src="{% static 'Images/hammer.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <div class="column1">
+        <video width="100%" height="300" style="margin: 1% 50% 1% 55%;" controls>
+            <source src="{% static 'Images/method2.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    </div>
+    <h4 style="margin-left: 23%;display: inline; font-size: medium;" >2. Groin kick</h4>
+    <h4 style="margin-left: 23%;display: inline; font-size: medium;" >3. Heel palm strike</h4>
+    <div class="row1">
+<div class="column1">
+    <video width="100%" height="300" style="margin: 0.5% 40% 1% 40%;" controls>
+        <source src="{% static 'Images/kick.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      
+</div>
+<div class="column1">
+    <video width="100%" height="300" style="margin: 0.5% 50% 1% 55%;" controls>
+        <source src="{% static 'Images/heel-palm.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+</div>
+    </div>
+    <h4 style="margin-left: 15%; display: inline; font-size: medium;" >4. Escape from a ‘bear hug attack’</h4>
+    <h4 style="margin-left: 15%; display: inline; font-size: medium;" >5. Escape with hands trapped</h4>
+    <div class="row1">
+        <div class="column1">
+            <video width="100%" height="300" style="margin: 1% 40% 1% 40%;" controls >
+                <source src="{% static 'Images/bear.mp4' %}" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+        <div class="column1">
+            <video width="100%" height="300" style="margin: 1% 50% 1% 55%;" controls>
+                <source src="{% static 'Images/hands.mp4' %}" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+    </div>
+  
+  
+  <h4 style="margin: 0.5% 17% 0.5% 38%;font-size: medium;">6. Escape from side headlock</h4><br>
+  <video width="40%" height="300" style="margin: 0.5% 30%;" controls>
     <source src="{% static 'Images/head.mp4' %}" type="video/mp4">
   Your browser does not support the video tag.
   </video>
