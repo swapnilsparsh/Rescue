@@ -205,7 +205,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown"
           style="background-color: rgb(6, 17, 31); padding: None">
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and  not user.has_usable_password %}
             <li class="nav-item dropdown" style="margin-top: 20px">
               <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
@@ -213,7 +213,17 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
-                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
+              </div>
+            </li>
+            {%  elif user.is_authenticated and not backends.associated %}
+            <li class="nav-item dropdown" style="margin-top: 20px">
+              <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
+                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
+                <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
+                <a class="dropdown-item" style="color: white" href="/change_password">Change Password</a>
               </div>
             </li>
             {% else %}
