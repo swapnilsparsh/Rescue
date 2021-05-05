@@ -54,7 +54,7 @@ def register(request):
             return redirect('main_app:home')
         else:
             for msg in form.error_messages:
-                messages.error(request, f"{msg}: form.error_messages[msg]")
+                messages.error(request, f"{form.error_messages[msg]}")
         
     else:
         form = UserCreateForm()
