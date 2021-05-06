@@ -244,33 +244,23 @@ def developers(request):
 def women_rights(request):
     return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})
 
-def page_not_found(request):
-    return render(request, 'main_app/404.html', {'title': '404_error'})
+def page_not_found(request,exception):
+    return render(request,'main_app/404.html')
+    
 
-def changepassword(request):
-    users = User.objects.all()
-    curr = 0
-    for user in users:
-        if request.user.is_authenticated:
-            curr = user
-            break
-    if curr == 0:
-        return redirect("main_app:login")
-    error=""
-    if request.method == 'POST':
-        o = request.POST['old']
-        n = request.POST['new']
-        c = request.POST['confirm']
-        if c==n:
-            u = User.objects.get(username__exact = request.user.username)
-            u.set_password(n)
-            u.save()
-            error="no"
-        else:
-            error="yes"
-    context={'error':error}
-    return render(request, 'main_app/changepassword.html',context)
+def check_username(request):
+    username = request.GET.get("name")
+    if User.objects.filter(username=username).exists():
+        return JsonResponse({"exists":"yes"})
+    return JsonResponse({"exists":"no"})
+    
 
+def check_email(request):
+    email = request.GET.get("email")
+    if User.objects.filter(email=email).exists():
+        return JsonResponse({"exists":"yes"})
+    return JsonResponse({"exists":"no"})
+  
 def contact_user(request):
 	if request.method == "POST":
 		message_name = request.POST['message-name']
