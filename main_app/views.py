@@ -17,7 +17,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
 from django.http import HttpResponse,JsonResponse
-
+from .SMS import send_sms
 # Create your views here
 
 def home(request):
@@ -219,8 +219,16 @@ def emergency(request):
         send_email(name, c.email, link)
     try:
         send_whatsapp(mobile_numbers, name, link)
-    except:
-        messages.error(request, "your contact numbers contains number without country code.")
+        send_sms(mobile_numbers, name, link)
+    
+    except Exception as e:
+
+        if str(e) == "Account Credentials Not Found":
+            messages.error(request, "We are sorry for not sending the message, try again later.")
+        
+        else:
+            messages.error(request, "your contact numbers contains number without country code.")
+
     return render(request,'main_app/emergency_contact.html',context)
 
 
