@@ -19,13 +19,14 @@ urlpatterns = [
     path("create_contact/", views.create_contact , name="create_contact"),
     path("update_contact/<str:pk>/", views.update_contact, name="update_contact"),
     path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
-    path("emergency/", views.emergency, name="emergency"), 
+    path("emergency/", views.emergency, name="emergency"),
     path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
     path('ngo_details/', views.ngo_details, name='ngo_details'),
     path('main_app/FAQ.html', views.FAQ, name='FAQ'),
     path("developers/", views.developers, name="developers"),
+    path('contact_user/', views.contact_user , name="contact_user"),
     path("404_error/", views.page_not_found, name="404_error"),        
     path("activate/<uidb64>/<token>", VerificationView.as_view() ,name= "activate"),      
     path('reset_password/',auth_views.PasswordResetView.as_view(template_name = "main_app/password_reset.html"),name="reset_password"),
@@ -36,4 +37,5 @@ urlpatterns = [
     path('check_username',views.check_username,name="check_username"),
     path('check_email',views.check_email,name="check_email")
               ]
+
 
