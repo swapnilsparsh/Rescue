@@ -3,69 +3,8 @@
 
 {% block content %}
 <html lang="en">
-
-<body style="background-color:white;">
-	<div class="emergency-contact-page">
-
-		<div class="jumbotron" style="background-color: white;margin-top:10px;">
-			<div>
-				<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-				<h1 class="display-4" style="color: black; font-family: 'Bangers', cursive; margin-top: 8%;">
-					Emergency
-					Contacts</h1>
-				<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-				<p class="lead" style="font-family: 'Overpass', sans-serif;">Save Your Trusted Contacts. In
-					Emergency
-					Your
-					Contacts are just one <b>CLICK </b> away.</p>
-				<hr class="my-10">
-			</div>
-		</div>
-	</div>
-
-	<div class="contacts">
-
-		<!-- <div class="row"> -->
-		<!-- <div class="col-md-7"> -->
-		<div class="sub-heading">
-			<h6>Saved Contacts: {{total_contacts}}</h6>
-			<hr><br>
-		</div>
-
-		<a style="color:white; background-color:rgb(30,142,62);" class="btn btn-primary  btn-sm btn-block"
-			href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
-		<br>
-		<table class="table">
-			<thead class="thead" style="color:black; background-color:#E9ECEF;">
-				<tr>
-					<th>Name</th>
-					<th>Relation</th>
-					<th>Email</th>
-					<th>Mobile No.</th>
-					<th>Update</th>
-					<th>Delete</th>
-				</tr>
-			</thead>
-
-			{% for contact in contacts.all %}
-			<tbody class="table-striped">
-				<tr>
-					<td>{{contact.name}}</td>
-					<td>{{contact.relation}}</td>
-					<td>{{contact.email}}</td>
-					<td>{{contact.mobile_no}}</td>
-					<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
-							href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
-					<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
-							href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
-				</tr>
-			</tbody>
-			<br>
-			{% endfor %}
-
-		</table>
-	</div>
-	</div>
+<head>
+	<title>Rescue | Emergency contacts</title>
 	<style>
 	    html {
 	scroll-behavior:smooth;
@@ -140,7 +79,7 @@
 				font-size: 2rem;
 				width: 80%;
 				max-width: 100rem;
-				margin: 30rem auto;
+				margin: 10rem auto;
 				position: relative;
 				text-align: center;
 			}
@@ -167,7 +106,7 @@
 				font-size: 2rem;
 				width: 80%;
 				max-width: 100rem;
-				margin: 30rem auto;
+				margin: 20rem auto;
 				position: relative;
 				text-align: center;
 			}
@@ -204,14 +143,119 @@
 			}
 		}
 
-		@media only screen and (min-width:768px) {
-			.emergency-contact-page {
-				position: relative;
+		@media screen and (min-device-width: 425px) and (max-device-width: 768px) {
+
+			.contacts {
+				width: 90%;			
+				text-align: center;
+				font-size: 1.5rem;			
+				max-width: 100rem;
 			}
 		}
 
+
+		@media only screen and (min-width:768px) {
+			.emergency-contact-page {
+				position: relative;				
+			}
+			.contacts {
+				width: 70%;
+				margin-bottom:5%;
+				font-size: 1.2rem;
+			}
+		}
+		.table-responsive::-webkit-scrollbar {
+			-webkit-appearance: none;
+		}
+
+		.table-responsive::-webkit-scrollbar:vertical {
+			width: 12px;
+		}
+
+		.table-responsive::-webkit-scrollbar:horizontal {
+			height: 12px;
+		}
+
+		.table-responsive::-webkit-scrollbar-thumb {
+			background-color: rgba(0, 0, 0, .5);
+			border-radius: 10px;
+			border: 2px solid #ffffff;
+		}
+
+		.table-responsive::-webkit-scrollbar-track {
+			border-radius: 10px;  
+			background-color: #ffffff; 
+		}
     
 	</style>
+
+</head>
+
+<body style="background-color:white;">
+	<div class="emergency-contact-page">
+
+		<div class="jumbotron" style="background-color: white;margin-top:10px;">
+			<div>
+				<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+				<h1 class="display-4" style="color: black; font-family: 'Bangers', cursive; margin-top: 8%;">
+					Emergency
+					Contacts</h1>
+				<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+				<p class="lead" style="font-family: 'Overpass', sans-serif;">Save Your Trusted Contacts. In
+					Emergency
+					Your
+					Contacts are just one <b>CLICK </b> away.</p>
+				<hr class="my-10">
+			</div>
+		</div>
+	</div>
+
+	<div class="contacts">
+
+		<!-- <div class="row"> -->
+		<!-- <div class="col-md-7"> -->
+		<div class="sub-heading">
+			<h4>Saved Contacts: {{total_contacts}}</h4>
+			<hr><br>
+		</div>
+
+		<a style="color:white; background-color:rgb(30,142,62);" class="btn btn-primary  btn-sm btn-block"
+			href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
+		<br>
+		<div class="table-responsive text-nowrap">
+			<table class="table">
+				<thead class="thead" style="color:black; background-color:#E9ECEF;">
+					<tr>
+						<th>Name</th>
+						<th>Relation</th>
+						<th>Email</th>
+						<th>Mobile No.</th>
+						<th>Update</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+	
+				{% for contact in contacts.all %}
+				<tbody class="table-striped">
+					<tr>
+						<td>{{contact.name}}</td>
+						<td>{{contact.relation}}</td>
+						<td>{{contact.email}}</td>
+						<td>{{contact.mobile_no}}</td>
+						<td><a style="color:white; background-color:rgb(26,115,232);" class="btn btn-sm btn-info"
+								href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
+						<td><a style="color:white; background-color:rgb(217,48,37);" class="btn btn-sm btn-danger"
+								href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
+					</tr>
+				</tbody>
+				<br>
+				{% endfor %}
+	
+			</table>
+		</div>
+	</div>
+	</div>
+	
 	<br><br><br>
 
 	{% endblock %}

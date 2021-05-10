@@ -5,6 +5,7 @@
 
 <body lang="en">
     {% block content %}
+    <title>Rescue | Register</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         html {
@@ -118,10 +119,12 @@
         @media only screen and (max-device-width: 768px){
             .form-div1{
                 margin-top: 5em;
+                margin: 0 auto;
             }
             .form-div2{
                 width: 80%;
                 margin-left: 3.7em;
+                margin: 0 auto;
             }
             label {
                 font-size: 2.5rem;
@@ -130,31 +133,38 @@
                 margin: 0 auto;
                 font-size: 2rem;
             }
+            .row {
+                margin: unset;
+            }
         }
 
         /* google button css */
-              .gg{
-    width:240px;
-    height:40px;
-    border:0px;
-    border-radius: 50px;
-    background-color: #DB4437;
-    font-family: 'Roboto', sans-serif;
-    font-size:20px;
-    color:white;
-  }
-  .gg i{
-    margin-left: -20px;
-    padding-right:8px;
-  }
-  .or{
-      font-size: 2em;
-      padding-bottom: 20px;
-  }
+        .gg{
+            width:240px;
+            height:40px;
+            border:0px;
+            border-radius: 50px;
+            background-color: #DB4437;
+            font-family: 'Roboto', sans-serif;
+            font-size:20px;
+            color:white;
+        }
+        .gg i{
+            margin-left: -20px;
+            padding-right:8px;
+        }
+        .or{
+            font-size: 2em;
+            padding-bottom: 20px;
+        }
 
   body > div.register-page > form > div.row > div:nth-child(2) > div > p:nth-child(6),p:nth-child(3){
     display: initial;
     width: 98%;
+  }
+
+  #id_username,#id_email{
+    width: 92% !important;
   }
 
     </style> 
@@ -190,6 +200,113 @@
 
     <script>
 
+        // Creating nodes for the mark and alert text
+        var newNode = document.createElement('span');
+        newNode.id = "validationmark1"
+        var referenceNode = document.querySelector("#id_username");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('small');
+        newNode.id = "username_alert"
+        var referenceNode = document.querySelector("#validationmark1");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('span');
+        newNode.id = "validationmark2"
+        var referenceNode = document.querySelector("#id_email");
+        referenceNode.after(newNode);
+
+        var newNode = document.createElement('small');
+        newNode.id = "email_alert"
+        var referenceNode = document.querySelector("#validationmark2");
+        referenceNode.after(newNode);
+
+        $(".form-style").submit(function(){
+            console.log($("#id_password1").val())
+            console.log($("#id_password2").val())
+            if($("#username_alert").length > 0 || $("#email_alert").length > 0){
+                alert("Please make sure the Username and Email are unique!")
+                return false
+            }
+            else{
+                if($("#id_password1").val() != $("#id_password2").val()){
+                    console.log("here")
+                    alert("The passwords don't match")
+                    return false
+                }
+            }
+        })
+
+        $('#id_username').on('input', function () {
+                $.ajax({
+                    url: "/check_username",
+                    data: {
+                        'name':this.value
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        //Getting mark and alert text elements
+                        x = document.getElementById("username_alert")
+                        y = document.getElementById("validationmark1")
+
+                        if(data.exists == "yes"){
+                                x.style = "color: red;font-size: 17px;"
+                                x.innerHTML = "<br>Username not available <br>"
+                                y.innerHTML = "x"
+                                y.style = "color: red;margin-left: -23px;"
+                        }
+                        else{
+                            // If the input field is not empty and the username is available
+                            if($('#id_username').val() != ""){
+                                x.style = "color: green;font-size: 17px;"
+                                x.innerHTML = "<br>Username is available <br>"
+                                y.innerHTML = "✓"
+                                y.style = "color: green;margin-left: -23px;"
+                            }
+                            else{
+                                x.innerHTML = ""
+                                y.innerHTML = ""
+                            }
+                        }
+                    }
+                })
+            });
+
+
+            $('#id_email').on('input', function () {
+                $.ajax({
+                    url: "/check_email",
+                    data: {
+                        'email':this.value
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        x = document.getElementById("email_alert")
+                        y = document.getElementById("validationmark2")
+                        if(data.exists == "yes"){
+                                x.style = "color: red;font-size: 17px;"
+                                x.innerHTML = "<br>Email not available <br>"
+                                y.innerHTML = "x"
+                                y.style = "color: red;margin-left: -23px;"
+                        }
+                        else{
+                            // If the input is not empty and the entered email is valid
+                            if($('#id_email').val() != "" && document.getElementById("id_email").checkValidity()){
+                                x.style = "color: green;font-size: 17px;"
+                                x.innerHTML = "<br>Email is available <br>"
+                                y.innerHTML = "✓"
+                                y.style = "color: green;margin-left: -23px;"
+                            }
+                            else{
+                                x.innerHTML = ""
+                                y.innerHTML = ""
+                            }
+                        }
+                    }
+                })
+            });
+
+
         // Adding the eye icon for the first password field
         addNode(1,"id_password1")
 
@@ -202,7 +319,7 @@
             var newNode = document.createElement('i');
             newNode.className = "far fa-eye";
             newNode.id = `togglePassword${id}`;
-            newNode.style = "margin-left: -30px; cursor: pointer;"
+            newNode.style = "margin-left: -32px; cursor: pointer;"
 
             var referenceNode = document.querySelector(`#${referenceNode}`);
 

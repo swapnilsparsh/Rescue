@@ -2,6 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -31,11 +32,7 @@
       src="https://code.jquery.com/jquery-2.1.1.min.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!--Favicon-->
     <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}" />
@@ -305,6 +302,8 @@
                 <a class="dropdown-item" style="color: white" href="/logout"
                   >Logout</a
                 >
+                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
+             
               </div>
             </li>
             {% else %}
@@ -375,6 +374,12 @@
                   href="/ngo_details"
                   >NGOs for Women</a
                 >
+                <a
+                  class="dropdown-item"
+                  style="color: white"
+                  href="../main_app/FAQ.html"
+                  >FAQ's</a
+                >
               </div>
             </li>
 
@@ -403,11 +408,14 @@
                 EMERGENCY !
               </a>
             </li>
-            
+
           </ul>
         </div>
       </nav>
     </header>
+
+    {% block body %}
+    {% endblock %}
 
     {% if messages %}
         {% for message in messages %}
@@ -422,17 +430,7 @@
             {% endif %}
         {% endfor %}
     {% endif %} {% block content %} {% endblock %}
-    
-    <!-- {% for message in messages %}
-    <div class="container-fluid p-0" style="margin-top:10%;margin-bottom:-10%;width:75%;" >
-      <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        {{ message }}
-      </div>
-    </div>
-    {% endfor %} -->
+
     
     <!-- Back to top button -->
     <button id="back-to-top-btn" onclick="this.style.outline='none'"><i class="fas fa-angle-double-up"></i></button>
@@ -467,14 +465,10 @@
         <div class="row" style="margin-right: 10%"  class="list-unstyled quick-links">
           <ul class="col" style="margin-top: 5px">
             <li ><a href="#" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+            <li><a href="https://github.com/swapnilsparsh/Rescue" target="_blank" style="font-size:25px;"><i class="bi bi-github"> </i>Contribute Here</a></li>
           </ul>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

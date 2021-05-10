@@ -36,11 +36,14 @@ pip install -r requirements.txt
 3. Fill the details in  
 ```
 main_app/mail.py
+mysite/settings.py
 ```
 
 4. Run the website by following command in the terminal
 ```sh
+python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser
 python manage.py runserver
 ```
 ## First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
