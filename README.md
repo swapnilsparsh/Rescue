@@ -36,15 +36,10 @@ pip install -r requirements.txt
 3. Fill the details in  
 ```
 main_app/mail.py
+mysite/settings.py
 ```
 
-4. Fill your email-id and password in
- 
- ```
- mysite/mail.py
- ``` 
-
-5. Run the website by following command in the terminal
+4. Run the website by following command in the terminal
 ```sh
 python manage.py makemigrations
 python manage.py migrate
