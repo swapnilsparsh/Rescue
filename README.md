@@ -41,7 +41,7 @@ main_app/mail.py
 4. Fill your email-id and password in
  
  ```
- mysite/settings.py
+ mysite/mail.py
  ``` 
 
 5. Run the website by following command in the terminal
