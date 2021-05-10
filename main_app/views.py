@@ -55,7 +55,7 @@ def register(request):
         else:
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: form.error_messages[msg]")
-        
+
     else:
         form = UserCreateForm()
     return render(request, 'main_app/register.html', {'form': form})
@@ -135,8 +135,7 @@ def login_request(request):
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
-        
-            
+
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
@@ -245,9 +244,9 @@ def developers(request):
 def women_rights(request):
     return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})
 
-def page_not_found(request):
-    return render(request, 'main_app/404.html', {'title': '404_error'})
-
+def page_not_found(request,exception):
+    return render(request,'main_app/404.html')
+    
 
 def check_username(request):
     username = request.GET.get("name")
@@ -261,3 +260,22 @@ def check_email(request):
     if User.objects.filter(email=email).exists():
         return JsonResponse({"exists":"yes"})
     return JsonResponse({"exists":"no"})
+  
+def contact_user(request):
+	if request.method == "POST":
+		message_name = request.POST['message-name']
+		message_email = request.POST['message-email']
+		message = request.POST['message']
+
+		# send an email
+		send_mail(
+			message_name, # subject
+			message, # message
+			message_email, # from email
+			['rescue@gmail.com'], # To Email
+			)
+
+		return render(request, 'main_app/contact_user.html', {'message_name': message_name})
+
+	else:
+		return render(request, 'main_app/contact_user.html', {})

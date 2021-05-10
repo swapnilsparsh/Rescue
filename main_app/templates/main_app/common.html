@@ -408,11 +408,14 @@
                 EMERGENCY !
               </a>
             </li>
-            
+
           </ul>
         </div>
       </nav>
     </header>
+
+    {% block body %}
+    {% endblock %}
 
     {% if messages %} {% for message in messages %}
     <script>
