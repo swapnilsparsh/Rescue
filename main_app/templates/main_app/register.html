@@ -224,7 +224,7 @@
         $(".form-style").submit(function(){
             console.log($("#id_password1").val())
             console.log($("#id_password2").val())
-            if($("#username_alert").length > 0 || $("#email_alert").length > 0){
+            if($("#id_username").val() === $("#id_email").val()){
                 alert("Please make sure the Username and Email are unique!")
                 return false
             }
