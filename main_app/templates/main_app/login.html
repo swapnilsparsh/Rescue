@@ -138,7 +138,7 @@
         margin-bottom: 2em;
     }
     .login-img {
-        width: 40%;
+        width: 80%;
         height: auto;
     }
     .login-img img {
@@ -261,25 +261,25 @@
         </div>
     </section>
     <section class="login-section container">
-        <div class="row">
-            <div class="login-img">
-                <img src="{% static 'Images/login.svg' %}" alt="log-in">
-            </div>
-            <div class="login-form-div">
-                <form class="login-form" method="POST">
-                    {% csrf_token %}
-                    <div class="form-div">
-                        {{form.as_p}}
-                        <i class="far fa-eye" id="togglePassword" style="margin-left: 0px; position: relative; left: 90%; bottom: 45px; cursor: pointer; font-size: 1.8rem;"></i>
+        <form method="POST" class="login-form"> 
+            {% csrf_token %}         
+            <div class="row login-form-div">   
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="login-img">
+                        <img src="{% static 'Images/login.svg' %}" alt="log-in">
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="login-buttons">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="form-div">{{form.as_p}}</div>
+                </div>
+            </div>  
             <div class="login-sign-in" align="center">
-                <input type="submit" value="SignIn">
+                <input type="submit" value="Sign In">
                 <h3 class="login-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
                 <h3 class="login-sign-in-text"><a href="/reset_password" >Forgot Password?</a></h3>
+            </div>
+        </form>
+        <div class="login-form-div">
             <center>
                 <div class="or">
                     or
@@ -287,7 +287,7 @@
                 <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
                         <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
                     </button></p>
-            </center>
+            </center>  
         </div>
     </section>
 
