@@ -6,7 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-dotenv_path=env_path=Path('.')/'.env'
+dotenv_path=env_path=Path(BASE_DIR)/'.env'
 
 load_dotenv(dotenv_path=dotenv_path)
 
