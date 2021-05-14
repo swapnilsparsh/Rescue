@@ -215,7 +215,14 @@ def emergency(request):
     name = request.user.username
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
-        send_email(name, c.email, link)
+
+        try :
+          send_email(name, c.email, link)
+        except Exception as e :
+            
+            if str(e)=="Email or Password is missing" :
+                
+
     try:
         send_whatsapp(mobile_numbers, name, link)
         send_sms(mobile_numbers, name, link)
