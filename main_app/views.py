@@ -215,9 +215,14 @@ def emergency(request):
     name = request.user.username
     link = "http://www.google.com/maps/place/"+lat+","+log
     for c in contacts:
-        send_email(name, c.email, link)
+        try:
+         send_email(name, c.email, link)
+        except Exception as e:
+            pass
+            #print(e) 
     try:
         send_whatsapp(mobile_numbers, name, link)
+        
     except:
         messages.error(request, "your contact numbers contains number without country code.")
     return render(request,'main_app/emergency_contact.html',context)

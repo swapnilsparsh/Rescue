@@ -11,19 +11,26 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from pathlib import Path
+from dotenv import load_dotenv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+dotenv_path=env_path=Path(BASE_DIR)/'.env'
+
+load_dotenv(dotenv_path=dotenv_path)
+
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p#dw566&a7f70whcd*$7k9cthul*pshe$xzd-+fiz)^lulf*=@'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ["*"]
 
@@ -159,11 +166,11 @@ MEDIA_ROOT = [os.path.join(BASE_DIR+"/main_app/", 'media')]
 #SMTP Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'youremailid'  #eg : rescue@gmail.com
-EMAIL_HOST_PASSWORD = 'youremailpassword'    #eg : 213@Hupo34$19wed
-DEFAULT_FROM_EMAIL = 'youremailid'
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER','rescue@gmail.com')  #eg : rescue@gmail.com
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD','213@Hupo34$19wed')   #eg : 213@Hupo34$19wed
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 
 
 #AUTHENTICATION SETUP
