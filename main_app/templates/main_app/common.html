@@ -157,7 +157,6 @@
         align-items: center;
         outline: none;
       }
-
       #back-to-top-btn:focus, button:focus {
         outline: none !important; 
       }
@@ -219,6 +218,22 @@
           position: relative;
         }
       }
+
+      @media only screen and (min-width: 980px) {
+        .logo{
+        height:50%;
+        width:60%;
+        }
+      }
+
+      @media only screen and (max-width: 979px) {
+        .logo{
+          position: relative;
+          height:45%;
+          width:50%;
+        }
+      }
+
       #footer a {
       color: #ffffff;
       text-decoration: none !important;
@@ -252,15 +267,9 @@
     <header>
       <nav
         class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 85px; padding: None"
+        style="background-color: rgb(6, 17, 31); height: 95px; padding: None"
       >
-        <a class="navbar-brand" href="/home"
-          ><i
-            class="material-icons large text-white"
-            style="width: 80%; font-size: 45px"
-            >home</i
-          ></a
-        >
+        <a class="navbar-brand" href="/home"> <img src="{% static 'Images/logo.png' %}" alt="logo" class="logo"></a>
         <button
           class="navbar-toggler ml-auto"
           type="button"
