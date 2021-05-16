@@ -27,6 +27,10 @@ def home(request):
 def register(request):
     if request.method == 'POST':
         form = UserCreateForm(request.POST)
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password1=request.POST.get('password1')
+        password2=request.POST.get('password2')
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -52,9 +56,13 @@ def register(request):
             messages.success(request, f"Check your email to Activate your account!")
             email.send(fail_silently=False)
             return redirect('main_app:home')
+        elif(User.objects.filter(username=username).exists()):
+                messages.warning(request, f"The username you entered has already been taken. Please try another username")
+        elif(User.objects.filter(email=email).exists()):
+                messages.warning(request, f"The Email you entered has already been taken. Please try another Email")
         else:
             for msg in form.error_messages:
-                messages.error(request, f"{form.error_messages[msg]}")
+                messages.warning(request, f"{form.error_messages[msg]}")
         
     else:
         form = UserCreateForm()
