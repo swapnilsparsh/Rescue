@@ -223,6 +223,20 @@
     #footer ul.quick-links li:hover a i {
         font-weight: 700;
     }
+    @media only screen and (min-width: 980px) {
+        .logo{
+        height:50%;
+        width:60%;
+        }
+      }
+
+      @media only screen and (max-width: 979px) {
+        .logo{
+          position: relative;
+          height:45%;
+          width:50%;
+        }
+      }
   </style>
   <script>
 
@@ -250,9 +264,8 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 85px; padding: None">
-        <a class="navbar-brand" href="/home"><i class="material-icons large text-white"
-            style="width: 80%; font-size: 45px">home</i></a>
+        style="background-color: rgb(6, 17, 31); height: 95px; padding: None">
+        <a class="navbar-brand" href="/home"> <img src="{% static 'Images/logo.png' %}"  class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
           style="background-color: white">
