@@ -230,6 +230,9 @@ def helpline_numbers(request):
 def ngo_details(request):
     return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
 
+def gallery(request):
+    return render(request, 'main_app/gallery.html', {'title': 'Gallery'})
+
 def FAQ(request):
     return render(request, 'main_app/FAQ.html', {'title': 'FAQ'})    
 
