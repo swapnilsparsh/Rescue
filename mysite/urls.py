@@ -21,9 +21,13 @@ from django.conf import settings
 from main_app import views
 from django.urls import path
 from  main_app.views import VerificationView
-
+from django.conf.urls import handler404
+from django.conf.urls import url
+from django.views.static import serve
 
 urlpatterns = [
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('', include('main_app.urls')),
     path('register/', views.register, name='register'),   
@@ -35,5 +39,8 @@ urlpatterns = [
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name="main_app/password_reset_form.html"), name="password_reset_confirm"),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="main_app/password_reset_done.html"), name="password_reset_complete"),
     path('accounts/', include('allauth.urls')),
+    path("404_error/", views.page_not_found, name="404_error"),        
+    path('delete_account/<str:username>', views.delete_account, name='delete_account'),
 
 ]
+handler404 = 'main_app.views.page_not_found'

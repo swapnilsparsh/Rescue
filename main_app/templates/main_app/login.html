@@ -1,38 +1,40 @@
-<!DOCTYPE html> {% extends "main_app/common.html" %} {% load static %} {% load socialaccount %}
 
-<body lang="en">
-    {% block content %}
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+{% load socialaccount %}
+<html lang="en">
+{% block content %}
+<title>Rescue | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        html {
-            scroll-behavior: smooth;
-        }
-        /* CSS for back to top button */
-        
+    html {
+        scroll-behavior:smooth;
+    }
         #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            border: 2px black solid;
-            outline: none;
-            background-image:url("{% static 'Images/top.png' %}");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: black;
-            cursor: pointer;
-            padding: 1.4rem;
-            border-radius: 25rem;
+        display: none; 
+        position: fixed; 
+        bottom: 20px;  
+        right: 30px; 
+        z-index: 99; 
+        border: 2px black solid; 
+        outline: none; 
+        background-image:url("{% static 'Images/top.png' %}"); 
+        background-position:center;
+        background-repeat:no-repeat;
+        background-color:black; 
+        cursor: pointer; 
+        padding: 1.4rem;
+        border-radius: 25rem;
         }
-        
         #myBtn:hover {
-            background-color: white;
-            background-image:url("{% static 'Images/toph.png' %}");
-        }
-        /* Register Page styling */
-        
-        .register-page {
+        background-color: white;
+        background-image:url("{% static 'Images/toph.png' %}"); 
+    }
+          .register-page {
             margin-top: 7em;
         }
         
@@ -69,8 +71,140 @@
             width: 80%;
             margin-top: 3em;
         }
-        
+    .display-4{
+        text-align: center;
+        color: black; 
+        font-family: 'Bangers', cursive;
+    }
+
+    .lead{
+        text-align: center; 
+        font-family: 'Overpass', sans-serif;
+    }
+
+    @media only screen and (max-device-width: 768px){
         label {
+            font-size: 2.5rem;
+        }
+        .button{
+            font-size: 1.3em;
+        }
+        .sign-btn{
+            font-size: 1.3em;
+            border-radius: 35px;
+        }
+        .display-4{
+            font-size: 5.5em;
+        }
+        .lead{
+            font-size: 2.5rem;
+        }
+        .log-img{
+            height: 500px;
+        }
+        .register-text{
+            font-size: 1em;
+        }
+    }
+    /* google button css */
+    .gg{
+        width:240px;
+        height:40px;
+        border:0px;
+        border-radius: 50px;
+        background-color: #DB4437;
+        font-family: 'Roboto', sans-serif;
+        font-size:20px;
+        color:white;
+        }
+    .gg i{
+        margin-left: -20px;
+        padding-right:8px;
+        margin: 0 auto;
+    }
+    body > div.login-page > div > form > div > p:nth-child(2){
+            display: inline-block;
+            width: 98%;
+        }
+
+    /* intro section styling */
+    .intro-section {
+        padding-top: 6em;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro-section img {
+        width: 275px;
+        flex: 0 1 auto;
+    }
+    .login-page-title {
+        font-size: 2.75rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 0.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .login-page-text {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .intro-title {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .intro-title h1 {
+        font-size: 2.75rem;
+        margin: 1em 0;
+    }
+
+    .login-section {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-around;
+        padding: 2em 0;
+        margin-bottom: 2em;
+    }
+    .login-img {
+        width: 80%;
+        height: auto;
+    }
+    .login-img img {
+        width: 100%;
+        height: auto;
+    }
+    .login-form-div{
+        width: auto;
+        margin: 0 auto;
+        justify-content: center;
+    }
+ 
+    .button {
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .login-text{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 0.5em auto;
+    }
+
+    label {
             font-size: 1.75rem;
             color: #6C63FF;
             margin: 1em 0 0.5em 0;
@@ -198,6 +332,51 @@
         </center>
 
     </div>
+
+ 
+<style>
+   
+
+    .center {
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+
+
+    @media (max-width:768px) {
+        .intro-section {
+            flex-direction: row;
+            margin-bottom: 2em;
+        }
+        .intro-section img {
+            width: 375px;
+        }
+        .login-img{
+            width: 275px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .form-div {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .login-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .row {
+            margin: unset;
+        }
+
+    }
+
+    </style>   
+
 
     <script>
         // Creating nodes for the mark and alert text
@@ -339,6 +518,7 @@
             });
         }
     </script>
-
+   
+    
     {% endblock %}
 </body>

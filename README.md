@@ -6,7 +6,7 @@
   <h2 align="center"><b>Rescue(Women Safety Website)</b></h2>
 
   <p align="center">
-    📧<i>A women safety website which sends emails to your trusted ones.</i> 🚺
+    📧<i>A women’s safety website that sends emails and messages to your trusted ones.</i> 🚺
     <br />
   </p>
 </p>
@@ -36,15 +36,10 @@ pip install -r requirements.txt
 3. Fill the details in  
 ```
 main_app/mail.py
+mysite/settings.py
 ```
 
-4. Fill your email-id and password in
- 
- ```
- mysite/settings.py
- ``` 
-
-5. Run the website by following command in the terminal
+4. Run the website by following command in the terminal
 ```sh
 python manage.py makemigrations
 python manage.py migrate

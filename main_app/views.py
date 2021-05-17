@@ -54,7 +54,7 @@ def register(request):
             return redirect('main_app:home')
         else:
             for msg in form.error_messages:
-                messages.error(request, f"{msg}: form.error_messages[msg]")
+                messages.error(request, f"{form.error_messages[msg]}")
         
     else:
         form = UserCreateForm()
@@ -87,6 +87,19 @@ def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
     return redirect("main_app:home")
+
+
+
+def delete_account(request,username):     
+    try:
+        user = User.objects.get(username = username)
+        user.delete()
+        messages.success(request,user.username+", Your account is deleted successfully!")            
+
+    except User.DoesNotExist:
+        messages.error(request, "User doesnot exist")    
+    
+    return redirect('main_app:home')
 
 
 def login_request(request):
@@ -122,8 +135,7 @@ def login_request(request):
             else:
                 messages.error(request, f"Invalid username or password")
                 return redirect("main_app:login")
-        
-            
+
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
 
@@ -218,6 +230,8 @@ def helpline_numbers(request):
 def ngo_details(request):
     return render(request, 'main_app/ngo_details.html', {'title': 'ngo_details'})
 
+def FAQ(request):
+    return render(request, 'main_app/FAQ.html', {'title': 'FAQ'})    
 
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
@@ -230,9 +244,9 @@ def developers(request):
 def women_rights(request):
     return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})
 
-def page_not_found(request):
-    return render(request, 'main_app/404.html', {'title': '404_error'})
-
+def page_not_found(request,exception):
+    return render(request,'main_app/404.html')
+    
 
 def check_username(request):
     username = request.GET.get("name")
@@ -246,3 +260,22 @@ def check_email(request):
     if User.objects.filter(email=email).exists():
         return JsonResponse({"exists":"yes"})
     return JsonResponse({"exists":"no"})
+  
+def contact_user(request):
+	if request.method == "POST":
+		message_name = request.POST['message-name']
+		message_email = request.POST['message-email']
+		message = request.POST['message']
+
+		# send an email
+		send_mail(
+			message_name, # subject
+			message, # message
+			message_email, # from email
+			['rescue@gmail.com'], # To Email
+			)
+
+		return render(request, 'main_app/contact_user.html', {'message_name': message_name})
+
+	else:
+		return render(request, 'main_app/contact_user.html', {})
