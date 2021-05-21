@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm,PasswordChangeForm
+from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from django.contrib import messages
 from .forms import ContactForm
 from django.conf import settings
@@ -245,6 +245,24 @@ def emergency(request):
     except:
         messages.error(request, "your contact numbers contains number without country code.")
     return render(request,'main_app/emergency_contact.html',context)
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('main_app:home')
+        else:
+            for msg in form.error_messages:
+                messages.error(request,f"{form.error_messages[msg]}")
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'main_app/change_password.html', {
+        'form': form
+    })
 
 
 def helpline_numbers(request):
