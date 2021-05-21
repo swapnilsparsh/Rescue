@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import ContactForm
+from django.conf import settings
 from .models import contact,Login
 from django.contrib.auth.models import User , auth
 from .mail import send_email
@@ -17,6 +18,8 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
 from django.http import HttpResponse,JsonResponse
+import json
+import urllib
 
 # Create your views here
 
@@ -115,34 +118,47 @@ def login_request(request):
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
     if request.method == "POST":  
-        if username and password:          
-            if(User.objects.filter(username=username).exists()):
-                user=auth.authenticate(username=username,password=password)
-                if user:
-                    if user.is_active:
-                        login(request, user)
-                        messages.success(request, 'Welcome, ' +
-                                        user.username+' you are now logged in')
-                        return redirect('main_app:home')
-                    
-                messages.error(request, "Account is not active,please check your email")
-                    
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+        }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+        if result['success']:
+            if username and password:          
+                if(User.objects.filter(username=username).exists()):
+                    user=auth.authenticate(username=username,password=password)
+                    if user:
+                        if user.is_active:
+                            login(request, user)
+                            messages.success(request, 'Welcome, ' +
+                                            user.username+' you are now logged in')
+                            return redirect('main_app:home')
+                        
+                    messages.error(request, "Account is not active,please check your email")
+                        
 
-            elif(User.objects.filter(email=username).exists()):
-                user=User.objects.get(email=username)
-                user=auth.authenticate(username=user.username,password=password)
-                if user:
-                    if user.is_active:
-                        login(request, user)
-                        messages.success(request, 'Welcome, ' +
-                                        user.username+' you are now logged in')
-                        return redirect('main_app:home')
-                    
-                messages.error(request, "Account is not active,please check your email")
-                    
-            else:
-                messages.error(request, f"Invalid username or password")
-                return redirect("main_app:login")
+                elif(User.objects.filter(email=username).exists()):
+                    user=User.objects.get(email=username)
+                    user=auth.authenticate(username=user.username,password=password)
+                    if user:
+                        if user.is_active:
+                            login(request, user)
+                            messages.success(request, 'Welcome, ' +
+                                            user.username+' you are now logged in')
+                            return redirect('main_app:home')
+                        
+                    messages.error(request, "Account is not active,please check your email")
+                        
+                else:
+                    messages.error(request, f"Invalid username or password")
+                    return redirect("main_app:login")
+        else:
+            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
