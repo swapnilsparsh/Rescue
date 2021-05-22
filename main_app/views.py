@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm,PasswordChangeForm
+from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from django.contrib import messages
 from .forms import ContactForm
+from django.conf import settings
 from .models import contact,Login
 from django.contrib.auth.models import User , auth
 from .mail import send_email
@@ -17,6 +18,8 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import account_activation_token
 from django.http import HttpResponse,JsonResponse
+import json
+import urllib
 
 # Create your views here
 
@@ -27,6 +30,10 @@ def home(request):
 def register(request):
     if request.method == 'POST':
         form = UserCreateForm(request.POST)
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password1=request.POST.get('password1')
+        password2=request.POST.get('password2')
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -52,9 +59,13 @@ def register(request):
             messages.success(request, f"Check your email to Activate your account!")
             email.send(fail_silently=False)
             return redirect('main_app:home')
+        elif(User.objects.filter(username=username).exists()):
+                messages.warning(request, f"The username you entered has already been taken. Please try another username")
+        elif(User.objects.filter(email=email).exists()):
+                messages.warning(request, f"The Email you entered has already been taken. Please try another Email")
         else:
             for msg in form.error_messages:
-                messages.error(request, f"{form.error_messages[msg]}")
+                messages.warning(request, f"{form.error_messages[msg]}")
         
     else:
         form = UserCreateForm()
@@ -107,34 +118,47 @@ def login_request(request):
     username = request.POST.get('Username_or_Email')
     password = request.POST.get('password')
     if request.method == "POST":  
-        if username and password:          
-            if(User.objects.filter(username=username).exists()):
-                user=auth.authenticate(username=username,password=password)
-                if user:
-                    if user.is_active:
-                        login(request, user)
-                        messages.success(request, 'Welcome, ' +
-                                        user.username+' you are now logged in')
-                        return redirect('main_app:home')
-                    
-                messages.error(request, "Account is not active,please check your email")
-                    
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+        }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+        if result['success']:
+            if username and password:          
+                if(User.objects.filter(username=username).exists()):
+                    user=auth.authenticate(username=username,password=password)
+                    if user:
+                        if user.is_active:
+                            login(request, user)
+                            messages.success(request, 'Welcome, ' +
+                                            user.username+' you are now logged in')
+                            return redirect('main_app:home')
+                        
+                    messages.error(request, "Account is not active,please check your email")
+                        
 
-            elif(User.objects.filter(email=username).exists()):
-                user=User.objects.get(email=username)
-                user=auth.authenticate(username=user.username,password=password)
-                if user:
-                    if user.is_active:
-                        login(request, user)
-                        messages.success(request, 'Welcome, ' +
-                                        user.username+' you are now logged in')
-                        return redirect('main_app:home')
-                    
-                messages.error(request, "Account is not active,please check your email")
-                    
-            else:
-                messages.error(request, f"Invalid username or password")
-                return redirect("main_app:login")
+                elif(User.objects.filter(email=username).exists()):
+                    user=User.objects.get(email=username)
+                    user=auth.authenticate(username=user.username,password=password)
+                    if user:
+                        if user.is_active:
+                            login(request, user)
+                            messages.success(request, 'Welcome, ' +
+                                            user.username+' you are now logged in')
+                            return redirect('main_app:home')
+                        
+                    messages.error(request, "Account is not active,please check your email")
+                        
+                else:
+                    messages.error(request, f"Invalid username or password")
+                    return redirect("main_app:login")
+        else:
+            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 
     form = LoginForm()
     return render(request, "main_app/login.html", {'form': form})
@@ -221,6 +245,24 @@ def emergency(request):
     except:
         messages.error(request, "your contact numbers contains number without country code.")
     return render(request,'main_app/emergency_contact.html',context)
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('main_app:home')
+        else:
+            for msg in form.error_messages:
+                messages.error(request,f"{form.error_messages[msg]}")
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'main_app/change_password.html', {
+        'form': form
+    })
 
 
 def helpline_numbers(request):
