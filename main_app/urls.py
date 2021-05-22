@@ -25,6 +25,7 @@ urlpatterns = [
     path('women_rights/', views.women_rights, name='women_rights'),
     path('ngo_details/', views.ngo_details, name='ngo_details'),
     path('main_app/FAQ.html', views.FAQ, name='FAQ'),
+    path('gallery/', views.gallery, name='gallery'),
     path("developers/", views.developers, name="developers"),
     path('contact_user/', views.contact_user , name="contact_user"),
     path("404_error/", views.page_not_found, name="404_error"),        
@@ -33,6 +34,7 @@ urlpatterns = [
     path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name ="main_app/password_reset_sent.html"), name="password_reset_done"),
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name="main_app/password_reset_form.html"), name="password_reset_confirm"),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="main_app/password_reset_done.html"), name="password_reset_complete"),
+    path("change_password/",views.change_password, name='change_password'),
     path('check_username',views.check_username,name="check_username"),
     path('check_email',views.check_email,name="check_email")
               ]

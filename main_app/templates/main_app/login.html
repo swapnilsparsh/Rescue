@@ -378,6 +378,49 @@
     </style>   
 
 
+
+</head>
+<body> 
+    <section class="container intro-section">
+        <div class="intro-title">
+            <h1 class="login-page-title">WELCOME</h1>
+            <h2 class="login-page-text">Login through Registered Account</h2>
+        </div>
+    </section>
+    <section class="login-section container">
+        <form method="POST" class="login-form"> 
+            {% csrf_token %}         
+            <div class="row login-form-div">   
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="login-img">
+                        <img src="{% static 'Images/login.svg' %}" alt="log-in">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="form-div">{{form.as_p}}</div>
+                </div>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6Ldj7dkaAAAAAMGNkatRmD99HA3UUWm2PZsCj0EX"></div>
+        
+            </div>  
+            <div class="login-sign-in" align="center">
+                <input type="submit" value="Sign In">
+                <h3 class="login-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
+                <h3 class="login-sign-in-text"><a href="/reset_password" >Forgot Password?</a></h3>
+            </div>
+        </form>
+        <div class="login-form-div">
+            <center>
+                <div class="or">
+                   <p>or</p>
+                </div>
+                <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
+                        <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
+                    </button></p>
+            </center>  
+        </div>
+    </section>
+
     <script>
         // Creating nodes for the mark and alert text
         var newNode = document.createElement('span');
