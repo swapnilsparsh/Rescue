@@ -55,10 +55,10 @@ def register(request):
                 'noreply@gmail.com',
                 [email],
             )
-            messages.success(request, f"New Account Created Successfully: {username}")
             messages.success(request, f"Check your email to Activate your account!")
+            messages.success(request, f"New Account Created Successfully: {username}")
             email.send(fail_silently=False)
-            return redirect('main_app:home')
+            return redirect('main_app:email_sent')
         elif(User.objects.filter(username=username).exists()):
                 messages.warning(request, f"The username you entered has already been taken. Please try another username")
         elif(User.objects.filter(email=email).exists()):
@@ -281,6 +281,8 @@ def FAQ(request):
 def women_laws(request):
     return render(request, 'main_app/women_laws.html', {'title': 'women_laws'})
 
+def email_sent(request):
+    return render(request, 'main_app/email_sent.html', {'title': 'Email_sent'})
 
 def developers(request):
     return render(request, 'main_app/developers.html', {'title': 'developers'})
