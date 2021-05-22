@@ -14,6 +14,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         respondableId: ${{ github.event.pull_request.node_id }}
-        response: "This issue is closed @${{ github.event.pull_request.user.login }}.Looking forward for your contributions :)"
+        response: "This issue is closed @${{ github.event.pull_request.user.login }}. Looking forward for your contributions :)"
         author: ${{ github.event.pull_request.user.login }}
         #exemptedAuthors: ""
