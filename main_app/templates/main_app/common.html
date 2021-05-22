@@ -288,107 +288,129 @@
           id="navbarNavDropdown"
           style="background-color: rgb(6, 17, 31); padding: None"
         >
-          <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown" style="margin-top: 20px">
-              <a
-                class="nav-link"
-                href="#"
-                id="navbarDropdown2"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+        <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
+          {% if user.is_authenticated  and  not user.has_usable_password %}
+          <li class="nav-item dropdown" style="margin-top: 20px">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown2"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/logout"
+                >Logout</a
               >
-                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
-              </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdown2"
-                style="background-color: rgb(6, 17, 31)"
+              </li>
+          {% elif user.is_authenticated and not backends.associated %}
+          <li class="nav-item dropdown" style="margin-top: 20px">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown2"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/logout"
+                >Logout</a
               >
-                <a class="dropdown-item" style="color: white" href="/logout"
-                  >Logout</a
-                >
-                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
-             
-              </div>
+              <a class="dropdown-item" style="color: white" href="/change_password">Change Password</a>              </div>
             </li>
-            {% else %}
-            <li class="nav-item dropdown">
+          {% else %}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown3"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              &nbsp;&nbsp; User
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown3"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/register"
+                >Register</a
+              >
+              <a class="dropdown-item" style="color: white" href="/login"
+                >Login</a
+              >
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown" style="margin-top: 22px">
+            <a
+              class="nav-link"
+              href="#"
+              data-target="#navbarDopdown1"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="new">&nbsp;&nbsp; More</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              id="navbarDropdown1"
+              aria-labelledby="navbarDropdown1"
+              style="background-color: rgb(6, 17, 31)"
+            >
               <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown3"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+                class="dropdown-item"
+                style="color: white"
+                href="/women_rights"
+                >Women's Rights</a
               >
-                &nbsp;&nbsp; User
+              <a class="dropdown-item" style="color: white" href="/women_laws"
+                >Women's Safety Laws
               </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdown3"
-                style="background-color: rgb(6, 17, 31)"
-              >
-                <a class="dropdown-item" style="color: white" href="/register"
-                  >Register</a
-                >
-                <a class="dropdown-item" style="color: white" href="/login"
-                  >Login</a
-                >
-              </div>
-            </li>
-            {% endif %}
-            <li class="nav-item dropdown" style="margin-top: 22px">
               <a
-                class="nav-link"
-                href="#"
-                data-target="#navbarDopdown1"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+                class="dropdown-item"
+                style="color: white"
+                href="/helpline_numbers"
+                >Women Helpline Numbers</a
               >
-                <h4 class="new">&nbsp;&nbsp; More</h4>
-              </a>
-              <div
-                class="dropdown-menu"
-                id="navbarDropdown1"
-                aria-labelledby="navbarDropdown1"
-                style="background-color: rgb(6, 17, 31)"
+              <a
+                class="dropdown-item"
+                style="color: white"
+                href="/ngo_details"
+                >NGOs for Women</a
               >
-                <a
-                  class="dropdown-item"
-                  style="color: white"
-                  href="/women_rights"
-                  >Women's Rights</a
-                >
-                <a class="dropdown-item" style="color: white" href="/women_laws"
-                  >Women's Safety Laws
-                </a>
-                <a
-                  class="dropdown-item"
-                  style="color: white"
-                  href="/helpline_numbers"
-                  >Women Helpline Numbers</a
-                >
-                <a
-                  class="dropdown-item"
-                  style="color: white"
-                  href="/ngo_details"
-                  >NGOs for Women</a
-                >
-                <a
+              <a
                   class="dropdown-item"
                   style="color: white"
                   href="../main_app/FAQ.html"
                   >FAQ's</a
                 >
+
                 <a class="dropdown-item" style="color: white" href="/gallery">Woment's Rights Activists Gallery</a>
 
               </div>
@@ -424,6 +446,7 @@
         </div>
       </nav>
     </header>
+
 
     {% block body %}
     {% endblock %}
