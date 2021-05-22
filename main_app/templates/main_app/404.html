@@ -11,103 +11,38 @@
         margin: 0;
         background-color: #f1f1f1;
     }
-
+    .img-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+    }
     .caption {
-        position: absolute;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        transform: translate(-50%, 210%);
         text-shadow: 0 3px 5px rgba(0, 0, 0, .3);
         cursor: default;
         text-align: center;
     }
 
-    .text-3d {
-        text-transform: uppercase;
-        font-size: 30vw;
-        color: #eee;
-        text-decoration: none;
-        position: absolute;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        transform: translate(-50%, -50%);
-        text-shadow:
-            0 1px 0 rgb(190, 190, 190),
-            0 2px 0 rgb(185, 185, 185),
-            0 3px 0 rgb(180, 180, 180),
-            0 4px 0 rgb(175, 175, 175),
-            0 5px 0 rgb(170, 170, 170),
-            0 6px 0 rgb(165, 165, 165),
-            0 7px 0 rgb(160, 160, 160),
-
-            0 1px 5px rgba(0, 0, 0, .05),
-            0 3px 5px rgba(0, 0, 0, .10),
-            0 5px 10px rgba(0, 0, 0, .15),
-            0 7px 10px rgba(0, 0, 0, .20),
-            0 10px 15px rgba(0, 0, 0, .25);
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    }
-
-    .text-3d:hover {
-        text-shadow:
-            0 1px 0 rgb(190, 190, 190),
-            0 2px 0 rgb(185, 185, 185),
-            0 3px 0 rgb(180, 180, 180),
-            0 4px 0 rgb(175, 175, 175),
-            0 5px 0 rgb(170, 170, 170),
-            0 6px 0 rgb(165, 165, 165),
-            0 7px 0 rgb(160, 160, 160),
-            0 8px 0 rgb(155, 155, 155),
-            0 9px 0 rgb(150, 150, 150),
-
-            0 1px 5px rgba(0, 0, 0, .05),
-            0 5px 5px rgba(0, 0, 0, .10),
-            0 10px 10px rgba(0, 0, 0, .15),
-            0 15px 10px rgba(0, 0, 0, .20),
-            0 20px 15px rgba(0, 0, 0, .25);
-
-        transform: translate(-51%, -51%);
-        transition: all 0.3s ease-in-out;
-        text-decoration: none;
-        color: black;
-    }
-
     @media screen and (min-device-width: 465px) and (max-device-width: 591px)  {
 
-        .main {
-            margin-top: 50%;
-            height: 50vw;
-        }
-
-        .text-3d {
-            top: 50vh;
-            left: 50vw;
-            
-            font-size: 20rem;
-        }
-
         .caption {
-            top: 45vh;
-            left: 50vw;
             font-size: 2.5rem;
+        }
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
         }
     }
 
     @media screen and (max-device-width: 464px) {
 
-        .main {
-            margin-top: 50%;
-            height: 50vh;
-        }
-
-        .text-3d {
-            top: 40vh;
-            left: 50vw;
-            font-size: 25rem;
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
         }
 
         .caption {
-            top: 40vh;
-            left: 50vw;
             font-size: 2.5rem;
         }
     }
@@ -115,80 +50,34 @@
 
 
     @media screen and (max-device-width: 680px) and (min-device-width: 592px) {
-        .main {
+        .container {
             margin-top: 20%;
-            height: 55vh;
+            margin-bottom:20%;
         }
 
-        .text-3d {
-            top: 60vh;
-            left: 50vw;
-            margin-top: -30vw;
-            font-size: 20vw;
-        }
-
-        .caption {
-            top: 65vh;
-            left: 50vw;
-            margin-top: -40vw;
-        }
     }
 
     @media screen and (min-device-width: 681px) {
-        .main {
-            margin-top: 20%;
-            height: 70vh;
-        }
-
-        .text-3d {
-            top: 60vw;
-            left: 50vw;
-            margin-top: -30vw;
-            font-size: 15vw;
-        }
-
-        .caption {
-            top: 62vw;
-            left: 50vw;
-            margin-top: -30vw;
+        .container {
+            margin-top: 15%;
+            margin-bottom:10%;
         }
     }
 	 html {
-	scroll-behavior:smooth;
-   }
-   #myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
+        scroll-behavior:smooth;
     }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
+  
 </style>
 
 <body>
-    <div class="main">
-        <div class="container">
-            <div class="row justify-content-center" style="width: 100%;">
-                <div class="column">
-                    <a href="/home" class="text-3d">404</a>
-                    <span class="caption">The page you are looking for is not available</span>
-                </div>
-            </div>
+    
+    <div class="container">
+        <div class="row justify-content-center" style="width: 100%;">
+            <a href="/home"><img class="img-responsive" src="{% static 'Images/404_image.png' %}" height="500" width="900" alt="404_error"></a>            
+            <p class="caption">The page you are looking for is not available</p>
         </div>
     </div>
+    
 
 </body>
 {% endblock %}
