@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<br>
+
+<head>
+    <style>
+        .collapsible-header:hover {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible-header {
+            background-color: white;
+            font-family: 'Alegreya', serif;
+        }
+
+        .collapsible-header.active {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible {
+            margin-top: -15%;
+        }
+
+        .collapsible-body {
+            font-family: 'Arvo', serif;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -50%;
+            margin-left: 40%;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+        .card {
+            padding-left: 20px;
+            padding-right: 20px;
+            box-shadow: 0 0px 20px 0 rgba(0,0,0,0.2);
+            background-color: rgba(51, 121, 167, 0.671);
+            font-size: medium;
+        }
+        .card-title{
+            font-family: 'Arvo', serif;
+        }
+        .card-text{
+            color:white;
+            font-size: 15px;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+   p{
+    font-family: 'Arvo', serif;
+    font-size: medium;
+   }
+   html {
+	scroll-behavior:smooth;
+   }
+   .column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+   }
+   .row1::after {
+  content: "";
+  clear: both;
+  display: table;
+    }
+   #myBtn {
+     display: none; 
+     position: fixed; 
+     bottom: 20px;  
+     right: 30px; 
+     z-index: 99; 
+     border: 2px black solid; 
+     outline: none; 
+     background-image:url("{% static 'Images/top.png' %}"); 
+	 background-position:center;
+	 background-repeat:no-repeat;
+     background-color:black; 
+     cursor: pointer; 
+     padding: 1.4rem;
+     border-radius: 25rem;
+    }
+	#myBtn:hover {
+      background-color: white;
+      background-image:url("{% static 'Images/toph.png' %}"); 
+   }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
+    <div class="container">
+
+        <div class="row justify-content-center"
+            style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+            <div class="column">
+                <img src="{% static 'Images/Safety_1.png' %}" class="img1-responsive" alt="Safety">
+            </div>
+            <div class="column">
+                <h1 class="wb-stl-heading1"
+                    style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
+                    <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                        <font color="black">Women's Safety Tips</font>
+                    </strong>
+                    <img src="{% static 'Images/Safety_2.jpg' %}" alt="Safety" height="50vw">
+                </h1>
+                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+                <p class="lead" style="font-family: 'Overpass', sans-serif; text-align:center"><b>"Be Safe. Not Sorry"</b><br>
+                    <b>"Safety is a full time job, don't make it a part time practice."</b></p>
+                <hr class="my-10">
+                <a class="btn" href="https://timesofindia.indiatimes.com/blogs/the-next-step/safety-tips-for-women/" target="_blank"><b>MORE DETAILS</b></a>
+            </div>
+        </div>
+        <br><br>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>General Guidelines</h5>
+                </div>
+                <div class="collapsible-body">
+                    <img class="card-img-left" src="{% static 'Images/Safety_2.jpg' %}" alt="Card image cap">
+                    <p style="float:right; line-height: 1.5;"> 1.  Be aware of your surroundings. Don’t let your guard down.
+                                    <br>
+                                    2.  Please trust and make good use of your ‘gut feel’ or ‘intuition’ or ‘sixth sense’ in each & every place <br>and situation.
+                                    <br>
+                                    3.  Don’t take eve teasing lightly.Respond with a stern voice.Threaten to take a picture which might<br> scare them away.If the eve teasing still persists then immediately raise your voice<br> to gather a crowd.
+                                    <br>
+                                    4.  As much as possible avoid late night travel using public transport. If avoiding is not possible <br>then be sure to travel only on crowded bus. Avoid taking road side cabs.
+                                    <br>
+                                    5.  While using 2 wheeler be sure to wear helmet at all times (especially at night). Don’t stop for any<br> stranger.
+                                    In case attacked, use your helmet to defend yourself.
+                    </p>
+                    <br><br>
+                    <b>Hack # 1 : If you wear a fake wedding ring when you have to be out late at night by yourself or are traveling through an 
+                        unfamiliar place, you could deter somebody from following you home because they think you live with somebody.</b>
+                        </div>
+            </li>
+            <br>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Safety tips when you are driving</h5>
+                </div>
+                <div class="collapsible-body">
+                    <img class="card-img-left" src="{% static 'Images/girl-car.jpg' %}" alt="Card image cap">
+                    <p style="float:right; line-height: 2;"> 1.Avoid parking at desolate areas.<br>
+                                    2.Look inside the car especially the back seat before unlocking & entering.<br>
+                                    3.Lock the doors immediately after entering the car.<br>
+                                    4.Start the car & drive off rather then call someone. Calls can wait.<br>
+                                    5.Don’t give lift to strangers.Don’t stop your car for strangers, especially at night.<br>
+                                    6.Take known routes, avoid short cuts which you don’t know.    
+                    </p>
+                     <br><br>   
+                     <b>Hack # 2 : Buy a portable alarm.Portable alarms can be set off from anywhere. If someone has covered your mouth, 
+                     or you’re somewhere so isolated your screams wouldn’t be heard, a portable alarm will make a lot of noise, and your 
+                     attacker will need time to figure out how to disarm it.</b>
+                    </div>
+            </li>
+            <br><br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Safety tips when you use a cell phone in public places</h5>
+                </div>
+                <div class="collapsible-body">
+                    <img class="card-img-left" src="{% static 'Images/phone.jpg' %}" alt="Card image cap">
+                        <p style="float:right; line-height: 1.7;"> 1.While travelling at night don’t keep your phone in your hand.Remember phone is the first <br>thing your attacker will throw away.<br>
+                                    2.Activate your speed dials which can be used to dial numbers in emergency.<br>
+                                    3.Keep it in your pocket or at a place from where you can easily take it out & dial a number & leave it on.<br>
+                                    4.Once the number has been dialled start shouting & try to speak out your location so that the <br>other person can inform police about your location.<br>
+                                    5.If you have a smart phone then install emergency apps which can send sms to known people & can<br> even dial police no. in case of emergency.<br> 
+                                </p><br><br>
+                               <b> Hack # 3 : Bring a selfie stick.Once you hand somebody your phone to take a photo of you, they can look around in it and grab information like your address. 
+                                Bring a selfie stick where you go so you don’t need a photographer.</b>
+                    
+                            </div>
+            </li>
+            <br>
+            <hr><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What should a woman do if she finds herself alone in the company of a strange male as she prepares to enter a lift in a high-rise apartment late at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Enter the lift.If you need to reach the 13th floor, press all the buttons up to your destination. No one will dare attack you in a lift that stops on every floor.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What to do if a stranger tries to attack you when you are alone in your house?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say : Run into the kitchen . You alone know where the chilli powder and turmeric are kept.And where the knives and plates are. All these can be turned into deadly weapons. If nothing else, start throwing plates and utensils all over.
+                Let them break. Scream. Remember that noise is his greatest enemy. He does not want to be caught.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What precautions should be followed while taking an Auto or Taxi at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Before getting into an auto at night, note down it's registration number. Then use your mobile to call your family or friend and
+                pass on the details to them in the language the driver understands. Even if no one answers your call, petend you are in a conversation. The driver 
+                now knows someone has his details and he will be in serious trouble if anything goes wrong. He is bound to take you home safe and sound.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What if one is stalked at night?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Enter a shop or a house and explain your predicament.If it is night and shops are not open, go inside an ATM box. ATM centers always have security guards. They are also monitored by 
+                close circuit television. Fearing identification, no one will dare attack you.</p>
+        </div>
+    </li>
+    <br><br>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down</i>
+            <h5><b>Question: What if the driver turns into a street he is not supposed to and you feel you are entering a danger zone?</b></h5>
+        </div>
+        <div class="collapsible-body">
+            <p> Experts Say: Use the handle of your purse or your dupatta to wrap around his neck and pull him back. Within seconds he will feel choked and helpless.
+                In case you don't have a purse or dupatta, just pull him back by his collar. The top button of his shirt would do the same trick.</p>
+        </div>
+    </li>
+    <hr>
+    <br>
+    </ul>
+    </div>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" alt="women" class="img-responsive">
+    </div>
+</body>
+{% endblock %}
+
+</html>

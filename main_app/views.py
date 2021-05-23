@@ -285,6 +285,9 @@ def women_laws(request):
 def developers(request):
     return render(request, 'main_app/developers.html', {'title': 'developers'})
 
+def safety_tips(request):
+    return render(request, 'main_app/safety_tips.html', {'title': 'safety_tips'})
+
 
 def women_rights(request):
     return render(request, 'main_app/women_rights.html', {'title': 'women_rights'})
