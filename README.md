@@ -73,7 +73,7 @@ You can find our Code of Conduct [here](/Code_of_Conduct.md).
 
 ## 📄License
 
-<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENS" target="_blank">
+<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE" target="_blank">
 <img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
 </a>
 
