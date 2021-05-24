@@ -46,6 +46,43 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 ```
+
+<h2>Lint and Format 📜</h2>
+
+- We use [Flake8](https://flake8.pycqa.org/en/latest/manpage.html) and [Black](https://pypi.org/project/black/) for linting & formatting source code of this project.
+<br>
+**Run QA checks on local environment ⚡** :
+<br>
+
+  - Run Shell script on Windows 💾 :
+
+  ```
+  ...\rescue> .\rescue_QA_checks
+  ``` 
+
+  - Run Shell script on Linux 👨‍💻 :
+
+  ```
+  .../rescue$ ./rescue_QA_checks
+  ``` 
+  
+  - Alternate option ✔ :
+    - Run this on terminal ⚡:
+      - Windows 💾
+        ```
+        ...\rescue> black .
+        ``` 
+        ```
+        ...\rescue> flake8 .
+        ``` 
+      - Linux 👨‍💻
+        ```
+        .../rescue$ black .
+        ``` 
+        ```
+        .../rescue$ flake8 .
+        ``` 
+
 ## First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 Read [how to contribute.](https://github.com/swapnilsparsh/Rescue/blob/master/Contributing.md)
