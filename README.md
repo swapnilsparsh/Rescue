@@ -75,11 +75,21 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-<h2>Lint and Format 📜</h2>
+9. View the website - 
+    - [Click here](https://localhost:8000 "https://localhost:8000")
+    <br> OR <br>
+    - Paste the following in your browser
+      ```bash
+      https://localhost:8000
+      ```
+
+# Lint and Format 📜
 
 - We use [Flake8](https://flake8.pycqa.org/en/latest/manpage.html) and [Black](https://pypi.org/project/black/) for linting & formatting source code of this project.
 <br>
+
 **Run QA checks on local environment ⚡** :
+
 <br>
 
   - Run Shell script on Windows 💾 :
@@ -110,13 +120,6 @@ python manage.py runserver
         ```
         .../rescue$ flake8 .
         ``` 
-
-## First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
-9. View the website by pasting the address in your browser.
-```bash
-https://localhost:8000
-```
 
 # First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
