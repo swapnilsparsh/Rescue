@@ -16,31 +16,50 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from django.conf.urls.static import static
 from django.conf import settings
 from main_app import views
-from django.urls import path
-from  main_app.views import VerificationView
-from django.conf.urls import handler404
-from django.conf.urls import url
+from main_app.views import VerificationView
+from django.conf.urls import url, handler404
 from django.views.static import serve
 
 urlpatterns = [
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
-    path('admin/', admin.site.urls),
-    path('', include('main_app.urls')),
-    path('register/', views.register, name='register'),   
-    path('activate/<uidb64>/<token>',
-         VerificationView.as_view(), name='activate'),
-    path('', include('django.contrib.auth.urls')),
-    path('reset_password/',auth_views.PasswordResetView.as_view(template_name = "main_app/password_reset.html"),name="reset_password"),
-    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name ="main_app/password_reset_sent.html"), name="password_reset_done"),
-    path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name="main_app/password_reset_form.html"), name="password_reset_confirm"),
-    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="main_app/password_reset_done.html"), name="password_reset_complete"),
-    path('accounts/', include('allauth.urls')),
-    path("404_error/", views.page_not_found, name="404_error"),        
-    path('delete_account/<str:username>', views.delete_account, name='delete_account'),
-
+    url(r"^media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
+    url(r"^static/(?P<path>.*)$", serve, {"document_root": settings.STATIC_ROOT}),
+    path("admin/", admin.site.urls),
+    path("", include("main_app.urls")),
+    path("register/", views.register, name="register"),
+    path("activate/<uidb64>/<token>", VerificationView.as_view(), name="activate"),
+    path("", include("django.contrib.auth.urls")),
+    path(
+        "reset_password/",
+        auth_views.PasswordResetView.as_view(
+            template_name="main_app/password_reset.html"
+        ),
+        name="reset_password",
+    ),
+    path(
+        "reset_password_sent/",
+        auth_views.PasswordResetDoneView.as_view(
+            template_name="main_app/password_reset_sent.html"
+        ),
+        name="password_reset_done",
+    ),
+    path(
+        "reset/<uidb64>/<token>/",
+        auth_views.PasswordResetConfirmView.as_view(
+            template_name="main_app/password_reset_form.html"
+        ),
+        name="password_reset_confirm",
+    ),
+    path(
+        "reset_password_complete/",
+        auth_views.PasswordResetCompleteView.as_view(
+            template_name="main_app/password_reset_done.html"
+        ),
+        name="password_reset_complete",
+    ),
+    path("accounts/", include("allauth.urls")),
+    path("404_error/", views.page_not_found, name="404_error"),
+    path("delete_account/<str:username>", views.delete_account, name="delete_account"),
 ]
-handler404 = 'main_app.views.page_not_found'
+handler404 = "main_app.views.page_not_found"  # noqa
