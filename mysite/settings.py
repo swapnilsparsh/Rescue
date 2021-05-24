@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "p#dw566&a7f70whcd*$7k9cthul*pshe$xzd-+fiz)^lulf*=@"
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -129,11 +130,13 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST = "localhost"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
-EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = "RESCUE <no-reply@rescue.com>"
+EMAIL_PORT = config("EMAIL_PORT", cast=int)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
+DEFAULT_FROM_EMAIL = config(
+    "DEFAULT_FROM_EMAIL", default="RESCUE <no-reply@rescue.com>"
+)
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 # Static files (CSS, JavaScript, Images)
@@ -157,11 +160,11 @@ MEDIA_ROOT = [os.path.join(BASE_DIR + "/main_app/", "media")]
 # SMTP Configuration
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "youremailid"  # eg : rescue@gmail.com
-EMAIL_HOST_PASSWORD = "youremailpassword"  # eg : 213@Hupo34$19wed
-DEFAULT_FROM_EMAIL = "youremailid"
+EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")  # eg : rescue@gmail.com
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")  # eg : 213@Hupo34$19wed
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
 
 # AUTHENTICATION SETUP
@@ -185,4 +188,4 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-GOOGLE_RECAPTCHA_SECRET_KEY = "6Ldj7dkaAAAAALd12sHuTm4kLr3FmAqD5chszUjH"
+GOOGLE_RECAPTCHA_SECRET_KEY = config("GOOGLE_RECAPTCHA_SECRET_KEY")

@@ -34,6 +34,7 @@ pyOpenSSL==19.1.0
 pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1
+python-decouple==3.4
 pytz==2020.1
 pyzmq==18.1.1
 qtconsole==4.7.4

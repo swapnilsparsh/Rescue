@@ -286,7 +286,10 @@ def emergency(request):
     name = request.user.username
     link = "http://www.google.com/maps/place/" + lat + "," + log
     for c in contacts:
-        send_email(name, c.email, link)
+        try:
+            send_email(name, c.email, link)
+        except Exception as e:
+            messages.error(request, f"unable to send email, due to {e}")
     try:
         send_whatsapp(mobile_numbers, name, link)
     except:  # noqa
