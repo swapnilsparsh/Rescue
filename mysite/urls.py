@@ -59,7 +59,9 @@ urlpatterns = [
         name="password_reset_complete",
     ),
     path("accounts/", include("allauth.urls")),
+    path('contact_user/', views.contact_user , name="contact_user"),
     path("404_error/", views.page_not_found, name="404_error"),
     path("delete_account/<str:username>", views.delete_account, name="delete_account"),
+
 ]
 handler404 = "main_app.views.page_not_found"  # noqa
