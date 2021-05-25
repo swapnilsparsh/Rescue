@@ -85,41 +85,37 @@ python manage.py runserver
 
 # Lint and Format 📜
 
-- We use [Flake8](https://flake8.pycqa.org/en/latest/manpage.html) and [Black](https://pypi.org/project/black/) for linting & formatting source code of this project.
+We are using [Flake8](https://flake8.pycqa.org/en/latest/manpage.html) and [Black](https://pypi.org/project/black/) for _linting & formatting_ source code of this project.
+
+### **Run QA checks on local environment ⚡** :
+
 <br>
 
-**Run QA checks on local environment ⚡** :
+* For Windows 💾 :
+```sh
+...\rescue> .\rescue_QA_checks
+``` 
 
-<br>
+* For Linux 👨‍💻 :
+```bash
+.../rescue$ ./rescue_QA_checks
+``` 
 
-  - Run Shell script on Windows 💾 :
-
-  ```
-  ...\rescue> .\rescue_QA_checks
-  ``` 
-
-  - Run Shell script on Linux 👨‍💻 :
-
-  ```
-  .../rescue$ ./rescue_QA_checks
-  ``` 
-  
-  - Alternate option ✔ :
-    - Run this on terminal ⚡:
-      - Windows 💾
-        ```
-        ...\rescue> black .
-        ``` 
-        ```
-        ...\rescue> flake8 .
-        ``` 
-      - Linux 👨‍💻
-        ```
-        .../rescue$ black .
-        ``` 
-        ```
-        .../rescue$ flake8 .
-        ``` 
+* Alternate option ✔ Run the following commands ⚡:
+  * For Windows 💾
+    ```
+    ...\rescue> black .
+    ``` 
+    ```
+    ...\rescue> flake8 .
+    ``` 
+  * For Linux 👨‍💻
+    ```
+    .../rescue$ black .
+    ``` 
+    ```
+    .../rescue$ flake8 .
+    ``` 
 
 # First time to [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
