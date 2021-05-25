@@ -61,18 +61,35 @@
 	 html {
         scroll-behavior:smooth;
     }
-  
+    .link-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-text a {
+        text-decoration: none;
+        color: #6C63FF;
+        transition: all 0.5s ease-in-out;
+        margin: 0 auto;
+    }
+    .link-text a:hover {
+        text-decoration: underline;
+    }
 </style>
 
 <body>
     
     <div class="container">
         <div class="row justify-content-center" style="width: 100%;">
-            <a href="/home"><img class="img-responsive" src="{% static 'Images/email.png' %}" height="500" width="900" alt="404_error"></a>            
+            <a href="/home"><img class="img-responsive" src="{% static 'Images/activation_email_sent.png' %}" height="500" width="900" alt="404_error"></a>            
         </div>
         <div style="text-align: center;">
             <h1 style="margin:10px;color:#6C63FF;">Hey there !</h1>
             <p style="font-size:22px;font-weight:500;">We have sent you a Confirmation mail ! Verify your email address and Activate your account!</p>
+            <h3 class="link-text"><a href="https://mail.google.com">Click here to open Gmail</a></h3>
         </div> 
     </div>
    
