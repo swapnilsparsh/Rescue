@@ -15,13 +15,45 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='contact',
+            name="contact",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('email', models.EmailField(max_length=254)),
-                ('relation', models.CharField(choices=[('Father', 'Father'), ('Mother', 'Mother'), ('Brother', 'Brother'), ('Sister', 'Sister'), ('Husband', 'Husband'), ('Friend', 'Friend'), ('Relative', 'Relative'), ('Other', 'Other')], default='Other', max_length=10)),
-                ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='contact', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("email", models.EmailField(max_length=254)),
+                (
+                    "relation",
+                    models.CharField(
+                        choices=[
+                            ("Father", "Father"),
+                            ("Mother", "Mother"),
+                            ("Brother", "Brother"),
+                            ("Sister", "Sister"),
+                            ("Husband", "Husband"),
+                            ("Friend", "Friend"),
+                            ("Relative", "Relative"),
+                            ("Other", "Other"),
+                        ],
+                        default="Other",
+                        max_length=10,
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="contact",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]
