@@ -70,14 +70,20 @@ def register(request):
                 "noreply@gmail.com",
                 [email],
             )
-            messages.success(request, f"Check your email to Activate your account!")
             messages.success(request, f"New Account Created Successfully: {username}")
+            messages.success(request, "Check your email to Activate your account!")
             email.send(fail_silently=False)
             return redirect('main_app:email_sent')
-        elif(User.objects.filter(username=username).exists()):
-                messages.warning(request, f"The username you entered has already been taken. Please try another username")
-        elif(User.objects.filter(email=email).exists()):
-                messages.warning(request, f"The Email you entered has already been taken. Please try another Email")
+        elif User.objects.filter(username=username).exists():
+            messages.warning(
+                request,
+                "The username you entered has already been taken. Please try another username",
+            )
+        elif User.objects.filter(email=email).exists():
+            messages.warning(
+                request,
+                "The Email you entered has already been taken. Please try another Email",
+            )
         else:
             for msg in form.error_messages:
                 messages.warning(request, f"{form.error_messages[msg]}")
@@ -327,8 +333,6 @@ def FAQ(request):
 def women_laws(request):
     return render(request, "main_app/women_laws.html", {"title": "women_laws"})
 
-def email_sent(request):
-    return render(request, 'main_app/email_sent.html', {'title': 'Email_sent'})
 
 def developers(request):
     return render(request, "main_app/developers.html", {"title": "developers"})
