@@ -73,7 +73,7 @@ def register(request):
             messages.success(request, f"New Account Created Successfully: {username}")
             messages.success(request, "Check your email to Activate your account!")
             email.send(fail_silently=False)
-            return redirect("main_app:home")
+            return redirect('main_app:email_sent')
         elif User.objects.filter(username=username).exists():
             messages.warning(
                 request,
