@@ -7,13 +7,13 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main_app', '0001_initial'),
+        ("main_app", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='contact',
-            name='mobile_no',
+            model_name="contact",
+            name="mobile_no",
             field=models.CharField(default=django.utils.timezone.now, max_length=15),
             preserve_default=False,
         ),
