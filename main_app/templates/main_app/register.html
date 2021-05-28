@@ -151,10 +151,10 @@
             <form method="POST" class="form-style"> 
                 {% csrf_token %}         
                 <div class="row">   
-                    <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="fade-down">
                         <h1 class="register-page-title">WELCOME TO RESCUE</h1>
                         <p class="register-page-text">Create Your Account</p>
-                        <img class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
+                        <img data-aos="zoom-in"  class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="form-div2">{{form.as_p}}</div>
