@@ -33,44 +33,6 @@
         background-image:url("{% static 'Images/toph.png' %}");
     }
     
-    .register-page {
-        margin-top: 7em;
-    }
-    
-    .register-page-img {
-        width: 50%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 0.5em;
-    }
-    
-    .register-page-title {
-        font-size: 2.75rem;
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 900;
-        text-align: center;
-        letter-spacing: 0.2em;
-        margin-bottom: 0.5em;
-    }
-    
-    .register-page-text {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .form-style {
-        font-size: 1.15rem;
-    }
-    
-    .form-div1 {
-        margin-top: 8em;
-    }
-    
-    .form-div2 {
-        width: 80%;
-        margin-top: 3em;
-    }
-    
     .display-4 {
         text-align: center;
         color: black;
@@ -241,7 +203,7 @@
         cursor: pointer;
     }
     
-    .register-sign-in {
+    .login-sign-in {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -250,100 +212,17 @@
         /* padding: 1.5em 0; */
     }
     
-    .register-sign-in a {
+    .login-sign-in a {
         text-decoration: none;
         color: #6C63FF;
         transition: all 0.5s ease-in-out;
         margin: 0 auto;
     }
     
-    .register-sign-in a:hover {
+    .login-sign-in a:hover {
         text-decoration: underline;
     }
     
-    @media only screen and (max-device-width: 768px) {
-        .form-div1 {
-            margin-top: 5em;
-        }
-        .form-div2 {
-            width: 80%;
-            margin-left: 3.7em;
-        }
-        label {
-            font-size: 2.5rem;
-        }
-        form.form-style {
-            margin: 0 auto;
-            font-size: 2rem;
-        }
-    }
-    /* google button css */
-    
-    .gg {
-        width: 240px;
-        height: 40px;
-        border: 0px;
-        border-radius: 50px;
-        background-color: #DB4437;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        color: white;
-    }
-    
-    .gg i {
-        margin-left: -20px;
-        padding-right: 8px;
-    }
-    
-    .or {
-        font-size: 2em;
-        padding-bottom: 20px;
-    }
-    
-    body>div.register-page>form>div.row>div:nth-child(2)>div>p:nth-child(6),
-    p:nth-child(3) {
-        display: initial;
-        width: 98%;
-    }
-    
-    #id_username,
-    #id_email {
-        width: 92% !important;
-    }
-</style>
-<div class="register-page">
-    <form method="POST" class="form-style">
-        {% csrf_token %}
-        <div class="row">
-            <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
-                <h1 class="register-page-title">WELCOME TO RESCUE</h1>
-                <p class="register-page-text">Login</p>
-                <img class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
-            </div>
-            <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="form-div2">{{form.as_p}}</div>
-            </div>
-        </div>
-        <div class="register-sign-in" align="center">
-            <input type="submit" value="Sign In">
-            <h3 class="register-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
-            <h3><a href="/reset_password">Forgot Password?</a></h3>
-
-        </div>
-    </form>
-    <center>
-        <div class="or">
-            or
-        </div>
-        <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
-                    <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
-                </button></p>
-    </center>
-
-</div>
-
-
-<style>
     .center {
         justify-content: center;
         margin: 0 auto;
@@ -378,149 +257,60 @@
         }
     }
 </style>
+<!-- </head>
+<body> -->
+<section class="container intro-section">
+    <div class="intro-title" data-aos="fade-down">
+        <h1 class="login-page-title">WELCOME</h1>
+        <h2 class="login-page-text">Login through Registered Account</h2>
+    </div>
+</section>
+<section class="login-section container">
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        <div class="row login-form-div">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="login-img">
+                    <img data-aos="zoom-in" src="{% static 'Images/login.svg' %}" alt="log-in">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="form-div">{{form.as_p}}</div>
+            </div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="6Ldj7dkaAAAAAMGNkatRmD99HA3UUWm2PZsCj0EX"></div>
 
+        </div>
+        <div class="login-sign-in" align="center">
+            <input type="submit" value="Sign In">
+            <h3 class="login-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
+            <h3 class="login-sign-in-text"><a href="/reset_password">Forgot Password?</a></h3>
+        </div>
+    </form>
+    <div class="login-form-div">
+        <center>
+            <div class="or">
+                <p>or</p>
+            </div>
+            <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
+                        <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
+                    </button></p>
+        </center>
+    </div>
+</section>
 
 <script>
-    // Creating nodes for the mark and alert text
-    var newNode = document.createElement('span');
-    newNode.id = "validationmark1"
-    var referenceNode = document.querySelector("#id_username");
-    referenceNode.after(newNode);
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#id_password');
 
-    var newNode = document.createElement('small');
-    newNode.id = "username_alert"
-    var referenceNode = document.querySelector("#validationmark1");
-    referenceNode.after(newNode);
-
-    var newNode = document.createElement('span');
-    newNode.id = "validationmark2"
-    var referenceNode = document.querySelector("#id_email");
-    referenceNode.after(newNode);
-
-    var newNode = document.createElement('small');
-    newNode.id = "email_alert"
-    var referenceNode = document.querySelector("#validationmark2");
-    referenceNode.after(newNode);
-
-    $(".form-style").submit(function() {
-        console.log($("#id_password1").val())
-        console.log($("#id_password2").val())
-        if ($("#username_alert").length > 0 || $("#email_alert").length > 0) {
-            alert("Please make sure the Username and Email are unique!")
-            return false
-        } else {
-            if ($("#id_password1").val() != $("#id_password2").val()) {
-                console.log("here")
-                alert("The passwords don't match")
-                return false
-            }
-        }
-    })
-
-    $('#id_username').on('input', function() {
-        $.ajax({
-            url: "/check_username",
-            data: {
-                'name': this.value
-            },
-            dataType: 'json',
-            success: function(data) {
-                //Getting mark and alert text elements
-                x = document.getElementById("username_alert")
-                y = document.getElementById("validationmark1")
-
-                if (data.exists == "yes") {
-                    x.style = "color: red;font-size: 17px;"
-                    x.innerHTML = "<br>Username not available <br>"
-                    y.innerHTML = "x"
-                    y.style = "color: red;margin-left: -23px;"
-                } else {
-                    // If the input field is not empty and the username is available
-                    if ($('#id_username').val() != "") {
-                        x.style = "color: green;font-size: 17px;"
-                        x.innerHTML = "<br>Username is available <br>"
-                        y.innerHTML = "✓"
-                        y.style = "color: green;margin-left: -23px;"
-                    } else {
-                        x.innerHTML = ""
-                        y.innerHTML = ""
-                    }
-                }
-            }
-        })
+    togglePassword.addEventListener('click', function(e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
     });
-
-
-    $('#id_email').on('input', function() {
-        $.ajax({
-            url: "/check_email",
-            data: {
-                'email': this.value
-            },
-            dataType: 'json',
-            success: function(data) {
-                x = document.getElementById("email_alert")
-                y = document.getElementById("validationmark2")
-                if (data.exists == "yes") {
-                    x.style = "color: red;font-size: 17px;"
-                    x.innerHTML = "<br>Email not available <br>"
-                    y.innerHTML = "x"
-                    y.style = "color: red;margin-left: -23px;"
-                } else {
-                    // If the input is not empty and the entered email is valid
-                    if ($('#id_email').val() != "" && document.getElementById("id_email").checkValidity()) {
-                        x.style = "color: green;font-size: 17px;"
-                        x.innerHTML = "<br>Email is available <br>"
-                        y.innerHTML = "✓"
-                        y.style = "color: green;margin-left: -23px;"
-                    } else {
-                        x.innerHTML = ""
-                        y.innerHTML = ""
-                    }
-                }
-            }
-        })
-    });
-
-
-    // Adding the eye icon for the first password field
-    addNode(1, "id_password1")
-
-    //Adding the eye icon for second password field
-    addNode(2, "id_password2")
-
-    // This function will help us add the icon in between the form just after the input field
-
-    function addNode(id, referenceNode) {
-        var newNode = document.createElement('i');
-        newNode.className = "far fa-eye";
-        newNode.id = `togglePassword${id}`;
-        newNode.style = "margin-left: -30px; cursor: pointer;"
-
-        var referenceNode = document.querySelector(`#${referenceNode}`);
-
-        referenceNode.after(newNode);
-    }
-
-    // Assigning the toggle action for 2 icons
-    toggleAction(1)
-
-    toggleAction(2)
-
-    // This function adds the event listener to the icon for respective password field
-    function toggleAction(id) {
-        const togglePassword = document.querySelector(`#togglePassword${id}`);
-        const password = document.querySelector(`#id_password${id}`);
-        togglePassword.addEventListener('click', function(e) {
-            // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // toggle the eye slash icon
-            this.classList.toggle('fa-eye-slash');
-        });
-    }
 </script>
-
 
 {% endblock %}
 </body>
