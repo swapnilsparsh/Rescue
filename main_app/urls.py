@@ -21,6 +21,7 @@ urlpatterns = [
     path("helpline_numbers/", views.helpline_numbers, name="helpline_numbers"),
     path("women_laws/", views.women_laws, name="women_laws"),
     path('women_rights/', views.women_rights, name='women_rights'),
+    path('safety_tips/', views.safety_tips, name='safety_tips'),
     path('ngo_details/', views.ngo_details, name='ngo_details'),
     path('FAQ/', views.FAQ, name='FAQ'),
     path('gallery/', views.gallery, name='gallery'),
