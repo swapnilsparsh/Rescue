@@ -367,7 +367,7 @@ def contact_user(request):
         message = request.POST["message"]
 
         # send an email
-        send_mail(  # noqa
+        send_email(  # noqa
             message_name,  # subject
             message,  # message
             message_email,  # from email
