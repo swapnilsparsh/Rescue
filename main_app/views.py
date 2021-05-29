@@ -292,6 +292,7 @@ def emergency(request):
             messages.error(request, f"unable to send email, due to {e}")
     try:
         send_whatsapp(mobile_numbers, name, link)
+        messages.success(request, f"Message deleivered to {name} at {mobile_numbers}")
     except:  # noqa
         messages.error(
             request, "your contact numbers contains number without country code."
