@@ -287,8 +287,10 @@ def emergency(request):
     link = "http://www.google.com/maps/place/" + lat + "," + log
     for c in contacts:
         send_email(name, c.email, link)
+        messages.success(request,f"Email deleiverd to {name} at {c.email}")
     try:
         send_whatsapp(mobile_numbers, name, link)
+        messages.success(request,f"Message deleivered to {name} at {mobile_numbers}")
     except:  # noqa
         messages.error(
             request, "your contact numbers contains number without country code."
