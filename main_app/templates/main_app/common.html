@@ -74,6 +74,12 @@
         display: flex;
         flex-direction: column;
       }
+      
+      nav {
+        min-height: 95px;
+        background-color: rgb(6, 17, 31);
+        padding: 1em 0; 
+      }
 
       /* footer { */
       /* position: relative;
@@ -220,11 +226,16 @@
         }
       }
 
-      @media only screen and (min-width: 980px) {
+      /* @media only screen and (min-width: 980px) {
         .logo{
-        height:50%;
-        width:60%;
+        width:175px;
+        height:auto;
         }
+      } */
+
+      .logo {
+        width: 175px;
+        height: auto;
       }
 
       @media only screen and (max-width: 979px) {
@@ -233,10 +244,6 @@
         }
         .logo{
           position: relative;
-          height:45%;
-          width:50%;
-          min-width: 160px;
-          max-width: 170px;
         }
       }
 
@@ -271,13 +278,11 @@
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 95px; padding: None"
-      >
-        <a class="navbar-brand" href="/home"> <img src="{% static 'Images/logo.png' %}" alt="logo" class="logo"></a>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+
+        <a class="navbar-brand ml-3 p-0" href="/home"> <img class="logo" src="{% static 'Images/logo.png' %}" alt="logo"></a>
         <button
-          class="navbar-toggler ml-auto"
+          class="navbar-toggler mr-3"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavDropdown"
