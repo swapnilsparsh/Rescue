@@ -6,6 +6,7 @@
 <br>
 
 <head>
+    <title> Rescue | Women Rights </title>
     <style>
         .collapsible-header:hover {
             background-color: #f6f5f5;
@@ -32,7 +33,7 @@
             font-size: 1.5rem;
         }
 
-        .btn {
+        .btn-details {
             background-color: black;
             color: white;
             text-align: center;
@@ -40,7 +41,7 @@
             margin-left: 40%;
         }
 
-        .btn:hover {
+        .btn-details:hover {
             background-color: #f1f1f1;
             color: black;
             text-align: center;
@@ -54,29 +55,10 @@
             margin-right: auto;
         }
    
-   html {
-	scroll-behavior:smooth;
-   }
-   #myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
+        html {
+            scroll-behavior:smooth;
+        }
+  
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
@@ -90,12 +72,12 @@
             style="width: 100%; margin:0 auto; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
             <div class="column">
-                <img src="{% static 'Images/women_rights.jpg' %}" class="img1-responsive" alt="Rights"
+                <img src="{% static 'Images/women_rights.jpg' %}" data-aos="zoom-in" class="img1-responsive" alt="Rights"
                     style="margin-top: -200px;">
             </div>
 
             <div class="column">
-                <h1 class="wb-stl-heading1"
+                <h1 class="wb-stl-heading1" data-aos="fade-down"
                     style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
                     <strong style="text-shadow: 2px 2px grey; text-align: center; ">
                         <font color="black">Women's Rights</font>
@@ -107,7 +89,7 @@
                         the
                         Might to Treated Right"</b></p>
                 <hr class="my-10">
-                <a class="btn"
+                <a class="btn btn-details"
                     href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
                     target="_blank"><b>MORE DETAILS</b></a>
             </div>

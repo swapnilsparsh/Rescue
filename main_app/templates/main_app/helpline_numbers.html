@@ -6,6 +6,8 @@
 {% block content %}
 
 <head>
+    <title>Rescue | Helpline Numbers </title>
+
     <style>
         .btn-danger:hover {
         background-color: #dc3545;}
@@ -89,27 +91,7 @@
    html {
 	scroll-behavior:smooth;
    }
-   #myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black;
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
-    
+
     /* intro section styling */
     .intro-section {
         padding-top: 6em;
@@ -194,9 +176,9 @@
 
 <body>
     <section class="container intro-section">
-        <img src="../../static/Images/helpline.svg" alt="person making a phone call">
+        <img data-aos="zoom-in" src="../../static/Images/helpline.svg" alt="person making a phone call">
         <div class="intro-title">
-            <h1>WOMEN HELPLINE NUMBERS</h1>
+            <h1 data-aos="fade-down">WOMEN HELPLINE NUMBERS</h1>
             <h2>Click "<u>Call</u>" to get help or dial</h2>
         </div>
     </section>
@@ -262,12 +244,12 @@
         </table>
         
 
-
+    </section>
         
             
             
 
-    </div>
+
 
 
     

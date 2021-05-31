@@ -4,12 +4,8 @@
 
 <html lang="en">
 {% block content %}
-
-
-
-<body style="background-color:white;margin-top:50px;">
-	
-	<style>
+<title>Rescue | Developers </title>
+<style>
 		html {
 			scroll-behavior:smooth;
    		}
@@ -189,35 +185,20 @@
 			color: rgb(160, 10, 10);
 		}
 		
-		#myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
-	</style>
+</style>
+  
+  
 
+
+<body style="background-color:white;margin-top:50px;">
+	
 	<div class="developers-page">
 
 		<div class="container">
 			<br>
 			<div class="jumbotron" style="background-color:white; text-align: center;">
 				<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-				<h1 class="display-4"
+				<h1 class="display-4" data-aos="fade-up"
 					style="color: rgb(184, 25, 25); font-family: 'Bangers', cursive; margin-top: 3rem; ">ABOUT US</h1>
 				<br><br>
 				<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
@@ -242,11 +223,11 @@
 		</div>
 
 		<div class="container-dev-img">
-			<img class="dev-img" src="{% static 'Images/developers.png' %}" alt="dvelopers illustration">
+			<img class="dev-img" data-aos="fade-down" src="{% static 'Images/developers.png' %}" alt="dvelopers illustration">
 		</div>
 		<section class="container my-4">
 			<div class="cards-div mx-auto">
-				<div class="desing-card my-3 mx-auto">
+				<div class="desing-card my-3 mx-auto" data-aos="flip-left">
 					<div class="box1"></div>
 					<div class="box2"></div>
 					<div class="content"></div>
@@ -265,7 +246,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="desing-card my-3 mx-auto">
+				<div class="desing-card my-3 mx-auto" data-aos="flip-left">
 					<div class="box1"></div>
 					<div class="box2"></div>
 					<div class="content"></div>
@@ -283,7 +264,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="desing-card my-3 mx-auto">
+				<div class="desing-card my-3 mx-auto"  data-aos="flip-left">
 					<div class="box1"></div>
 					<div class="box2"></div>
 					<div class="content"></div>

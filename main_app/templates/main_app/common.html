@@ -9,6 +9,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -72,6 +73,12 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+      }
+      
+      nav {
+        min-height: 95px;
+        background-color: rgb(6, 17, 31);
+        padding: 1em 0; 
       }
 
       /* footer { */
@@ -157,7 +164,6 @@
         align-items: center;
         outline: none;
       }
-
       #back-to-top-btn:focus, button:focus {
         outline: none !important; 
       }
@@ -219,6 +225,28 @@
           position: relative;
         }
       }
+
+      /* @media only screen and (min-width: 980px) {
+        .logo{
+        width:175px;
+        height:auto;
+        }
+      } */
+
+      .logo {
+        width: 175px;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 979px) {
+        .navbar-brand {
+          max-width: 50%;
+        }
+        .logo{
+          position: relative;
+        }
+      }
+
       #footer a {
       color: #ffffff;
       text-decoration: none !important;
@@ -250,19 +278,11 @@
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 85px; padding: None"
-      >
-        <a class="navbar-brand" href="/home"
-          ><i
-            class="material-icons large text-white"
-            style="width: 80%; font-size: 45px"
-            >home</i
-          ></a
-        >
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+
+        <a class="navbar-brand ml-3 p-0" href="/home"> <img class="logo" src="{% static 'Images/logo.png' %}" alt="logo"></a>
         <button
-          class="navbar-toggler ml-auto"
+          class="navbar-toggler mr-3"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavDropdown"
@@ -279,101 +299,135 @@
           id="navbarNavDropdown"
           style="background-color: rgb(6, 17, 31); padding: None"
         >
-          <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown" style="margin-top: 20px">
-              <a
-                class="nav-link"
-                href="#"
-                id="navbarDropdown2"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+        <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
+          {% if user.is_authenticated  and  not user.has_usable_password %}
+          <li class="nav-item dropdown" style="margin-top: 20px">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown2"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/logout"
+                >Logout</a
               >
-                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
-              </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdown2"
-                style="background-color: rgb(6, 17, 31)"
-              >
-                <a class="dropdown-item" style="color: white" href="/logout"
-                  >Logout</a
-                >
-                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
-             
+              <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>            
               </div>
             </li>
-            {% else %}
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown3"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+          {% elif user.is_authenticated and not backends.associated %}
+          <li class="nav-item dropdown" style="margin-top: 20px">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown2"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/logout"
+                >Logout</a
               >
-                &nbsp;&nbsp; User
-              </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdown3"
-                style="background-color: rgb(6, 17, 31)"
-              >
-                <a class="dropdown-item" style="color: white" href="/register"
-                  >Register</a
-                >
-                <a class="dropdown-item" style="color: white" href="/login"
-                  >Login</a
-                >
-              </div>
+              <a class="dropdown-item" style="color: white" href="/change_password">Change Password</a>              
+              <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>            
+            </div>
             </li>
-            {% endif %}
-            <li class="nav-item dropdown" style="margin-top: 22px">
+          {% else %}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown3"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              &nbsp;&nbsp; User
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown3"
+              style="background-color: rgb(6, 17, 31)"
+            >
+              <a class="dropdown-item" style="color: white" href="/register"
+                >Register</a
+              >
+              <a class="dropdown-item" style="color: white" href="/login"
+                >Login</a
+              >
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown" style="margin-top: 22px">
+            <a
+              class="nav-link"
+              href="#"
+              data-target="#navbarDopdown1"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white; font-size: 18px"
+            >
+              <h4 class="new">&nbsp;&nbsp; More</h4>
+            </a>
+            <div
+              class="dropdown-menu"
+              id="navbarDropdown1"
+              aria-labelledby="navbarDropdown1"
+              style="background-color: rgb(6, 17, 31)"
+            >
               <a
-                class="nav-link"
-                href="#"
-                data-target="#navbarDopdown1"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="color: white; font-size: 18px"
+                class="dropdown-item"
+                style="color: white"
+                href="/women_rights"
+                >Women's Rights</a
               >
-                <h4 class="new">&nbsp;&nbsp; More</h4>
+              <a class="dropdown-item" style="color: white" href="/women_laws"
+                >Women's Safety Laws
               </a>
-              <div
-                class="dropdown-menu"
-                id="navbarDropdown1"
-                aria-labelledby="navbarDropdown1"
-                style="background-color: rgb(6, 17, 31)"
+              <a
+                class="dropdown-item"
+                style="color: white"
+                href="/helpline_numbers"
+                >Women Helpline Numbers</a
               >
-                <a
+              <a
+                class="dropdown-item"
+                style="color: white"
+                href="/ngo_details"
+                >NGOs for Women</a
+              >
+              <a
                   class="dropdown-item"
                   style="color: white"
-                  href="/women_rights"
-                  >Women's Rights</a
+                  href="../main_app/FAQ.html"
+                  >FAQ's</a
                 >
-                <a class="dropdown-item" style="color: white" href="/women_laws"
-                  >Women's Safety Laws
-                </a>
-                <a
-                  class="dropdown-item"
-                  style="color: white"
-                  href="/helpline_numbers"
-                  >Women Helpline Numbers</a
-                >
-                <a
-                  class="dropdown-item"
-                  style="color: white"
-                  href="/ngo_details"
-                  >NGOs for Women</a
-                >
+
+                <a class="dropdown-item" style="color: white" href="/gallery">Woment's Rights Activists Gallery</a>
+
               </div>
             </li>
 
@@ -402,21 +456,29 @@
                 EMERGENCY !
               </a>
             </li>
-            
+
           </ul>
         </div>
       </nav>
     </header>
 
-    {% if messages %} {% for message in messages %}
-    <script>
-      M.toast({
-        html: "{{message}}",
-        classes: "blue rounded",
-        displayLength: 4000,
-      });
-    </script>
-    {% endfor %} {% endif %} {% block content %} {% endblock %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+                <script>M.toast({html: "{{message}}", classes: 'green rounded', displayLength:2000});</script>
+            {% elif message.tags == 'info'%}
+                <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:2000});</script>
+            {% elif message.tags == 'warning'%}
+                <script>M.toast({html: "{{message}}", classes: 'orange rounded', displayLength:2000});</script>
+            {% elif message.tags == 'error'%}
+                <script>M.toast({html: "{{message}}", classes: 'red rounded', displayLength:2000});</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %} {% block content %} {% endblock %}
 
     
     <!-- Back to top button -->
@@ -451,7 +513,7 @@
         </div>
         <div class="row" style="margin-right: 10%"  class="list-unstyled quick-links">
           <ul class="col" style="margin-top: 5px">
-            <li ><a href="#" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+            <li ><a href="/contact_user" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
             <li><a href="https://github.com/swapnilsparsh/Rescue" target="_blank" style="font-size:25px;"><i class="bi bi-github"> </i>Contribute Here</a></li>
           </ul>
       </div>
@@ -467,5 +529,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> 
   </body>
 </html>

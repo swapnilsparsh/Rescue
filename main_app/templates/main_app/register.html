@@ -5,33 +5,13 @@
 
 <body lang="en">
     {% block content %}
+    <title>Rescue | Register</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         html {
             scroll-behavior:smooth;
         }
-        /* CSS for back to top button */
-        #myBtn {
-            display: none; 
-            position: fixed; 
-            bottom: 20px;  
-            right: 30px; 
-            z-index: 99; 
-            border: 2px black solid; 
-            outline: none; 
-            background-image:url("{% static 'Images/top.png' %}"); 
-            background-position:center;
-            background-repeat:no-repeat;
-            background-color:black; 
-            cursor: pointer; 
-            padding: 1.4rem;
-            border-radius: 25rem;
-        }
-        #myBtn:hover {
-            background-color: white;
-            background-image:url("{% static 'Images/toph.png' %}"); 
-        }
-
+        
         /* Register Page styling */
         .register-page{
             margin-top: 7em;
@@ -171,10 +151,10 @@
             <form method="POST" class="form-style"> 
                 {% csrf_token %}         
                 <div class="row">   
-                    <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="form-div1 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="fade-down">
                         <h1 class="register-page-title">WELCOME TO RESCUE</h1>
                         <p class="register-page-text">Create Your Account</p>
-                        <img class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
+                        <img data-aos="zoom-in"  class="register-page-img" src="{% static 'Images/signup-image.svg' %}" alt="Sign Up">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="form-div2">{{form.as_p}}</div>
@@ -220,21 +200,6 @@
         var referenceNode = document.querySelector("#validationmark2");
         referenceNode.after(newNode);
 
-        $(".form-style").submit(function(){
-            console.log($("#id_password1").val())
-            console.log($("#id_password2").val())
-            if($("#username_alert").length > 0 || $("#email_alert").length > 0){
-                alert("Please make sure the Username and Email are unique!")
-                return false
-            }
-            else{
-                if($("#id_password1").val() != $("#id_password2").val()){
-                    console.log("here")
-                    alert("The passwords don't match")
-                    return false
-                }
-            }
-        })
 
         $('#id_username').on('input', function () {
                 $.ajax({

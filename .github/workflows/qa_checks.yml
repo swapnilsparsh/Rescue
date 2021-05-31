@@ -1,0 +1,21 @@
+name: rescue_QA_Checks
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Linting and Code Formatting Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Installing QA-CHECKS Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black==20.8b1
+          pip install flake8==3.8.4
+      - name: Running QA-CHECKS
+        run: ./rescue_QA_checks

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<title> Rescue | Activation Email Sent </title>
+<style>    
+    body {
+        color: black;
+        font-size: 26px;
+        margin: 0;
+        background-color: #f1f1f1;
+    }
+    .img-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    
+
+    @media screen and (min-device-width: 465px) and (max-device-width: 591px)  {
+
+        .caption {
+            font-size: 2.5rem;
+        }
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
+        }
+    }
+
+    @media screen and (max-device-width: 464px) {
+
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
+        }
+
+        .caption {
+            font-size: 2.5rem;
+        }
+    }
+
+
+
+    @media screen and (max-device-width: 680px) and (min-device-width: 592px) {
+        .container {
+            margin-top: 20%;
+            margin-bottom:20%;
+        }
+
+    }
+
+    @media screen and (min-device-width: 681px) {
+        .container {
+            margin-top: 15%;
+            margin-bottom:10%;
+        }
+    }
+	 html {
+        scroll-behavior:smooth;
+    }
+    .link-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-text a {
+        text-decoration: none;
+        color: #6C63FF;
+        transition: all 0.5s ease-in-out;
+        margin: 0 auto;
+    }
+    .link-text a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="row justify-content-center" style="width: 100%;">
+            <a href="/home"><img class="img-responsive" src="{% static 'Images/activation_email_sent.png' %}" height="500" width="900" alt="404_error"></a>            
+        </div>
+        <div style="text-align: center;">
+            <h1 style="margin:10px;color:#6C63FF;">Hey there !</h1>
+            <p style="font-size:22px;font-weight:500;">We have sent you a Confirmation mail ! Verify your email address and Activate your account!</p>
+            <h3 class="link-text"><a href="https://mail.google.com">Click here to open Gmail</a></h3>
+        </div> 
+    </div>
+   
+</body>
+{% endblock %}
+
+</html>
