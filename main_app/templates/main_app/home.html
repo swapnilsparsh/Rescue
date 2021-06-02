@@ -41,6 +41,7 @@
   <style>
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
     body {
       min-height: 100vh;
@@ -177,6 +178,28 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    @media screen and (max-width: 480px) {
+      #preloader {
+        width: 100vw;
+      }
+
+      .preloader-div {
+        width: 19.375rem;
+        height: 19.375rem;
+        position: relative;
+      }
+
+      .rotator {
+        width: 19.375rem;
+        height: 19.375rem;
+      }
+
+      .preloader-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
     /* back to top button */
     #back-to-top-btn {
       position: fixed;
