@@ -37,8 +37,7 @@
             background-color: black;
             color: white;
             text-align: center;
-            margin-top: -50%;
-            margin-left: 40%;
+            margin: 0 auto;
         }
 
         .btn-details:hover {
@@ -51,10 +50,17 @@
         .img1-responsive {
             height: auto;
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
+            margin:0 auto;
         }
-   
+        img {
+            max-height: 100%;
+        }
+        .column-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         html {
             scroll-behavior:smooth;
         }
@@ -63,20 +69,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body style="background-color:white;margin-top: 150px;">
     <div class="container">
-
-        <div class="row justify-content-center"
-            style="width: 100%; margin:0 auto; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-            <div class="column">
-                <img src="{% static 'Images/women_rights.jpg' %}" data-aos="zoom-in" class="img1-responsive" alt="Rights"
-                    style="margin-top: -200px;">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6">
+                <img src="{% static 'Images/women_rights.jpg' %}" data-aos="zoom-in" class="img1-responsive" alt="Rights">
             </div>
 
-            <div class="column">
+            <div class="col-sm-12 col-md-6 column-right">
                 <h1 class="wb-stl-heading1" data-aos="fade-down"
                     style="text-align: center; margin-top: 40px; font-size:40px;font-family: 'Roboto Slab', serif;">
                     <strong style="text-shadow: 2px 2px grey; text-align: center; ">
@@ -84,18 +88,19 @@
                     </strong>
                     <img src="{% static 'Images/rights.jpg' %}" alt="24 * 7" height="50vw">
                 </h1>
-                <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
                 <p class="lead text-center" style="font-family: 'Overpass', sans-serif;"><b>"Awareness about Your Rights gives You
                         the
                         Might to Treated Right"</b></p>
-                <hr class="my-10">
+                <hr class="w-100">
+                
                 <a class="btn btn-details"
                     href="https://www.indiatoday.in/education-today/gk-current-affairs/story/11-women-rights-india-312263-2016-03-08"
                     target="_blank"><b>MORE DETAILS</b></a>
             </div>
         </div>
-
-        <ul class="collapsible popout" data-collapsible="accordion">
+    </div>
+    <div class="container mx-auto mt-2">    
+        <ul class="collapsible m-0 popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">
                     <i class="material-icons">arrow_drop_down</i>
