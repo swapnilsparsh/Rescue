@@ -114,11 +114,10 @@
     }
 
     .svg-img{
-      width:50%;
-      margin-left:25%;
-      margin-right:25%;
-      margin-bottom:5%;
-      height:50%;
+      margin: 0 auto;
+      width: 125px;
+      max-width:25%;
+      height: auto;
     }
 
     .new::after {
@@ -427,24 +426,24 @@
     
 
     <div class="parallax" >
-      <h1 style="padding:20px;" class="text-center">How it works</h1>
-      <div class="row text-center">
-        <div class="col">
+      <h1 class="text-center text-uppercase py-3">How it works</h1>
+      <div class="my-2 row text-center justify-content-center align-items-start" style="row-gap:1.15em;">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/id.svg' %}">
           <h4>REGISTER YOURSELF</h4>
           <p>Register using your email-id.</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/contact.svg' %}">
           <h4>ADD EMERGENCY CONTACTS</h4>
           <p>Save the mobile number of your trusted contacts</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/empowerment.svg' %}">
           <h4>YOU ARE ALL SET!</h4>
           <p>Click on the EMERGENCY button! Now you are ready to fight against the victim</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/help.svg' %}">
           <h4>ANY QUESTION?</h4>
           <p>Please follow our <b><a href="/FAQ" style="color:cyan;">Frequently asked questions (FAQ)</a></b></p>
