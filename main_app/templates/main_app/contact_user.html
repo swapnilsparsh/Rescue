@@ -3,225 +3,147 @@
 {% block body %}
 {% load static %}
 <title>Rescue | Contact Us</title>
-<style>
-.contacts{
-  margin-top: 100px;
-}
-.section-heading {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 50px;
-  font-family: 'Roboto Slab';
-  text-shadow: 2px 2px grey;}
-  .section-heading h2 {
-    font-size: 36px;
-    text-transform: capitalize;
-    margin-bottom: 20px; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .section-heading h2 {
-        font-size: 30px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .section-heading h2 {
-        font-size: 30px;
-        margin-bottom: 15px; } }
-    @media only screen and (max-width: 767px) {
-      .section-heading h2 {
-        font-size: 24px;
-        margin-bottom: 15px; } }
-  .section-heading .line {
-    width: 70px;
-    height: 4px;
-    background-color: rgb(30,142,62);; }
-  .section-heading.text-center .line {
-    margin: 0 auto; }
-  .section-heading.white h2 {
-    color: #ffffff; }
+<style>  
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-#scrollUp {
-  bottom: 50px;
-  font-size: 22px;
-  line-height: 42px;
-  right: 0;
-  width: 40px;
-  background-color: rgb(30,142,62);;
-  color: #ffffff;
-  text-align: center;
-  height: 40px;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
-  border-radius: 2px 0 0 2px; }
-  #scrollUp:focus, #scrollUp:hover {
-    background-color: #000; }
+  .contact-section {
+    margin-top: 100px;
+  }
 
-    .dento-contact-area {
-  position: relative;
-  z-index: 1;
-  margin: 20px;
-  background: white;
-  /* background: whitesmoke;
-  margin: 50px;
-  padding-left: 250px; */
-   }
+  .contact-info {
+    height: 50%;
+    width: auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-img {
+    width:100%;
+    max-width: inherit;
+    padding: 1em 0;
+  } 
+  .info-icons a {
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    color: #6C63FF;
+  }
+  .info-icons a:hover {
+    font-size: 3rem;
+    color: #ec4959;
+  }
+  .info-icons a i {
+    height: 2px;
+    border-radius: 50px;
+    transform: translatey(0px);
+	  animation: float 3s ease-in-out infinite;
+  }
+  .contact-form {
+    padding: 2em;
+    font-size: 1.25rem;
+  }
+  .contact-form-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  label {
+    font-size: 1.25rem;
+    color: #6C63FF;
+    margin: 0.5em 0;
+    font-weight: 500;
+  }
 
-.contact-information {
-  position: relative;
-  z-index: 1;
-  padding: 30px 50px;
-  margin-top: 75px;
-  font-family: 'Overpass';
-  background-color: #eaacb6;
-  border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  @media only screen and (max-width: 767px) {
-    .contact-information {
-      margin-bottom: 100px;
-    } }
-  .contact-information h5 {
-    color: black; }
-  .contact-information p {
-    color: black; }
+  textarea {
+    border-radius: 0.5em;
+  }
 
-.contact-form {
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;}
-  .contact-form .form-control {
-    width: 100%;
-    height: 46px;
-    padding: 15px;
-    font-size: 13px;
-    font-style: italic; }
-    .contact-form .form-control:focus {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      border-color:  rgb(30,142,62);;
-      opacity:0.7 }
-  .contact-form textarea.form-control {
-    height: 110px;
-    padding: 15px; }
+  input[type="submit"] {
+    background-color: #FFF;
+    color: #6C63FF;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5em 1.5em;
+    margin: 1em 0;
+    width: unset;
+    cursor: pointer;
+    border: 2px solid #6C63FF;
+    border-radius: 5em;
+    transition: all 0.3s ease-in-out;
+  }
 
-    .dento-btn {
-  position: relative;
-  z-index: 1;
-  min-width: 170px;
-  height: 46px;
-  line-height: 42px;
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-block;
-  padding: 0 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  border-radius: 2px;
-  background-color: rgb(30,142,62);
-  -webkit-transition: all 500ms;
-  -o-transition: all 500ms;
-  transition: all 500ms;
-  border: 2px rgb(30,142,62);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  @media only screen and (max-width: 767px) {
-    .dento-btn {
-      min-width: 120px;
-      padding: 0 10px; } }
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .dento-btn {
-      min-width: 170px;
-      padding: 0 20px; } }
-  .dento-btn.active, .dento-btn:focus, .dento-btn:hover {
-    box-shadow: none;
-    background-color: transparent;
-    color: rgb(30,142,62); }
-  .dento-btn.btn-2:focus, .dento-btn.btn-2:hover {
-    background-color: #ffffff;
-    color: rgb(30,142,62); }
-  .dento-btn.booking-btn {
-    color: #ffffff !important;
-    font-weight: 600;
-    min-width: 140px;
-    height: 40px;
-    line-height: 36px;
-    font-size: 12px; }
-    .dento-btn.booking-btn:focus, .dento-btn.booking-btn:hover {
-      font-size: 12px;
-      font-weight: 600;
-      background-color: #ffffff;
-      color: rgb(30,142,62);s !important; }
-      .pass-img{
-      width: 80%;
-      height: auto;
-      margin-top: 70px;
+  input[type="submit"]:hover {
+    color: #FFF;
+    background-color: #6C63FF;
+    border: 2px solid #6C63FF;
+    cursor: pointer;
+  }
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
     }
-
-
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
 </style>
 
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
 
   <!-- ***** Contact Area Start ***** -->
   {% if message_name %}
     <center>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
       <h2 style="margin-top: 120px; font-family: 'Overpass';">Thanks {{ message_name }}!</h2>
       <p style="font-family: 'Overpass';">We received your email and will respond shortly...</p>
     </center>
     <br/><br/><br/>
   {% else %}
 
-<div class="contacts">
-<section class="dento-contact-area mt-50 mb-100">
-    <div class="container">
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-12 col-md-4">
-          <div class="contact-information">
-          <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-            <h5>Address</h5>
-            <p>10 West ABC, XYZ, 60610 India</p>
-
-            <h5>Phone</h5>
-            <p>111 222 3333</p>
-
-            <h5>Email</h5>
-            <p class="mb-0">Rescue@gmail.com</p>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="col-12 col-md-8">
-          <div class="contact-form">
-            <!-- Section Heading -->
-            <div class="section-heading">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-              <h2 data-aos="fade-left">Get In Touch</h2>
-              <div class="line"></div>
-            </div>
-            <!-- Form -->
-            <form action="/contact_user/" method="post">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col-lg-4">
-                  <input type="text" name="message-name"  class="form-control mb-30" placeholder="Your Name">
-                </div><br><br>
-                <div class="col-lg-4">
-                  <input type="email" name="message-email"  style="width: 305px;" class="form-control mb-30" placeholder="Your Email">
-                </div><br><br><br>
-                <div class="col-12">
-                  <textarea name="message" class="form-control mb-30" style="width: 600px;" placeholder="Your Message"></textarea>
-                </div><br><br><br><br><br><br>
-                <div class="col-12">
-                  <button type="submit" class="btn dento-btn">Send Message</button><br><br>
-                </div>
-              </div>
-            </form>
-
-          </div>
-        </div>
+<section class="contact-section py-4 mx-auto align-items-start">
+  <div class="container row mx-auto">
+    <!-- Contact Information -->
+    <div class="contact-info col-12 col-md-6 col-lg-6 align-self-center">
+      <img src="../../static/Images/contact-page.svg" class="info-img" alt="contact illustration">
+      
+      <div class="info-icons">
+        <a href="https://github.com/swapnilsparsh" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.twitter.com/swapnilsparsh/" target="_blank"><i class="fab fa-twitter-square"></i></a>
       </div>
     </div>
-  </section>
-</div>
-
+  
+  <!-- Contact Form -->
+  <div class="contact-form col-12 col-md-6 col-lg-6">
+      <h2 class="contact-form-heading" data-aos="fade-left">Get in Touch</h2>
+      
+      <form action="/contact_user/" method="POST">
+        {% csrf_token %}
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        
+        <input type="submit" class="send-message" value="Send message">
+      </form>
+    </div>
+  </div>    
+</section>
   {% endif %}
   <!-- ***** Contact Area End ***** -->
-
-{% endblock %}
+  
+  {% endblock %}
+  

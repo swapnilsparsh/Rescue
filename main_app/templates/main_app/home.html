@@ -41,6 +41,7 @@
   <style>
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
     body {
       min-height: 100vh;
@@ -54,8 +55,8 @@
       min-height:auto; 
       background-attachment: fixed;
       background-position: center;
-      padding-left:5%;
-      padding-right:5%;
+      padding: 4em 2em;
+      margin: 2em 0;
       background-repeat: no-repeat;
       background-size: cover;
       color:white;
@@ -74,23 +75,38 @@
       font-size: 1.25rem;
     }
 
+    .objectives {
+      font-size: 1rem;
+      text-align: center;
+      padding: 2em;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width:698px) {
+      .objectives {
+        width: 100%;
+      }
+    }
+
+    .objectives h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 3.75rem;
+      text-decoration: underline;
+      padding: 0.2em;
+    }
+
     .objectives p {
-      font-size: 30px;
+      font-size: 1.5rem;
       color: #B82E44;
       font-weight: 500;
       font-family: 'Roboto Slab', serif;
     }
 
-    .objectives {
-      text-align: center;
-      padding: 60px;
-    }
-
-    .objectives h1 {
+    .carousel-heading {
       font-family: 'Bangers', cursive;
-      font-size: 60px;
+      text-align: center;
       text-decoration: underline;
-      padding: 20px;
     }
 
     .new {
@@ -98,11 +114,10 @@
     }
 
     .svg-img{
-      width:50%;
-      margin-left:25%;
-      margin-right:25%;
-      margin-bottom:5%;
-      height:50%;
+      margin: 0 auto;
+      width: 125px;
+      max-width:25%;
+      height: auto;
     }
 
     .new::after {
@@ -162,6 +177,28 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    @media screen and (max-width: 480px) {
+      #preloader {
+        width: 100vw;
+      }
+
+      .preloader-div {
+        width: 19.375rem;
+        height: 19.375rem;
+        position: relative;
+      }
+
+      .rotator {
+        width: 19.375rem;
+        height: 19.375rem;
+      }
+
+      .preloader-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
     /* back to top button */
     #back-to-top-btn {
       position: fixed;
@@ -389,24 +426,24 @@
     
 
     <div class="parallax" >
-      <h1 style="padding:20px;" class="text-center">How it works</h1>
-      <div class="row text-center">
-        <div class="col">
+      <h1 class="text-center text-uppercase py-3">How it works</h1>
+      <div class="my-2 row text-center justify-content-center align-items-start" style="row-gap:1.15em;">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/id.svg' %}">
           <h4>REGISTER YOURSELF</h4>
           <p>Register using your email-id.</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/contact.svg' %}">
           <h4>ADD EMERGENCY CONTACTS</h4>
           <p>Save the mobile number of your trusted contacts</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/empowerment.svg' %}">
           <h4>YOU ARE ALL SET!</h4>
           <p>Click on the EMERGENCY button! Now you are ready to fight against the victim</p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <img class="svg-img" src="{% static 'Images/help.svg' %}">
           <h4>ANY QUESTION?</h4>
           <p>Please follow our <b><a href="/FAQ" style="color:cyan;">Frequently asked questions (FAQ)</a></b></p>
@@ -414,16 +451,9 @@
       </div>
     </div>
 
-    
     <div class="jumbotron" style="background-color: white">
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
-      <h3 class="display-4" style="
-          color: black;
-          font-family: 'Bangers', cursive;
-          text-align: center;
-        ">
-        <u>Wonder Women of India</u>
-      </h3>
+      <h1 class="display-4 carousel-heading">Wonder Women of India</h1>
     </div>
 
     <div class="container carousel-container">
