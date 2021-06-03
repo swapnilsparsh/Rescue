@@ -13,7 +13,7 @@
     }
     
     font-size: 18px;
-    color: black
+    color: black;
 }
 .jumbotron {
     background-color: #f3f3f3;
@@ -78,8 +78,21 @@ p {
                 <div class="text-center " style="padding-bottom: 8%; padding-top: 5%; color: rgb(50, 192, 192); ">
                     <button style="color:white; border-radius: 25px; padding-bottom:35px " class="btn btn-success btn-lg " name="submit " type="submit "><b>Create</b></button></div>
             </form>
+
+
+
+
         </div>
     </div>
+    <script src='https://www.google.com/recaptcha/api.js' style="position: absolute; margin-left: 25px;"></script>
+
+
+    <div class="g-recaptcha" id="rcaptcha" data-sitekey="6LfGawkbAAAAAEwMU9ElnUNXMSG5Az8uXGLRvXZs"></div>
+    <span id="captcha" style="color:red"></span>
+    <!-- this will show captcha errors -->
+
+
+
 </body>
 
 {% endblock %}

@@ -226,8 +226,10 @@ def create_contact(request):
             messages.info(request, "An email has been sent to your contact!!")
             return redirect("main_app:emergency_contact")
         messages.error(request, "Invalid username or password")
-    context = {"form": form}
-    return render(request, "main_app/create_contact.html", context)
+    
+    
+    return render(request, "main_app/create_contact.html", {'form':form, 'recaptcha_site_key':settings.GOOGLE_RECAPTCHA_SITE_KEY})
+    
 
 
 def update_contact(request, pk):

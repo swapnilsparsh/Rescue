@@ -185,4 +185,16 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-GOOGLE_RECAPTCHA_SECRET_KEY = "6Ldj7dkaAAAAALd12sHuTm4kLr3FmAqD5chszUjH"
+
+...
+
+# SECURITY WARNING: keep the secret key used in production secret!
+...
+GOOGLE_RECAPTCHA_SITE_KEY = '6LfGawkbAAAAAEwMU9ElnUNXMSG5Az8uXGLRvXZs' #your reCAPTCHA SITE key 
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfGawkbAAAAAEXmouoGwTWgBV2__O-2lbOcN9iF' #your reCAPTCHA SECRET key 
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+...
