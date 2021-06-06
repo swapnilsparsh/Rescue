@@ -1,0 +1,149 @@
+{% extends 'main_app/common.html' %}
+
+{% block body %}
+{% load static %}
+<title>Rescue | Contact Us</title>
+<style>  
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  .contact-section {
+    margin-top: 100px;
+  }
+
+  .contact-info {
+    height: 50%;
+    width: auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-img {
+    width:100%;
+    max-width: inherit;
+    padding: 1em 0;
+  } 
+  .info-icons a {
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    color: #6C63FF;
+  }
+  .info-icons a:hover {
+    font-size: 3rem;
+    color: #ec4959;
+  }
+  .info-icons a i {
+    height: 2px;
+    border-radius: 50px;
+    transform: translatey(0px);
+	  animation: float 3s ease-in-out infinite;
+  }
+  .contact-form {
+    padding: 2em;
+    font-size: 1.25rem;
+  }
+  .contact-form-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  label {
+    font-size: 1.25rem;
+    color: #6C63FF;
+    margin: 0.5em 0;
+    font-weight: 500;
+  }
+
+  textarea {
+    border-radius: 0.5em;
+  }
+
+  input[type="submit"] {
+    background-color: #FFF;
+    color: #6C63FF;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5em 1.5em;
+    margin: 1em 0;
+    width: unset;
+    cursor: pointer;
+    border: 2px solid #6C63FF;
+    border-radius: 5em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input[type="submit"]:hover {
+    color: #FFF;
+    background-color: #6C63FF;
+    border: 2px solid #6C63FF;
+    cursor: pointer;
+  }
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+
+  <!-- ***** Contact Area Start ***** -->
+  {% if message_name %}
+    <center>
+      <h2 style="margin-top: 120px; font-family: 'Overpass';">Thanks {{ message_name }}!</h2>
+      <p style="font-family: 'Overpass';">We received your email and will respond shortly...</p>
+    </center>
+    <br/><br/><br/>
+  {% else %}
+
+<section class="contact-section py-4 mx-auto align-items-start">
+  <div class="container row mx-auto">
+    <!-- Contact Information -->
+    <div class="contact-info col-12 col-md-6 col-lg-6 align-self-center">
+      <img src="../../static/Images/contact-page.svg" class="info-img" alt="contact illustration">
+      
+      <div class="info-icons">
+        <a href="https://github.com/swapnilsparsh" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.twitter.com/swapnilsparsh/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+      </div>
+    </div>
+  
+  <!-- Contact Form -->
+  <div class="contact-form col-12 col-md-6 col-lg-6">
+      <h2 class="contact-form-heading" data-aos="fade-left">Get in Touch</h2>
+      
+      <form action="/contact_user/" method="POST">
+        {% csrf_token %}
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        
+        <input type="submit" class="send-message" value="Send message">
+      </form>
+    </div>
+  </div>    
+</section>
+  {% endif %}
+  <!-- ***** Contact Area End ***** -->
+  
+  {% endblock %}
+  

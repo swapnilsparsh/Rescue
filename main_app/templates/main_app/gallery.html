@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<title> Rescue | Women's Rights Activists Gallery </title>
+<head>
+  <style>
+    html {
+        scroll-behavior:smooth;
+    }
+
+    body {
+        background: #eeeded;
+    }
+
+    .card {
+      box-shadow: 5px 5px 6px rgba(0,0,0,0.24);
+      transition: all 0.2s ease-in-out;
+      box-sizing: border-box;
+      margin: 10px auto;
+      background-color:#FFF;
+      border-radius: 1.1em;
+      cursor: pointer;
+      height: 100%;
+      margin: 0px;
+    }
+
+    .card:hover {
+      box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .card .header {
+      margin-bottom:1.5em;
+      font-family: 'Poppins', serif;
+    }
+    
+    .card .header h2{
+      color: #6C63FF;
+      font-weight: bold;
+    }
+    
+    .card .header h5{
+      text-decoration: underline;
+    }
+
+    .card > .card-inner {
+      padding:10px;
+    }
+    
+    .card .card-inner .content {
+      max-height: 260px;
+      overflow-y: hidden;
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .card .card-inner .content:hover {
+      overflow-y: scroll;
+    }
+
+    .card .content p {
+      font-family: 'Arvo', serif;
+      font-size: 0.97rem;
+    }
+
+    .image {
+      border-radius: 1.1em 1.1em 0em 0em;
+    }
+
+    .card img{
+      width:100%;
+      max-height: 230px;
+      border-radius: 1.1em 1.1em 0em 0em;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .wb-stl-heading1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 40px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      text-shadow: 2px 2px grey;
+    }
+
+    
+    .intro {
+      display: flex;
+      flex-direction: column;
+      text-align: center; 
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-heading {
+      font-size: 3rem;
+      font-family: "Monospace", sans-serif;
+      color: #6C63FF;
+      font-weight: 900;
+    }
+
+    .intro-text {
+      font-size: 1.5rem;
+      margin-top: 1em;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    image {
+      width: 100%;
+      height: auto;
+    }
+
+    .intro-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 325px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 480px) {
+      .intro-img {
+        max-width: 80vw;
+      }
+    }
+
+  </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
+  <div class="container row mx-auto mb-5 p-3">
+    <div class="col"  data-aos="zoom-out">
+      <img class="intro-img" src="{% static 'Images/gallery-together.svg' %}"  alt="illustration showing togetherness">  
+    </div>
+    <div class="col intro mt-5" data-aos="fade-down">
+      <h1 class="wb-stl-heading1">Women's Rights Activists Gallery</h1>
+    </div>
+  </div>
+
+  <div class="container row justify-content-center mx-auto">
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/Laxmi.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Laxmi Agarwal</h2>
+            <br>
+            <h5>An Indian acid attack survivor, a campaigner for rights of acid attack victims, and a TV host</h5>
+          </div>
+          <div class="content">
+              <p>Laxmi Agarwal (born 1 June 1990) was attacked in 2005 in New Delhi at the age of 15, after rebuffing the romantic advances of Naeem Khan. Her story, among others, was told in a series on acid attack victims by Hindustan Times.<br><br>
+              She has since established grassroots campaigns for tackling the surge of acid attacks; one of her petitions has led the Supreme Court to order the central and state governments to regulate the sale of acid and the Parliament to enable easier prosecutions of acid attack perpetrators.<br><br>
+              She was the former director of Chhanv Foundation, a NGO dedicated to help acid attack survivors in India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/Manasi.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Manasi Pradhan</h2>
+            <br>
+            <h5>An Indian women's rights activist and author</h5>
+          </div>
+          <div class="content">
+            <p>Manasi Pradhan (born 4 October 1962) is the founder of Honour for Women National Campaign, a nationwide movement to end violence against women in India. She won the 'Outstanding Women Award' in 2011. She is the founder of Nirbhaya Vahini, Nirbhaya Samaroh and OYSS Women.<br><br> 
+            she fought successfully the widely prevalent social taboo against educating women, walked 15 km daily amidst hilly terrain and swamp to the only high school in the entire region to emerge as first woman matriculate of her village and subsequently the first woman law graduate of her region.<br><br> 
+            The life story of Manasi Pradhan has been adopted as documentaries in United States and Israel </p>
+          </div>
+        </div>
+      </div>
+    </div>      
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/pramila.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Pramila Nesargi</h2>
+            <br>
+            <h5>An Indian Lawyer and a well-known women's rights Activist</h5>
+          </div>
+          <div class="content">
+            <p>Pramila Nesargi's mother was a freedom fighter and her father was a self-made man. She obtained a law degree at an early age and started practicing law.<br><br> 
+            She is known as a maverick lawyer who fights against sensitive issues such as child labor, house and control, sexual violence at work, domestic violence and prisoner’s plight. She has also contributed in organising various unincorporated sectors. She has been a member of the dictionary committee for English-Kannada translation.<br> <br>
+            She is the first woman to be elected in the past 50 years to the Karnataka Bar Council as Chairman of Bar Association. Pramila has represented a sweep of cases from high profile to controversial cases for which she has often faced severe criticism.</p>
+          </div>
+        </div>
+      </div>
+    </div>           
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/Malala.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Malala Yousafzai</h2>
+            <br>
+            <h5>A pakistani women's Rights activist</h5>
+          </div>
+          <div class="content">
+              <p>Malala Yousafzai became the youngest ever person to be awarded the <b>‘Nobel Prize’</b> when she won the <b>‘Nobel Peace Prize’</b> in 2014. Malala is mainly known for her advocacy of female education in her native Swat Valley, Pakistan.<br> <br>
+              Born into a family of progressive thinkers and educationists, Malala started expressing her frustration over the restrictive practices of the Taliban in an anonymous blog when she was just 11 years old. Malala wrote about how the Taliban were attempting to control the valley and trying to prevent girls from going to school.<br> <br>
+              Her blog gained much prominence around the world and she soon became popular as an emerging activist who campaigned for girls’ rights to education. This angered the Taliban which issued a death threat against her. She was shot by a gunman when she was returning from school.<br> <br>
+              The gutsy girl survived the horrific attack and returned to activism even more determined than before.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/Flavia.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Flavia Agnes</h2>
+            <br>
+            <h5>An Indian women's rights lawyer</h5>
+          </div>
+          <div class="content">
+              <p>Flavia Agnes is an Indian women's rights lawyer with expertise in marital, divorce and property law. She has written and published numerous articles, some of which have appeared in the journals Subaltern Studies, Economic and Political Weekly, and Manushi.<br> <br>
+              She writes on themes of minorities and the law, gender and law, law in the context of women's movements, and on issues of domestic violence, feminist jurisprudence, and minority rights. Flavia Agnes began working in the field of women in law in the 1980s, which was at the beginning of the second phase of the women's movement, and since 1988, Agnes has been a practicing lawyer at the Mumbai High Court.<br> <br>
+              Her own experience with domestic violence inspired her to become a women's rights lawyer. She also advises the government on law implementation and currently advises the Ministry of Women and Child Development in Maharashtra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/vrinda.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Vrinda Grover</h2>
+            <br>
+            <h5>Lawyer, Researcher and human rights and women's rights Activist</h5>
+          </div>
+          <div class="content">
+            <p>Vrinda Grover as a lawyer she has appeared in prominent human rights cases and represented women and child survivors of domestic and sexual violence; victims and survivors of communal massacre, extrajudicial killings and custodial torture; sexual minorities; trade unions; and political activists.<br><br>
+            Focused on the impunity of the state in relation to human rights violations, her research and writing inquires into the role of law in the subordination of women; the failure of the criminal justice system during communal and targeted violence; the effect of 'security' laws on human rights; rights of undocumented workers; challenges confronting internally displaced persons; and examines impunity for enforced disappearances and torture in conflict situations. Time magazine identified her as one of the 100 most influential people in the world in 2013.</p>
+          </div>
+        </div>
+      </div>
+    </div>           
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+          <div class="image">
+            <img src="{% static 'Images/Indira.jpg' %}" />
+          </div>
+          <div class="card-inner">
+            <div class="header">
+              <h2>Indira Jaising</h2>
+              <br>
+              <h5>Lawyer and Human rights activist</h5>
+          </div>
+          <div class="content">
+            <p> Indira Jaising has been called <b>‘formidable’</b> by many especially when recounting her efforts in framing of the Domestic Violence Act (2005). Founder of the Lawyer’s Collective, Indira started her legal practice in the early 1960s and has been working tirelessly for the past 53 years.<br><br>
+            Indira was the first female senior advocate in the High Court of Bombay and served as the first female Additional Solicitor General of India. Apart from women’s issues and human rights, she has also taken up environmental issues like protection of coastlines and more.<br><br>
+            She has fought some  of the most high-profile cases in the country - she led commissions in Punjab to investigate the extra judicial killings, police brutality and disappearances in North India in the 70s and 80s, fought for  compensation of victims of the 1984 Bhopal gas tragedy, and of the victims 2002 riots in Gujarat. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/viji.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Viji Penkootu</h2>
+            <br>
+            <h5>Human rights and women's activist</h5>
+          </div>
+          <div class="content">
+            <p>Viji Penkoottu's contribution to <b>'Right to Sit’</b> struggle in Kozhikode received recognition from BBC when she was named as one of three Indians in the BBC 100 Women list. <br><br>
+            Women working in the shops and malls of Midhayitheru, SM Street were denied basic human rights like the right to sit or use toilets during working hours. Due to the prevalence of such practices against working women in Kozhikode and other parts of Kerala, Viji launched Penkoottu - an all-women’s trade union to fight for basic rights of saleswomen.<br><br>
+            Her eight-year struggle led to the passing of the Kerala Shops and Commercial Establishments (Amendments) Act, 2018 which accounted for flexible working hours and a place to sit for women.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+      <div class="card">
+        <div class="image">
+          <img src="{% static 'Images/kamla.jpg' %}" />
+        </div>
+        <div class="card-inner">
+          <div class="header">
+            <h2>Kamla Bhasin</h2>
+            <br>
+            <h5>Social scientist, Author, Poet, Development feminist and activist</h5>
+          </div>
+          <div class="content">
+            <p>Kamla Bhasin has worked on several subjects like gender equality, education, poverty alleviation, human rights and peace in South Asia since 1970. She is also part of SANGAT, a South Asian Feminist network and an active member of JAGORI, a women’s resource and training centre. <br><br>
+            In 1979, she began with the Food and Agricultural Organisation for their Freedom from Hunger campaign in New Delhi and worked for empowerment of rural and urban poor.<br><br>
+            She has written extensively on patriarchy and gender. Her published works include Laughing Matters, Exploring Masculinity, Borders & Boundaries: Women in India’s Partition, What Is Patriarchy?, and Feminism and its Relevance in South Asia. In her literary work and her activism, she envisions a feminist movement that transcends class, borders, and other social and political divisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>                 
+  </div> <!--container ends-->
+
+</body>
+
+{% endblock %}
+
+</html>

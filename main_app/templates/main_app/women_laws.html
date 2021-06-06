@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
 {% load static %}
-
 <html lang="en">
 {% block content %}
 <br>
-
+<title> Rescue | Women Laws </title>
 <head>
     <style>
-        .btn {
+        .btn-details {
             background-color: black;
             color: white;
             text-align: center;
@@ -16,7 +15,7 @@
             margin-left: 31%;
         }
 
-        .btn:hover {
+        .btn-details:hover {
             background-color: #f1f1f1;
             color: black;
             text-align: center;
@@ -29,7 +28,9 @@
         .collapsible-header {
             background-color: white;
             font-family: 'Alegreya', serif;
-            font-size: 20px;
+        }
+        .collapsible-header h5 {
+            font-size: 1.75rem;
         }
 
         .collapsible-header.active {
@@ -43,6 +44,7 @@
         .collapsible-body {
             text-align: justify;
             font-family: 'Arvo', serif;
+            font-size: 1.25rem;
         }
 
         .wb-stl-heading1 {
@@ -59,30 +61,11 @@
             margin-left: auto;
             margin-right: auto;
         }
-  
-  html {
-	scroll-behavior:smooth;
- } 
- #myBtn {
-     display: none; 
-     position: fixed; 
-     bottom: 20px;  
-     right: 30px; 
-     z-index: 99; 
-     border: 2px black solid; 
-     outline: none; 
-     background-image:url("{% static 'Images/top.png' %}"); 
-	 background-position:center;
-	 background-repeat:no-repeat;
-     background-color:black; 
-     cursor: pointer; 
-     padding: 1.4rem;
-     border-radius: 25rem;
-    }
-	#myBtn:hover {
-      background-color: white;
-      background-image:url("{% static 'Images/toph.png' %}"); 
-   }
+
+        html {
+            scroll-behavior:smooth;
+        }
+
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
@@ -91,24 +74,24 @@
 
 <body style="background-color:white;margin-top: 150px;">
     <div class="row justify-content-center"
-        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        style="width: 100%; margin:0 auto; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <div class="column">
-            <img src="{% static 'Images/law.jpg' %}" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
+            <img src="{% static 'Images/law.jpg' %}" data-aos="zoom-in" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;">
         </div>
 
         <div class="column">
-            <h1 class="wb-stl-heading1">
+            <h1 class="wb-stl-heading1" data-aos="fade-down"> 
                 <strong style="text-shadow: 2px 2px grey; text-align: center; ">
                     <font color="black">Women's Safety Laws</font>
                 </strong>
                 <img src="{% static 'Images/law_pic.jpg' %}" alt="24 * 7" height="50vw">
             </h1>
             <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-            <p class="lead" style="font-family: 'Overpass', sans-serif;"><b>"Always REMEMBER Awareness without Action is
+            <p class="lead text-center" style="font-family: 'Overpass', sans-serif;"><b>"Always REMEMBER Awareness without Action is
                     Worthless"</b></p>
             <hr class="my-10">
-            <a class="btn" href="https://en.wikipedia.org/wiki/Women_in_India#Women's_safety_laws"
+            <a class="btn btn-details" href="https://en.wikipedia.org/wiki/Women_in_India#Women's_safety_laws"
                 target="_blank"><b>MORE DETAILS</b></a>
         </div>
     </div>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html lang="en">
 
 <head>
+  <title>Rescue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -40,11 +41,25 @@
   <style>
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+
+    
+    .parallax{
+      background-image:url( "{% static 'Images/red-bg.jpg' %}");
+      min-height:auto; 
+      background-attachment: fixed;
+      background-position: center;
+      padding: 4em 2em;
+      margin: 2em 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color:white;
     }
 
     .my-bottom {
@@ -60,27 +75,49 @@
       font-size: 1.25rem;
     }
 
+    .objectives {
+      font-size: 1rem;
+      text-align: center;
+      padding: 2em;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width:698px) {
+      .objectives {
+        width: 100%;
+      }
+    }
+
+    .objectives h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 3.75rem;
+      text-decoration: underline;
+      padding: 0.2em;
+    }
+
     .objectives p {
-      font-size: 30px;
+      font-size: 1.5rem;
       color: #B82E44;
       font-weight: 500;
       font-family: 'Roboto Slab', serif;
     }
 
-    .objectives {
-      text-align: center;
-      padding: 60px;
-    }
-
-    .objectives h1 {
+    .carousel-heading {
       font-family: 'Bangers', cursive;
-      font-size: 60px;
+      text-align: center;
       text-decoration: underline;
-      padding: 20px;
     }
 
     .new {
       font-size: 1.2rem;
+    }
+
+    .svg-img{
+      margin: 0 auto;
+      width: 125px;
+      max-width:25%;
+      height: auto;
     }
 
     .new::after {
@@ -140,6 +177,28 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    @media screen and (max-width: 480px) {
+      #preloader {
+        width: 100vw;
+      }
+
+      .preloader-div {
+        width: 19.375rem;
+        height: 19.375rem;
+        position: relative;
+      }
+
+      .rotator {
+        width: 19.375rem;
+        height: 19.375rem;
+      }
+
+      .preloader-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
     /* back to top button */
     #back-to-top-btn {
       position: fixed;
@@ -162,6 +221,10 @@
       color: #FFF;
       border: 2px solid #FFF;
     }
+    .parallax p{
+      font-size:16px;
+    }
+
 
     @keyframes rotator {
       0% {
@@ -198,9 +261,28 @@
     #footer ul.quick-links li:hover a i {
         font-weight: 700;
     }
+    @media only screen and (min-width: 980px) {
+        .logo{
+        height:50%;
+        width:60%;
+        }
+      }
+
+      @media only screen and (max-width: 979px) {
+        .navbar-brand {
+          max-width: 50%;
+        }
+        .logo{
+          position: relative;
+          height:45%;
+          width:50%;
+          min-width: 160px;
+          max-width: 170px;
+        }
+      }
   </style>
   <script>
-    
+
     window.onload = function () {
       var preloader = document.getElementById("preloader");
       setTimeout(function () {
@@ -220,12 +302,13 @@
 
     </div>
   </div>
+<header>
   
+
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: rgb(6, 17, 31); height: 85px; padding: None">
-        <a class="navbar-brand" href="/home"><i class="material-icons large text-white"
-            style="width: 80%; font-size: 45px">home</i></a>
+        style="background-color: rgb(6, 17, 31); height: 95px; padding: None">
+        <a class="navbar-brand" href="/home"> <img src="{% static 'Images/logo.png' %}"  class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
           style="background-color: white">
@@ -235,7 +318,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown"
           style="background-color: rgb(6, 17, 31); padding: None">
           <ul class="navbar-nav ml-auto" style="margin-right: 20px !important">
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and  not user.has_usable_password %}
             <li class="nav-item dropdown" style="margin-top: 20px">
               <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
@@ -243,6 +326,19 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
                 <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
+                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
+              </div>
+            </li>
+            {%  elif user.is_authenticated and not backends.associated %}
+            <li class="nav-item dropdown" style="margin-top: 20px">
+              <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 18px">
+                <h4 class="User">&nbsp;&nbsp; {{user.username}}</h4>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="background-color: rgb(6, 17, 31)">
+                <a class="dropdown-item" style="color: white" href="/logout">Logout</a>
+                <a class="dropdown-item" style="color: white" href="/change_password">Change Password</a>
+                <a class="dropdown-item" style="color: white" href="{% url 'delete_account' user.username %}">Delete Account</a>
               </div>
             </li>
             {% else %}
@@ -269,6 +365,8 @@
                 </a>
                 <a class="dropdown-item" style="color: white" href="/helpline_numbers">Women Helpline Numbers</a>
                 <a class="dropdown-item" style="color: white" href="/ngo_details">NGOs for Women</a>
+                <a class="dropdown-item" style="color: white" href="../main_app/FAQ.html">FAQ's</a>
+                <a class="dropdown-item" style="color: white" href="/gallery">Woment's Rights Activists Gallery</a>
               </div>
             </li>
             <li class="nav-item">
@@ -295,15 +393,19 @@
       </nav>
     </header>
 
-    {% if messages %} {% for message in messages %}
-    <script>
-      M.toast({
-        html: "{{message}}",
-        classes: "blue rounded",
-        displayLength: 4000,
-      });
-    </script>
-    {% endfor %} {% endif %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+                <script>M.toast({html: "{{message}}", classes: 'green rounded', displayLength:2000});</script>
+            {% elif message.tags == 'info'%}
+                <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:2000});</script>
+            {% elif message.tags == 'warning'%}
+                <script>M.toast({html: "{{message}}", classes: 'orange rounded', displayLength:2000});</script>
+            {% elif message.tags == 'error'%}
+                <script>M.toast({html: "{{message}}", classes: 'red rounded', displayLength:2000});</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
     <div>
       <div>
         <img class="responsive" width="100%" style="margin-top: 85px;" src="{% static 'Images/rescues.gif' %}" />
@@ -321,15 +423,37 @@
       </p>
     </div>
 
+    
+
+    <div class="parallax" >
+      <h1 class="text-center text-uppercase py-3">How it works</h1>
+      <div class="my-2 row text-center justify-content-center align-items-start" style="row-gap:1.15em;">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <img class="svg-img" src="{% static 'Images/id.svg' %}">
+          <h4>REGISTER YOURSELF</h4>
+          <p>Register using your email-id.</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <img class="svg-img" src="{% static 'Images/contact.svg' %}">
+          <h4>ADD EMERGENCY CONTACTS</h4>
+          <p>Save the mobile number of your trusted contacts</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <img class="svg-img" src="{% static 'Images/empowerment.svg' %}">
+          <h4>YOU ARE ALL SET!</h4>
+          <p>Click on the EMERGENCY button! Now you are ready to fight against the victim</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <img class="svg-img" src="{% static 'Images/help.svg' %}">
+          <h4>ANY QUESTION?</h4>
+          <p>Please follow our <b><a href="/FAQ" style="color:cyan;">Frequently asked questions (FAQ)</a></b></p>
+        </div>       
+      </div>
+    </div>
+
     <div class="jumbotron" style="background-color: white">
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
-      <h3 class="display-4" style="
-          color: black;
-          font-family: 'Bangers', cursive;
-          text-align: center;
-        ">
-        <u>Wonder Women of India</u>
-      </h3>
+      <h1 class="display-4 carousel-heading">Wonder Women of India</h1>
     </div>
 
     <div class="container carousel-container">
@@ -401,7 +525,9 @@
         </div>
         <div class="row" style="margin-right: 10%"  class="list-unstyled quick-links">
           <ul class="col" style="margin-top: 5px">
-            <li ><a href="#" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+            <li ><a href="/contact_user" style="font-size:25px;"><i class="bi bi-chat-right-text-fill">  </i> Contact Us</a></li>
+            <li><a href="https://github.com/swapnilsparsh/Rescue" target="_blank" style="font-size:25px;"><i class="bi bi-github">
+                </i>Contribute Here</a></li>
           </ul>
       </div>
     </footer>

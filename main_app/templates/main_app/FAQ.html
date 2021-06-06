@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+<html lang="en">
+{% block content %}
+<br>
+
+<head>
+    <title>Rescue | FAQ</title>
+    <style>
+        .btn-details {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: -60%;
+            margin-left: 31%;
+        }
+
+        .btn-details:hover {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+        }
+
+        .collapsible-header:hover {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible-header {
+            background-color: white;
+            font-family: 'Alegreya', serif;
+            font-size: 20px;
+        }
+
+        .collapsible-header.active {
+            background-color: #f6f5f5;
+        }
+
+        .collapsible {
+            margin-top: -15%;
+        }
+
+        .collapsible-body {
+            text-align: justify;
+            font-family: 'Arvo', serif;
+        }
+
+        .wb-stl-heading1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img-responsive,
+        .img1-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  
+        html {
+            scroll-behavior:smooth;
+        } 
+ 
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:white;margin-top: 150px;">
+    <div class="row justify-content-center"
+        style="width: 100%; background-color:white;font-size:200px;text-shadow: 0 0 20px white">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <div class="column">
+            <img data-aos="slide-left" src="/static/Images/FAQs_pic.jpg" class="img1-responsive" alt="24 * 7" style="margin-top: -200px;width: 120%;margin-left: -8%;">
+        </div>
+
+        <div class="column" style="margin-top: -1%; margin-left: 5%;">
+            <h1 class="wb-stl-heading1" data-aos="fade-down">
+                <strong style="text-shadow: 2px 2px grey; text-align: center; ">
+                    <font color="black" style="font-size: 250%;margin-top: %;">FAQs</font>
+                </strong>
+            </h1>
+            <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+            <p class="lead" style="font-family: 'Overpass', sans-serif;" data-aos="fade-up"><b>"It is not the answer that enlightens but the question"</b></p>
+            <hr class="my-10">
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="collapsible popout" data-collapsible="accordion" style="margin-top: 4%;">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Is this website is free to register ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes this website is completely free to register and use. </p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What does emergency button do ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Emergency button sends the location and alert message to the persons whom contacts you have saved in the emergency contacts.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What is the aim of this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>To have a responsive website to help women in panic and unsafe situations and Our main aim is to help women with the support of new technologies.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>How can i save my emergency numbers ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Log in to your account then click on the emergency contacts tab in the navigation bar a new page will come up then click on the create contact and fill in the details and click on the create button to save.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Where can i share my personal problem ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>You can share your personal problems in the contact us page of rescue website or you can share them with the given women helpline numbers.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Who is the admin of this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Swapnil Srivastava is the admin of this website.</p>
+                </div>
+            </li>
+            <br>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Can a man use this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes anyone who wants can use this website.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>What are the things which are sent when I press emergency button ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Your location with a alert message are sent to the emergency contacts that you have saved via phone and gmail at that very moment.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">arrow_drop_down</i>
+                    <h5>Is it safe to use this website ?</h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Yes this website is completely safe and secure your data and contacts will also be secured by the password.</p>
+                </div>
+            </li>
+            <br>
+            <li>
+        </ul>
+        <br>
+    </div>
+    <div>
+        <img src="{% static 'Images/women-picture.jpg' %}" class="img-responsive" alt="">
+    </div>
+</body>
+
+{% endblock %}
+
+</html>
