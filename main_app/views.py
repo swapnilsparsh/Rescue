@@ -22,6 +22,7 @@ from .utils import account_activation_token
 from django.http import JsonResponse
 import json
 import urllib
+from .sms import send_sms
 
 # Create your views here
 
@@ -73,7 +74,7 @@ def register(request):
             messages.success(request, f"New Account Created Successfully: {username}")
             messages.success(request, "Check your email to Activate your account!")
             email.send(fail_silently=False)
-            return redirect('main_app:email_sent')
+            return redirect("main_app:email_sent")
         elif User.objects.filter(username=username).exists():
             messages.warning(
                 request,
@@ -226,10 +227,12 @@ def create_contact(request):
             messages.info(request, "An email has been sent to your contact!!")
             return redirect("main_app:emergency_contact")
         messages.error(request, "Invalid username or password")
-    
-    
-    return render(request, "main_app/create_contact.html", {'form':form, 'recaptcha_site_key':settings.GOOGLE_RECAPTCHA_SITE_KEY})
-    
+
+    return render(
+        request,
+        "main_app/create_contact.html",
+        {"form": form, "recaptcha_site_key": settings.GOOGLE_RECAPTCHA_SITE_KEY},
+    )
 
 
 def update_contact(request, pk):
@@ -289,14 +292,20 @@ def emergency(request):
     link = "http://www.google.com/maps/place/" + lat + "," + log
     for c in contacts:
         send_email(name, c.email, link)
-        messages.success(request,f"Email deleiverd to {name} at {c.email}")
+        messages.success(request, f"Email deleiverd to {name} at {c.email}")
     try:
         send_whatsapp(mobile_numbers, name, link)
-        messages.success(request,f"Message deleivered to {name} at {mobile_numbers}")
+        send_sms(mobile_numbers, name, link)
+        messages.success(request, f"Message deleivered to {name} at {mobile_numbers}")
     except:  # noqa
         messages.error(
             request, "your contact numbers contains number without country code."
         )
+    try:
+        send_sms(mobile_numbers, name, link)
+        messages.success(request, f"SMS deleivered to {name} at {mobile_numbers}")
+    except Exception as e:
+        messages.error(request, f"unable to send sms due to {e}")
     return render(request, "main_app/emergency_contact.html", context)
 
 
