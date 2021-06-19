@@ -6,7 +6,7 @@
   <h2 align="center"><b>Rescue (Women Safety Website)</b></h2>
 
   <p align="center">
-    📧<i>A women’s safety website that sends emails and messages to your trusted ones.</i> 🚺
+    <p style align="center">📧 A women’s safety website that sends emails and messages to your trusted ones.🚺</p> 
     <br />
   </p>
 </p>
@@ -144,7 +144,7 @@ You can find our Code of Conduct [here](/Code_of_Conduct.md).
 
 # 📄License
 
-<a href="https://github.com/swapnilsparsh/Rescue/blob/master/LICENSE" target="_blank">
+<a href="./LICENSE" target="_blank">
 <img src="https://img.shields.io/badge/license-MIT-green" alt=MIT>
 </a>
 
