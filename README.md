@@ -149,7 +149,9 @@ You can find our Code of Conduct [here](/Code_of_Conduct.md).
 </a>
 
 # Project Maintainer
-## Swapnil Sparsh
+### [Swapnil Srivastava](https://github.com/swapnilsparsh)
+### [Utkarsh Mall](https://github.com/iamutkarshmall)
+### [Utkarsh Sharma](https://github.com/U-c0de)
 
 <div align="left">
 <a href="https://github.com/swapnilsparsh" target="_blank">
